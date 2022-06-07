@@ -1,0 +1,4 @@
+# OpenAPI Generator Ignore
+# Lines beginning with a # are comments
+
+src/ShopwareSharp/Model/Data.cs

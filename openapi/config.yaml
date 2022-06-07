@@ -1,0 +1,10 @@
+global-property:
+gitRepoId: ShopwareSharp
+gitUserId: cmgt
+library: generichost
+additionalProperties:
+  conditionalSerialization: true
+  netCoreProjectFile: true
+  packageName: ShopwareSharp
+  packageVersion: 0.1.0
+  targetFramework: net6.0
