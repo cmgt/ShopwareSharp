@@ -39,16 +39,8 @@ namespace ShopwareSharp.Model
         /// <param name="_parameter">A string indicating which query parameter caused the error..</param>
         public ErrorSource(string pointer = default(string), string _parameter = default(string))
         {
-            this._Pointer = pointer;
-            if (this.Pointer != null)
-            {
-                this._flagPointer = true;
-            }
-            this._Parameter = _parameter;
-            if (this.Parameter != null)
-            {
-                this._flagParameter = true;
-            }
+            this.Pointer = pointer;
+            this.Parameter = _parameter;
         }
 
         /// <summary>
@@ -56,51 +48,15 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>A JSON Pointer [RFC6901] to the associated entity in the request document [e.g. \&quot;/data\&quot; for a primary data object, or \&quot;/data/attributes/title\&quot; for a specific attribute].</value>
         [DataMember(Name = "pointer", EmitDefaultValue = false)]
-        public string Pointer
-        {
-            get{ return _Pointer;}
-            set
-            {
-                _Pointer = value;
-                _flagPointer = true;
-            }
-        }
-        private string _Pointer;
-        private bool _flagPointer;
+        public string Pointer { get; set; }
 
-        /// <summary>
-        /// Returns false as Pointer should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePointer()
-        {
-            return _flagPointer;
-        }
         /// <summary>
         /// A string indicating which query parameter caused the error.
         /// </summary>
         /// <value>A string indicating which query parameter caused the error.</value>
         [DataMember(Name = "parameter", EmitDefaultValue = false)]
-        public string Parameter
-        {
-            get{ return _Parameter;}
-            set
-            {
-                _Parameter = value;
-                _flagParameter = true;
-            }
-        }
-        private string _Parameter;
-        private bool _flagParameter;
+        public string Parameter { get; set; }
 
-        /// <summary>
-        /// Returns false as Parameter should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeParameter()
-        {
-            return _flagParameter;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

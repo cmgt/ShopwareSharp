@@ -51,120 +51,36 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("documentBaseConfigId is a required property for DocumentBaseConfigSalesChannel and cannot be null");
             }
-            this._DocumentBaseConfigId = documentBaseConfigId;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._SalesChannelId = salesChannelId;
-            if (this.SalesChannelId != null)
-            {
-                this._flagSalesChannelId = true;
-            }
-            this._DocumentTypeId = documentTypeId;
-            if (this.DocumentTypeId != null)
-            {
-                this._flagDocumentTypeId = true;
-            }
+            this.DocumentBaseConfigId = documentBaseConfigId;
+            this.Id = id;
+            this.SalesChannelId = salesChannelId;
+            this.DocumentTypeId = documentTypeId;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets DocumentBaseConfigId
         /// </summary>
         [DataMember(Name = "documentBaseConfigId", IsRequired = true, EmitDefaultValue = false)]
-        public string DocumentBaseConfigId
-        {
-            get{ return _DocumentBaseConfigId;}
-            set
-            {
-                _DocumentBaseConfigId = value;
-                _flagDocumentBaseConfigId = true;
-            }
-        }
-        private string _DocumentBaseConfigId;
-        private bool _flagDocumentBaseConfigId;
+        public string DocumentBaseConfigId { get; set; }
 
-        /// <summary>
-        /// Returns false as DocumentBaseConfigId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDocumentBaseConfigId()
-        {
-            return _flagDocumentBaseConfigId;
-        }
         /// <summary>
         /// Gets or Sets SalesChannelId
         /// </summary>
         [DataMember(Name = "salesChannelId", EmitDefaultValue = false)]
-        public string SalesChannelId
-        {
-            get{ return _SalesChannelId;}
-            set
-            {
-                _SalesChannelId = value;
-                _flagSalesChannelId = true;
-            }
-        }
-        private string _SalesChannelId;
-        private bool _flagSalesChannelId;
+        public string SalesChannelId { get; set; }
 
-        /// <summary>
-        /// Returns false as SalesChannelId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalesChannelId()
-        {
-            return _flagSalesChannelId;
-        }
         /// <summary>
         /// Gets or Sets DocumentTypeId
         /// </summary>
         [DataMember(Name = "documentTypeId", EmitDefaultValue = false)]
-        public string DocumentTypeId
-        {
-            get{ return _DocumentTypeId;}
-            set
-            {
-                _DocumentTypeId = value;
-                _flagDocumentTypeId = true;
-            }
-        }
-        private string _DocumentTypeId;
-        private bool _flagDocumentTypeId;
+        public string DocumentTypeId { get; set; }
 
-        /// <summary>
-        /// Returns false as DocumentTypeId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDocumentTypeId()
-        {
-            return _flagDocumentTypeId;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>

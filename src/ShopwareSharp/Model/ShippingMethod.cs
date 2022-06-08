@@ -63,302 +63,88 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("name is a required property for ShippingMethod and cannot be null");
             }
-            this._Name = name;
+            this.Name = name;
             // to ensure "deliveryTimeId" is required (not null)
             if (deliveryTimeId == null)
             {
                 throw new ArgumentNullException("deliveryTimeId is a required property for ShippingMethod and cannot be null");
             }
-            this._DeliveryTimeId = deliveryTimeId;
+            this.DeliveryTimeId = deliveryTimeId;
             // to ensure "taxType" is required (not null)
             if (taxType == null)
             {
                 throw new ArgumentNullException("taxType is a required property for ShippingMethod and cannot be null");
             }
-            this._TaxType = taxType;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._Active = active;
-            if (this.Active != null)
-            {
-                this._flagActive = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._MediaId = mediaId;
-            if (this.MediaId != null)
-            {
-                this._flagMediaId = true;
-            }
-            this._Description = description;
-            if (this.Description != null)
-            {
-                this._flagDescription = true;
-            }
-            this._TrackingUrl = trackingUrl;
-            if (this.TrackingUrl != null)
-            {
-                this._flagTrackingUrl = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
-            this._DeliveryTime = deliveryTime;
-            if (this.DeliveryTime != null)
-            {
-                this._flagDeliveryTime = true;
-            }
-            this._AvailabilityRule = availabilityRule;
-            if (this.AvailabilityRule != null)
-            {
-                this._flagAvailabilityRule = true;
-            }
-            this._Prices = prices;
-            if (this.Prices != null)
-            {
-                this._flagPrices = true;
-            }
-            this._Media = media;
-            if (this.Media != null)
-            {
-                this._flagMedia = true;
-            }
-            this._Tags = tags;
-            if (this.Tags != null)
-            {
-                this._flagTags = true;
-            }
-            this._Tax = tax;
-            if (this.Tax != null)
-            {
-                this._flagTax = true;
-            }
+            this.TaxType = taxType;
+            this.Id = id;
+            this.Active = active;
+            this.CustomFields = customFields;
+            this.MediaId = mediaId;
+            this.Description = description;
+            this.TrackingUrl = trackingUrl;
+            this.Translated = translated;
+            this.DeliveryTime = deliveryTime;
+            this.AvailabilityRule = availabilityRule;
+            this.Prices = prices;
+            this.Media = media;
+            this.Tags = tags;
+            this.Tax = tax;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", EmitDefaultValue = true)]
-        public bool Active
-        {
-            get{ return _Active;}
-            set
-            {
-                _Active = value;
-                _flagActive = true;
-            }
-        }
-        private bool _Active;
-        private bool _flagActive;
+        public bool Active { get; set; }
 
-        /// <summary>
-        /// Returns false as Active should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeActive()
-        {
-            return _flagActive;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets MediaId
         /// </summary>
         [DataMember(Name = "mediaId", EmitDefaultValue = false)]
-        public string MediaId
-        {
-            get{ return _MediaId;}
-            set
-            {
-                _MediaId = value;
-                _flagMediaId = true;
-            }
-        }
-        private string _MediaId;
-        private bool _flagMediaId;
+        public string MediaId { get; set; }
 
-        /// <summary>
-        /// Returns false as MediaId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMediaId()
-        {
-            return _flagMediaId;
-        }
         /// <summary>
         /// Gets or Sets DeliveryTimeId
         /// </summary>
         [DataMember(Name = "deliveryTimeId", IsRequired = true, EmitDefaultValue = false)]
-        public string DeliveryTimeId
-        {
-            get{ return _DeliveryTimeId;}
-            set
-            {
-                _DeliveryTimeId = value;
-                _flagDeliveryTimeId = true;
-            }
-        }
-        private string _DeliveryTimeId;
-        private bool _flagDeliveryTimeId;
+        public string DeliveryTimeId { get; set; }
 
-        /// <summary>
-        /// Returns false as DeliveryTimeId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDeliveryTimeId()
-        {
-            return _flagDeliveryTimeId;
-        }
         /// <summary>
         /// Gets or Sets TaxType
         /// </summary>
         [DataMember(Name = "taxType", IsRequired = true, EmitDefaultValue = false)]
-        public string TaxType
-        {
-            get{ return _TaxType;}
-            set
-            {
-                _TaxType = value;
-                _flagTaxType = true;
-            }
-        }
-        private string _TaxType;
-        private bool _flagTaxType;
+        public string TaxType { get; set; }
 
-        /// <summary>
-        /// Returns false as TaxType should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTaxType()
-        {
-            return _flagTaxType;
-        }
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name = "description", EmitDefaultValue = false)]
-        public string Description
-        {
-            get{ return _Description;}
-            set
-            {
-                _Description = value;
-                _flagDescription = true;
-            }
-        }
-        private string _Description;
-        private bool _flagDescription;
+        public string Description { get; set; }
 
-        /// <summary>
-        /// Returns false as Description should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDescription()
-        {
-            return _flagDescription;
-        }
         /// <summary>
         /// Gets or Sets TrackingUrl
         /// </summary>
         [DataMember(Name = "trackingUrl", EmitDefaultValue = false)]
-        public string TrackingUrl
-        {
-            get{ return _TrackingUrl;}
-            set
-            {
-                _TrackingUrl = value;
-                _flagTrackingUrl = true;
-            }
-        }
-        private string _TrackingUrl;
-        private bool _flagTrackingUrl;
+        public string TrackingUrl { get; set; }
 
-        /// <summary>
-        /// Returns false as TrackingUrl should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTrackingUrl()
-        {
-            return _flagTrackingUrl;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -391,170 +177,44 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Gets or Sets DeliveryTime
         /// </summary>
         [DataMember(Name = "deliveryTime", EmitDefaultValue = false)]
-        public DeliveryTime DeliveryTime
-        {
-            get{ return _DeliveryTime;}
-            set
-            {
-                _DeliveryTime = value;
-                _flagDeliveryTime = true;
-            }
-        }
-        private DeliveryTime _DeliveryTime;
-        private bool _flagDeliveryTime;
+        public DeliveryTime DeliveryTime { get; set; }
 
-        /// <summary>
-        /// Returns false as DeliveryTime should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDeliveryTime()
-        {
-            return _flagDeliveryTime;
-        }
         /// <summary>
         /// Gets or Sets AvailabilityRule
         /// </summary>
         [DataMember(Name = "availabilityRule", EmitDefaultValue = false)]
-        public Rule AvailabilityRule
-        {
-            get{ return _AvailabilityRule;}
-            set
-            {
-                _AvailabilityRule = value;
-                _flagAvailabilityRule = true;
-            }
-        }
-        private Rule _AvailabilityRule;
-        private bool _flagAvailabilityRule;
+        public Rule AvailabilityRule { get; set; }
 
-        /// <summary>
-        /// Returns false as AvailabilityRule should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAvailabilityRule()
-        {
-            return _flagAvailabilityRule;
-        }
         /// <summary>
         /// Gets or Sets Prices
         /// </summary>
         [DataMember(Name = "prices", EmitDefaultValue = false)]
-        public ShippingMethodPrice Prices
-        {
-            get{ return _Prices;}
-            set
-            {
-                _Prices = value;
-                _flagPrices = true;
-            }
-        }
-        private ShippingMethodPrice _Prices;
-        private bool _flagPrices;
+        public ShippingMethodPrice Prices { get; set; }
 
-        /// <summary>
-        /// Returns false as Prices should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePrices()
-        {
-            return _flagPrices;
-        }
         /// <summary>
         /// Gets or Sets Media
         /// </summary>
         [DataMember(Name = "media", EmitDefaultValue = false)]
-        public Media Media
-        {
-            get{ return _Media;}
-            set
-            {
-                _Media = value;
-                _flagMedia = true;
-            }
-        }
-        private Media _Media;
-        private bool _flagMedia;
+        public Media Media { get; set; }
 
-        /// <summary>
-        /// Returns false as Media should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMedia()
-        {
-            return _flagMedia;
-        }
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name = "tags", EmitDefaultValue = false)]
-        public Tag Tags
-        {
-            get{ return _Tags;}
-            set
-            {
-                _Tags = value;
-                _flagTags = true;
-            }
-        }
-        private Tag _Tags;
-        private bool _flagTags;
+        public Tag Tags { get; set; }
 
-        /// <summary>
-        /// Returns false as Tags should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTags()
-        {
-            return _flagTags;
-        }
         /// <summary>
         /// Gets or Sets Tax
         /// </summary>
         [DataMember(Name = "tax", EmitDefaultValue = false)]
-        public Tax Tax
-        {
-            get{ return _Tax;}
-            set
-            {
-                _Tax = value;
-                _flagTax = true;
-            }
-        }
-        private Tax _Tax;
-        private bool _flagTax;
+        public Tax Tax { get; set; }
 
-        /// <summary>
-        /// Returns false as Tax should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTax()
-        {
-            return _flagTax;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

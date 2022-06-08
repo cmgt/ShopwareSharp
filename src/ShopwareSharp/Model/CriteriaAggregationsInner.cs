@@ -50,19 +50,19 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("name is a required property for CriteriaAggregationsInner and cannot be null");
             }
-            this._Name = name;
+            this.Name = name;
             // to ensure "type" is required (not null)
             if (type == null)
             {
                 throw new ArgumentNullException("type is a required property for CriteriaAggregationsInner and cannot be null");
             }
-            this._Type = type;
+            this.Type = type;
             // to ensure "field" is required (not null)
             if (field == null)
             {
                 throw new ArgumentNullException("field is a required property for CriteriaAggregationsInner and cannot be null");
             }
-            this._Field = field;
+            this.Field = field;
         }
 
         /// <summary>
@@ -70,76 +70,22 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Give your aggregation an identifier, so you can find it easier</value>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// The type of aggregation
         /// </summary>
         /// <value>The type of aggregation</value>
         [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = false)]
-        public string Type
-        {
-            get{ return _Type;}
-            set
-            {
-                _Type = value;
-                _flagType = true;
-            }
-        }
-        private string _Type;
-        private bool _flagType;
+        public string Type { get; set; }
 
-        /// <summary>
-        /// Returns false as Type should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeType()
-        {
-            return _flagType;
-        }
         /// <summary>
         /// The field you want to aggregate over.
         /// </summary>
         /// <value>The field you want to aggregate over.</value>
         [DataMember(Name = "field", IsRequired = true, EmitDefaultValue = false)]
-        public string Field
-        {
-            get{ return _Field;}
-            set
-            {
-                _Field = value;
-                _flagField = true;
-            }
-        }
-        private string _Field;
-        private bool _flagField;
+        public string Field { get; set; }
 
-        /// <summary>
-        /// Returns false as Field should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeField()
-        {
-            return _flagField;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

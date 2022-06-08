@@ -57,223 +57,65 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("groupId is a required property for PropertyGroupOption and cannot be null");
             }
-            this._GroupId = groupId;
+            this.GroupId = groupId;
             // to ensure "name" is required (not null)
             if (name == null)
             {
                 throw new ArgumentNullException("name is a required property for PropertyGroupOption and cannot be null");
             }
-            this._Name = name;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._Position = position;
-            if (this.Position != null)
-            {
-                this._flagPosition = true;
-            }
-            this._ColorHexCode = colorHexCode;
-            if (this.ColorHexCode != null)
-            {
-                this._flagColorHexCode = true;
-            }
-            this._MediaId = mediaId;
-            if (this.MediaId != null)
-            {
-                this._flagMediaId = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
-            this._Media = media;
-            if (this.Media != null)
-            {
-                this._flagMedia = true;
-            }
-            this._Group = group;
-            if (this.Group != null)
-            {
-                this._flagGroup = true;
-            }
+            this.Name = name;
+            this.Id = id;
+            this.Position = position;
+            this.ColorHexCode = colorHexCode;
+            this.MediaId = mediaId;
+            this.CustomFields = customFields;
+            this.Translated = translated;
+            this.Media = media;
+            this.Group = group;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets GroupId
         /// </summary>
         [DataMember(Name = "groupId", IsRequired = true, EmitDefaultValue = false)]
-        public string GroupId
-        {
-            get{ return _GroupId;}
-            set
-            {
-                _GroupId = value;
-                _flagGroupId = true;
-            }
-        }
-        private string _GroupId;
-        private bool _flagGroupId;
+        public string GroupId { get; set; }
 
-        /// <summary>
-        /// Returns false as GroupId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeGroupId()
-        {
-            return _flagGroupId;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Position
         /// </summary>
         [DataMember(Name = "position", EmitDefaultValue = false)]
-        public long Position
-        {
-            get{ return _Position;}
-            set
-            {
-                _Position = value;
-                _flagPosition = true;
-            }
-        }
-        private long _Position;
-        private bool _flagPosition;
+        public long Position { get; set; }
 
-        /// <summary>
-        /// Returns false as Position should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePosition()
-        {
-            return _flagPosition;
-        }
         /// <summary>
         /// Gets or Sets ColorHexCode
         /// </summary>
         [DataMember(Name = "colorHexCode", EmitDefaultValue = false)]
-        public string ColorHexCode
-        {
-            get{ return _ColorHexCode;}
-            set
-            {
-                _ColorHexCode = value;
-                _flagColorHexCode = true;
-            }
-        }
-        private string _ColorHexCode;
-        private bool _flagColorHexCode;
+        public string ColorHexCode { get; set; }
 
-        /// <summary>
-        /// Returns false as ColorHexCode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeColorHexCode()
-        {
-            return _flagColorHexCode;
-        }
         /// <summary>
         /// Gets or Sets MediaId
         /// </summary>
         [DataMember(Name = "mediaId", EmitDefaultValue = false)]
-        public string MediaId
-        {
-            get{ return _MediaId;}
-            set
-            {
-                _MediaId = value;
-                _flagMediaId = true;
-            }
-        }
-        private string _MediaId;
-        private bool _flagMediaId;
+        public string MediaId { get; set; }
 
-        /// <summary>
-        /// Returns false as MediaId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMediaId()
-        {
-            return _flagMediaId;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -306,74 +148,20 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Gets or Sets Media
         /// </summary>
         [DataMember(Name = "media", EmitDefaultValue = false)]
-        public Media Media
-        {
-            get{ return _Media;}
-            set
-            {
-                _Media = value;
-                _flagMedia = true;
-            }
-        }
-        private Media _Media;
-        private bool _flagMedia;
+        public Media Media { get; set; }
 
-        /// <summary>
-        /// Returns false as Media should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMedia()
-        {
-            return _flagMedia;
-        }
         /// <summary>
         /// Gets or Sets Group
         /// </summary>
         [DataMember(Name = "group", EmitDefaultValue = false)]
-        public PropertyGroup Group
-        {
-            get{ return _Group;}
-            set
-            {
-                _Group = value;
-                _flagGroup = true;
-            }
-        }
-        private PropertyGroup _Group;
-        private bool _flagGroup;
+        public PropertyGroup Group { get; set; }
 
-        /// <summary>
-        /// Returns false as Group should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeGroup()
-        {
-            return _flagGroup;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

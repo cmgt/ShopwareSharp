@@ -56,194 +56,58 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("contentHtml is a required property for MailTemplate and cannot be null");
             }
-            this._ContentHtml = contentHtml;
+            this.ContentHtml = contentHtml;
             // to ensure "contentPlain" is required (not null)
             if (contentPlain == null)
             {
                 throw new ArgumentNullException("contentPlain is a required property for MailTemplate and cannot be null");
             }
-            this._ContentPlain = contentPlain;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._SystemDefault = systemDefault;
-            if (this.SystemDefault != null)
-            {
-                this._flagSystemDefault = true;
-            }
-            this._SenderName = senderName;
-            if (this.SenderName != null)
-            {
-                this._flagSenderName = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
-            this._MailTemplateType = mailTemplateType;
-            if (this.MailTemplateType != null)
-            {
-                this._flagMailTemplateType = true;
-            }
-            this._Media = media;
-            if (this.Media != null)
-            {
-                this._flagMedia = true;
-            }
+            this.ContentPlain = contentPlain;
+            this.Id = id;
+            this.SystemDefault = systemDefault;
+            this.SenderName = senderName;
+            this.CustomFields = customFields;
+            this.Translated = translated;
+            this.MailTemplateType = mailTemplateType;
+            this.Media = media;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets SystemDefault
         /// </summary>
         [DataMember(Name = "systemDefault", EmitDefaultValue = true)]
-        public bool SystemDefault
-        {
-            get{ return _SystemDefault;}
-            set
-            {
-                _SystemDefault = value;
-                _flagSystemDefault = true;
-            }
-        }
-        private bool _SystemDefault;
-        private bool _flagSystemDefault;
+        public bool SystemDefault { get; set; }
 
-        /// <summary>
-        /// Returns false as SystemDefault should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSystemDefault()
-        {
-            return _flagSystemDefault;
-        }
         /// <summary>
         /// Gets or Sets SenderName
         /// </summary>
         [DataMember(Name = "senderName", EmitDefaultValue = false)]
-        public string SenderName
-        {
-            get{ return _SenderName;}
-            set
-            {
-                _SenderName = value;
-                _flagSenderName = true;
-            }
-        }
-        private string _SenderName;
-        private bool _flagSenderName;
+        public string SenderName { get; set; }
 
-        /// <summary>
-        /// Returns false as SenderName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSenderName()
-        {
-            return _flagSenderName;
-        }
         /// <summary>
         /// Gets or Sets ContentHtml
         /// </summary>
         [DataMember(Name = "contentHtml", IsRequired = true, EmitDefaultValue = false)]
-        public string ContentHtml
-        {
-            get{ return _ContentHtml;}
-            set
-            {
-                _ContentHtml = value;
-                _flagContentHtml = true;
-            }
-        }
-        private string _ContentHtml;
-        private bool _flagContentHtml;
+        public string ContentHtml { get; set; }
 
-        /// <summary>
-        /// Returns false as ContentHtml should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeContentHtml()
-        {
-            return _flagContentHtml;
-        }
         /// <summary>
         /// Gets or Sets ContentPlain
         /// </summary>
         [DataMember(Name = "contentPlain", IsRequired = true, EmitDefaultValue = false)]
-        public string ContentPlain
-        {
-            get{ return _ContentPlain;}
-            set
-            {
-                _ContentPlain = value;
-                _flagContentPlain = true;
-            }
-        }
-        private string _ContentPlain;
-        private bool _flagContentPlain;
+        public string ContentPlain { get; set; }
 
-        /// <summary>
-        /// Returns false as ContentPlain should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeContentPlain()
-        {
-            return _flagContentPlain;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -276,74 +140,20 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Gets or Sets MailTemplateType
         /// </summary>
         [DataMember(Name = "mailTemplateType", EmitDefaultValue = false)]
-        public MailTemplateType MailTemplateType
-        {
-            get{ return _MailTemplateType;}
-            set
-            {
-                _MailTemplateType = value;
-                _flagMailTemplateType = true;
-            }
-        }
-        private MailTemplateType _MailTemplateType;
-        private bool _flagMailTemplateType;
+        public MailTemplateType MailTemplateType { get; set; }
 
-        /// <summary>
-        /// Returns false as MailTemplateType should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMailTemplateType()
-        {
-            return _flagMailTemplateType;
-        }
         /// <summary>
         /// Gets or Sets Media
         /// </summary>
         [DataMember(Name = "media", EmitDefaultValue = false)]
-        public MailTemplateMedia Media
-        {
-            get{ return _Media;}
-            set
-            {
-                _Media = value;
-                _flagMedia = true;
-            }
-        }
-        private MailTemplateMedia _Media;
-        private bool _flagMedia;
+        public MailTemplateMedia Media { get; set; }
 
-        /// <summary>
-        /// Returns false as Media should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMedia()
-        {
-            return _flagMedia;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

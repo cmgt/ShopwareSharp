@@ -41,125 +41,37 @@ namespace ShopwareSharp.Model
         /// <param name="elements">elements.</param>
         public ProductListingResultAllOf(ProductListingResultAllOfCurrentFilters currentFilters = default(ProductListingResultAllOfCurrentFilters), List<Object> availableSortings = default(List<Object>), string sorting = default(string), List<Product> elements = default(List<Product>))
         {
-            this._CurrentFilters = currentFilters;
-            if (this.CurrentFilters != null)
-            {
-                this._flagCurrentFilters = true;
-            }
-            this._AvailableSortings = availableSortings;
-            if (this.AvailableSortings != null)
-            {
-                this._flagAvailableSortings = true;
-            }
-            this._Sorting = sorting;
-            if (this.Sorting != null)
-            {
-                this._flagSorting = true;
-            }
-            this._Elements = elements;
-            if (this.Elements != null)
-            {
-                this._flagElements = true;
-            }
+            this.CurrentFilters = currentFilters;
+            this.AvailableSortings = availableSortings;
+            this.Sorting = sorting;
+            this.Elements = elements;
         }
 
         /// <summary>
         /// Gets or Sets CurrentFilters
         /// </summary>
         [DataMember(Name = "currentFilters", EmitDefaultValue = false)]
-        public ProductListingResultAllOfCurrentFilters CurrentFilters
-        {
-            get{ return _CurrentFilters;}
-            set
-            {
-                _CurrentFilters = value;
-                _flagCurrentFilters = true;
-            }
-        }
-        private ProductListingResultAllOfCurrentFilters _CurrentFilters;
-        private bool _flagCurrentFilters;
+        public ProductListingResultAllOfCurrentFilters CurrentFilters { get; set; }
 
-        /// <summary>
-        /// Returns false as CurrentFilters should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCurrentFilters()
-        {
-            return _flagCurrentFilters;
-        }
         /// <summary>
         /// Contains the available sorting. These can be used to show a sorting select-box in the product listing.
         /// </summary>
         /// <value>Contains the available sorting. These can be used to show a sorting select-box in the product listing.</value>
         [DataMember(Name = "availableSortings", EmitDefaultValue = false)]
-        public List<Object> AvailableSortings
-        {
-            get{ return _AvailableSortings;}
-            set
-            {
-                _AvailableSortings = value;
-                _flagAvailableSortings = true;
-            }
-        }
-        private List<Object> _AvailableSortings;
-        private bool _flagAvailableSortings;
+        public List<Object> AvailableSortings { get; set; }
 
-        /// <summary>
-        /// Returns false as AvailableSortings should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAvailableSortings()
-        {
-            return _flagAvailableSortings;
-        }
         /// <summary>
         /// Gets or Sets Sorting
         /// </summary>
         [DataMember(Name = "sorting", EmitDefaultValue = false)]
-        public string Sorting
-        {
-            get{ return _Sorting;}
-            set
-            {
-                _Sorting = value;
-                _flagSorting = true;
-            }
-        }
-        private string _Sorting;
-        private bool _flagSorting;
+        public string Sorting { get; set; }
 
-        /// <summary>
-        /// Returns false as Sorting should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSorting()
-        {
-            return _flagSorting;
-        }
         /// <summary>
         /// Gets or Sets Elements
         /// </summary>
         [DataMember(Name = "elements", EmitDefaultValue = false)]
-        public List<Product> Elements
-        {
-            get{ return _Elements;}
-            set
-            {
-                _Elements = value;
-                _flagElements = true;
-            }
-        }
-        private List<Product> _Elements;
-        private bool _flagElements;
+        public List<Product> Elements { get; set; }
 
-        /// <summary>
-        /// Returns false as Elements should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeElements()
-        {
-            return _flagElements;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

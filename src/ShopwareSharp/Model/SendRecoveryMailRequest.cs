@@ -49,13 +49,13 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("email is a required property for SendRecoveryMailRequest and cannot be null");
             }
-            this._Email = email;
+            this.Email = email;
             // to ensure "storefrontUrl" is required (not null)
             if (storefrontUrl == null)
             {
                 throw new ArgumentNullException("storefrontUrl is a required property for SendRecoveryMailRequest and cannot be null");
             }
-            this._StorefrontUrl = storefrontUrl;
+            this.StorefrontUrl = storefrontUrl;
         }
 
         /// <summary>
@@ -63,51 +63,15 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>E-Mail address to identify the customer</value>
         [DataMember(Name = "email", IsRequired = true, EmitDefaultValue = false)]
-        public string Email
-        {
-            get{ return _Email;}
-            set
-            {
-                _Email = value;
-                _flagEmail = true;
-            }
-        }
-        private string _Email;
-        private bool _flagEmail;
+        public string Email { get; set; }
 
-        /// <summary>
-        /// Returns false as Email should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeEmail()
-        {
-            return _flagEmail;
-        }
         /// <summary>
         /// URL of the storefront to use for the generated reset link. It has to be a domain that is configured in the sales channel domain settings.
         /// </summary>
         /// <value>URL of the storefront to use for the generated reset link. It has to be a domain that is configured in the sales channel domain settings.</value>
         [DataMember(Name = "storefrontUrl", IsRequired = true, EmitDefaultValue = false)]
-        public string StorefrontUrl
-        {
-            get{ return _StorefrontUrl;}
-            set
-            {
-                _StorefrontUrl = value;
-                _flagStorefrontUrl = true;
-            }
-        }
-        private string _StorefrontUrl;
-        private bool _flagStorefrontUrl;
+        public string StorefrontUrl { get; set; }
 
-        /// <summary>
-        /// Returns false as StorefrontUrl should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStorefrontUrl()
-        {
-            return _flagStorefrontUrl;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

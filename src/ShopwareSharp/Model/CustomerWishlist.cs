@@ -50,91 +50,29 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("customerId is a required property for CustomerWishlist and cannot be null");
             }
-            this._CustomerId = customerId;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
+            this.CustomerId = customerId;
+            this.Id = id;
+            this.CustomFields = customFields;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets CustomerId
         /// </summary>
         [DataMember(Name = "customerId", IsRequired = true, EmitDefaultValue = false)]
-        public string CustomerId
-        {
-            get{ return _CustomerId;}
-            set
-            {
-                _CustomerId = value;
-                _flagCustomerId = true;
-            }
-        }
-        private string _CustomerId;
-        private bool _flagCustomerId;
+        public string CustomerId { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomerId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomerId()
-        {
-            return _flagCustomerId;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>

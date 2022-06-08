@@ -52,443 +52,113 @@ namespace ShopwareSharp.Model
         /// <param name="tags">tags.</param>
         public ShippingMethodPageRouteResponseInner(string name = default(string), bool active = default(bool), string description = default(string), string deliveryTimeId = default(string), ShippingMethodPageRouteResponseInnerDeliveryTime deliveryTime = default(ShippingMethodPageRouteResponseInnerDeliveryTime), List<ShippingMethodPageRouteResponseInnerTranslationsInner> translations = default(List<ShippingMethodPageRouteResponseInnerTranslationsInner>), List<ShippingMethodPageRouteResponseInnerOrderDeliveriesInner> orderDeliveries = default(List<ShippingMethodPageRouteResponseInnerOrderDeliveriesInner>), List<ShippingMethodPageRouteResponseInnerSalesChannelDefaultAssignmentsInner> salesChannelDefaultAssignments = default(List<ShippingMethodPageRouteResponseInnerSalesChannelDefaultAssignmentsInner>), List<ShippingMethodPageRouteResponseInnerSalesChannelDefaultAssignmentsInner> salesChannels = default(List<ShippingMethodPageRouteResponseInnerSalesChannelDefaultAssignmentsInner>), ShippingMethodPageRouteResponseInnerAvailabilityRule availabilityRule = default(ShippingMethodPageRouteResponseInnerAvailabilityRule), string availabilityRuleId = default(string), List<ShippingMethodPageRouteResponseInnerPricesInner> prices = default(List<ShippingMethodPageRouteResponseInnerPricesInner>), string mediaId = default(string), ShippingMethodPageRouteResponseInnerMedia media = default(ShippingMethodPageRouteResponseInnerMedia), List<ShippingMethodPageRouteResponseInnerTagsInner> tags = default(List<ShippingMethodPageRouteResponseInnerTagsInner>))
         {
-            this._Name = name;
-            if (this.Name != null)
-            {
-                this._flagName = true;
-            }
-            this._Active = active;
-            if (this.Active != null)
-            {
-                this._flagActive = true;
-            }
-            this._Description = description;
-            if (this.Description != null)
-            {
-                this._flagDescription = true;
-            }
-            this._DeliveryTimeId = deliveryTimeId;
-            if (this.DeliveryTimeId != null)
-            {
-                this._flagDeliveryTimeId = true;
-            }
-            this._DeliveryTime = deliveryTime;
-            if (this.DeliveryTime != null)
-            {
-                this._flagDeliveryTime = true;
-            }
-            this._Translations = translations;
-            if (this.Translations != null)
-            {
-                this._flagTranslations = true;
-            }
-            this._OrderDeliveries = orderDeliveries;
-            if (this.OrderDeliveries != null)
-            {
-                this._flagOrderDeliveries = true;
-            }
-            this._SalesChannelDefaultAssignments = salesChannelDefaultAssignments;
-            if (this.SalesChannelDefaultAssignments != null)
-            {
-                this._flagSalesChannelDefaultAssignments = true;
-            }
-            this._SalesChannels = salesChannels;
-            if (this.SalesChannels != null)
-            {
-                this._flagSalesChannels = true;
-            }
-            this._AvailabilityRule = availabilityRule;
-            if (this.AvailabilityRule != null)
-            {
-                this._flagAvailabilityRule = true;
-            }
-            this._AvailabilityRuleId = availabilityRuleId;
-            if (this.AvailabilityRuleId != null)
-            {
-                this._flagAvailabilityRuleId = true;
-            }
-            this._Prices = prices;
-            if (this.Prices != null)
-            {
-                this._flagPrices = true;
-            }
-            this._MediaId = mediaId;
-            if (this.MediaId != null)
-            {
-                this._flagMediaId = true;
-            }
-            this._Media = media;
-            if (this.Media != null)
-            {
-                this._flagMedia = true;
-            }
-            this._Tags = tags;
-            if (this.Tags != null)
-            {
-                this._flagTags = true;
-            }
+            this.Name = name;
+            this.Active = active;
+            this.Description = description;
+            this.DeliveryTimeId = deliveryTimeId;
+            this.DeliveryTime = deliveryTime;
+            this.Translations = translations;
+            this.OrderDeliveries = orderDeliveries;
+            this.SalesChannelDefaultAssignments = salesChannelDefaultAssignments;
+            this.SalesChannels = salesChannels;
+            this.AvailabilityRule = availabilityRule;
+            this.AvailabilityRuleId = availabilityRuleId;
+            this.Prices = prices;
+            this.MediaId = mediaId;
+            this.Media = media;
+            this.Tags = tags;
         }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", EmitDefaultValue = true)]
-        public bool Active
-        {
-            get{ return _Active;}
-            set
-            {
-                _Active = value;
-                _flagActive = true;
-            }
-        }
-        private bool _Active;
-        private bool _flagActive;
+        public bool Active { get; set; }
 
-        /// <summary>
-        /// Returns false as Active should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeActive()
-        {
-            return _flagActive;
-        }
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name = "description", EmitDefaultValue = false)]
-        public string Description
-        {
-            get{ return _Description;}
-            set
-            {
-                _Description = value;
-                _flagDescription = true;
-            }
-        }
-        private string _Description;
-        private bool _flagDescription;
+        public string Description { get; set; }
 
-        /// <summary>
-        /// Returns false as Description should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDescription()
-        {
-            return _flagDescription;
-        }
         /// <summary>
         /// Gets or Sets DeliveryTimeId
         /// </summary>
         [DataMember(Name = "deliveryTimeId", EmitDefaultValue = false)]
-        public string DeliveryTimeId
-        {
-            get{ return _DeliveryTimeId;}
-            set
-            {
-                _DeliveryTimeId = value;
-                _flagDeliveryTimeId = true;
-            }
-        }
-        private string _DeliveryTimeId;
-        private bool _flagDeliveryTimeId;
+        public string DeliveryTimeId { get; set; }
 
-        /// <summary>
-        /// Returns false as DeliveryTimeId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDeliveryTimeId()
-        {
-            return _flagDeliveryTimeId;
-        }
         /// <summary>
         /// Gets or Sets DeliveryTime
         /// </summary>
         [DataMember(Name = "deliveryTime", EmitDefaultValue = false)]
-        public ShippingMethodPageRouteResponseInnerDeliveryTime DeliveryTime
-        {
-            get{ return _DeliveryTime;}
-            set
-            {
-                _DeliveryTime = value;
-                _flagDeliveryTime = true;
-            }
-        }
-        private ShippingMethodPageRouteResponseInnerDeliveryTime _DeliveryTime;
-        private bool _flagDeliveryTime;
+        public ShippingMethodPageRouteResponseInnerDeliveryTime DeliveryTime { get; set; }
 
-        /// <summary>
-        /// Returns false as DeliveryTime should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDeliveryTime()
-        {
-            return _flagDeliveryTime;
-        }
         /// <summary>
         /// Gets or Sets Translations
         /// </summary>
         [DataMember(Name = "translations", EmitDefaultValue = false)]
-        public List<ShippingMethodPageRouteResponseInnerTranslationsInner> Translations
-        {
-            get{ return _Translations;}
-            set
-            {
-                _Translations = value;
-                _flagTranslations = true;
-            }
-        }
-        private List<ShippingMethodPageRouteResponseInnerTranslationsInner> _Translations;
-        private bool _flagTranslations;
+        public List<ShippingMethodPageRouteResponseInnerTranslationsInner> Translations { get; set; }
 
-        /// <summary>
-        /// Returns false as Translations should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslations()
-        {
-            return _flagTranslations;
-        }
         /// <summary>
         /// Gets or Sets OrderDeliveries
         /// </summary>
         [DataMember(Name = "orderDeliveries", EmitDefaultValue = false)]
-        public List<ShippingMethodPageRouteResponseInnerOrderDeliveriesInner> OrderDeliveries
-        {
-            get{ return _OrderDeliveries;}
-            set
-            {
-                _OrderDeliveries = value;
-                _flagOrderDeliveries = true;
-            }
-        }
-        private List<ShippingMethodPageRouteResponseInnerOrderDeliveriesInner> _OrderDeliveries;
-        private bool _flagOrderDeliveries;
+        public List<ShippingMethodPageRouteResponseInnerOrderDeliveriesInner> OrderDeliveries { get; set; }
 
-        /// <summary>
-        /// Returns false as OrderDeliveries should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrderDeliveries()
-        {
-            return _flagOrderDeliveries;
-        }
         /// <summary>
         /// Gets or Sets SalesChannelDefaultAssignments
         /// </summary>
         [DataMember(Name = "salesChannelDefaultAssignments", EmitDefaultValue = false)]
-        public List<ShippingMethodPageRouteResponseInnerSalesChannelDefaultAssignmentsInner> SalesChannelDefaultAssignments
-        {
-            get{ return _SalesChannelDefaultAssignments;}
-            set
-            {
-                _SalesChannelDefaultAssignments = value;
-                _flagSalesChannelDefaultAssignments = true;
-            }
-        }
-        private List<ShippingMethodPageRouteResponseInnerSalesChannelDefaultAssignmentsInner> _SalesChannelDefaultAssignments;
-        private bool _flagSalesChannelDefaultAssignments;
+        public List<ShippingMethodPageRouteResponseInnerSalesChannelDefaultAssignmentsInner> SalesChannelDefaultAssignments { get; set; }
 
-        /// <summary>
-        /// Returns false as SalesChannelDefaultAssignments should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalesChannelDefaultAssignments()
-        {
-            return _flagSalesChannelDefaultAssignments;
-        }
         /// <summary>
         /// Gets or Sets SalesChannels
         /// </summary>
         [DataMember(Name = "salesChannels", EmitDefaultValue = false)]
-        public List<ShippingMethodPageRouteResponseInnerSalesChannelDefaultAssignmentsInner> SalesChannels
-        {
-            get{ return _SalesChannels;}
-            set
-            {
-                _SalesChannels = value;
-                _flagSalesChannels = true;
-            }
-        }
-        private List<ShippingMethodPageRouteResponseInnerSalesChannelDefaultAssignmentsInner> _SalesChannels;
-        private bool _flagSalesChannels;
+        public List<ShippingMethodPageRouteResponseInnerSalesChannelDefaultAssignmentsInner> SalesChannels { get; set; }
 
-        /// <summary>
-        /// Returns false as SalesChannels should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalesChannels()
-        {
-            return _flagSalesChannels;
-        }
         /// <summary>
         /// Gets or Sets AvailabilityRule
         /// </summary>
         [DataMember(Name = "availabilityRule", EmitDefaultValue = false)]
-        public ShippingMethodPageRouteResponseInnerAvailabilityRule AvailabilityRule
-        {
-            get{ return _AvailabilityRule;}
-            set
-            {
-                _AvailabilityRule = value;
-                _flagAvailabilityRule = true;
-            }
-        }
-        private ShippingMethodPageRouteResponseInnerAvailabilityRule _AvailabilityRule;
-        private bool _flagAvailabilityRule;
+        public ShippingMethodPageRouteResponseInnerAvailabilityRule AvailabilityRule { get; set; }
 
-        /// <summary>
-        /// Returns false as AvailabilityRule should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAvailabilityRule()
-        {
-            return _flagAvailabilityRule;
-        }
         /// <summary>
         /// Gets or Sets AvailabilityRuleId
         /// </summary>
         [DataMember(Name = "availabilityRuleId", EmitDefaultValue = false)]
-        public string AvailabilityRuleId
-        {
-            get{ return _AvailabilityRuleId;}
-            set
-            {
-                _AvailabilityRuleId = value;
-                _flagAvailabilityRuleId = true;
-            }
-        }
-        private string _AvailabilityRuleId;
-        private bool _flagAvailabilityRuleId;
+        public string AvailabilityRuleId { get; set; }
 
-        /// <summary>
-        /// Returns false as AvailabilityRuleId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAvailabilityRuleId()
-        {
-            return _flagAvailabilityRuleId;
-        }
         /// <summary>
         /// Gets or Sets Prices
         /// </summary>
         [DataMember(Name = "prices", EmitDefaultValue = false)]
-        public List<ShippingMethodPageRouteResponseInnerPricesInner> Prices
-        {
-            get{ return _Prices;}
-            set
-            {
-                _Prices = value;
-                _flagPrices = true;
-            }
-        }
-        private List<ShippingMethodPageRouteResponseInnerPricesInner> _Prices;
-        private bool _flagPrices;
+        public List<ShippingMethodPageRouteResponseInnerPricesInner> Prices { get; set; }
 
-        /// <summary>
-        /// Returns false as Prices should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePrices()
-        {
-            return _flagPrices;
-        }
         /// <summary>
         /// Gets or Sets MediaId
         /// </summary>
         [DataMember(Name = "mediaId", EmitDefaultValue = false)]
-        public string MediaId
-        {
-            get{ return _MediaId;}
-            set
-            {
-                _MediaId = value;
-                _flagMediaId = true;
-            }
-        }
-        private string _MediaId;
-        private bool _flagMediaId;
+        public string MediaId { get; set; }
 
-        /// <summary>
-        /// Returns false as MediaId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMediaId()
-        {
-            return _flagMediaId;
-        }
         /// <summary>
         /// Gets or Sets Media
         /// </summary>
         [DataMember(Name = "media", EmitDefaultValue = false)]
-        public ShippingMethodPageRouteResponseInnerMedia Media
-        {
-            get{ return _Media;}
-            set
-            {
-                _Media = value;
-                _flagMedia = true;
-            }
-        }
-        private ShippingMethodPageRouteResponseInnerMedia _Media;
-        private bool _flagMedia;
+        public ShippingMethodPageRouteResponseInnerMedia Media { get; set; }
 
-        /// <summary>
-        /// Returns false as Media should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMedia()
-        {
-            return _flagMedia;
-        }
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name = "tags", EmitDefaultValue = false)]
-        public List<ShippingMethodPageRouteResponseInnerTagsInner> Tags
-        {
-            get{ return _Tags;}
-            set
-            {
-                _Tags = value;
-                _flagTags = true;
-            }
-        }
-        private List<ShippingMethodPageRouteResponseInnerTagsInner> _Tags;
-        private bool _flagTags;
+        public List<ShippingMethodPageRouteResponseInnerTagsInner> Tags { get; set; }
 
-        /// <summary>
-        /// Returns false as Tags should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTags()
-        {
-            return _flagTags;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

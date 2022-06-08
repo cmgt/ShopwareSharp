@@ -39,66 +39,22 @@ namespace ShopwareSharp.Model
         /// <param name="displayGross">displayGross.</param>
         public SalesChannelContextAllOfCurrentCustomerGroup(string name = default(string), bool displayGross = default(bool))
         {
-            this._Name = name;
-            if (this.Name != null)
-            {
-                this._flagName = true;
-            }
-            this._DisplayGross = displayGross;
-            if (this.DisplayGross != null)
-            {
-                this._flagDisplayGross = true;
-            }
+            this.Name = name;
+            this.DisplayGross = displayGross;
         }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets DisplayGross
         /// </summary>
         [DataMember(Name = "displayGross", EmitDefaultValue = true)]
-        public bool DisplayGross
-        {
-            get{ return _DisplayGross;}
-            set
-            {
-                _DisplayGross = value;
-                _flagDisplayGross = true;
-            }
-        }
-        private bool _DisplayGross;
-        private bool _flagDisplayGross;
+        public bool DisplayGross { get; set; }
 
-        /// <summary>
-        /// Returns false as DisplayGross should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDisplayGross()
-        {
-            return _flagDisplayGross;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

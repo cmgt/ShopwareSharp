@@ -52,122 +52,42 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("key is a required property for ProductSorting and cannot be null");
             }
-            this._Key = key;
-            this._Priority = priority;
+            this.Key = key;
+            this.Priority = priority;
             // to ensure "label" is required (not null)
             if (label == null)
             {
                 throw new ArgumentNullException("label is a required property for ProductSorting and cannot be null");
             }
-            this._Label = label;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
+            this.Label = label;
+            this.Id = id;
+            this.Translated = translated;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Key
         /// </summary>
         [DataMember(Name = "key", IsRequired = true, EmitDefaultValue = false)]
-        public string Key
-        {
-            get{ return _Key;}
-            set
-            {
-                _Key = value;
-                _flagKey = true;
-            }
-        }
-        private string _Key;
-        private bool _flagKey;
+        public string Key { get; set; }
 
-        /// <summary>
-        /// Returns false as Key should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeKey()
-        {
-            return _flagKey;
-        }
         /// <summary>
         /// Gets or Sets Priority
         /// </summary>
         [DataMember(Name = "priority", IsRequired = true, EmitDefaultValue = false)]
-        public long Priority
-        {
-            get{ return _Priority;}
-            set
-            {
-                _Priority = value;
-                _flagPriority = true;
-            }
-        }
-        private long _Priority;
-        private bool _flagPriority;
+        public long Priority { get; set; }
 
-        /// <summary>
-        /// Returns false as Priority should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePriority()
-        {
-            return _flagPriority;
-        }
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
         [DataMember(Name = "label", IsRequired = true, EmitDefaultValue = false)]
-        public string Label
-        {
-            get{ return _Label;}
-            set
-            {
-                _Label = value;
-                _flagLabel = true;
-            }
-        }
-        private string _Label;
-        private bool _flagLabel;
+        public string Label { get; set; }
 
-        /// <summary>
-        /// Returns false as Label should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLabel()
-        {
-            return _flagLabel;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -200,26 +120,8 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

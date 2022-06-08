@@ -50,91 +50,29 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("productId is a required property for CustomerWishlistProduct and cannot be null");
             }
-            this._ProductId = productId;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._ProductVersionId = productVersionId;
-            if (this.ProductVersionId != null)
-            {
-                this._flagProductVersionId = true;
-            }
+            this.ProductId = productId;
+            this.Id = id;
+            this.ProductVersionId = productVersionId;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets ProductId
         /// </summary>
         [DataMember(Name = "productId", IsRequired = true, EmitDefaultValue = false)]
-        public string ProductId
-        {
-            get{ return _ProductId;}
-            set
-            {
-                _ProductId = value;
-                _flagProductId = true;
-            }
-        }
-        private string _ProductId;
-        private bool _flagProductId;
+        public string ProductId { get; set; }
 
-        /// <summary>
-        /// Returns false as ProductId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProductId()
-        {
-            return _flagProductId;
-        }
         /// <summary>
         /// Gets or Sets ProductVersionId
         /// </summary>
         [DataMember(Name = "productVersionId", EmitDefaultValue = false)]
-        public string ProductVersionId
-        {
-            get{ return _ProductVersionId;}
-            set
-            {
-                _ProductVersionId = value;
-                _flagProductVersionId = true;
-            }
-        }
-        private string _ProductVersionId;
-        private bool _flagProductVersionId;
+        public string ProductVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as ProductVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProductVersionId()
-        {
-            return _flagProductVersionId;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>

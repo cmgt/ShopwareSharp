@@ -64,381 +64,117 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("documentTypeId is a required property for Document and cannot be null");
             }
-            this._DocumentTypeId = documentTypeId;
+            this.DocumentTypeId = documentTypeId;
             // to ensure "fileType" is required (not null)
             if (fileType == null)
             {
                 throw new ArgumentNullException("fileType is a required property for Document and cannot be null");
             }
-            this._FileType = fileType;
+            this.FileType = fileType;
             // to ensure "orderId" is required (not null)
             if (orderId == null)
             {
                 throw new ArgumentNullException("orderId is a required property for Document and cannot be null");
             }
-            this._OrderId = orderId;
+            this.OrderId = orderId;
             // to ensure "config" is required (not null)
             if (config == null)
             {
                 throw new ArgumentNullException("config is a required property for Document and cannot be null");
             }
-            this._Config = config;
+            this.Config = config;
             // to ensure "deepLinkCode" is required (not null)
             if (deepLinkCode == null)
             {
                 throw new ArgumentNullException("deepLinkCode is a required property for Document and cannot be null");
             }
-            this._DeepLinkCode = deepLinkCode;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._ReferencedDocumentId = referencedDocumentId;
-            if (this.ReferencedDocumentId != null)
-            {
-                this._flagReferencedDocumentId = true;
-            }
-            this._DocumentMediaFileId = documentMediaFileId;
-            if (this.DocumentMediaFileId != null)
-            {
-                this._flagDocumentMediaFileId = true;
-            }
-            this._OrderVersionId = orderVersionId;
-            if (this.OrderVersionId != null)
-            {
-                this._flagOrderVersionId = true;
-            }
-            this._Sent = sent;
-            if (this.Sent != null)
-            {
-                this._flagSent = true;
-            }
-            this._Static = _static;
-            if (this.Static != null)
-            {
-                this._flagStatic = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._DocumentType = documentType;
-            if (this.DocumentType != null)
-            {
-                this._flagDocumentType = true;
-            }
-            this._Order = order;
-            if (this.Order != null)
-            {
-                this._flagOrder = true;
-            }
-            this._ReferencedDocument = referencedDocument;
-            if (this.ReferencedDocument != null)
-            {
-                this._flagReferencedDocument = true;
-            }
-            this._DependentDocuments = dependentDocuments;
-            if (this.DependentDocuments != null)
-            {
-                this._flagDependentDocuments = true;
-            }
-            this._DocumentMediaFile = documentMediaFile;
-            if (this.DocumentMediaFile != null)
-            {
-                this._flagDocumentMediaFile = true;
-            }
+            this.DeepLinkCode = deepLinkCode;
+            this.Id = id;
+            this.ReferencedDocumentId = referencedDocumentId;
+            this.DocumentMediaFileId = documentMediaFileId;
+            this.OrderVersionId = orderVersionId;
+            this.Sent = sent;
+            this.Static = _static;
+            this.CustomFields = customFields;
+            this.DocumentType = documentType;
+            this.Order = order;
+            this.ReferencedDocument = referencedDocument;
+            this.DependentDocuments = dependentDocuments;
+            this.DocumentMediaFile = documentMediaFile;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets DocumentTypeId
         /// </summary>
         [DataMember(Name = "documentTypeId", IsRequired = true, EmitDefaultValue = false)]
-        public string DocumentTypeId
-        {
-            get{ return _DocumentTypeId;}
-            set
-            {
-                _DocumentTypeId = value;
-                _flagDocumentTypeId = true;
-            }
-        }
-        private string _DocumentTypeId;
-        private bool _flagDocumentTypeId;
+        public string DocumentTypeId { get; set; }
 
-        /// <summary>
-        /// Returns false as DocumentTypeId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDocumentTypeId()
-        {
-            return _flagDocumentTypeId;
-        }
         /// <summary>
         /// Gets or Sets FileType
         /// </summary>
         [DataMember(Name = "fileType", IsRequired = true, EmitDefaultValue = false)]
-        public string FileType
-        {
-            get{ return _FileType;}
-            set
-            {
-                _FileType = value;
-                _flagFileType = true;
-            }
-        }
-        private string _FileType;
-        private bool _flagFileType;
+        public string FileType { get; set; }
 
-        /// <summary>
-        /// Returns false as FileType should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFileType()
-        {
-            return _flagFileType;
-        }
         /// <summary>
         /// Gets or Sets ReferencedDocumentId
         /// </summary>
         [DataMember(Name = "referencedDocumentId", EmitDefaultValue = false)]
-        public string ReferencedDocumentId
-        {
-            get{ return _ReferencedDocumentId;}
-            set
-            {
-                _ReferencedDocumentId = value;
-                _flagReferencedDocumentId = true;
-            }
-        }
-        private string _ReferencedDocumentId;
-        private bool _flagReferencedDocumentId;
+        public string ReferencedDocumentId { get; set; }
 
-        /// <summary>
-        /// Returns false as ReferencedDocumentId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeReferencedDocumentId()
-        {
-            return _flagReferencedDocumentId;
-        }
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>
         [DataMember(Name = "orderId", IsRequired = true, EmitDefaultValue = false)]
-        public string OrderId
-        {
-            get{ return _OrderId;}
-            set
-            {
-                _OrderId = value;
-                _flagOrderId = true;
-            }
-        }
-        private string _OrderId;
-        private bool _flagOrderId;
+        public string OrderId { get; set; }
 
-        /// <summary>
-        /// Returns false as OrderId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrderId()
-        {
-            return _flagOrderId;
-        }
         /// <summary>
         /// Gets or Sets DocumentMediaFileId
         /// </summary>
         [DataMember(Name = "documentMediaFileId", EmitDefaultValue = false)]
-        public string DocumentMediaFileId
-        {
-            get{ return _DocumentMediaFileId;}
-            set
-            {
-                _DocumentMediaFileId = value;
-                _flagDocumentMediaFileId = true;
-            }
-        }
-        private string _DocumentMediaFileId;
-        private bool _flagDocumentMediaFileId;
+        public string DocumentMediaFileId { get; set; }
 
-        /// <summary>
-        /// Returns false as DocumentMediaFileId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDocumentMediaFileId()
-        {
-            return _flagDocumentMediaFileId;
-        }
         /// <summary>
         /// Gets or Sets OrderVersionId
         /// </summary>
         [DataMember(Name = "orderVersionId", EmitDefaultValue = false)]
-        public string OrderVersionId
-        {
-            get{ return _OrderVersionId;}
-            set
-            {
-                _OrderVersionId = value;
-                _flagOrderVersionId = true;
-            }
-        }
-        private string _OrderVersionId;
-        private bool _flagOrderVersionId;
+        public string OrderVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as OrderVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrderVersionId()
-        {
-            return _flagOrderVersionId;
-        }
         /// <summary>
         /// Gets or Sets Config
         /// </summary>
         [DataMember(Name = "config", IsRequired = true, EmitDefaultValue = false)]
-        public Object Config
-        {
-            get{ return _Config;}
-            set
-            {
-                _Config = value;
-                _flagConfig = true;
-            }
-        }
-        private Object _Config;
-        private bool _flagConfig;
+        public Object Config { get; set; }
 
-        /// <summary>
-        /// Returns false as Config should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeConfig()
-        {
-            return _flagConfig;
-        }
         /// <summary>
         /// Gets or Sets Sent
         /// </summary>
         [DataMember(Name = "sent", EmitDefaultValue = true)]
-        public bool Sent
-        {
-            get{ return _Sent;}
-            set
-            {
-                _Sent = value;
-                _flagSent = true;
-            }
-        }
-        private bool _Sent;
-        private bool _flagSent;
+        public bool Sent { get; set; }
 
-        /// <summary>
-        /// Returns false as Sent should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSent()
-        {
-            return _flagSent;
-        }
         /// <summary>
         /// Gets or Sets Static
         /// </summary>
         [DataMember(Name = "static", EmitDefaultValue = true)]
-        public bool Static
-        {
-            get{ return _Static;}
-            set
-            {
-                _Static = value;
-                _flagStatic = true;
-            }
-        }
-        private bool _Static;
-        private bool _flagStatic;
+        public bool Static { get; set; }
 
-        /// <summary>
-        /// Returns false as Static should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStatic()
-        {
-            return _flagStatic;
-        }
         /// <summary>
         /// Gets or Sets DeepLinkCode
         /// </summary>
         [DataMember(Name = "deepLinkCode", IsRequired = true, EmitDefaultValue = false)]
-        public string DeepLinkCode
-        {
-            get{ return _DeepLinkCode;}
-            set
-            {
-                _DeepLinkCode = value;
-                _flagDeepLinkCode = true;
-            }
-        }
-        private string _DeepLinkCode;
-        private bool _flagDeepLinkCode;
+        public string DeepLinkCode { get; set; }
 
-        /// <summary>
-        /// Returns false as DeepLinkCode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDeepLinkCode()
-        {
-            return _flagDeepLinkCode;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -471,122 +207,32 @@ namespace ShopwareSharp.Model
         /// Gets or Sets DocumentType
         /// </summary>
         [DataMember(Name = "documentType", EmitDefaultValue = false)]
-        public DocumentType DocumentType
-        {
-            get{ return _DocumentType;}
-            set
-            {
-                _DocumentType = value;
-                _flagDocumentType = true;
-            }
-        }
-        private DocumentType _DocumentType;
-        private bool _flagDocumentType;
+        public DocumentType DocumentType { get; set; }
 
-        /// <summary>
-        /// Returns false as DocumentType should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDocumentType()
-        {
-            return _flagDocumentType;
-        }
         /// <summary>
         /// Gets or Sets Order
         /// </summary>
         [DataMember(Name = "order", EmitDefaultValue = false)]
-        public Order Order
-        {
-            get{ return _Order;}
-            set
-            {
-                _Order = value;
-                _flagOrder = true;
-            }
-        }
-        private Order _Order;
-        private bool _flagOrder;
+        public Order Order { get; set; }
 
-        /// <summary>
-        /// Returns false as Order should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrder()
-        {
-            return _flagOrder;
-        }
         /// <summary>
         /// Gets or Sets ReferencedDocument
         /// </summary>
         [DataMember(Name = "referencedDocument", EmitDefaultValue = false)]
-        public Document ReferencedDocument
-        {
-            get{ return _ReferencedDocument;}
-            set
-            {
-                _ReferencedDocument = value;
-                _flagReferencedDocument = true;
-            }
-        }
-        private Document _ReferencedDocument;
-        private bool _flagReferencedDocument;
+        public Document ReferencedDocument { get; set; }
 
-        /// <summary>
-        /// Returns false as ReferencedDocument should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeReferencedDocument()
-        {
-            return _flagReferencedDocument;
-        }
         /// <summary>
         /// Gets or Sets DependentDocuments
         /// </summary>
         [DataMember(Name = "dependentDocuments", EmitDefaultValue = false)]
-        public Document DependentDocuments
-        {
-            get{ return _DependentDocuments;}
-            set
-            {
-                _DependentDocuments = value;
-                _flagDependentDocuments = true;
-            }
-        }
-        private Document _DependentDocuments;
-        private bool _flagDependentDocuments;
+        public Document DependentDocuments { get; set; }
 
-        /// <summary>
-        /// Returns false as DependentDocuments should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDependentDocuments()
-        {
-            return _flagDependentDocuments;
-        }
         /// <summary>
         /// Gets or Sets DocumentMediaFile
         /// </summary>
         [DataMember(Name = "documentMediaFile", EmitDefaultValue = false)]
-        public Media DocumentMediaFile
-        {
-            get{ return _DocumentMediaFile;}
-            set
-            {
-                _DocumentMediaFile = value;
-                _flagDocumentMediaFile = true;
-            }
-        }
-        private Media _DocumentMediaFile;
-        private bool _flagDocumentMediaFile;
+        public Media DocumentMediaFile { get; set; }
 
-        /// <summary>
-        /// Returns false as DocumentMediaFile should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDocumentMediaFile()
-        {
-            return _flagDocumentMediaFile;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

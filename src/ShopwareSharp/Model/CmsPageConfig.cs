@@ -38,37 +38,15 @@ namespace ShopwareSharp.Model
         /// <param name="backgroundColor">backgroundColor.</param>
         public CmsPageConfig(string backgroundColor = default(string))
         {
-            this._BackgroundColor = backgroundColor;
-            if (this.BackgroundColor != null)
-            {
-                this._flagBackgroundColor = true;
-            }
+            this.BackgroundColor = backgroundColor;
         }
 
         /// <summary>
         /// Gets or Sets BackgroundColor
         /// </summary>
         [DataMember(Name = "backgroundColor", EmitDefaultValue = false)]
-        public string BackgroundColor
-        {
-            get{ return _BackgroundColor;}
-            set
-            {
-                _BackgroundColor = value;
-                _flagBackgroundColor = true;
-            }
-        }
-        private string _BackgroundColor;
-        private bool _flagBackgroundColor;
+        public string BackgroundColor { get; set; }
 
-        /// <summary>
-        /// Returns false as BackgroundColor should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBackgroundColor()
-        {
-            return _flagBackgroundColor;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

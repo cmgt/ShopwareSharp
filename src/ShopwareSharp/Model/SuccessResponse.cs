@@ -38,37 +38,15 @@ namespace ShopwareSharp.Model
         /// <param name="success">success.</param>
         public SuccessResponse(bool success = default(bool))
         {
-            this._Success = success;
-            if (this.Success != null)
-            {
-                this._flagSuccess = true;
-            }
+            this.Success = success;
         }
 
         /// <summary>
         /// Gets or Sets Success
         /// </summary>
         [DataMember(Name = "success", EmitDefaultValue = true)]
-        public bool Success
-        {
-            get{ return _Success;}
-            set
-            {
-                _Success = value;
-                _flagSuccess = true;
-            }
-        }
-        private bool _Success;
-        private bool _flagSuccess;
+        public bool Success { get; set; }
 
-        /// <summary>
-        /// Returns false as Success should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSuccess()
-        {
-            return _flagSuccess;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

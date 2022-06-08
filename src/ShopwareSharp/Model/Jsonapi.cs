@@ -39,67 +39,23 @@ namespace ShopwareSharp.Model
         /// <param name="meta">Non-standard meta-information that can not be represented as an attribute or relationship..</param>
         public Jsonapi(string version = default(string), Dictionary<string, Object> meta = default(Dictionary<string, Object>))
         {
-            this.__Version = version;
-            if (this._Version != null)
-            {
-                this._flag_Version = true;
-            }
-            this._Meta = meta;
-            if (this.Meta != null)
-            {
-                this._flagMeta = true;
-            }
+            this._Version = version;
+            this.Meta = meta;
         }
 
         /// <summary>
         /// Gets or Sets _Version
         /// </summary>
         [DataMember(Name = "version", EmitDefaultValue = false)]
-        public string _Version
-        {
-            get{ return __Version;}
-            set
-            {
-                __Version = value;
-                _flag_Version = true;
-            }
-        }
-        private string __Version;
-        private bool _flag_Version;
+        public string _Version { get; set; }
 
-        /// <summary>
-        /// Returns false as _Version should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerialize_Version()
-        {
-            return _flag_Version;
-        }
         /// <summary>
         /// Non-standard meta-information that can not be represented as an attribute or relationship.
         /// </summary>
         /// <value>Non-standard meta-information that can not be represented as an attribute or relationship.</value>
         [DataMember(Name = "meta", EmitDefaultValue = false)]
-        public Dictionary<string, Object> Meta
-        {
-            get{ return _Meta;}
-            set
-            {
-                _Meta = value;
-                _flagMeta = true;
-            }
-        }
-        private Dictionary<string, Object> _Meta;
-        private bool _flagMeta;
+        public Dictionary<string, Object> Meta { get; set; }
 
-        /// <summary>
-        /// Returns false as Meta should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMeta()
-        {
-            return _flagMeta;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

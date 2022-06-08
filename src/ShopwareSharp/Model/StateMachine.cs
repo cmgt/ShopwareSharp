@@ -46,52 +46,18 @@ namespace ShopwareSharp.Model
         /// <param name="transitions">transitions.</param>
         public StateMachine(string id = default(string), Object translated = default(Object), StateMachineState states = default(StateMachineState), StateMachineTransition transitions = default(StateMachineTransition))
         {
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
-            this._States = states;
-            if (this.States != null)
-            {
-                this._flagStates = true;
-            }
-            this._Transitions = transitions;
-            if (this.Transitions != null)
-            {
-                this._flagTransitions = true;
-            }
+            this.Id = id;
+            this.Translated = translated;
+            this.States = states;
+            this.Transitions = transitions;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -124,74 +90,20 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Gets or Sets States
         /// </summary>
         [DataMember(Name = "states", EmitDefaultValue = false)]
-        public StateMachineState States
-        {
-            get{ return _States;}
-            set
-            {
-                _States = value;
-                _flagStates = true;
-            }
-        }
-        private StateMachineState _States;
-        private bool _flagStates;
+        public StateMachineState States { get; set; }
 
-        /// <summary>
-        /// Returns false as States should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStates()
-        {
-            return _flagStates;
-        }
         /// <summary>
         /// Gets or Sets Transitions
         /// </summary>
         [DataMember(Name = "transitions", EmitDefaultValue = false)]
-        public StateMachineTransition Transitions
-        {
-            get{ return _Transitions;}
-            set
-            {
-                _Transitions = value;
-                _flagTransitions = true;
-            }
-        }
-        private StateMachineTransition _Transitions;
-        private bool _flagTransitions;
+        public StateMachineTransition Transitions { get; set; }
 
-        /// <summary>
-        /// Returns false as Transitions should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTransitions()
-        {
-            return _flagTransitions;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

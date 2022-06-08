@@ -67,517 +67,155 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("countryId is a required property for OrderAddress and cannot be null");
             }
-            this._CountryId = countryId;
+            this.CountryId = countryId;
             // to ensure "firstName" is required (not null)
             if (firstName == null)
             {
                 throw new ArgumentNullException("firstName is a required property for OrderAddress and cannot be null");
             }
-            this._FirstName = firstName;
+            this.FirstName = firstName;
             // to ensure "lastName" is required (not null)
             if (lastName == null)
             {
                 throw new ArgumentNullException("lastName is a required property for OrderAddress and cannot be null");
             }
-            this._LastName = lastName;
+            this.LastName = lastName;
             // to ensure "street" is required (not null)
             if (street == null)
             {
                 throw new ArgumentNullException("street is a required property for OrderAddress and cannot be null");
             }
-            this._Street = street;
+            this.Street = street;
             // to ensure "zipcode" is required (not null)
             if (zipcode == null)
             {
                 throw new ArgumentNullException("zipcode is a required property for OrderAddress and cannot be null");
             }
-            this._Zipcode = zipcode;
+            this.Zipcode = zipcode;
             // to ensure "city" is required (not null)
             if (city == null)
             {
                 throw new ArgumentNullException("city is a required property for OrderAddress and cannot be null");
             }
-            this._City = city;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._VersionId = versionId;
-            if (this.VersionId != null)
-            {
-                this._flagVersionId = true;
-            }
-            this._CountryStateId = countryStateId;
-            if (this.CountryStateId != null)
-            {
-                this._flagCountryStateId = true;
-            }
-            this._Company = company;
-            if (this.Company != null)
-            {
-                this._flagCompany = true;
-            }
-            this._Department = department;
-            if (this.Department != null)
-            {
-                this._flagDepartment = true;
-            }
-            this._Title = title;
-            if (this.Title != null)
-            {
-                this._flagTitle = true;
-            }
-            this._VatId = vatId;
-            if (this.VatId != null)
-            {
-                this._flagVatId = true;
-            }
-            this._PhoneNumber = phoneNumber;
-            if (this.PhoneNumber != null)
-            {
-                this._flagPhoneNumber = true;
-            }
-            this._AdditionalAddressLine1 = additionalAddressLine1;
-            if (this.AdditionalAddressLine1 != null)
-            {
-                this._flagAdditionalAddressLine1 = true;
-            }
-            this._AdditionalAddressLine2 = additionalAddressLine2;
-            if (this.AdditionalAddressLine2 != null)
-            {
-                this._flagAdditionalAddressLine2 = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Country = country;
-            if (this.Country != null)
-            {
-                this._flagCountry = true;
-            }
-            this._CountryState = countryState;
-            if (this.CountryState != null)
-            {
-                this._flagCountryState = true;
-            }
-            this._Salutation = salutation;
-            if (this.Salutation != null)
-            {
-                this._flagSalutation = true;
-            }
+            this.City = city;
+            this.Id = id;
+            this.VersionId = versionId;
+            this.CountryStateId = countryStateId;
+            this.Company = company;
+            this.Department = department;
+            this.Title = title;
+            this.VatId = vatId;
+            this.PhoneNumber = phoneNumber;
+            this.AdditionalAddressLine1 = additionalAddressLine1;
+            this.AdditionalAddressLine2 = additionalAddressLine2;
+            this.CustomFields = customFields;
+            this.Country = country;
+            this.CountryState = countryState;
+            this.Salutation = salutation;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets VersionId
         /// </summary>
         [DataMember(Name = "versionId", EmitDefaultValue = false)]
-        public string VersionId
-        {
-            get{ return _VersionId;}
-            set
-            {
-                _VersionId = value;
-                _flagVersionId = true;
-            }
-        }
-        private string _VersionId;
-        private bool _flagVersionId;
+        public string VersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as VersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeVersionId()
-        {
-            return _flagVersionId;
-        }
         /// <summary>
         /// Gets or Sets CountryId
         /// </summary>
         [DataMember(Name = "countryId", IsRequired = true, EmitDefaultValue = false)]
-        public string CountryId
-        {
-            get{ return _CountryId;}
-            set
-            {
-                _CountryId = value;
-                _flagCountryId = true;
-            }
-        }
-        private string _CountryId;
-        private bool _flagCountryId;
+        public string CountryId { get; set; }
 
-        /// <summary>
-        /// Returns false as CountryId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCountryId()
-        {
-            return _flagCountryId;
-        }
         /// <summary>
         /// Gets or Sets CountryStateId
         /// </summary>
         [DataMember(Name = "countryStateId", EmitDefaultValue = false)]
-        public string CountryStateId
-        {
-            get{ return _CountryStateId;}
-            set
-            {
-                _CountryStateId = value;
-                _flagCountryStateId = true;
-            }
-        }
-        private string _CountryStateId;
-        private bool _flagCountryStateId;
+        public string CountryStateId { get; set; }
 
-        /// <summary>
-        /// Returns false as CountryStateId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCountryStateId()
-        {
-            return _flagCountryStateId;
-        }
         /// <summary>
         /// Gets or Sets FirstName
         /// </summary>
         [DataMember(Name = "firstName", IsRequired = true, EmitDefaultValue = false)]
-        public string FirstName
-        {
-            get{ return _FirstName;}
-            set
-            {
-                _FirstName = value;
-                _flagFirstName = true;
-            }
-        }
-        private string _FirstName;
-        private bool _flagFirstName;
+        public string FirstName { get; set; }
 
-        /// <summary>
-        /// Returns false as FirstName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFirstName()
-        {
-            return _flagFirstName;
-        }
         /// <summary>
         /// Gets or Sets LastName
         /// </summary>
         [DataMember(Name = "lastName", IsRequired = true, EmitDefaultValue = false)]
-        public string LastName
-        {
-            get{ return _LastName;}
-            set
-            {
-                _LastName = value;
-                _flagLastName = true;
-            }
-        }
-        private string _LastName;
-        private bool _flagLastName;
+        public string LastName { get; set; }
 
-        /// <summary>
-        /// Returns false as LastName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLastName()
-        {
-            return _flagLastName;
-        }
         /// <summary>
         /// Gets or Sets Street
         /// </summary>
         [DataMember(Name = "street", IsRequired = true, EmitDefaultValue = false)]
-        public string Street
-        {
-            get{ return _Street;}
-            set
-            {
-                _Street = value;
-                _flagStreet = true;
-            }
-        }
-        private string _Street;
-        private bool _flagStreet;
+        public string Street { get; set; }
 
-        /// <summary>
-        /// Returns false as Street should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStreet()
-        {
-            return _flagStreet;
-        }
         /// <summary>
         /// Gets or Sets Zipcode
         /// </summary>
         [DataMember(Name = "zipcode", IsRequired = true, EmitDefaultValue = false)]
-        public string Zipcode
-        {
-            get{ return _Zipcode;}
-            set
-            {
-                _Zipcode = value;
-                _flagZipcode = true;
-            }
-        }
-        private string _Zipcode;
-        private bool _flagZipcode;
+        public string Zipcode { get; set; }
 
-        /// <summary>
-        /// Returns false as Zipcode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeZipcode()
-        {
-            return _flagZipcode;
-        }
         /// <summary>
         /// Gets or Sets City
         /// </summary>
         [DataMember(Name = "city", IsRequired = true, EmitDefaultValue = false)]
-        public string City
-        {
-            get{ return _City;}
-            set
-            {
-                _City = value;
-                _flagCity = true;
-            }
-        }
-        private string _City;
-        private bool _flagCity;
+        public string City { get; set; }
 
-        /// <summary>
-        /// Returns false as City should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCity()
-        {
-            return _flagCity;
-        }
         /// <summary>
         /// Gets or Sets Company
         /// </summary>
         [DataMember(Name = "company", EmitDefaultValue = false)]
-        public string Company
-        {
-            get{ return _Company;}
-            set
-            {
-                _Company = value;
-                _flagCompany = true;
-            }
-        }
-        private string _Company;
-        private bool _flagCompany;
+        public string Company { get; set; }
 
-        /// <summary>
-        /// Returns false as Company should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCompany()
-        {
-            return _flagCompany;
-        }
         /// <summary>
         /// Gets or Sets Department
         /// </summary>
         [DataMember(Name = "department", EmitDefaultValue = false)]
-        public string Department
-        {
-            get{ return _Department;}
-            set
-            {
-                _Department = value;
-                _flagDepartment = true;
-            }
-        }
-        private string _Department;
-        private bool _flagDepartment;
+        public string Department { get; set; }
 
-        /// <summary>
-        /// Returns false as Department should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDepartment()
-        {
-            return _flagDepartment;
-        }
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name = "title", EmitDefaultValue = false)]
-        public string Title
-        {
-            get{ return _Title;}
-            set
-            {
-                _Title = value;
-                _flagTitle = true;
-            }
-        }
-        private string _Title;
-        private bool _flagTitle;
+        public string Title { get; set; }
 
-        /// <summary>
-        /// Returns false as Title should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTitle()
-        {
-            return _flagTitle;
-        }
         /// <summary>
         /// Gets or Sets VatId
         /// </summary>
         [DataMember(Name = "vatId", EmitDefaultValue = false)]
-        public string VatId
-        {
-            get{ return _VatId;}
-            set
-            {
-                _VatId = value;
-                _flagVatId = true;
-            }
-        }
-        private string _VatId;
-        private bool _flagVatId;
+        public string VatId { get; set; }
 
-        /// <summary>
-        /// Returns false as VatId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeVatId()
-        {
-            return _flagVatId;
-        }
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
         [DataMember(Name = "phoneNumber", EmitDefaultValue = false)]
-        public string PhoneNumber
-        {
-            get{ return _PhoneNumber;}
-            set
-            {
-                _PhoneNumber = value;
-                _flagPhoneNumber = true;
-            }
-        }
-        private string _PhoneNumber;
-        private bool _flagPhoneNumber;
+        public string PhoneNumber { get; set; }
 
-        /// <summary>
-        /// Returns false as PhoneNumber should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePhoneNumber()
-        {
-            return _flagPhoneNumber;
-        }
         /// <summary>
         /// Gets or Sets AdditionalAddressLine1
         /// </summary>
         [DataMember(Name = "additionalAddressLine1", EmitDefaultValue = false)]
-        public string AdditionalAddressLine1
-        {
-            get{ return _AdditionalAddressLine1;}
-            set
-            {
-                _AdditionalAddressLine1 = value;
-                _flagAdditionalAddressLine1 = true;
-            }
-        }
-        private string _AdditionalAddressLine1;
-        private bool _flagAdditionalAddressLine1;
+        public string AdditionalAddressLine1 { get; set; }
 
-        /// <summary>
-        /// Returns false as AdditionalAddressLine1 should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAdditionalAddressLine1()
-        {
-            return _flagAdditionalAddressLine1;
-        }
         /// <summary>
         /// Gets or Sets AdditionalAddressLine2
         /// </summary>
         [DataMember(Name = "additionalAddressLine2", EmitDefaultValue = false)]
-        public string AdditionalAddressLine2
-        {
-            get{ return _AdditionalAddressLine2;}
-            set
-            {
-                _AdditionalAddressLine2 = value;
-                _flagAdditionalAddressLine2 = true;
-            }
-        }
-        private string _AdditionalAddressLine2;
-        private bool _flagAdditionalAddressLine2;
+        public string AdditionalAddressLine2 { get; set; }
 
-        /// <summary>
-        /// Returns false as AdditionalAddressLine2 should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAdditionalAddressLine2()
-        {
-            return _flagAdditionalAddressLine2;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -610,74 +248,20 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Country
         /// </summary>
         [DataMember(Name = "country", EmitDefaultValue = false)]
-        public Country Country
-        {
-            get{ return _Country;}
-            set
-            {
-                _Country = value;
-                _flagCountry = true;
-            }
-        }
-        private Country _Country;
-        private bool _flagCountry;
+        public Country Country { get; set; }
 
-        /// <summary>
-        /// Returns false as Country should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCountry()
-        {
-            return _flagCountry;
-        }
         /// <summary>
         /// Gets or Sets CountryState
         /// </summary>
         [DataMember(Name = "countryState", EmitDefaultValue = false)]
-        public CountryState CountryState
-        {
-            get{ return _CountryState;}
-            set
-            {
-                _CountryState = value;
-                _flagCountryState = true;
-            }
-        }
-        private CountryState _CountryState;
-        private bool _flagCountryState;
+        public CountryState CountryState { get; set; }
 
-        /// <summary>
-        /// Returns false as CountryState should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCountryState()
-        {
-            return _flagCountryState;
-        }
         /// <summary>
         /// Gets or Sets Salutation
         /// </summary>
         [DataMember(Name = "salutation", EmitDefaultValue = false)]
-        public Salutation Salutation
-        {
-            get{ return _Salutation;}
-            set
-            {
-                _Salutation = value;
-                _flagSalutation = true;
-            }
-        }
-        private Salutation _Salutation;
-        private bool _flagSalutation;
+        public Salutation Salutation { get; set; }
 
-        /// <summary>
-        /// Returns false as Salutation should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalutation()
-        {
-            return _flagSalutation;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

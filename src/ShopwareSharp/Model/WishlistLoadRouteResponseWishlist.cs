@@ -39,66 +39,22 @@ namespace ShopwareSharp.Model
         /// <param name="salesChannelId">salesChannelId.</param>
         public WishlistLoadRouteResponseWishlist(string customerId = default(string), string salesChannelId = default(string))
         {
-            this._CustomerId = customerId;
-            if (this.CustomerId != null)
-            {
-                this._flagCustomerId = true;
-            }
-            this._SalesChannelId = salesChannelId;
-            if (this.SalesChannelId != null)
-            {
-                this._flagSalesChannelId = true;
-            }
+            this.CustomerId = customerId;
+            this.SalesChannelId = salesChannelId;
         }
 
         /// <summary>
         /// Gets or Sets CustomerId
         /// </summary>
         [DataMember(Name = "customerId", EmitDefaultValue = false)]
-        public string CustomerId
-        {
-            get{ return _CustomerId;}
-            set
-            {
-                _CustomerId = value;
-                _flagCustomerId = true;
-            }
-        }
-        private string _CustomerId;
-        private bool _flagCustomerId;
+        public string CustomerId { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomerId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomerId()
-        {
-            return _flagCustomerId;
-        }
         /// <summary>
         /// Gets or Sets SalesChannelId
         /// </summary>
         [DataMember(Name = "salesChannelId", EmitDefaultValue = false)]
-        public string SalesChannelId
-        {
-            get{ return _SalesChannelId;}
-            set
-            {
-                _SalesChannelId = value;
-                _flagSalesChannelId = true;
-            }
-        }
-        private string _SalesChannelId;
-        private bool _flagSalesChannelId;
+        public string SalesChannelId { get; set; }
 
-        /// <summary>
-        /// Returns false as SalesChannelId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalesChannelId()
-        {
-            return _flagSalesChannelId;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -41,26 +41,10 @@ namespace ShopwareSharp.Model
         /// <param name="next">The next page of data.</param>
         public Pagination(string first = default(string), string last = default(string), string prev = default(string), string next = default(string))
         {
-            this._First = first;
-            if (this.First != null)
-            {
-                this._flagFirst = true;
-            }
-            this._Last = last;
-            if (this.Last != null)
-            {
-                this._flagLast = true;
-            }
-            this._Prev = prev;
-            if (this.Prev != null)
-            {
-                this._flagPrev = true;
-            }
-            this._Next = next;
-            if (this.Next != null)
-            {
-                this._flagNext = true;
-            }
+            this.First = first;
+            this.Last = last;
+            this.Prev = prev;
+            this.Next = next;
         }
 
         /// <summary>
@@ -68,101 +52,29 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>The first page of data</value>
         [DataMember(Name = "first", EmitDefaultValue = false)]
-        public string First
-        {
-            get{ return _First;}
-            set
-            {
-                _First = value;
-                _flagFirst = true;
-            }
-        }
-        private string _First;
-        private bool _flagFirst;
+        public string First { get; set; }
 
-        /// <summary>
-        /// Returns false as First should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFirst()
-        {
-            return _flagFirst;
-        }
         /// <summary>
         /// The last page of data
         /// </summary>
         /// <value>The last page of data</value>
         [DataMember(Name = "last", EmitDefaultValue = false)]
-        public string Last
-        {
-            get{ return _Last;}
-            set
-            {
-                _Last = value;
-                _flagLast = true;
-            }
-        }
-        private string _Last;
-        private bool _flagLast;
+        public string Last { get; set; }
 
-        /// <summary>
-        /// Returns false as Last should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLast()
-        {
-            return _flagLast;
-        }
         /// <summary>
         /// The previous page of data
         /// </summary>
         /// <value>The previous page of data</value>
         [DataMember(Name = "prev", EmitDefaultValue = false)]
-        public string Prev
-        {
-            get{ return _Prev;}
-            set
-            {
-                _Prev = value;
-                _flagPrev = true;
-            }
-        }
-        private string _Prev;
-        private bool _flagPrev;
+        public string Prev { get; set; }
 
-        /// <summary>
-        /// Returns false as Prev should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePrev()
-        {
-            return _flagPrev;
-        }
         /// <summary>
         /// The next page of data
         /// </summary>
         /// <value>The next page of data</value>
         [DataMember(Name = "next", EmitDefaultValue = false)]
-        public string Next
-        {
-            get{ return _Next;}
-            set
-            {
-                _Next = value;
-                _flagNext = true;
-            }
-        }
-        private string _Next;
-        private bool _flagNext;
+        public string Next { get; set; }
 
-        /// <summary>
-        /// Returns false as Next should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNext()
-        {
-            return _flagNext;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -52,151 +52,53 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("setId is a required property for Snippet and cannot be null");
             }
-            this._SetId = setId;
+            this.SetId = setId;
             // to ensure "translationKey" is required (not null)
             if (translationKey == null)
             {
                 throw new ArgumentNullException("translationKey is a required property for Snippet and cannot be null");
             }
-            this._TranslationKey = translationKey;
+            this.TranslationKey = translationKey;
             // to ensure "value" is required (not null)
             if (value == null)
             {
                 throw new ArgumentNullException("value is a required property for Snippet and cannot be null");
             }
-            this._Value = value;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
+            this.Value = value;
+            this.Id = id;
+            this.CustomFields = customFields;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets SetId
         /// </summary>
         [DataMember(Name = "setId", IsRequired = true, EmitDefaultValue = false)]
-        public string SetId
-        {
-            get{ return _SetId;}
-            set
-            {
-                _SetId = value;
-                _flagSetId = true;
-            }
-        }
-        private string _SetId;
-        private bool _flagSetId;
+        public string SetId { get; set; }
 
-        /// <summary>
-        /// Returns false as SetId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSetId()
-        {
-            return _flagSetId;
-        }
         /// <summary>
         /// Gets or Sets TranslationKey
         /// </summary>
         [DataMember(Name = "translationKey", IsRequired = true, EmitDefaultValue = false)]
-        public string TranslationKey
-        {
-            get{ return _TranslationKey;}
-            set
-            {
-                _TranslationKey = value;
-                _flagTranslationKey = true;
-            }
-        }
-        private string _TranslationKey;
-        private bool _flagTranslationKey;
+        public string TranslationKey { get; set; }
 
-        /// <summary>
-        /// Returns false as TranslationKey should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslationKey()
-        {
-            return _flagTranslationKey;
-        }
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name = "value", IsRequired = true, EmitDefaultValue = false)]
-        public string Value
-        {
-            get{ return _Value;}
-            set
-            {
-                _Value = value;
-                _flagValue = true;
-            }
-        }
-        private string _Value;
-        private bool _flagValue;
+        public string Value { get; set; }
 
-        /// <summary>
-        /// Returns false as Value should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeValue()
-        {
-            return _flagValue;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>

@@ -39,16 +39,8 @@ namespace ShopwareSharp.Model
         /// <param name="onlyAggregations">If this flag is set, no products are fetched. Sorting and associations are also ignored. This parameter is a flag, the value has no effect..</param>
         public ProductListingFlags(string noAggregations = default(string), string onlyAggregations = default(string))
         {
-            this._NoAggregations = noAggregations;
-            if (this.NoAggregations != null)
-            {
-                this._flagNoAggregations = true;
-            }
-            this._OnlyAggregations = onlyAggregations;
-            if (this.OnlyAggregations != null)
-            {
-                this._flagOnlyAggregations = true;
-            }
+            this.NoAggregations = noAggregations;
+            this.OnlyAggregations = onlyAggregations;
         }
 
         /// <summary>
@@ -56,51 +48,15 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Resets all aggregations in the criteria. This parameter is a flag, the value has no effect.</value>
         [DataMember(Name = "no-aggregations", EmitDefaultValue = true)]
-        public string NoAggregations
-        {
-            get{ return _NoAggregations;}
-            set
-            {
-                _NoAggregations = value;
-                _flagNoAggregations = true;
-            }
-        }
-        private string _NoAggregations;
-        private bool _flagNoAggregations;
+        public string NoAggregations { get; set; }
 
-        /// <summary>
-        /// Returns false as NoAggregations should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNoAggregations()
-        {
-            return _flagNoAggregations;
-        }
         /// <summary>
         /// If this flag is set, no products are fetched. Sorting and associations are also ignored. This parameter is a flag, the value has no effect.
         /// </summary>
         /// <value>If this flag is set, no products are fetched. Sorting and associations are also ignored. This parameter is a flag, the value has no effect.</value>
         [DataMember(Name = "only-aggregations", EmitDefaultValue = true)]
-        public string OnlyAggregations
-        {
-            get{ return _OnlyAggregations;}
-            set
-            {
-                _OnlyAggregations = value;
-                _flagOnlyAggregations = true;
-            }
-        }
-        private string _OnlyAggregations;
-        private bool _flagOnlyAggregations;
+        public string OnlyAggregations { get; set; }
 
-        /// <summary>
-        /// Returns false as OnlyAggregations should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOnlyAggregations()
-        {
-            return _flagOnlyAggregations;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

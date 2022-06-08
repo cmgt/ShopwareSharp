@@ -49,13 +49,13 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("username is a required property for LoginCustomerRequest and cannot be null");
             }
-            this._Username = username;
+            this.Username = username;
             // to ensure "password" is required (not null)
             if (password == null)
             {
                 throw new ArgumentNullException("password is a required property for LoginCustomerRequest and cannot be null");
             }
-            this._Password = password;
+            this.Password = password;
         }
 
         /// <summary>
@@ -63,51 +63,15 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Email</value>
         [DataMember(Name = "username", IsRequired = true, EmitDefaultValue = false)]
-        public string Username
-        {
-            get{ return _Username;}
-            set
-            {
-                _Username = value;
-                _flagUsername = true;
-            }
-        }
-        private string _Username;
-        private bool _flagUsername;
+        public string Username { get; set; }
 
-        /// <summary>
-        /// Returns false as Username should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUsername()
-        {
-            return _flagUsername;
-        }
         /// <summary>
         /// Password
         /// </summary>
         /// <value>Password</value>
         [DataMember(Name = "password", IsRequired = true, EmitDefaultValue = false)]
-        public string Password
-        {
-            get{ return _Password;}
-            set
-            {
-                _Password = value;
-                _flagPassword = true;
-            }
-        }
-        private string _Password;
-        private bool _flagPassword;
+        public string Password { get; set; }
 
-        /// <summary>
-        /// Returns false as Password should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePassword()
-        {
-            return _flagPassword;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

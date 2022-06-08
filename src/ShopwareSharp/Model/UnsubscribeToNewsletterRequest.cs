@@ -48,7 +48,7 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("email is a required property for UnsubscribeToNewsletterRequest and cannot be null");
             }
-            this._Email = email;
+            this.Email = email;
         }
 
         /// <summary>
@@ -56,26 +56,8 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Email address that should be removed from the mailing lists.</value>
         [DataMember(Name = "email", IsRequired = true, EmitDefaultValue = false)]
-        public string Email
-        {
-            get{ return _Email;}
-            set
-            {
-                _Email = value;
-                _flagEmail = true;
-            }
-        }
-        private string _Email;
-        private bool _flagEmail;
+        public string Email { get; set; }
 
-        /// <summary>
-        /// Returns false as Email should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeEmail()
-        {
-            return _flagEmail;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

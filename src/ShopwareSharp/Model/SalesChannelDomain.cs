@@ -58,255 +58,87 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("url is a required property for SalesChannelDomain and cannot be null");
             }
-            this._Url = url;
+            this.Url = url;
             // to ensure "salesChannelId" is required (not null)
             if (salesChannelId == null)
             {
                 throw new ArgumentNullException("salesChannelId is a required property for SalesChannelDomain and cannot be null");
             }
-            this._SalesChannelId = salesChannelId;
+            this.SalesChannelId = salesChannelId;
             // to ensure "languageId" is required (not null)
             if (languageId == null)
             {
                 throw new ArgumentNullException("languageId is a required property for SalesChannelDomain and cannot be null");
             }
-            this._LanguageId = languageId;
+            this.LanguageId = languageId;
             // to ensure "currencyId" is required (not null)
             if (currencyId == null)
             {
                 throw new ArgumentNullException("currencyId is a required property for SalesChannelDomain and cannot be null");
             }
-            this._CurrencyId = currencyId;
+            this.CurrencyId = currencyId;
             // to ensure "snippetSetId" is required (not null)
             if (snippetSetId == null)
             {
                 throw new ArgumentNullException("snippetSetId is a required property for SalesChannelDomain and cannot be null");
             }
-            this._SnippetSetId = snippetSetId;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._HreflangUseOnlyLocale = hreflangUseOnlyLocale;
-            if (this.HreflangUseOnlyLocale != null)
-            {
-                this._flagHreflangUseOnlyLocale = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Language = language;
-            if (this.Language != null)
-            {
-                this._flagLanguage = true;
-            }
-            this._Currency = currency;
-            if (this.Currency != null)
-            {
-                this._flagCurrency = true;
-            }
-            this._SalesChannelDefaultHreflang = salesChannelDefaultHreflang;
-            if (this.SalesChannelDefaultHreflang != null)
-            {
-                this._flagSalesChannelDefaultHreflang = true;
-            }
+            this.SnippetSetId = snippetSetId;
+            this.Id = id;
+            this.HreflangUseOnlyLocale = hreflangUseOnlyLocale;
+            this.CustomFields = customFields;
+            this.Language = language;
+            this.Currency = currency;
+            this.SalesChannelDefaultHreflang = salesChannelDefaultHreflang;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
         [DataMember(Name = "url", IsRequired = true, EmitDefaultValue = false)]
-        public string Url
-        {
-            get{ return _Url;}
-            set
-            {
-                _Url = value;
-                _flagUrl = true;
-            }
-        }
-        private string _Url;
-        private bool _flagUrl;
+        public string Url { get; set; }
 
-        /// <summary>
-        /// Returns false as Url should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUrl()
-        {
-            return _flagUrl;
-        }
         /// <summary>
         /// Gets or Sets SalesChannelId
         /// </summary>
         [DataMember(Name = "salesChannelId", IsRequired = true, EmitDefaultValue = false)]
-        public string SalesChannelId
-        {
-            get{ return _SalesChannelId;}
-            set
-            {
-                _SalesChannelId = value;
-                _flagSalesChannelId = true;
-            }
-        }
-        private string _SalesChannelId;
-        private bool _flagSalesChannelId;
+        public string SalesChannelId { get; set; }
 
-        /// <summary>
-        /// Returns false as SalesChannelId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalesChannelId()
-        {
-            return _flagSalesChannelId;
-        }
         /// <summary>
         /// Gets or Sets LanguageId
         /// </summary>
         [DataMember(Name = "languageId", IsRequired = true, EmitDefaultValue = false)]
-        public string LanguageId
-        {
-            get{ return _LanguageId;}
-            set
-            {
-                _LanguageId = value;
-                _flagLanguageId = true;
-            }
-        }
-        private string _LanguageId;
-        private bool _flagLanguageId;
+        public string LanguageId { get; set; }
 
-        /// <summary>
-        /// Returns false as LanguageId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLanguageId()
-        {
-            return _flagLanguageId;
-        }
         /// <summary>
         /// Gets or Sets CurrencyId
         /// </summary>
         [DataMember(Name = "currencyId", IsRequired = true, EmitDefaultValue = false)]
-        public string CurrencyId
-        {
-            get{ return _CurrencyId;}
-            set
-            {
-                _CurrencyId = value;
-                _flagCurrencyId = true;
-            }
-        }
-        private string _CurrencyId;
-        private bool _flagCurrencyId;
+        public string CurrencyId { get; set; }
 
-        /// <summary>
-        /// Returns false as CurrencyId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCurrencyId()
-        {
-            return _flagCurrencyId;
-        }
         /// <summary>
         /// Gets or Sets SnippetSetId
         /// </summary>
         [DataMember(Name = "snippetSetId", IsRequired = true, EmitDefaultValue = false)]
-        public string SnippetSetId
-        {
-            get{ return _SnippetSetId;}
-            set
-            {
-                _SnippetSetId = value;
-                _flagSnippetSetId = true;
-            }
-        }
-        private string _SnippetSetId;
-        private bool _flagSnippetSetId;
+        public string SnippetSetId { get; set; }
 
-        /// <summary>
-        /// Returns false as SnippetSetId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSnippetSetId()
-        {
-            return _flagSnippetSetId;
-        }
         /// <summary>
         /// Gets or Sets HreflangUseOnlyLocale
         /// </summary>
         [DataMember(Name = "hreflangUseOnlyLocale", EmitDefaultValue = true)]
-        public bool HreflangUseOnlyLocale
-        {
-            get{ return _HreflangUseOnlyLocale;}
-            set
-            {
-                _HreflangUseOnlyLocale = value;
-                _flagHreflangUseOnlyLocale = true;
-            }
-        }
-        private bool _HreflangUseOnlyLocale;
-        private bool _flagHreflangUseOnlyLocale;
+        public bool HreflangUseOnlyLocale { get; set; }
 
-        /// <summary>
-        /// Returns false as HreflangUseOnlyLocale should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeHreflangUseOnlyLocale()
-        {
-            return _flagHreflangUseOnlyLocale;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -339,74 +171,20 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Language
         /// </summary>
         [DataMember(Name = "language", EmitDefaultValue = false)]
-        public Language Language
-        {
-            get{ return _Language;}
-            set
-            {
-                _Language = value;
-                _flagLanguage = true;
-            }
-        }
-        private Language _Language;
-        private bool _flagLanguage;
+        public Language Language { get; set; }
 
-        /// <summary>
-        /// Returns false as Language should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLanguage()
-        {
-            return _flagLanguage;
-        }
         /// <summary>
         /// Gets or Sets Currency
         /// </summary>
         [DataMember(Name = "currency", EmitDefaultValue = false)]
-        public Currency Currency
-        {
-            get{ return _Currency;}
-            set
-            {
-                _Currency = value;
-                _flagCurrency = true;
-            }
-        }
-        private Currency _Currency;
-        private bool _flagCurrency;
+        public Currency Currency { get; set; }
 
-        /// <summary>
-        /// Returns false as Currency should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCurrency()
-        {
-            return _flagCurrency;
-        }
         /// <summary>
         /// Gets or Sets SalesChannelDefaultHreflang
         /// </summary>
         [DataMember(Name = "salesChannelDefaultHreflang", EmitDefaultValue = false)]
-        public SalesChannel SalesChannelDefaultHreflang
-        {
-            get{ return _SalesChannelDefaultHreflang;}
-            set
-            {
-                _SalesChannelDefaultHreflang = value;
-                _flagSalesChannelDefaultHreflang = true;
-            }
-        }
-        private SalesChannel _SalesChannelDefaultHreflang;
-        private bool _flagSalesChannelDefaultHreflang;
+        public SalesChannel SalesChannelDefaultHreflang { get; set; }
 
-        /// <summary>
-        /// Returns false as SalesChannelDefaultHreflang should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalesChannelDefaultHreflang()
-        {
-            return _flagSalesChannelDefaultHreflang;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

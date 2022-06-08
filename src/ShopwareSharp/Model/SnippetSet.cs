@@ -52,126 +52,42 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("name is a required property for SnippetSet and cannot be null");
             }
-            this._Name = name;
+            this.Name = name;
             // to ensure "iso" is required (not null)
             if (iso == null)
             {
                 throw new ArgumentNullException("iso is a required property for SnippetSet and cannot be null");
             }
-            this._Iso = iso;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Snippets = snippets;
-            if (this.Snippets != null)
-            {
-                this._flagSnippets = true;
-            }
+            this.Iso = iso;
+            this.Id = id;
+            this.CustomFields = customFields;
+            this.Snippets = snippets;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Iso
         /// </summary>
         [DataMember(Name = "iso", IsRequired = true, EmitDefaultValue = false)]
-        public string Iso
-        {
-            get{ return _Iso;}
-            set
-            {
-                _Iso = value;
-                _flagIso = true;
-            }
-        }
-        private string _Iso;
-        private bool _flagIso;
+        public string Iso { get; set; }
 
-        /// <summary>
-        /// Returns false as Iso should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeIso()
-        {
-            return _flagIso;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -204,26 +120,8 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Snippets
         /// </summary>
         [DataMember(Name = "snippets", EmitDefaultValue = false)]
-        public Snippet Snippets
-        {
-            get{ return _Snippets;}
-            set
-            {
-                _Snippets = value;
-                _flagSnippets = true;
-            }
-        }
-        private Snippet _Snippets;
-        private bool _flagSnippets;
+        public Snippet Snippets { get; set; }
 
-        /// <summary>
-        /// Returns false as Snippets should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSnippets()
-        {
-            return _flagSnippets;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

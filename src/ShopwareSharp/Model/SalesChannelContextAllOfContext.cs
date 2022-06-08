@@ -45,240 +45,64 @@ namespace ShopwareSharp.Model
         /// <param name="useCache">useCache.</param>
         public SalesChannelContextAllOfContext(string versionId = default(string), string currencyId = default(string), int currencyFactor = default(int), int currencyPrecision = default(int), string scope = default(string), string source = default(string), string taxState = default(string), bool useCache = default(bool))
         {
-            this._VersionId = versionId;
-            if (this.VersionId != null)
-            {
-                this._flagVersionId = true;
-            }
-            this._CurrencyId = currencyId;
-            if (this.CurrencyId != null)
-            {
-                this._flagCurrencyId = true;
-            }
-            this._CurrencyFactor = currencyFactor;
-            if (this.CurrencyFactor != null)
-            {
-                this._flagCurrencyFactor = true;
-            }
-            this._CurrencyPrecision = currencyPrecision;
-            if (this.CurrencyPrecision != null)
-            {
-                this._flagCurrencyPrecision = true;
-            }
-            this._Scope = scope;
-            if (this.Scope != null)
-            {
-                this._flagScope = true;
-            }
-            this._Source = source;
-            if (this.Source != null)
-            {
-                this._flagSource = true;
-            }
-            this._TaxState = taxState;
-            if (this.TaxState != null)
-            {
-                this._flagTaxState = true;
-            }
-            this._UseCache = useCache;
-            if (this.UseCache != null)
-            {
-                this._flagUseCache = true;
-            }
+            this.VersionId = versionId;
+            this.CurrencyId = currencyId;
+            this.CurrencyFactor = currencyFactor;
+            this.CurrencyPrecision = currencyPrecision;
+            this.Scope = scope;
+            this.Source = source;
+            this.TaxState = taxState;
+            this.UseCache = useCache;
         }
 
         /// <summary>
         /// Gets or Sets VersionId
         /// </summary>
         [DataMember(Name = "versionId", EmitDefaultValue = false)]
-        public string VersionId
-        {
-            get{ return _VersionId;}
-            set
-            {
-                _VersionId = value;
-                _flagVersionId = true;
-            }
-        }
-        private string _VersionId;
-        private bool _flagVersionId;
+        public string VersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as VersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeVersionId()
-        {
-            return _flagVersionId;
-        }
         /// <summary>
         /// Gets or Sets CurrencyId
         /// </summary>
         [DataMember(Name = "currencyId", EmitDefaultValue = false)]
-        public string CurrencyId
-        {
-            get{ return _CurrencyId;}
-            set
-            {
-                _CurrencyId = value;
-                _flagCurrencyId = true;
-            }
-        }
-        private string _CurrencyId;
-        private bool _flagCurrencyId;
+        public string CurrencyId { get; set; }
 
-        /// <summary>
-        /// Returns false as CurrencyId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCurrencyId()
-        {
-            return _flagCurrencyId;
-        }
         /// <summary>
         /// Gets or Sets CurrencyFactor
         /// </summary>
         [DataMember(Name = "currencyFactor", EmitDefaultValue = false)]
-        public int CurrencyFactor
-        {
-            get{ return _CurrencyFactor;}
-            set
-            {
-                _CurrencyFactor = value;
-                _flagCurrencyFactor = true;
-            }
-        }
-        private int _CurrencyFactor;
-        private bool _flagCurrencyFactor;
+        public int CurrencyFactor { get; set; }
 
-        /// <summary>
-        /// Returns false as CurrencyFactor should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCurrencyFactor()
-        {
-            return _flagCurrencyFactor;
-        }
         /// <summary>
         /// Gets or Sets CurrencyPrecision
         /// </summary>
         [DataMember(Name = "currencyPrecision", EmitDefaultValue = false)]
-        public int CurrencyPrecision
-        {
-            get{ return _CurrencyPrecision;}
-            set
-            {
-                _CurrencyPrecision = value;
-                _flagCurrencyPrecision = true;
-            }
-        }
-        private int _CurrencyPrecision;
-        private bool _flagCurrencyPrecision;
+        public int CurrencyPrecision { get; set; }
 
-        /// <summary>
-        /// Returns false as CurrencyPrecision should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCurrencyPrecision()
-        {
-            return _flagCurrencyPrecision;
-        }
         /// <summary>
         /// Gets or Sets Scope
         /// </summary>
         [DataMember(Name = "scope", EmitDefaultValue = false)]
-        public string Scope
-        {
-            get{ return _Scope;}
-            set
-            {
-                _Scope = value;
-                _flagScope = true;
-            }
-        }
-        private string _Scope;
-        private bool _flagScope;
+        public string Scope { get; set; }
 
-        /// <summary>
-        /// Returns false as Scope should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeScope()
-        {
-            return _flagScope;
-        }
         /// <summary>
         /// Gets or Sets Source
         /// </summary>
         [DataMember(Name = "source", EmitDefaultValue = false)]
-        public string Source
-        {
-            get{ return _Source;}
-            set
-            {
-                _Source = value;
-                _flagSource = true;
-            }
-        }
-        private string _Source;
-        private bool _flagSource;
+        public string Source { get; set; }
 
-        /// <summary>
-        /// Returns false as Source should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSource()
-        {
-            return _flagSource;
-        }
         /// <summary>
         /// Gets or Sets TaxState
         /// </summary>
         [DataMember(Name = "taxState", EmitDefaultValue = false)]
-        public string TaxState
-        {
-            get{ return _TaxState;}
-            set
-            {
-                _TaxState = value;
-                _flagTaxState = true;
-            }
-        }
-        private string _TaxState;
-        private bool _flagTaxState;
+        public string TaxState { get; set; }
 
-        /// <summary>
-        /// Returns false as TaxState should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTaxState()
-        {
-            return _flagTaxState;
-        }
         /// <summary>
         /// Gets or Sets UseCache
         /// </summary>
         [DataMember(Name = "useCache", EmitDefaultValue = true)]
-        public bool UseCache
-        {
-            get{ return _UseCache;}
-            set
-            {
-                _UseCache = value;
-                _flagUseCache = true;
-            }
-        }
-        private bool _UseCache;
-        private bool _flagUseCache;
+        public bool UseCache { get; set; }
 
-        /// <summary>
-        /// Returns false as UseCache should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUseCache()
-        {
-            return _flagUseCache;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

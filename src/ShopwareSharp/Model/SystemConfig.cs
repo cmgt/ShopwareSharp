@@ -52,126 +52,42 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("configurationKey is a required property for SystemConfig and cannot be null");
             }
-            this._ConfigurationKey = configurationKey;
+            this.ConfigurationKey = configurationKey;
             // to ensure "configurationValue" is required (not null)
             if (configurationValue == null)
             {
                 throw new ArgumentNullException("configurationValue is a required property for SystemConfig and cannot be null");
             }
-            this._ConfigurationValue = configurationValue;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._SalesChannelId = salesChannelId;
-            if (this.SalesChannelId != null)
-            {
-                this._flagSalesChannelId = true;
-            }
-            this._SalesChannel = salesChannel;
-            if (this.SalesChannel != null)
-            {
-                this._flagSalesChannel = true;
-            }
+            this.ConfigurationValue = configurationValue;
+            this.Id = id;
+            this.SalesChannelId = salesChannelId;
+            this.SalesChannel = salesChannel;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets ConfigurationKey
         /// </summary>
         [DataMember(Name = "configurationKey", IsRequired = true, EmitDefaultValue = false)]
-        public string ConfigurationKey
-        {
-            get{ return _ConfigurationKey;}
-            set
-            {
-                _ConfigurationKey = value;
-                _flagConfigurationKey = true;
-            }
-        }
-        private string _ConfigurationKey;
-        private bool _flagConfigurationKey;
+        public string ConfigurationKey { get; set; }
 
-        /// <summary>
-        /// Returns false as ConfigurationKey should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeConfigurationKey()
-        {
-            return _flagConfigurationKey;
-        }
         /// <summary>
         /// Gets or Sets ConfigurationValue
         /// </summary>
         [DataMember(Name = "configurationValue", IsRequired = true, EmitDefaultValue = false)]
-        public SystemConfigConfigurationValue ConfigurationValue
-        {
-            get{ return _ConfigurationValue;}
-            set
-            {
-                _ConfigurationValue = value;
-                _flagConfigurationValue = true;
-            }
-        }
-        private SystemConfigConfigurationValue _ConfigurationValue;
-        private bool _flagConfigurationValue;
+        public SystemConfigConfigurationValue ConfigurationValue { get; set; }
 
-        /// <summary>
-        /// Returns false as ConfigurationValue should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeConfigurationValue()
-        {
-            return _flagConfigurationValue;
-        }
         /// <summary>
         /// Gets or Sets SalesChannelId
         /// </summary>
         [DataMember(Name = "salesChannelId", EmitDefaultValue = false)]
-        public string SalesChannelId
-        {
-            get{ return _SalesChannelId;}
-            set
-            {
-                _SalesChannelId = value;
-                _flagSalesChannelId = true;
-            }
-        }
-        private string _SalesChannelId;
-        private bool _flagSalesChannelId;
+        public string SalesChannelId { get; set; }
 
-        /// <summary>
-        /// Returns false as SalesChannelId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalesChannelId()
-        {
-            return _flagSalesChannelId;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -204,26 +120,8 @@ namespace ShopwareSharp.Model
         /// Gets or Sets SalesChannel
         /// </summary>
         [DataMember(Name = "salesChannel", EmitDefaultValue = false)]
-        public SalesChannel SalesChannel
-        {
-            get{ return _SalesChannel;}
-            set
-            {
-                _SalesChannel = value;
-                _flagSalesChannel = true;
-            }
-        }
-        private SalesChannel _SalesChannel;
-        private bool _flagSalesChannel;
+        public SalesChannel SalesChannel { get; set; }
 
-        /// <summary>
-        /// Returns false as SalesChannel should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalesChannel()
-        {
-            return _flagSalesChannel;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

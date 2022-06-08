@@ -70,965 +70,239 @@ namespace ShopwareSharp.Model
         /// <param name="remoteAddress">remoteAddress.</param>
         public SalesChannelContextAllOfCustomer(string groupId = default(string), string defaultPaymentMethodId = default(string), string salesChannelId = default(string), string languageId = default(string), string lastPaymentMethodId = default(string), string defaultBillingAddressId = default(string), string defaultShippingAddressId = default(string), string customerNumber = default(string), string salutationId = default(string), string firstName = default(string), string lastName = default(string), string company = default(string), string password = default(string), string email = default(string), string title = default(string), string affiliateCode = default(string), string campaignCode = default(string), bool active = default(bool), bool doubleOptInRegistration = default(bool), DateTime doubleOptInEmailSentDate = default(DateTime), DateTime doubleOptInConfirmDate = default(DateTime), string hash = default(string), bool guest = default(bool), DateTime firstLogin = default(DateTime), DateTime lastLogin = default(DateTime), bool newsletter = default(bool), DateTime birthday = default(DateTime), DateTime lastOrderDate = default(DateTime), int orderCount = default(int), string legacyEncoder = default(string), string legacyPassword = default(string), int autoIncrement = default(int), string remoteAddress = default(string))
         {
-            this._GroupId = groupId;
-            if (this.GroupId != null)
-            {
-                this._flagGroupId = true;
-            }
-            this._DefaultPaymentMethodId = defaultPaymentMethodId;
-            if (this.DefaultPaymentMethodId != null)
-            {
-                this._flagDefaultPaymentMethodId = true;
-            }
-            this._SalesChannelId = salesChannelId;
-            if (this.SalesChannelId != null)
-            {
-                this._flagSalesChannelId = true;
-            }
-            this._LanguageId = languageId;
-            if (this.LanguageId != null)
-            {
-                this._flagLanguageId = true;
-            }
-            this._LastPaymentMethodId = lastPaymentMethodId;
-            if (this.LastPaymentMethodId != null)
-            {
-                this._flagLastPaymentMethodId = true;
-            }
-            this._DefaultBillingAddressId = defaultBillingAddressId;
-            if (this.DefaultBillingAddressId != null)
-            {
-                this._flagDefaultBillingAddressId = true;
-            }
-            this._DefaultShippingAddressId = defaultShippingAddressId;
-            if (this.DefaultShippingAddressId != null)
-            {
-                this._flagDefaultShippingAddressId = true;
-            }
-            this._CustomerNumber = customerNumber;
-            if (this.CustomerNumber != null)
-            {
-                this._flagCustomerNumber = true;
-            }
-            this._SalutationId = salutationId;
-            if (this.SalutationId != null)
-            {
-                this._flagSalutationId = true;
-            }
-            this._FirstName = firstName;
-            if (this.FirstName != null)
-            {
-                this._flagFirstName = true;
-            }
-            this._LastName = lastName;
-            if (this.LastName != null)
-            {
-                this._flagLastName = true;
-            }
-            this._Company = company;
-            if (this.Company != null)
-            {
-                this._flagCompany = true;
-            }
-            this._Password = password;
-            if (this.Password != null)
-            {
-                this._flagPassword = true;
-            }
-            this._Email = email;
-            if (this.Email != null)
-            {
-                this._flagEmail = true;
-            }
-            this._Title = title;
-            if (this.Title != null)
-            {
-                this._flagTitle = true;
-            }
-            this._AffiliateCode = affiliateCode;
-            if (this.AffiliateCode != null)
-            {
-                this._flagAffiliateCode = true;
-            }
-            this._CampaignCode = campaignCode;
-            if (this.CampaignCode != null)
-            {
-                this._flagCampaignCode = true;
-            }
-            this._Active = active;
-            if (this.Active != null)
-            {
-                this._flagActive = true;
-            }
-            this._DoubleOptInRegistration = doubleOptInRegistration;
-            if (this.DoubleOptInRegistration != null)
-            {
-                this._flagDoubleOptInRegistration = true;
-            }
-            this._DoubleOptInEmailSentDate = doubleOptInEmailSentDate;
-            if (this.DoubleOptInEmailSentDate != null)
-            {
-                this._flagDoubleOptInEmailSentDate = true;
-            }
-            this._DoubleOptInConfirmDate = doubleOptInConfirmDate;
-            if (this.DoubleOptInConfirmDate != null)
-            {
-                this._flagDoubleOptInConfirmDate = true;
-            }
-            this._Hash = hash;
-            if (this.Hash != null)
-            {
-                this._flagHash = true;
-            }
-            this._Guest = guest;
-            if (this.Guest != null)
-            {
-                this._flagGuest = true;
-            }
-            this._FirstLogin = firstLogin;
-            if (this.FirstLogin != null)
-            {
-                this._flagFirstLogin = true;
-            }
-            this._LastLogin = lastLogin;
-            if (this.LastLogin != null)
-            {
-                this._flagLastLogin = true;
-            }
-            this._Newsletter = newsletter;
-            if (this.Newsletter != null)
-            {
-                this._flagNewsletter = true;
-            }
-            this._Birthday = birthday;
-            if (this.Birthday != null)
-            {
-                this._flagBirthday = true;
-            }
-            this._LastOrderDate = lastOrderDate;
-            if (this.LastOrderDate != null)
-            {
-                this._flagLastOrderDate = true;
-            }
-            this._OrderCount = orderCount;
-            if (this.OrderCount != null)
-            {
-                this._flagOrderCount = true;
-            }
-            this._LegacyEncoder = legacyEncoder;
-            if (this.LegacyEncoder != null)
-            {
-                this._flagLegacyEncoder = true;
-            }
-            this._LegacyPassword = legacyPassword;
-            if (this.LegacyPassword != null)
-            {
-                this._flagLegacyPassword = true;
-            }
-            this._AutoIncrement = autoIncrement;
-            if (this.AutoIncrement != null)
-            {
-                this._flagAutoIncrement = true;
-            }
-            this._RemoteAddress = remoteAddress;
-            if (this.RemoteAddress != null)
-            {
-                this._flagRemoteAddress = true;
-            }
+            this.GroupId = groupId;
+            this.DefaultPaymentMethodId = defaultPaymentMethodId;
+            this.SalesChannelId = salesChannelId;
+            this.LanguageId = languageId;
+            this.LastPaymentMethodId = lastPaymentMethodId;
+            this.DefaultBillingAddressId = defaultBillingAddressId;
+            this.DefaultShippingAddressId = defaultShippingAddressId;
+            this.CustomerNumber = customerNumber;
+            this.SalutationId = salutationId;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Company = company;
+            this.Password = password;
+            this.Email = email;
+            this.Title = title;
+            this.AffiliateCode = affiliateCode;
+            this.CampaignCode = campaignCode;
+            this.Active = active;
+            this.DoubleOptInRegistration = doubleOptInRegistration;
+            this.DoubleOptInEmailSentDate = doubleOptInEmailSentDate;
+            this.DoubleOptInConfirmDate = doubleOptInConfirmDate;
+            this.Hash = hash;
+            this.Guest = guest;
+            this.FirstLogin = firstLogin;
+            this.LastLogin = lastLogin;
+            this.Newsletter = newsletter;
+            this.Birthday = birthday;
+            this.LastOrderDate = lastOrderDate;
+            this.OrderCount = orderCount;
+            this.LegacyEncoder = legacyEncoder;
+            this.LegacyPassword = legacyPassword;
+            this.AutoIncrement = autoIncrement;
+            this.RemoteAddress = remoteAddress;
         }
 
         /// <summary>
         /// Gets or Sets GroupId
         /// </summary>
         [DataMember(Name = "groupId", EmitDefaultValue = false)]
-        public string GroupId
-        {
-            get{ return _GroupId;}
-            set
-            {
-                _GroupId = value;
-                _flagGroupId = true;
-            }
-        }
-        private string _GroupId;
-        private bool _flagGroupId;
+        public string GroupId { get; set; }
 
-        /// <summary>
-        /// Returns false as GroupId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeGroupId()
-        {
-            return _flagGroupId;
-        }
         /// <summary>
         /// Gets or Sets DefaultPaymentMethodId
         /// </summary>
         [DataMember(Name = "defaultPaymentMethodId", EmitDefaultValue = false)]
-        public string DefaultPaymentMethodId
-        {
-            get{ return _DefaultPaymentMethodId;}
-            set
-            {
-                _DefaultPaymentMethodId = value;
-                _flagDefaultPaymentMethodId = true;
-            }
-        }
-        private string _DefaultPaymentMethodId;
-        private bool _flagDefaultPaymentMethodId;
+        public string DefaultPaymentMethodId { get; set; }
 
-        /// <summary>
-        /// Returns false as DefaultPaymentMethodId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDefaultPaymentMethodId()
-        {
-            return _flagDefaultPaymentMethodId;
-        }
         /// <summary>
         /// Gets or Sets SalesChannelId
         /// </summary>
         [DataMember(Name = "salesChannelId", EmitDefaultValue = false)]
-        public string SalesChannelId
-        {
-            get{ return _SalesChannelId;}
-            set
-            {
-                _SalesChannelId = value;
-                _flagSalesChannelId = true;
-            }
-        }
-        private string _SalesChannelId;
-        private bool _flagSalesChannelId;
+        public string SalesChannelId { get; set; }
 
-        /// <summary>
-        /// Returns false as SalesChannelId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalesChannelId()
-        {
-            return _flagSalesChannelId;
-        }
         /// <summary>
         /// Gets or Sets LanguageId
         /// </summary>
         [DataMember(Name = "languageId", EmitDefaultValue = false)]
-        public string LanguageId
-        {
-            get{ return _LanguageId;}
-            set
-            {
-                _LanguageId = value;
-                _flagLanguageId = true;
-            }
-        }
-        private string _LanguageId;
-        private bool _flagLanguageId;
+        public string LanguageId { get; set; }
 
-        /// <summary>
-        /// Returns false as LanguageId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLanguageId()
-        {
-            return _flagLanguageId;
-        }
         /// <summary>
         /// Gets or Sets LastPaymentMethodId
         /// </summary>
         [DataMember(Name = "lastPaymentMethodId", EmitDefaultValue = false)]
-        public string LastPaymentMethodId
-        {
-            get{ return _LastPaymentMethodId;}
-            set
-            {
-                _LastPaymentMethodId = value;
-                _flagLastPaymentMethodId = true;
-            }
-        }
-        private string _LastPaymentMethodId;
-        private bool _flagLastPaymentMethodId;
+        public string LastPaymentMethodId { get; set; }
 
-        /// <summary>
-        /// Returns false as LastPaymentMethodId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLastPaymentMethodId()
-        {
-            return _flagLastPaymentMethodId;
-        }
         /// <summary>
         /// Gets or Sets DefaultBillingAddressId
         /// </summary>
         [DataMember(Name = "defaultBillingAddressId", EmitDefaultValue = false)]
-        public string DefaultBillingAddressId
-        {
-            get{ return _DefaultBillingAddressId;}
-            set
-            {
-                _DefaultBillingAddressId = value;
-                _flagDefaultBillingAddressId = true;
-            }
-        }
-        private string _DefaultBillingAddressId;
-        private bool _flagDefaultBillingAddressId;
+        public string DefaultBillingAddressId { get; set; }
 
-        /// <summary>
-        /// Returns false as DefaultBillingAddressId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDefaultBillingAddressId()
-        {
-            return _flagDefaultBillingAddressId;
-        }
         /// <summary>
         /// Gets or Sets DefaultShippingAddressId
         /// </summary>
         [DataMember(Name = "defaultShippingAddressId", EmitDefaultValue = false)]
-        public string DefaultShippingAddressId
-        {
-            get{ return _DefaultShippingAddressId;}
-            set
-            {
-                _DefaultShippingAddressId = value;
-                _flagDefaultShippingAddressId = true;
-            }
-        }
-        private string _DefaultShippingAddressId;
-        private bool _flagDefaultShippingAddressId;
+        public string DefaultShippingAddressId { get; set; }
 
-        /// <summary>
-        /// Returns false as DefaultShippingAddressId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDefaultShippingAddressId()
-        {
-            return _flagDefaultShippingAddressId;
-        }
         /// <summary>
         /// Gets or Sets CustomerNumber
         /// </summary>
         [DataMember(Name = "customerNumber", EmitDefaultValue = false)]
-        public string CustomerNumber
-        {
-            get{ return _CustomerNumber;}
-            set
-            {
-                _CustomerNumber = value;
-                _flagCustomerNumber = true;
-            }
-        }
-        private string _CustomerNumber;
-        private bool _flagCustomerNumber;
+        public string CustomerNumber { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomerNumber should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomerNumber()
-        {
-            return _flagCustomerNumber;
-        }
         /// <summary>
         /// Gets or Sets SalutationId
         /// </summary>
         [DataMember(Name = "salutationId", EmitDefaultValue = false)]
-        public string SalutationId
-        {
-            get{ return _SalutationId;}
-            set
-            {
-                _SalutationId = value;
-                _flagSalutationId = true;
-            }
-        }
-        private string _SalutationId;
-        private bool _flagSalutationId;
+        public string SalutationId { get; set; }
 
-        /// <summary>
-        /// Returns false as SalutationId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalutationId()
-        {
-            return _flagSalutationId;
-        }
         /// <summary>
         /// Gets or Sets FirstName
         /// </summary>
         [DataMember(Name = "firstName", EmitDefaultValue = false)]
-        public string FirstName
-        {
-            get{ return _FirstName;}
-            set
-            {
-                _FirstName = value;
-                _flagFirstName = true;
-            }
-        }
-        private string _FirstName;
-        private bool _flagFirstName;
+        public string FirstName { get; set; }
 
-        /// <summary>
-        /// Returns false as FirstName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFirstName()
-        {
-            return _flagFirstName;
-        }
         /// <summary>
         /// Gets or Sets LastName
         /// </summary>
         [DataMember(Name = "lastName", EmitDefaultValue = false)]
-        public string LastName
-        {
-            get{ return _LastName;}
-            set
-            {
-                _LastName = value;
-                _flagLastName = true;
-            }
-        }
-        private string _LastName;
-        private bool _flagLastName;
+        public string LastName { get; set; }
 
-        /// <summary>
-        /// Returns false as LastName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLastName()
-        {
-            return _flagLastName;
-        }
         /// <summary>
         /// Gets or Sets Company
         /// </summary>
         [DataMember(Name = "company", EmitDefaultValue = false)]
-        public string Company
-        {
-            get{ return _Company;}
-            set
-            {
-                _Company = value;
-                _flagCompany = true;
-            }
-        }
-        private string _Company;
-        private bool _flagCompany;
+        public string Company { get; set; }
 
-        /// <summary>
-        /// Returns false as Company should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCompany()
-        {
-            return _flagCompany;
-        }
         /// <summary>
         /// Gets or Sets Password
         /// </summary>
         [DataMember(Name = "password", EmitDefaultValue = false)]
-        public string Password
-        {
-            get{ return _Password;}
-            set
-            {
-                _Password = value;
-                _flagPassword = true;
-            }
-        }
-        private string _Password;
-        private bool _flagPassword;
+        public string Password { get; set; }
 
-        /// <summary>
-        /// Returns false as Password should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePassword()
-        {
-            return _flagPassword;
-        }
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
         [DataMember(Name = "email", EmitDefaultValue = false)]
-        public string Email
-        {
-            get{ return _Email;}
-            set
-            {
-                _Email = value;
-                _flagEmail = true;
-            }
-        }
-        private string _Email;
-        private bool _flagEmail;
+        public string Email { get; set; }
 
-        /// <summary>
-        /// Returns false as Email should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeEmail()
-        {
-            return _flagEmail;
-        }
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name = "title", EmitDefaultValue = false)]
-        public string Title
-        {
-            get{ return _Title;}
-            set
-            {
-                _Title = value;
-                _flagTitle = true;
-            }
-        }
-        private string _Title;
-        private bool _flagTitle;
+        public string Title { get; set; }
 
-        /// <summary>
-        /// Returns false as Title should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTitle()
-        {
-            return _flagTitle;
-        }
         /// <summary>
         /// Gets or Sets AffiliateCode
         /// </summary>
         [DataMember(Name = "affiliateCode", EmitDefaultValue = false)]
-        public string AffiliateCode
-        {
-            get{ return _AffiliateCode;}
-            set
-            {
-                _AffiliateCode = value;
-                _flagAffiliateCode = true;
-            }
-        }
-        private string _AffiliateCode;
-        private bool _flagAffiliateCode;
+        public string AffiliateCode { get; set; }
 
-        /// <summary>
-        /// Returns false as AffiliateCode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAffiliateCode()
-        {
-            return _flagAffiliateCode;
-        }
         /// <summary>
         /// Gets or Sets CampaignCode
         /// </summary>
         [DataMember(Name = "campaignCode", EmitDefaultValue = false)]
-        public string CampaignCode
-        {
-            get{ return _CampaignCode;}
-            set
-            {
-                _CampaignCode = value;
-                _flagCampaignCode = true;
-            }
-        }
-        private string _CampaignCode;
-        private bool _flagCampaignCode;
+        public string CampaignCode { get; set; }
 
-        /// <summary>
-        /// Returns false as CampaignCode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCampaignCode()
-        {
-            return _flagCampaignCode;
-        }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", EmitDefaultValue = true)]
-        public bool Active
-        {
-            get{ return _Active;}
-            set
-            {
-                _Active = value;
-                _flagActive = true;
-            }
-        }
-        private bool _Active;
-        private bool _flagActive;
+        public bool Active { get; set; }
 
-        /// <summary>
-        /// Returns false as Active should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeActive()
-        {
-            return _flagActive;
-        }
         /// <summary>
         /// Gets or Sets DoubleOptInRegistration
         /// </summary>
         [DataMember(Name = "doubleOptInRegistration", EmitDefaultValue = true)]
-        public bool DoubleOptInRegistration
-        {
-            get{ return _DoubleOptInRegistration;}
-            set
-            {
-                _DoubleOptInRegistration = value;
-                _flagDoubleOptInRegistration = true;
-            }
-        }
-        private bool _DoubleOptInRegistration;
-        private bool _flagDoubleOptInRegistration;
+        public bool DoubleOptInRegistration { get; set; }
 
-        /// <summary>
-        /// Returns false as DoubleOptInRegistration should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDoubleOptInRegistration()
-        {
-            return _flagDoubleOptInRegistration;
-        }
         /// <summary>
         /// Gets or Sets DoubleOptInEmailSentDate
         /// </summary>
         [DataMember(Name = "doubleOptInEmailSentDate", EmitDefaultValue = false)]
-        public DateTime DoubleOptInEmailSentDate
-        {
-            get{ return _DoubleOptInEmailSentDate;}
-            set
-            {
-                _DoubleOptInEmailSentDate = value;
-                _flagDoubleOptInEmailSentDate = true;
-            }
-        }
-        private DateTime _DoubleOptInEmailSentDate;
-        private bool _flagDoubleOptInEmailSentDate;
+        public DateTime DoubleOptInEmailSentDate { get; set; }
 
-        /// <summary>
-        /// Returns false as DoubleOptInEmailSentDate should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDoubleOptInEmailSentDate()
-        {
-            return _flagDoubleOptInEmailSentDate;
-        }
         /// <summary>
         /// Gets or Sets DoubleOptInConfirmDate
         /// </summary>
         [DataMember(Name = "doubleOptInConfirmDate", EmitDefaultValue = false)]
-        public DateTime DoubleOptInConfirmDate
-        {
-            get{ return _DoubleOptInConfirmDate;}
-            set
-            {
-                _DoubleOptInConfirmDate = value;
-                _flagDoubleOptInConfirmDate = true;
-            }
-        }
-        private DateTime _DoubleOptInConfirmDate;
-        private bool _flagDoubleOptInConfirmDate;
+        public DateTime DoubleOptInConfirmDate { get; set; }
 
-        /// <summary>
-        /// Returns false as DoubleOptInConfirmDate should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDoubleOptInConfirmDate()
-        {
-            return _flagDoubleOptInConfirmDate;
-        }
         /// <summary>
         /// Gets or Sets Hash
         /// </summary>
         [DataMember(Name = "hash", EmitDefaultValue = false)]
-        public string Hash
-        {
-            get{ return _Hash;}
-            set
-            {
-                _Hash = value;
-                _flagHash = true;
-            }
-        }
-        private string _Hash;
-        private bool _flagHash;
+        public string Hash { get; set; }
 
-        /// <summary>
-        /// Returns false as Hash should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeHash()
-        {
-            return _flagHash;
-        }
         /// <summary>
         /// Gets or Sets Guest
         /// </summary>
         [DataMember(Name = "guest", EmitDefaultValue = true)]
-        public bool Guest
-        {
-            get{ return _Guest;}
-            set
-            {
-                _Guest = value;
-                _flagGuest = true;
-            }
-        }
-        private bool _Guest;
-        private bool _flagGuest;
+        public bool Guest { get; set; }
 
-        /// <summary>
-        /// Returns false as Guest should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeGuest()
-        {
-            return _flagGuest;
-        }
         /// <summary>
         /// Gets or Sets FirstLogin
         /// </summary>
         [DataMember(Name = "firstLogin", EmitDefaultValue = false)]
-        public DateTime FirstLogin
-        {
-            get{ return _FirstLogin;}
-            set
-            {
-                _FirstLogin = value;
-                _flagFirstLogin = true;
-            }
-        }
-        private DateTime _FirstLogin;
-        private bool _flagFirstLogin;
+        public DateTime FirstLogin { get; set; }
 
-        /// <summary>
-        /// Returns false as FirstLogin should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFirstLogin()
-        {
-            return _flagFirstLogin;
-        }
         /// <summary>
         /// Gets or Sets LastLogin
         /// </summary>
         [DataMember(Name = "lastLogin", EmitDefaultValue = false)]
-        public DateTime LastLogin
-        {
-            get{ return _LastLogin;}
-            set
-            {
-                _LastLogin = value;
-                _flagLastLogin = true;
-            }
-        }
-        private DateTime _LastLogin;
-        private bool _flagLastLogin;
+        public DateTime LastLogin { get; set; }
 
-        /// <summary>
-        /// Returns false as LastLogin should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLastLogin()
-        {
-            return _flagLastLogin;
-        }
         /// <summary>
         /// Gets or Sets Newsletter
         /// </summary>
         [DataMember(Name = "newsletter", EmitDefaultValue = true)]
-        public bool Newsletter
-        {
-            get{ return _Newsletter;}
-            set
-            {
-                _Newsletter = value;
-                _flagNewsletter = true;
-            }
-        }
-        private bool _Newsletter;
-        private bool _flagNewsletter;
+        public bool Newsletter { get; set; }
 
-        /// <summary>
-        /// Returns false as Newsletter should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNewsletter()
-        {
-            return _flagNewsletter;
-        }
         /// <summary>
         /// Gets or Sets Birthday
         /// </summary>
         [DataMember(Name = "birthday", EmitDefaultValue = false)]
-        public DateTime Birthday
-        {
-            get{ return _Birthday;}
-            set
-            {
-                _Birthday = value;
-                _flagBirthday = true;
-            }
-        }
-        private DateTime _Birthday;
-        private bool _flagBirthday;
+        public DateTime Birthday { get; set; }
 
-        /// <summary>
-        /// Returns false as Birthday should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBirthday()
-        {
-            return _flagBirthday;
-        }
         /// <summary>
         /// Gets or Sets LastOrderDate
         /// </summary>
         [DataMember(Name = "lastOrderDate", EmitDefaultValue = false)]
-        public DateTime LastOrderDate
-        {
-            get{ return _LastOrderDate;}
-            set
-            {
-                _LastOrderDate = value;
-                _flagLastOrderDate = true;
-            }
-        }
-        private DateTime _LastOrderDate;
-        private bool _flagLastOrderDate;
+        public DateTime LastOrderDate { get; set; }
 
-        /// <summary>
-        /// Returns false as LastOrderDate should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLastOrderDate()
-        {
-            return _flagLastOrderDate;
-        }
         /// <summary>
         /// Gets or Sets OrderCount
         /// </summary>
         [DataMember(Name = "orderCount", EmitDefaultValue = false)]
-        public int OrderCount
-        {
-            get{ return _OrderCount;}
-            set
-            {
-                _OrderCount = value;
-                _flagOrderCount = true;
-            }
-        }
-        private int _OrderCount;
-        private bool _flagOrderCount;
+        public int OrderCount { get; set; }
 
-        /// <summary>
-        /// Returns false as OrderCount should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrderCount()
-        {
-            return _flagOrderCount;
-        }
         /// <summary>
         /// Gets or Sets LegacyEncoder
         /// </summary>
         [DataMember(Name = "legacyEncoder", EmitDefaultValue = false)]
-        public string LegacyEncoder
-        {
-            get{ return _LegacyEncoder;}
-            set
-            {
-                _LegacyEncoder = value;
-                _flagLegacyEncoder = true;
-            }
-        }
-        private string _LegacyEncoder;
-        private bool _flagLegacyEncoder;
+        public string LegacyEncoder { get; set; }
 
-        /// <summary>
-        /// Returns false as LegacyEncoder should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLegacyEncoder()
-        {
-            return _flagLegacyEncoder;
-        }
         /// <summary>
         /// Gets or Sets LegacyPassword
         /// </summary>
         [DataMember(Name = "legacyPassword", EmitDefaultValue = false)]
-        public string LegacyPassword
-        {
-            get{ return _LegacyPassword;}
-            set
-            {
-                _LegacyPassword = value;
-                _flagLegacyPassword = true;
-            }
-        }
-        private string _LegacyPassword;
-        private bool _flagLegacyPassword;
+        public string LegacyPassword { get; set; }
 
-        /// <summary>
-        /// Returns false as LegacyPassword should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLegacyPassword()
-        {
-            return _flagLegacyPassword;
-        }
         /// <summary>
         /// Gets or Sets AutoIncrement
         /// </summary>
         [DataMember(Name = "autoIncrement", EmitDefaultValue = false)]
-        public int AutoIncrement
-        {
-            get{ return _AutoIncrement;}
-            set
-            {
-                _AutoIncrement = value;
-                _flagAutoIncrement = true;
-            }
-        }
-        private int _AutoIncrement;
-        private bool _flagAutoIncrement;
+        public int AutoIncrement { get; set; }
 
-        /// <summary>
-        /// Returns false as AutoIncrement should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAutoIncrement()
-        {
-            return _flagAutoIncrement;
-        }
         /// <summary>
         /// Gets or Sets RemoteAddress
         /// </summary>
         [DataMember(Name = "remoteAddress", EmitDefaultValue = false)]
-        public string RemoteAddress
-        {
-            get{ return _RemoteAddress;}
-            set
-            {
-                _RemoteAddress = value;
-                _flagRemoteAddress = true;
-            }
-        }
-        private string _RemoteAddress;
-        private bool _flagRemoteAddress;
+        public string RemoteAddress { get; set; }
 
-        /// <summary>
-        /// Returns false as RemoteAddress should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeRemoteAddress()
-        {
-            return _flagRemoteAddress;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -45,240 +45,64 @@ namespace ShopwareSharp.Model
         /// <param name="isSystemDefault">isSystemDefault.</param>
         public SalesChannelContextAllOfCurrency(string isoCode = default(string), int factor = default(int), string symbol = default(string), string shortName = default(string), string name = default(string), int position = default(int), int decimalPrecision = default(int), bool isSystemDefault = default(bool))
         {
-            this._IsoCode = isoCode;
-            if (this.IsoCode != null)
-            {
-                this._flagIsoCode = true;
-            }
-            this._Factor = factor;
-            if (this.Factor != null)
-            {
-                this._flagFactor = true;
-            }
-            this._Symbol = symbol;
-            if (this.Symbol != null)
-            {
-                this._flagSymbol = true;
-            }
-            this._ShortName = shortName;
-            if (this.ShortName != null)
-            {
-                this._flagShortName = true;
-            }
-            this._Name = name;
-            if (this.Name != null)
-            {
-                this._flagName = true;
-            }
-            this._Position = position;
-            if (this.Position != null)
-            {
-                this._flagPosition = true;
-            }
-            this._DecimalPrecision = decimalPrecision;
-            if (this.DecimalPrecision != null)
-            {
-                this._flagDecimalPrecision = true;
-            }
-            this._IsSystemDefault = isSystemDefault;
-            if (this.IsSystemDefault != null)
-            {
-                this._flagIsSystemDefault = true;
-            }
+            this.IsoCode = isoCode;
+            this.Factor = factor;
+            this.Symbol = symbol;
+            this.ShortName = shortName;
+            this.Name = name;
+            this.Position = position;
+            this.DecimalPrecision = decimalPrecision;
+            this.IsSystemDefault = isSystemDefault;
         }
 
         /// <summary>
         /// Gets or Sets IsoCode
         /// </summary>
         [DataMember(Name = "isoCode", EmitDefaultValue = false)]
-        public string IsoCode
-        {
-            get{ return _IsoCode;}
-            set
-            {
-                _IsoCode = value;
-                _flagIsoCode = true;
-            }
-        }
-        private string _IsoCode;
-        private bool _flagIsoCode;
+        public string IsoCode { get; set; }
 
-        /// <summary>
-        /// Returns false as IsoCode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeIsoCode()
-        {
-            return _flagIsoCode;
-        }
         /// <summary>
         /// Gets or Sets Factor
         /// </summary>
         [DataMember(Name = "factor", EmitDefaultValue = false)]
-        public int Factor
-        {
-            get{ return _Factor;}
-            set
-            {
-                _Factor = value;
-                _flagFactor = true;
-            }
-        }
-        private int _Factor;
-        private bool _flagFactor;
+        public int Factor { get; set; }
 
-        /// <summary>
-        /// Returns false as Factor should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFactor()
-        {
-            return _flagFactor;
-        }
         /// <summary>
         /// Gets or Sets Symbol
         /// </summary>
         [DataMember(Name = "symbol", EmitDefaultValue = false)]
-        public string Symbol
-        {
-            get{ return _Symbol;}
-            set
-            {
-                _Symbol = value;
-                _flagSymbol = true;
-            }
-        }
-        private string _Symbol;
-        private bool _flagSymbol;
+        public string Symbol { get; set; }
 
-        /// <summary>
-        /// Returns false as Symbol should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSymbol()
-        {
-            return _flagSymbol;
-        }
         /// <summary>
         /// Gets or Sets ShortName
         /// </summary>
         [DataMember(Name = "shortName", EmitDefaultValue = false)]
-        public string ShortName
-        {
-            get{ return _ShortName;}
-            set
-            {
-                _ShortName = value;
-                _flagShortName = true;
-            }
-        }
-        private string _ShortName;
-        private bool _flagShortName;
+        public string ShortName { get; set; }
 
-        /// <summary>
-        /// Returns false as ShortName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShortName()
-        {
-            return _flagShortName;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Position
         /// </summary>
         [DataMember(Name = "position", EmitDefaultValue = false)]
-        public int Position
-        {
-            get{ return _Position;}
-            set
-            {
-                _Position = value;
-                _flagPosition = true;
-            }
-        }
-        private int _Position;
-        private bool _flagPosition;
+        public int Position { get; set; }
 
-        /// <summary>
-        /// Returns false as Position should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePosition()
-        {
-            return _flagPosition;
-        }
         /// <summary>
         /// Gets or Sets DecimalPrecision
         /// </summary>
         [DataMember(Name = "decimalPrecision", EmitDefaultValue = false)]
-        public int DecimalPrecision
-        {
-            get{ return _DecimalPrecision;}
-            set
-            {
-                _DecimalPrecision = value;
-                _flagDecimalPrecision = true;
-            }
-        }
-        private int _DecimalPrecision;
-        private bool _flagDecimalPrecision;
+        public int DecimalPrecision { get; set; }
 
-        /// <summary>
-        /// Returns false as DecimalPrecision should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDecimalPrecision()
-        {
-            return _flagDecimalPrecision;
-        }
         /// <summary>
         /// Gets or Sets IsSystemDefault
         /// </summary>
         [DataMember(Name = "isSystemDefault", EmitDefaultValue = true)]
-        public bool IsSystemDefault
-        {
-            get{ return _IsSystemDefault;}
-            set
-            {
-                _IsSystemDefault = value;
-                _flagIsSystemDefault = true;
-            }
-        }
-        private bool _IsSystemDefault;
-        private bool _flagIsSystemDefault;
+        public bool IsSystemDefault { get; set; }
 
-        /// <summary>
-        /// Returns false as IsSystemDefault should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeIsSystemDefault()
-        {
-            return _flagIsSystemDefault;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -47,298 +47,78 @@ namespace ShopwareSharp.Model
         /// <param name="modified">modified.</param>
         public LineItem(string id = default(string), string referencedId = default(string), string label = default(string), int quantity = default(int), string type = default(string), bool good = default(bool), string description = default(string), bool removable = default(bool), bool stackable = default(bool), bool modified = default(bool))
         {
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._ReferencedId = referencedId;
-            if (this.ReferencedId != null)
-            {
-                this._flagReferencedId = true;
-            }
-            this._Label = label;
-            if (this.Label != null)
-            {
-                this._flagLabel = true;
-            }
-            this._Quantity = quantity;
-            if (this.Quantity != null)
-            {
-                this._flagQuantity = true;
-            }
-            this._Type = type;
-            if (this.Type != null)
-            {
-                this._flagType = true;
-            }
-            this._Good = good;
-            if (this.Good != null)
-            {
-                this._flagGood = true;
-            }
-            this._Description = description;
-            if (this.Description != null)
-            {
-                this._flagDescription = true;
-            }
-            this._Removable = removable;
-            if (this.Removable != null)
-            {
-                this._flagRemovable = true;
-            }
-            this._Stackable = stackable;
-            if (this.Stackable != null)
-            {
-                this._flagStackable = true;
-            }
-            this._Modified = modified;
-            if (this.Modified != null)
-            {
-                this._flagModified = true;
-            }
+            this.Id = id;
+            this.ReferencedId = referencedId;
+            this.Label = label;
+            this.Quantity = quantity;
+            this.Type = type;
+            this.Good = good;
+            this.Description = description;
+            this.Removable = removable;
+            this.Stackable = stackable;
+            this.Modified = modified;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets ReferencedId
         /// </summary>
         [DataMember(Name = "referencedId", EmitDefaultValue = false)]
-        public string ReferencedId
-        {
-            get{ return _ReferencedId;}
-            set
-            {
-                _ReferencedId = value;
-                _flagReferencedId = true;
-            }
-        }
-        private string _ReferencedId;
-        private bool _flagReferencedId;
+        public string ReferencedId { get; set; }
 
-        /// <summary>
-        /// Returns false as ReferencedId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeReferencedId()
-        {
-            return _flagReferencedId;
-        }
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
         [DataMember(Name = "label", EmitDefaultValue = false)]
-        public string Label
-        {
-            get{ return _Label;}
-            set
-            {
-                _Label = value;
-                _flagLabel = true;
-            }
-        }
-        private string _Label;
-        private bool _flagLabel;
+        public string Label { get; set; }
 
-        /// <summary>
-        /// Returns false as Label should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLabel()
-        {
-            return _flagLabel;
-        }
         /// <summary>
         /// Gets or Sets Quantity
         /// </summary>
         [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public int Quantity
-        {
-            get{ return _Quantity;}
-            set
-            {
-                _Quantity = value;
-                _flagQuantity = true;
-            }
-        }
-        private int _Quantity;
-        private bool _flagQuantity;
+        public int Quantity { get; set; }
 
-        /// <summary>
-        /// Returns false as Quantity should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeQuantity()
-        {
-            return _flagQuantity;
-        }
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name = "type", EmitDefaultValue = false)]
-        public string Type
-        {
-            get{ return _Type;}
-            set
-            {
-                _Type = value;
-                _flagType = true;
-            }
-        }
-        private string _Type;
-        private bool _flagType;
+        public string Type { get; set; }
 
-        /// <summary>
-        /// Returns false as Type should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeType()
-        {
-            return _flagType;
-        }
         /// <summary>
         /// Gets or Sets Good
         /// </summary>
         [DataMember(Name = "good", EmitDefaultValue = true)]
-        public bool Good
-        {
-            get{ return _Good;}
-            set
-            {
-                _Good = value;
-                _flagGood = true;
-            }
-        }
-        private bool _Good;
-        private bool _flagGood;
+        public bool Good { get; set; }
 
-        /// <summary>
-        /// Returns false as Good should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeGood()
-        {
-            return _flagGood;
-        }
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name = "description", EmitDefaultValue = false)]
-        public string Description
-        {
-            get{ return _Description;}
-            set
-            {
-                _Description = value;
-                _flagDescription = true;
-            }
-        }
-        private string _Description;
-        private bool _flagDescription;
+        public string Description { get; set; }
 
-        /// <summary>
-        /// Returns false as Description should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDescription()
-        {
-            return _flagDescription;
-        }
         /// <summary>
         /// Gets or Sets Removable
         /// </summary>
         [DataMember(Name = "removable", EmitDefaultValue = true)]
-        public bool Removable
-        {
-            get{ return _Removable;}
-            set
-            {
-                _Removable = value;
-                _flagRemovable = true;
-            }
-        }
-        private bool _Removable;
-        private bool _flagRemovable;
+        public bool Removable { get; set; }
 
-        /// <summary>
-        /// Returns false as Removable should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeRemovable()
-        {
-            return _flagRemovable;
-        }
         /// <summary>
         /// Gets or Sets Stackable
         /// </summary>
         [DataMember(Name = "stackable", EmitDefaultValue = true)]
-        public bool Stackable
-        {
-            get{ return _Stackable;}
-            set
-            {
-                _Stackable = value;
-                _flagStackable = true;
-            }
-        }
-        private bool _Stackable;
-        private bool _flagStackable;
+        public bool Stackable { get; set; }
 
-        /// <summary>
-        /// Returns false as Stackable should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStackable()
-        {
-            return _flagStackable;
-        }
         /// <summary>
         /// Gets or Sets Modified
         /// </summary>
         [DataMember(Name = "modified", EmitDefaultValue = true)]
-        public bool Modified
-        {
-            get{ return _Modified;}
-            set
-            {
-                _Modified = value;
-                _flagModified = true;
-            }
-        }
-        private bool _Modified;
-        private bool _flagModified;
+        public bool Modified { get; set; }
 
-        /// <summary>
-        /// Returns false as Modified should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeModified()
-        {
-            return _flagModified;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

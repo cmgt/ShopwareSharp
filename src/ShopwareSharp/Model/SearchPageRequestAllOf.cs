@@ -48,7 +48,7 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("search is a required property for SearchPageRequestAllOf and cannot be null");
             }
-            this._Search = search;
+            this.Search = search;
         }
 
         /// <summary>
@@ -56,26 +56,8 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Using the search parameter, the server performs a text search on all records based on their data model and weighting as defined in the entity definition using the SearchRanking flag.</value>
         [DataMember(Name = "search", IsRequired = true, EmitDefaultValue = false)]
-        public string Search
-        {
-            get{ return _Search;}
-            set
-            {
-                _Search = value;
-                _flagSearch = true;
-            }
-        }
-        private string _Search;
-        private bool _flagSearch;
+        public string Search { get; set; }
 
-        /// <summary>
-        /// Returns false as Search should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSearch()
-        {
-            return _flagSearch;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

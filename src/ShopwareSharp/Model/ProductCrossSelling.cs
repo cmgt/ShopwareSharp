@@ -56,238 +56,70 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("name is a required property for ProductCrossSelling and cannot be null");
             }
-            this._Name = name;
-            this._Position = position;
+            this.Name = name;
+            this.Position = position;
             // to ensure "type" is required (not null)
             if (type == null)
             {
                 throw new ArgumentNullException("type is a required property for ProductCrossSelling and cannot be null");
             }
-            this._Type = type;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._SortBy = sortBy;
-            if (this.SortBy != null)
-            {
-                this._flagSortBy = true;
-            }
-            this._SortDirection = sortDirection;
-            if (this.SortDirection != null)
-            {
-                this._flagSortDirection = true;
-            }
-            this._Active = active;
-            if (this.Active != null)
-            {
-                this._flagActive = true;
-            }
-            this._Limit = limit;
-            if (this.Limit != null)
-            {
-                this._flagLimit = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
+            this.Type = type;
+            this.Id = id;
+            this.SortBy = sortBy;
+            this.SortDirection = sortDirection;
+            this.Active = active;
+            this.Limit = limit;
+            this.Translated = translated;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Position
         /// </summary>
         [DataMember(Name = "position", IsRequired = true, EmitDefaultValue = false)]
-        public long Position
-        {
-            get{ return _Position;}
-            set
-            {
-                _Position = value;
-                _flagPosition = true;
-            }
-        }
-        private long _Position;
-        private bool _flagPosition;
+        public long Position { get; set; }
 
-        /// <summary>
-        /// Returns false as Position should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePosition()
-        {
-            return _flagPosition;
-        }
         /// <summary>
         /// Gets or Sets SortBy
         /// </summary>
         [DataMember(Name = "sortBy", EmitDefaultValue = false)]
-        public string SortBy
-        {
-            get{ return _SortBy;}
-            set
-            {
-                _SortBy = value;
-                _flagSortBy = true;
-            }
-        }
-        private string _SortBy;
-        private bool _flagSortBy;
+        public string SortBy { get; set; }
 
-        /// <summary>
-        /// Returns false as SortBy should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSortBy()
-        {
-            return _flagSortBy;
-        }
         /// <summary>
         /// Gets or Sets SortDirection
         /// </summary>
         [DataMember(Name = "sortDirection", EmitDefaultValue = false)]
-        public string SortDirection
-        {
-            get{ return _SortDirection;}
-            set
-            {
-                _SortDirection = value;
-                _flagSortDirection = true;
-            }
-        }
-        private string _SortDirection;
-        private bool _flagSortDirection;
+        public string SortDirection { get; set; }
 
-        /// <summary>
-        /// Returns false as SortDirection should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSortDirection()
-        {
-            return _flagSortDirection;
-        }
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = false)]
-        public string Type
-        {
-            get{ return _Type;}
-            set
-            {
-                _Type = value;
-                _flagType = true;
-            }
-        }
-        private string _Type;
-        private bool _flagType;
+        public string Type { get; set; }
 
-        /// <summary>
-        /// Returns false as Type should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeType()
-        {
-            return _flagType;
-        }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", EmitDefaultValue = true)]
-        public bool Active
-        {
-            get{ return _Active;}
-            set
-            {
-                _Active = value;
-                _flagActive = true;
-            }
-        }
-        private bool _Active;
-        private bool _flagActive;
+        public bool Active { get; set; }
 
-        /// <summary>
-        /// Returns false as Active should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeActive()
-        {
-            return _flagActive;
-        }
         /// <summary>
         /// Gets or Sets Limit
         /// </summary>
         [DataMember(Name = "limit", EmitDefaultValue = false)]
-        public long Limit
-        {
-            get{ return _Limit;}
-            set
-            {
-                _Limit = value;
-                _flagLimit = true;
-            }
-        }
-        private long _Limit;
-        private bool _flagLimit;
+        public long Limit { get; set; }
 
-        /// <summary>
-        /// Returns false as Limit should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLimit()
-        {
-            return _flagLimit;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -320,26 +152,8 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

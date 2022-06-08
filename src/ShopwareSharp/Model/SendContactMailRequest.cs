@@ -58,60 +58,32 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("salutationId is a required property for SendContactMailRequest and cannot be null");
             }
-            this._SalutationId = salutationId;
+            this.SalutationId = salutationId;
             // to ensure "email" is required (not null)
             if (email == null)
             {
                 throw new ArgumentNullException("email is a required property for SendContactMailRequest and cannot be null");
             }
-            this._Email = email;
+            this.Email = email;
             // to ensure "subject" is required (not null)
             if (subject == null)
             {
                 throw new ArgumentNullException("subject is a required property for SendContactMailRequest and cannot be null");
             }
-            this._Subject = subject;
+            this.Subject = subject;
             // to ensure "comment" is required (not null)
             if (comment == null)
             {
                 throw new ArgumentNullException("comment is a required property for SendContactMailRequest and cannot be null");
             }
-            this._Comment = comment;
-            this._FirstName = firstName;
-            if (this.FirstName != null)
-            {
-                this._flagFirstName = true;
-            }
-            this._LastName = lastName;
-            if (this.LastName != null)
-            {
-                this._flagLastName = true;
-            }
-            this._Phone = phone;
-            if (this.Phone != null)
-            {
-                this._flagPhone = true;
-            }
-            this._NavigationId = navigationId;
-            if (this.NavigationId != null)
-            {
-                this._flagNavigationId = true;
-            }
-            this._SlotId = slotId;
-            if (this.SlotId != null)
-            {
-                this._flagSlotId = true;
-            }
-            this._CmsPageType = cmsPageType;
-            if (this.CmsPageType != null)
-            {
-                this._flagCmsPageType = true;
-            }
-            this._EntityName = entityName;
-            if (this.EntityName != null)
-            {
-                this._flagEntityName = true;
-            }
+            this.Comment = comment;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Phone = phone;
+            this.NavigationId = navigationId;
+            this.SlotId = slotId;
+            this.CmsPageType = cmsPageType;
+            this.EntityName = entityName;
         }
 
         /// <summary>
@@ -119,276 +91,78 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Identifier of the salutation. Use &#x60;/api/salutation&#x60; endpoint to fetch possible values.</value>
         [DataMember(Name = "salutationId", IsRequired = true, EmitDefaultValue = false)]
-        public string SalutationId
-        {
-            get{ return _SalutationId;}
-            set
-            {
-                _SalutationId = value;
-                _flagSalutationId = true;
-            }
-        }
-        private string _SalutationId;
-        private bool _flagSalutationId;
+        public string SalutationId { get; set; }
 
-        /// <summary>
-        /// Returns false as SalutationId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalutationId()
-        {
-            return _flagSalutationId;
-        }
         /// <summary>
         /// Firstname. This field may be required depending on the system settings.
         /// </summary>
         /// <value>Firstname. This field may be required depending on the system settings.</value>
         [DataMember(Name = "firstName", EmitDefaultValue = false)]
-        public string FirstName
-        {
-            get{ return _FirstName;}
-            set
-            {
-                _FirstName = value;
-                _flagFirstName = true;
-            }
-        }
-        private string _FirstName;
-        private bool _flagFirstName;
+        public string FirstName { get; set; }
 
-        /// <summary>
-        /// Returns false as FirstName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFirstName()
-        {
-            return _flagFirstName;
-        }
         /// <summary>
         /// Lastname. This field may be required depending on the system settings.
         /// </summary>
         /// <value>Lastname. This field may be required depending on the system settings.</value>
         [DataMember(Name = "lastName", EmitDefaultValue = false)]
-        public string LastName
-        {
-            get{ return _LastName;}
-            set
-            {
-                _LastName = value;
-                _flagLastName = true;
-            }
-        }
-        private string _LastName;
-        private bool _flagLastName;
+        public string LastName { get; set; }
 
-        /// <summary>
-        /// Returns false as LastName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLastName()
-        {
-            return _flagLastName;
-        }
         /// <summary>
         /// Email address
         /// </summary>
         /// <value>Email address</value>
         [DataMember(Name = "email", IsRequired = true, EmitDefaultValue = false)]
-        public string Email
-        {
-            get{ return _Email;}
-            set
-            {
-                _Email = value;
-                _flagEmail = true;
-            }
-        }
-        private string _Email;
-        private bool _flagEmail;
+        public string Email { get; set; }
 
-        /// <summary>
-        /// Returns false as Email should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeEmail()
-        {
-            return _flagEmail;
-        }
         /// <summary>
         /// Phone. This field may be required depending on the system settings.
         /// </summary>
         /// <value>Phone. This field may be required depending on the system settings.</value>
         [DataMember(Name = "phone", EmitDefaultValue = false)]
-        public string Phone
-        {
-            get{ return _Phone;}
-            set
-            {
-                _Phone = value;
-                _flagPhone = true;
-            }
-        }
-        private string _Phone;
-        private bool _flagPhone;
+        public string Phone { get; set; }
 
-        /// <summary>
-        /// Returns false as Phone should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePhone()
-        {
-            return _flagPhone;
-        }
         /// <summary>
         /// The subject of the contact form.
         /// </summary>
         /// <value>The subject of the contact form.</value>
         [DataMember(Name = "subject", IsRequired = true, EmitDefaultValue = false)]
-        public string Subject
-        {
-            get{ return _Subject;}
-            set
-            {
-                _Subject = value;
-                _flagSubject = true;
-            }
-        }
-        private string _Subject;
-        private bool _flagSubject;
+        public string Subject { get; set; }
 
-        /// <summary>
-        /// Returns false as Subject should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSubject()
-        {
-            return _flagSubject;
-        }
         /// <summary>
         /// The message of the contact form
         /// </summary>
         /// <value>The message of the contact form</value>
         [DataMember(Name = "comment", IsRequired = true, EmitDefaultValue = false)]
-        public string Comment
-        {
-            get{ return _Comment;}
-            set
-            {
-                _Comment = value;
-                _flagComment = true;
-            }
-        }
-        private string _Comment;
-        private bool _flagComment;
+        public string Comment { get; set; }
 
-        /// <summary>
-        /// Returns false as Comment should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeComment()
-        {
-            return _flagComment;
-        }
         /// <summary>
         /// Identifier of the navigation page. Can be used to override the configuration. Take a look at the settings of a category containing a concact form in the administration.
         /// </summary>
         /// <value>Identifier of the navigation page. Can be used to override the configuration. Take a look at the settings of a category containing a concact form in the administration.</value>
         [DataMember(Name = "navigationId", EmitDefaultValue = false)]
-        public string NavigationId
-        {
-            get{ return _NavigationId;}
-            set
-            {
-                _NavigationId = value;
-                _flagNavigationId = true;
-            }
-        }
-        private string _NavigationId;
-        private bool _flagNavigationId;
+        public string NavigationId { get; set; }
 
-        /// <summary>
-        /// Returns false as NavigationId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNavigationId()
-        {
-            return _flagNavigationId;
-        }
         /// <summary>
         /// Identifier of the cms element
         /// </summary>
         /// <value>Identifier of the cms element</value>
         [DataMember(Name = "slotId", EmitDefaultValue = false)]
-        public string SlotId
-        {
-            get{ return _SlotId;}
-            set
-            {
-                _SlotId = value;
-                _flagSlotId = true;
-            }
-        }
-        private string _SlotId;
-        private bool _flagSlotId;
+        public string SlotId { get; set; }
 
-        /// <summary>
-        /// Returns false as SlotId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSlotId()
-        {
-            return _flagSlotId;
-        }
         /// <summary>
         /// Type of the content management page
         /// </summary>
         /// <value>Type of the content management page</value>
         [DataMember(Name = "cmsPageType", EmitDefaultValue = false)]
-        public string CmsPageType
-        {
-            get{ return _CmsPageType;}
-            set
-            {
-                _CmsPageType = value;
-                _flagCmsPageType = true;
-            }
-        }
-        private string _CmsPageType;
-        private bool _flagCmsPageType;
+        public string CmsPageType { get; set; }
 
-        /// <summary>
-        /// Returns false as CmsPageType should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCmsPageType()
-        {
-            return _flagCmsPageType;
-        }
         /// <summary>
         /// Entity name for slot config
         /// </summary>
         /// <value>Entity name for slot config</value>
         [DataMember(Name = "entityName", EmitDefaultValue = false)]
-        public string EntityName
-        {
-            get{ return _EntityName;}
-            set
-            {
-                _EntityName = value;
-                _flagEntityName = true;
-            }
-        }
-        private string _EntityName;
-        private bool _flagEntityName;
+        public string EntityName { get; set; }
 
-        /// <summary>
-        /// Returns false as EntityName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeEntityName()
-        {
-            return _flagEntityName;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

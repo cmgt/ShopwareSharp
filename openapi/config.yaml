@@ -4,9 +4,7 @@ gitUserId: cmgt
 # library: generichost
 library: httpclient
 additionalProperties:
-  conditionalSerialization: true
   netCoreProjectFile: true
   packageName: ShopwareSharp
   packageVersion: 0.1.0
-  useOneOfDiscriminatorLookup: true
   targetFramework: net6.0

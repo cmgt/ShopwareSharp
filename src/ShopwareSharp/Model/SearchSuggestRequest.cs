@@ -50,17 +50,9 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("search is a required property for SearchSuggestRequest and cannot be null");
             }
-            this._Search = search;
-            this._NoAggregations = noAggregations;
-            if (this.NoAggregations != null)
-            {
-                this._flagNoAggregations = true;
-            }
-            this._OnlyAggregations = onlyAggregations;
-            if (this.OnlyAggregations != null)
-            {
-                this._flagOnlyAggregations = true;
-            }
+            this.Search = search;
+            this.NoAggregations = noAggregations;
+            this.OnlyAggregations = onlyAggregations;
         }
 
         /// <summary>
@@ -68,76 +60,22 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Resets all aggregations in the criteria. This parameter is a flag, the value has no effect.</value>
         [DataMember(Name = "no-aggregations", EmitDefaultValue = true)]
-        public string NoAggregations
-        {
-            get{ return _NoAggregations;}
-            set
-            {
-                _NoAggregations = value;
-                _flagNoAggregations = true;
-            }
-        }
-        private string _NoAggregations;
-        private bool _flagNoAggregations;
+        public string NoAggregations { get; set; }
 
-        /// <summary>
-        /// Returns false as NoAggregations should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNoAggregations()
-        {
-            return _flagNoAggregations;
-        }
         /// <summary>
         /// If this flag is set, no products are fetched. Sorting and associations are also ignored. This parameter is a flag, the value has no effect.
         /// </summary>
         /// <value>If this flag is set, no products are fetched. Sorting and associations are also ignored. This parameter is a flag, the value has no effect.</value>
         [DataMember(Name = "only-aggregations", EmitDefaultValue = true)]
-        public string OnlyAggregations
-        {
-            get{ return _OnlyAggregations;}
-            set
-            {
-                _OnlyAggregations = value;
-                _flagOnlyAggregations = true;
-            }
-        }
-        private string _OnlyAggregations;
-        private bool _flagOnlyAggregations;
+        public string OnlyAggregations { get; set; }
 
-        /// <summary>
-        /// Returns false as OnlyAggregations should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOnlyAggregations()
-        {
-            return _flagOnlyAggregations;
-        }
         /// <summary>
         /// Using the search parameter, the server performs a text search on all records based on their data model and weighting as defined in the entity definition using the SearchRanking flag.
         /// </summary>
         /// <value>Using the search parameter, the server performs a text search on all records based on their data model and weighting as defined in the entity definition using the SearchRanking flag.</value>
         [DataMember(Name = "search", IsRequired = true, EmitDefaultValue = false)]
-        public string Search
-        {
-            get{ return _Search;}
-            set
-            {
-                _Search = value;
-                _flagSearch = true;
-            }
-        }
-        private string _Search;
-        private bool _flagSearch;
+        public string Search { get; set; }
 
-        /// <summary>
-        /// Returns false as Search should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSearch()
-        {
-            return _flagSearch;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

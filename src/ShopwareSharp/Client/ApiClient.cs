@@ -191,7 +191,8 @@ namespace ShopwareSharp.Client
                 {
                     OverrideSpecifiedNames = false
                 }
-            }
+            },
+            NullValueHandling = NullValueHandling.Ignore
         };
 
         /// <summary>

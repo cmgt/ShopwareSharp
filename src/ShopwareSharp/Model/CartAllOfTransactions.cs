@@ -38,37 +38,15 @@ namespace ShopwareSharp.Model
         /// <param name="paymentMethodId">paymentMethodId.</param>
         public CartAllOfTransactions(string paymentMethodId = default(string))
         {
-            this._PaymentMethodId = paymentMethodId;
-            if (this.PaymentMethodId != null)
-            {
-                this._flagPaymentMethodId = true;
-            }
+            this.PaymentMethodId = paymentMethodId;
         }
 
         /// <summary>
         /// Gets or Sets PaymentMethodId
         /// </summary>
         [DataMember(Name = "paymentMethodId", EmitDefaultValue = false)]
-        public string PaymentMethodId
-        {
-            get{ return _PaymentMethodId;}
-            set
-            {
-                _PaymentMethodId = value;
-                _flagPaymentMethodId = true;
-            }
-        }
-        private string _PaymentMethodId;
-        private bool _flagPaymentMethodId;
+        public string PaymentMethodId { get; set; }
 
-        /// <summary>
-        /// Returns false as PaymentMethodId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePaymentMethodId()
-        {
-            return _flagPaymentMethodId;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

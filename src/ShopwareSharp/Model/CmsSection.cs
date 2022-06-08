@@ -58,398 +58,112 @@ namespace ShopwareSharp.Model
         /// <param name="blocks">blocks.</param>
         public CmsSection(string id = default(string), long position = default(long), string type = default(string), string name = default(string), string sizingMode = default(string), string mobileBehavior = default(string), string backgroundColor = default(string), string backgroundMediaId = default(string), string backgroundMediaMode = default(string), string cssClass = default(string), string pageId = default(string), Object customFields = default(Object), string cmsPageVersionId = default(string), CmsPage page = default(CmsPage), Media backgroundMedia = default(Media), CmsBlock blocks = default(CmsBlock))
         {
-            this._Position = position;
+            this.Position = position;
             // to ensure "type" is required (not null)
             if (type == null)
             {
                 throw new ArgumentNullException("type is a required property for CmsSection and cannot be null");
             }
-            this._Type = type;
+            this.Type = type;
             // to ensure "pageId" is required (not null)
             if (pageId == null)
             {
                 throw new ArgumentNullException("pageId is a required property for CmsSection and cannot be null");
             }
-            this._PageId = pageId;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._Name = name;
-            if (this.Name != null)
-            {
-                this._flagName = true;
-            }
-            this._SizingMode = sizingMode;
-            if (this.SizingMode != null)
-            {
-                this._flagSizingMode = true;
-            }
-            this._MobileBehavior = mobileBehavior;
-            if (this.MobileBehavior != null)
-            {
-                this._flagMobileBehavior = true;
-            }
-            this._BackgroundColor = backgroundColor;
-            if (this.BackgroundColor != null)
-            {
-                this._flagBackgroundColor = true;
-            }
-            this._BackgroundMediaId = backgroundMediaId;
-            if (this.BackgroundMediaId != null)
-            {
-                this._flagBackgroundMediaId = true;
-            }
-            this._BackgroundMediaMode = backgroundMediaMode;
-            if (this.BackgroundMediaMode != null)
-            {
-                this._flagBackgroundMediaMode = true;
-            }
-            this._CssClass = cssClass;
-            if (this.CssClass != null)
-            {
-                this._flagCssClass = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._CmsPageVersionId = cmsPageVersionId;
-            if (this.CmsPageVersionId != null)
-            {
-                this._flagCmsPageVersionId = true;
-            }
-            this._Page = page;
-            if (this.Page != null)
-            {
-                this._flagPage = true;
-            }
-            this._BackgroundMedia = backgroundMedia;
-            if (this.BackgroundMedia != null)
-            {
-                this._flagBackgroundMedia = true;
-            }
-            this._Blocks = blocks;
-            if (this.Blocks != null)
-            {
-                this._flagBlocks = true;
-            }
+            this.PageId = pageId;
+            this.Id = id;
+            this.Name = name;
+            this.SizingMode = sizingMode;
+            this.MobileBehavior = mobileBehavior;
+            this.BackgroundColor = backgroundColor;
+            this.BackgroundMediaId = backgroundMediaId;
+            this.BackgroundMediaMode = backgroundMediaMode;
+            this.CssClass = cssClass;
+            this.CustomFields = customFields;
+            this.CmsPageVersionId = cmsPageVersionId;
+            this.Page = page;
+            this.BackgroundMedia = backgroundMedia;
+            this.Blocks = blocks;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Position
         /// </summary>
         [DataMember(Name = "position", IsRequired = true, EmitDefaultValue = false)]
-        public long Position
-        {
-            get{ return _Position;}
-            set
-            {
-                _Position = value;
-                _flagPosition = true;
-            }
-        }
-        private long _Position;
-        private bool _flagPosition;
+        public long Position { get; set; }
 
-        /// <summary>
-        /// Returns false as Position should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePosition()
-        {
-            return _flagPosition;
-        }
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = false)]
-        public string Type
-        {
-            get{ return _Type;}
-            set
-            {
-                _Type = value;
-                _flagType = true;
-            }
-        }
-        private string _Type;
-        private bool _flagType;
+        public string Type { get; set; }
 
-        /// <summary>
-        /// Returns false as Type should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeType()
-        {
-            return _flagType;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets SizingMode
         /// </summary>
         [DataMember(Name = "sizingMode", EmitDefaultValue = false)]
-        public string SizingMode
-        {
-            get{ return _SizingMode;}
-            set
-            {
-                _SizingMode = value;
-                _flagSizingMode = true;
-            }
-        }
-        private string _SizingMode;
-        private bool _flagSizingMode;
+        public string SizingMode { get; set; }
 
-        /// <summary>
-        /// Returns false as SizingMode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSizingMode()
-        {
-            return _flagSizingMode;
-        }
         /// <summary>
         /// Gets or Sets MobileBehavior
         /// </summary>
         [DataMember(Name = "mobileBehavior", EmitDefaultValue = false)]
-        public string MobileBehavior
-        {
-            get{ return _MobileBehavior;}
-            set
-            {
-                _MobileBehavior = value;
-                _flagMobileBehavior = true;
-            }
-        }
-        private string _MobileBehavior;
-        private bool _flagMobileBehavior;
+        public string MobileBehavior { get; set; }
 
-        /// <summary>
-        /// Returns false as MobileBehavior should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMobileBehavior()
-        {
-            return _flagMobileBehavior;
-        }
         /// <summary>
         /// Gets or Sets BackgroundColor
         /// </summary>
         [DataMember(Name = "backgroundColor", EmitDefaultValue = false)]
-        public string BackgroundColor
-        {
-            get{ return _BackgroundColor;}
-            set
-            {
-                _BackgroundColor = value;
-                _flagBackgroundColor = true;
-            }
-        }
-        private string _BackgroundColor;
-        private bool _flagBackgroundColor;
+        public string BackgroundColor { get; set; }
 
-        /// <summary>
-        /// Returns false as BackgroundColor should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBackgroundColor()
-        {
-            return _flagBackgroundColor;
-        }
         /// <summary>
         /// Gets or Sets BackgroundMediaId
         /// </summary>
         [DataMember(Name = "backgroundMediaId", EmitDefaultValue = false)]
-        public string BackgroundMediaId
-        {
-            get{ return _BackgroundMediaId;}
-            set
-            {
-                _BackgroundMediaId = value;
-                _flagBackgroundMediaId = true;
-            }
-        }
-        private string _BackgroundMediaId;
-        private bool _flagBackgroundMediaId;
+        public string BackgroundMediaId { get; set; }
 
-        /// <summary>
-        /// Returns false as BackgroundMediaId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBackgroundMediaId()
-        {
-            return _flagBackgroundMediaId;
-        }
         /// <summary>
         /// Gets or Sets BackgroundMediaMode
         /// </summary>
         [DataMember(Name = "backgroundMediaMode", EmitDefaultValue = false)]
-        public string BackgroundMediaMode
-        {
-            get{ return _BackgroundMediaMode;}
-            set
-            {
-                _BackgroundMediaMode = value;
-                _flagBackgroundMediaMode = true;
-            }
-        }
-        private string _BackgroundMediaMode;
-        private bool _flagBackgroundMediaMode;
+        public string BackgroundMediaMode { get; set; }
 
-        /// <summary>
-        /// Returns false as BackgroundMediaMode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBackgroundMediaMode()
-        {
-            return _flagBackgroundMediaMode;
-        }
         /// <summary>
         /// Gets or Sets CssClass
         /// </summary>
         [DataMember(Name = "cssClass", EmitDefaultValue = false)]
-        public string CssClass
-        {
-            get{ return _CssClass;}
-            set
-            {
-                _CssClass = value;
-                _flagCssClass = true;
-            }
-        }
-        private string _CssClass;
-        private bool _flagCssClass;
+        public string CssClass { get; set; }
 
-        /// <summary>
-        /// Returns false as CssClass should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCssClass()
-        {
-            return _flagCssClass;
-        }
         /// <summary>
         /// Gets or Sets PageId
         /// </summary>
         [DataMember(Name = "pageId", IsRequired = true, EmitDefaultValue = false)]
-        public string PageId
-        {
-            get{ return _PageId;}
-            set
-            {
-                _PageId = value;
-                _flagPageId = true;
-            }
-        }
-        private string _PageId;
-        private bool _flagPageId;
+        public string PageId { get; set; }
 
-        /// <summary>
-        /// Returns false as PageId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePageId()
-        {
-            return _flagPageId;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CmsPageVersionId
         /// </summary>
         [DataMember(Name = "cmsPageVersionId", EmitDefaultValue = false)]
-        public string CmsPageVersionId
-        {
-            get{ return _CmsPageVersionId;}
-            set
-            {
-                _CmsPageVersionId = value;
-                _flagCmsPageVersionId = true;
-            }
-        }
-        private string _CmsPageVersionId;
-        private bool _flagCmsPageVersionId;
+        public string CmsPageVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as CmsPageVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCmsPageVersionId()
-        {
-            return _flagCmsPageVersionId;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -482,74 +196,20 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Page
         /// </summary>
         [DataMember(Name = "page", EmitDefaultValue = false)]
-        public CmsPage Page
-        {
-            get{ return _Page;}
-            set
-            {
-                _Page = value;
-                _flagPage = true;
-            }
-        }
-        private CmsPage _Page;
-        private bool _flagPage;
+        public CmsPage Page { get; set; }
 
-        /// <summary>
-        /// Returns false as Page should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePage()
-        {
-            return _flagPage;
-        }
         /// <summary>
         /// Gets or Sets BackgroundMedia
         /// </summary>
         [DataMember(Name = "backgroundMedia", EmitDefaultValue = false)]
-        public Media BackgroundMedia
-        {
-            get{ return _BackgroundMedia;}
-            set
-            {
-                _BackgroundMedia = value;
-                _flagBackgroundMedia = true;
-            }
-        }
-        private Media _BackgroundMedia;
-        private bool _flagBackgroundMedia;
+        public Media BackgroundMedia { get; set; }
 
-        /// <summary>
-        /// Returns false as BackgroundMedia should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBackgroundMedia()
-        {
-            return _flagBackgroundMedia;
-        }
         /// <summary>
         /// Gets or Sets Blocks
         /// </summary>
         [DataMember(Name = "blocks", EmitDefaultValue = false)]
-        public CmsBlock Blocks
-        {
-            get{ return _Blocks;}
-            set
-            {
-                _Blocks = value;
-                _flagBlocks = true;
-            }
-        }
-        private CmsBlock _Blocks;
-        private bool _flagBlocks;
+        public CmsBlock Blocks { get; set; }
 
-        /// <summary>
-        /// Returns false as Blocks should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBlocks()
-        {
-            return _flagBlocks;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -46,116 +46,36 @@ namespace ShopwareSharp.Model
         /// <param name="customFields">customFields.</param>
         public MediaThumbnailSize(string id = default(string), long width = default(long), long height = default(long), Object customFields = default(Object))
         {
-            this._Width = width;
-            this._Height = height;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
+            this.Width = width;
+            this.Height = height;
+            this.Id = id;
+            this.CustomFields = customFields;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Width
         /// </summary>
         [DataMember(Name = "width", IsRequired = true, EmitDefaultValue = false)]
-        public long Width
-        {
-            get{ return _Width;}
-            set
-            {
-                _Width = value;
-                _flagWidth = true;
-            }
-        }
-        private long _Width;
-        private bool _flagWidth;
+        public long Width { get; set; }
 
-        /// <summary>
-        /// Returns false as Width should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeWidth()
-        {
-            return _flagWidth;
-        }
         /// <summary>
         /// Gets or Sets Height
         /// </summary>
         [DataMember(Name = "height", IsRequired = true, EmitDefaultValue = false)]
-        public long Height
-        {
-            get{ return _Height;}
-            set
-            {
-                _Height = value;
-                _flagHeight = true;
-            }
-        }
-        private long _Height;
-        private bool _flagHeight;
+        public long Height { get; set; }
 
-        /// <summary>
-        /// Returns false as Height should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeHeight()
-        {
-            return _flagHeight;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>

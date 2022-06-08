@@ -55,213 +55,63 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("productId is a required property for ProductMedia and cannot be null");
             }
-            this._ProductId = productId;
+            this.ProductId = productId;
             // to ensure "mediaId" is required (not null)
             if (mediaId == null)
             {
                 throw new ArgumentNullException("mediaId is a required property for ProductMedia and cannot be null");
             }
-            this._MediaId = mediaId;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._VersionId = versionId;
-            if (this.VersionId != null)
-            {
-                this._flagVersionId = true;
-            }
-            this._ProductVersionId = productVersionId;
-            if (this.ProductVersionId != null)
-            {
-                this._flagProductVersionId = true;
-            }
-            this._Position = position;
-            if (this.Position != null)
-            {
-                this._flagPosition = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Media = media;
-            if (this.Media != null)
-            {
-                this._flagMedia = true;
-            }
+            this.MediaId = mediaId;
+            this.Id = id;
+            this.VersionId = versionId;
+            this.ProductVersionId = productVersionId;
+            this.Position = position;
+            this.CustomFields = customFields;
+            this.Media = media;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets VersionId
         /// </summary>
         [DataMember(Name = "versionId", EmitDefaultValue = false)]
-        public string VersionId
-        {
-            get{ return _VersionId;}
-            set
-            {
-                _VersionId = value;
-                _flagVersionId = true;
-            }
-        }
-        private string _VersionId;
-        private bool _flagVersionId;
+        public string VersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as VersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeVersionId()
-        {
-            return _flagVersionId;
-        }
         /// <summary>
         /// Gets or Sets ProductId
         /// </summary>
         [DataMember(Name = "productId", IsRequired = true, EmitDefaultValue = false)]
-        public string ProductId
-        {
-            get{ return _ProductId;}
-            set
-            {
-                _ProductId = value;
-                _flagProductId = true;
-            }
-        }
-        private string _ProductId;
-        private bool _flagProductId;
+        public string ProductId { get; set; }
 
-        /// <summary>
-        /// Returns false as ProductId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProductId()
-        {
-            return _flagProductId;
-        }
         /// <summary>
         /// Gets or Sets ProductVersionId
         /// </summary>
         [DataMember(Name = "productVersionId", EmitDefaultValue = false)]
-        public string ProductVersionId
-        {
-            get{ return _ProductVersionId;}
-            set
-            {
-                _ProductVersionId = value;
-                _flagProductVersionId = true;
-            }
-        }
-        private string _ProductVersionId;
-        private bool _flagProductVersionId;
+        public string ProductVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as ProductVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProductVersionId()
-        {
-            return _flagProductVersionId;
-        }
         /// <summary>
         /// Gets or Sets MediaId
         /// </summary>
         [DataMember(Name = "mediaId", IsRequired = true, EmitDefaultValue = false)]
-        public string MediaId
-        {
-            get{ return _MediaId;}
-            set
-            {
-                _MediaId = value;
-                _flagMediaId = true;
-            }
-        }
-        private string _MediaId;
-        private bool _flagMediaId;
+        public string MediaId { get; set; }
 
-        /// <summary>
-        /// Returns false as MediaId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMediaId()
-        {
-            return _flagMediaId;
-        }
         /// <summary>
         /// Gets or Sets Position
         /// </summary>
         [DataMember(Name = "position", EmitDefaultValue = false)]
-        public long Position
-        {
-            get{ return _Position;}
-            set
-            {
-                _Position = value;
-                _flagPosition = true;
-            }
-        }
-        private long _Position;
-        private bool _flagPosition;
+        public long Position { get; set; }
 
-        /// <summary>
-        /// Returns false as Position should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePosition()
-        {
-            return _flagPosition;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -294,26 +144,8 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Media
         /// </summary>
         [DataMember(Name = "media", EmitDefaultValue = false)]
-        public Media Media
-        {
-            get{ return _Media;}
-            set
-            {
-                _Media = value;
-                _flagMedia = true;
-            }
-        }
-        private Media _Media;
-        private bool _flagMedia;
+        public Media Media { get; set; }
 
-        /// <summary>
-        /// Returns false as Media should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMedia()
-        {
-            return _flagMedia;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

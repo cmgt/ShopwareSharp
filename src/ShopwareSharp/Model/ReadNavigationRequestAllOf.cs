@@ -39,16 +39,8 @@ namespace ShopwareSharp.Model
         /// <param name="buildTree">Return the categories as a tree or as a flat list..</param>
         public ReadNavigationRequestAllOf(Object depth = default(Object), Object buildTree = default(Object))
         {
-            this._Depth = depth;
-            if (this.Depth != null)
-            {
-                this._flagDepth = true;
-            }
-            this._BuildTree = buildTree;
-            if (this.BuildTree != null)
-            {
-                this._flagBuildTree = true;
-            }
+            this.Depth = depth;
+            this.BuildTree = buildTree;
         }
 
         /// <summary>
@@ -56,51 +48,15 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Determines the depth of fetched navigation levels.</value>
         [DataMember(Name = "depth", EmitDefaultValue = true)]
-        public Object Depth
-        {
-            get{ return _Depth;}
-            set
-            {
-                _Depth = value;
-                _flagDepth = true;
-            }
-        }
-        private Object _Depth;
-        private bool _flagDepth;
+        public Object Depth { get; set; }
 
-        /// <summary>
-        /// Returns false as Depth should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDepth()
-        {
-            return _flagDepth;
-        }
         /// <summary>
         /// Return the categories as a tree or as a flat list.
         /// </summary>
         /// <value>Return the categories as a tree or as a flat list.</value>
         [DataMember(Name = "buildTree", EmitDefaultValue = true)]
-        public Object BuildTree
-        {
-            get{ return _BuildTree;}
-            set
-            {
-                _BuildTree = value;
-                _flagBuildTree = true;
-            }
-        }
-        private Object _BuildTree;
-        private bool _flagBuildTree;
+        public Object BuildTree { get; set; }
 
-        /// <summary>
-        /// Returns false as BuildTree should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBuildTree()
-        {
-            return _flagBuildTree;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

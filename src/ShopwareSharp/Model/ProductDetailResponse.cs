@@ -39,67 +39,23 @@ namespace ShopwareSharp.Model
         /// <param name="configurator">List of property groups with their corresponding options and information on how to display them..</param>
         public ProductDetailResponse(Product product = default(Product), List<PropertyGroup> configurator = default(List<PropertyGroup>))
         {
-            this._Product = product;
-            if (this.Product != null)
-            {
-                this._flagProduct = true;
-            }
-            this._Configurator = configurator;
-            if (this.Configurator != null)
-            {
-                this._flagConfigurator = true;
-            }
+            this.Product = product;
+            this.Configurator = configurator;
         }
 
         /// <summary>
         /// Gets or Sets Product
         /// </summary>
         [DataMember(Name = "product", EmitDefaultValue = false)]
-        public Product Product
-        {
-            get{ return _Product;}
-            set
-            {
-                _Product = value;
-                _flagProduct = true;
-            }
-        }
-        private Product _Product;
-        private bool _flagProduct;
+        public Product Product { get; set; }
 
-        /// <summary>
-        /// Returns false as Product should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProduct()
-        {
-            return _flagProduct;
-        }
         /// <summary>
         /// List of property groups with their corresponding options and information on how to display them.
         /// </summary>
         /// <value>List of property groups with their corresponding options and information on how to display them.</value>
         [DataMember(Name = "configurator", EmitDefaultValue = false)]
-        public List<PropertyGroup> Configurator
-        {
-            get{ return _Configurator;}
-            set
-            {
-                _Configurator = value;
-                _flagConfigurator = true;
-            }
-        }
-        private List<PropertyGroup> _Configurator;
-        private bool _flagConfigurator;
+        public List<PropertyGroup> Configurator { get; set; }
 
-        /// <summary>
-        /// Returns false as Configurator should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeConfigurator()
-        {
-            return _flagConfigurator;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

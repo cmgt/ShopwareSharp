@@ -58,272 +58,78 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("documentTypeId is a required property for DocumentBaseConfig and cannot be null");
             }
-            this._DocumentTypeId = documentTypeId;
+            this.DocumentTypeId = documentTypeId;
             // to ensure "name" is required (not null)
             if (name == null)
             {
                 throw new ArgumentNullException("name is a required property for DocumentBaseConfig and cannot be null");
             }
-            this._Name = name;
-            this._Global = global;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._LogoId = logoId;
-            if (this.LogoId != null)
-            {
-                this._flagLogoId = true;
-            }
-            this._FilenamePrefix = filenamePrefix;
-            if (this.FilenamePrefix != null)
-            {
-                this._flagFilenamePrefix = true;
-            }
-            this._FilenameSuffix = filenameSuffix;
-            if (this.FilenameSuffix != null)
-            {
-                this._flagFilenameSuffix = true;
-            }
-            this._DocumentNumber = documentNumber;
-            if (this.DocumentNumber != null)
-            {
-                this._flagDocumentNumber = true;
-            }
-            this._Config = config;
-            if (this.Config != null)
-            {
-                this._flagConfig = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Logo = logo;
-            if (this.Logo != null)
-            {
-                this._flagLogo = true;
-            }
+            this.Name = name;
+            this.Global = global;
+            this.Id = id;
+            this.LogoId = logoId;
+            this.FilenamePrefix = filenamePrefix;
+            this.FilenameSuffix = filenameSuffix;
+            this.DocumentNumber = documentNumber;
+            this.Config = config;
+            this.CustomFields = customFields;
+            this.Logo = logo;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets DocumentTypeId
         /// </summary>
         [DataMember(Name = "documentTypeId", IsRequired = true, EmitDefaultValue = false)]
-        public string DocumentTypeId
-        {
-            get{ return _DocumentTypeId;}
-            set
-            {
-                _DocumentTypeId = value;
-                _flagDocumentTypeId = true;
-            }
-        }
-        private string _DocumentTypeId;
-        private bool _flagDocumentTypeId;
+        public string DocumentTypeId { get; set; }
 
-        /// <summary>
-        /// Returns false as DocumentTypeId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDocumentTypeId()
-        {
-            return _flagDocumentTypeId;
-        }
         /// <summary>
         /// Gets or Sets LogoId
         /// </summary>
         [DataMember(Name = "logoId", EmitDefaultValue = false)]
-        public string LogoId
-        {
-            get{ return _LogoId;}
-            set
-            {
-                _LogoId = value;
-                _flagLogoId = true;
-            }
-        }
-        private string _LogoId;
-        private bool _flagLogoId;
+        public string LogoId { get; set; }
 
-        /// <summary>
-        /// Returns false as LogoId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLogoId()
-        {
-            return _flagLogoId;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets FilenamePrefix
         /// </summary>
         [DataMember(Name = "filenamePrefix", EmitDefaultValue = false)]
-        public string FilenamePrefix
-        {
-            get{ return _FilenamePrefix;}
-            set
-            {
-                _FilenamePrefix = value;
-                _flagFilenamePrefix = true;
-            }
-        }
-        private string _FilenamePrefix;
-        private bool _flagFilenamePrefix;
+        public string FilenamePrefix { get; set; }
 
-        /// <summary>
-        /// Returns false as FilenamePrefix should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFilenamePrefix()
-        {
-            return _flagFilenamePrefix;
-        }
         /// <summary>
         /// Gets or Sets FilenameSuffix
         /// </summary>
         [DataMember(Name = "filenameSuffix", EmitDefaultValue = false)]
-        public string FilenameSuffix
-        {
-            get{ return _FilenameSuffix;}
-            set
-            {
-                _FilenameSuffix = value;
-                _flagFilenameSuffix = true;
-            }
-        }
-        private string _FilenameSuffix;
-        private bool _flagFilenameSuffix;
+        public string FilenameSuffix { get; set; }
 
-        /// <summary>
-        /// Returns false as FilenameSuffix should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFilenameSuffix()
-        {
-            return _flagFilenameSuffix;
-        }
         /// <summary>
         /// Gets or Sets Global
         /// </summary>
         [DataMember(Name = "global", IsRequired = true, EmitDefaultValue = true)]
-        public bool Global
-        {
-            get{ return _Global;}
-            set
-            {
-                _Global = value;
-                _flagGlobal = true;
-            }
-        }
-        private bool _Global;
-        private bool _flagGlobal;
+        public bool Global { get; set; }
 
-        /// <summary>
-        /// Returns false as Global should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeGlobal()
-        {
-            return _flagGlobal;
-        }
         /// <summary>
         /// Gets or Sets DocumentNumber
         /// </summary>
         [DataMember(Name = "documentNumber", EmitDefaultValue = false)]
-        public string DocumentNumber
-        {
-            get{ return _DocumentNumber;}
-            set
-            {
-                _DocumentNumber = value;
-                _flagDocumentNumber = true;
-            }
-        }
-        private string _DocumentNumber;
-        private bool _flagDocumentNumber;
+        public string DocumentNumber { get; set; }
 
-        /// <summary>
-        /// Returns false as DocumentNumber should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDocumentNumber()
-        {
-            return _flagDocumentNumber;
-        }
         /// <summary>
         /// Gets or Sets Config
         /// </summary>
         [DataMember(Name = "config", EmitDefaultValue = false)]
-        public Object Config
-        {
-            get{ return _Config;}
-            set
-            {
-                _Config = value;
-                _flagConfig = true;
-            }
-        }
-        private Object _Config;
-        private bool _flagConfig;
+        public Object Config { get; set; }
 
-        /// <summary>
-        /// Returns false as Config should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeConfig()
-        {
-            return _flagConfig;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -342,26 +148,8 @@ namespace ShopwareSharp.Model
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
@@ -380,26 +168,8 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Logo
         /// </summary>
         [DataMember(Name = "logo", EmitDefaultValue = false)]
-        public Media Logo
-        {
-            get{ return _Logo;}
-            set
-            {
-                _Logo = value;
-                _flagLogo = true;
-            }
-        }
-        private Media _Logo;
-        private bool _flagLogo;
+        public Media Logo { get; set; }
 
-        /// <summary>
-        /// Returns false as Logo should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLogo()
-        {
-            return _flagLogo;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

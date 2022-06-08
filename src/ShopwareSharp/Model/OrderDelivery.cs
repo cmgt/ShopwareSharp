@@ -64,397 +64,123 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("orderId is a required property for OrderDelivery and cannot be null");
             }
-            this._OrderId = orderId;
+            this.OrderId = orderId;
             // to ensure "shippingOrderAddressId" is required (not null)
             if (shippingOrderAddressId == null)
             {
                 throw new ArgumentNullException("shippingOrderAddressId is a required property for OrderDelivery and cannot be null");
             }
-            this._ShippingOrderAddressId = shippingOrderAddressId;
+            this.ShippingOrderAddressId = shippingOrderAddressId;
             // to ensure "shippingMethodId" is required (not null)
             if (shippingMethodId == null)
             {
                 throw new ArgumentNullException("shippingMethodId is a required property for OrderDelivery and cannot be null");
             }
-            this._ShippingMethodId = shippingMethodId;
+            this.ShippingMethodId = shippingMethodId;
             // to ensure "stateId" is required (not null)
             if (stateId == null)
             {
                 throw new ArgumentNullException("stateId is a required property for OrderDelivery and cannot be null");
             }
-            this._StateId = stateId;
+            this.StateId = stateId;
             // to ensure "trackingCodes" is required (not null)
             if (trackingCodes == null)
             {
                 throw new ArgumentNullException("trackingCodes is a required property for OrderDelivery and cannot be null");
             }
-            this._TrackingCodes = trackingCodes;
-            this._ShippingDateEarliest = shippingDateEarliest;
-            this._ShippingDateLatest = shippingDateLatest;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._VersionId = versionId;
-            if (this.VersionId != null)
-            {
-                this._flagVersionId = true;
-            }
-            this._OrderVersionId = orderVersionId;
-            if (this.OrderVersionId != null)
-            {
-                this._flagOrderVersionId = true;
-            }
-            this._ShippingOrderAddressVersionId = shippingOrderAddressVersionId;
-            if (this.ShippingOrderAddressVersionId != null)
-            {
-                this._flagShippingOrderAddressVersionId = true;
-            }
-            this._ShippingCosts = shippingCosts;
-            if (this.ShippingCosts != null)
-            {
-                this._flagShippingCosts = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._StateMachineState = stateMachineState;
-            if (this.StateMachineState != null)
-            {
-                this._flagStateMachineState = true;
-            }
-            this._ShippingOrderAddress = shippingOrderAddress;
-            if (this.ShippingOrderAddress != null)
-            {
-                this._flagShippingOrderAddress = true;
-            }
-            this._ShippingMethod = shippingMethod;
-            if (this.ShippingMethod != null)
-            {
-                this._flagShippingMethod = true;
-            }
-            this._Positions = positions;
-            if (this.Positions != null)
-            {
-                this._flagPositions = true;
-            }
+            this.TrackingCodes = trackingCodes;
+            this.ShippingDateEarliest = shippingDateEarliest;
+            this.ShippingDateLatest = shippingDateLatest;
+            this.Id = id;
+            this.VersionId = versionId;
+            this.OrderVersionId = orderVersionId;
+            this.ShippingOrderAddressVersionId = shippingOrderAddressVersionId;
+            this.ShippingCosts = shippingCosts;
+            this.CustomFields = customFields;
+            this.StateMachineState = stateMachineState;
+            this.ShippingOrderAddress = shippingOrderAddress;
+            this.ShippingMethod = shippingMethod;
+            this.Positions = positions;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets VersionId
         /// </summary>
         [DataMember(Name = "versionId", EmitDefaultValue = false)]
-        public string VersionId
-        {
-            get{ return _VersionId;}
-            set
-            {
-                _VersionId = value;
-                _flagVersionId = true;
-            }
-        }
-        private string _VersionId;
-        private bool _flagVersionId;
+        public string VersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as VersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeVersionId()
-        {
-            return _flagVersionId;
-        }
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>
         [DataMember(Name = "orderId", IsRequired = true, EmitDefaultValue = false)]
-        public string OrderId
-        {
-            get{ return _OrderId;}
-            set
-            {
-                _OrderId = value;
-                _flagOrderId = true;
-            }
-        }
-        private string _OrderId;
-        private bool _flagOrderId;
+        public string OrderId { get; set; }
 
-        /// <summary>
-        /// Returns false as OrderId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrderId()
-        {
-            return _flagOrderId;
-        }
         /// <summary>
         /// Gets or Sets OrderVersionId
         /// </summary>
         [DataMember(Name = "orderVersionId", EmitDefaultValue = false)]
-        public string OrderVersionId
-        {
-            get{ return _OrderVersionId;}
-            set
-            {
-                _OrderVersionId = value;
-                _flagOrderVersionId = true;
-            }
-        }
-        private string _OrderVersionId;
-        private bool _flagOrderVersionId;
+        public string OrderVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as OrderVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrderVersionId()
-        {
-            return _flagOrderVersionId;
-        }
         /// <summary>
         /// Gets or Sets ShippingOrderAddressId
         /// </summary>
         [DataMember(Name = "shippingOrderAddressId", IsRequired = true, EmitDefaultValue = false)]
-        public string ShippingOrderAddressId
-        {
-            get{ return _ShippingOrderAddressId;}
-            set
-            {
-                _ShippingOrderAddressId = value;
-                _flagShippingOrderAddressId = true;
-            }
-        }
-        private string _ShippingOrderAddressId;
-        private bool _flagShippingOrderAddressId;
+        public string ShippingOrderAddressId { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingOrderAddressId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingOrderAddressId()
-        {
-            return _flagShippingOrderAddressId;
-        }
         /// <summary>
         /// Gets or Sets ShippingOrderAddressVersionId
         /// </summary>
         [DataMember(Name = "shippingOrderAddressVersionId", EmitDefaultValue = false)]
-        public string ShippingOrderAddressVersionId
-        {
-            get{ return _ShippingOrderAddressVersionId;}
-            set
-            {
-                _ShippingOrderAddressVersionId = value;
-                _flagShippingOrderAddressVersionId = true;
-            }
-        }
-        private string _ShippingOrderAddressVersionId;
-        private bool _flagShippingOrderAddressVersionId;
+        public string ShippingOrderAddressVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingOrderAddressVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingOrderAddressVersionId()
-        {
-            return _flagShippingOrderAddressVersionId;
-        }
         /// <summary>
         /// Gets or Sets ShippingMethodId
         /// </summary>
         [DataMember(Name = "shippingMethodId", IsRequired = true, EmitDefaultValue = false)]
-        public string ShippingMethodId
-        {
-            get{ return _ShippingMethodId;}
-            set
-            {
-                _ShippingMethodId = value;
-                _flagShippingMethodId = true;
-            }
-        }
-        private string _ShippingMethodId;
-        private bool _flagShippingMethodId;
+        public string ShippingMethodId { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingMethodId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingMethodId()
-        {
-            return _flagShippingMethodId;
-        }
         /// <summary>
         /// Gets or Sets StateId
         /// </summary>
         [DataMember(Name = "stateId", IsRequired = true, EmitDefaultValue = false)]
-        public string StateId
-        {
-            get{ return _StateId;}
-            set
-            {
-                _StateId = value;
-                _flagStateId = true;
-            }
-        }
-        private string _StateId;
-        private bool _flagStateId;
+        public string StateId { get; set; }
 
-        /// <summary>
-        /// Returns false as StateId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStateId()
-        {
-            return _flagStateId;
-        }
         /// <summary>
         /// Gets or Sets TrackingCodes
         /// </summary>
         [DataMember(Name = "trackingCodes", IsRequired = true, EmitDefaultValue = false)]
-        public List<string> TrackingCodes
-        {
-            get{ return _TrackingCodes;}
-            set
-            {
-                _TrackingCodes = value;
-                _flagTrackingCodes = true;
-            }
-        }
-        private List<string> _TrackingCodes;
-        private bool _flagTrackingCodes;
+        public List<string> TrackingCodes { get; set; }
 
-        /// <summary>
-        /// Returns false as TrackingCodes should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTrackingCodes()
-        {
-            return _flagTrackingCodes;
-        }
         /// <summary>
         /// Gets or Sets ShippingDateEarliest
         /// </summary>
         [DataMember(Name = "shippingDateEarliest", IsRequired = true, EmitDefaultValue = false)]
-        public DateTime ShippingDateEarliest
-        {
-            get{ return _ShippingDateEarliest;}
-            set
-            {
-                _ShippingDateEarliest = value;
-                _flagShippingDateEarliest = true;
-            }
-        }
-        private DateTime _ShippingDateEarliest;
-        private bool _flagShippingDateEarliest;
+        public DateTime ShippingDateEarliest { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingDateEarliest should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingDateEarliest()
-        {
-            return _flagShippingDateEarliest;
-        }
         /// <summary>
         /// Gets or Sets ShippingDateLatest
         /// </summary>
         [DataMember(Name = "shippingDateLatest", IsRequired = true, EmitDefaultValue = false)]
-        public DateTime ShippingDateLatest
-        {
-            get{ return _ShippingDateLatest;}
-            set
-            {
-                _ShippingDateLatest = value;
-                _flagShippingDateLatest = true;
-            }
-        }
-        private DateTime _ShippingDateLatest;
-        private bool _flagShippingDateLatest;
+        public DateTime ShippingDateLatest { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingDateLatest should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingDateLatest()
-        {
-            return _flagShippingDateLatest;
-        }
         /// <summary>
         /// Gets or Sets ShippingCosts
         /// </summary>
         [DataMember(Name = "shippingCosts", EmitDefaultValue = false)]
-        public OrderShippingCosts ShippingCosts
-        {
-            get{ return _ShippingCosts;}
-            set
-            {
-                _ShippingCosts = value;
-                _flagShippingCosts = true;
-            }
-        }
-        private OrderShippingCosts _ShippingCosts;
-        private bool _flagShippingCosts;
+        public OrderShippingCosts ShippingCosts { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingCosts should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingCosts()
-        {
-            return _flagShippingCosts;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -487,98 +213,26 @@ namespace ShopwareSharp.Model
         /// Gets or Sets StateMachineState
         /// </summary>
         [DataMember(Name = "stateMachineState", EmitDefaultValue = false)]
-        public StateMachineState StateMachineState
-        {
-            get{ return _StateMachineState;}
-            set
-            {
-                _StateMachineState = value;
-                _flagStateMachineState = true;
-            }
-        }
-        private StateMachineState _StateMachineState;
-        private bool _flagStateMachineState;
+        public StateMachineState StateMachineState { get; set; }
 
-        /// <summary>
-        /// Returns false as StateMachineState should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStateMachineState()
-        {
-            return _flagStateMachineState;
-        }
         /// <summary>
         /// Gets or Sets ShippingOrderAddress
         /// </summary>
         [DataMember(Name = "shippingOrderAddress", EmitDefaultValue = false)]
-        public OrderAddress ShippingOrderAddress
-        {
-            get{ return _ShippingOrderAddress;}
-            set
-            {
-                _ShippingOrderAddress = value;
-                _flagShippingOrderAddress = true;
-            }
-        }
-        private OrderAddress _ShippingOrderAddress;
-        private bool _flagShippingOrderAddress;
+        public OrderAddress ShippingOrderAddress { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingOrderAddress should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingOrderAddress()
-        {
-            return _flagShippingOrderAddress;
-        }
         /// <summary>
         /// Gets or Sets ShippingMethod
         /// </summary>
         [DataMember(Name = "shippingMethod", EmitDefaultValue = false)]
-        public ShippingMethod ShippingMethod
-        {
-            get{ return _ShippingMethod;}
-            set
-            {
-                _ShippingMethod = value;
-                _flagShippingMethod = true;
-            }
-        }
-        private ShippingMethod _ShippingMethod;
-        private bool _flagShippingMethod;
+        public ShippingMethod ShippingMethod { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingMethod should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingMethod()
-        {
-            return _flagShippingMethod;
-        }
         /// <summary>
         /// Gets or Sets Positions
         /// </summary>
         [DataMember(Name = "positions", EmitDefaultValue = false)]
-        public OrderDeliveryPosition Positions
-        {
-            get{ return _Positions;}
-            set
-            {
-                _Positions = value;
-                _flagPositions = true;
-            }
-        }
-        private OrderDeliveryPosition _Positions;
-        private bool _flagPositions;
+        public OrderDeliveryPosition Positions { get; set; }
 
-        /// <summary>
-        /// Returns false as Positions should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePositions()
-        {
-            return _flagPositions;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

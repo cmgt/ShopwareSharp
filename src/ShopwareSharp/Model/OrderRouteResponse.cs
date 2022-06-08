@@ -39,67 +39,23 @@ namespace ShopwareSharp.Model
         /// <param name="paymentChangeable">The key-value pairs contain the uuid of the order as key and a boolean as value, indicating that the payment method can still be changed..</param>
         public OrderRouteResponse(List<Order> orders = default(List<Order>), Dictionary<string, bool> paymentChangeable = default(Dictionary<string, bool>))
         {
-            this._Orders = orders;
-            if (this.Orders != null)
-            {
-                this._flagOrders = true;
-            }
-            this._PaymentChangeable = paymentChangeable;
-            if (this.PaymentChangeable != null)
-            {
-                this._flagPaymentChangeable = true;
-            }
+            this.Orders = orders;
+            this.PaymentChangeable = paymentChangeable;
         }
 
         /// <summary>
         /// Gets or Sets Orders
         /// </summary>
         [DataMember(Name = "orders", EmitDefaultValue = false)]
-        public List<Order> Orders
-        {
-            get{ return _Orders;}
-            set
-            {
-                _Orders = value;
-                _flagOrders = true;
-            }
-        }
-        private List<Order> _Orders;
-        private bool _flagOrders;
+        public List<Order> Orders { get; set; }
 
-        /// <summary>
-        /// Returns false as Orders should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrders()
-        {
-            return _flagOrders;
-        }
         /// <summary>
         /// The key-value pairs contain the uuid of the order as key and a boolean as value, indicating that the payment method can still be changed.
         /// </summary>
         /// <value>The key-value pairs contain the uuid of the order as key and a boolean as value, indicating that the payment method can still be changed.</value>
         [DataMember(Name = "paymentChangeable", EmitDefaultValue = false)]
-        public Dictionary<string, bool> PaymentChangeable
-        {
-            get{ return _PaymentChangeable;}
-            set
-            {
-                _PaymentChangeable = value;
-                _flagPaymentChangeable = true;
-            }
-        }
-        private Dictionary<string, bool> _PaymentChangeable;
-        private bool _flagPaymentChangeable;
+        public Dictionary<string, bool> PaymentChangeable { get; set; }
 
-        /// <summary>
-        /// Returns false as PaymentChangeable should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePaymentChangeable()
-        {
-            return _flagPaymentChangeable;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

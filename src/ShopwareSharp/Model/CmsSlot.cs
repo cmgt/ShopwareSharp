@@ -58,229 +58,71 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("type is a required property for CmsSlot and cannot be null");
             }
-            this._Type = type;
+            this.Type = type;
             // to ensure "slot" is required (not null)
             if (slot == null)
             {
                 throw new ArgumentNullException("slot is a required property for CmsSlot and cannot be null");
             }
-            this._Slot = slot;
+            this.Slot = slot;
             // to ensure "blockId" is required (not null)
             if (blockId == null)
             {
                 throw new ArgumentNullException("blockId is a required property for CmsSlot and cannot be null");
             }
-            this._BlockId = blockId;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._VersionId = versionId;
-            if (this.VersionId != null)
-            {
-                this._flagVersionId = true;
-            }
-            this._Locked = locked;
-            if (this.Locked != null)
-            {
-                this._flagLocked = true;
-            }
-            this._Config = config;
-            if (this.Config != null)
-            {
-                this._flagConfig = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._CmsBlockVersionId = cmsBlockVersionId;
-            if (this.CmsBlockVersionId != null)
-            {
-                this._flagCmsBlockVersionId = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
-            this._Block = block;
-            if (this.Block != null)
-            {
-                this._flagBlock = true;
-            }
+            this.BlockId = blockId;
+            this.Id = id;
+            this.VersionId = versionId;
+            this.Locked = locked;
+            this.Config = config;
+            this.CustomFields = customFields;
+            this.CmsBlockVersionId = cmsBlockVersionId;
+            this.Translated = translated;
+            this.Block = block;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets VersionId
         /// </summary>
         [DataMember(Name = "versionId", EmitDefaultValue = false)]
-        public string VersionId
-        {
-            get{ return _VersionId;}
-            set
-            {
-                _VersionId = value;
-                _flagVersionId = true;
-            }
-        }
-        private string _VersionId;
-        private bool _flagVersionId;
+        public string VersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as VersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeVersionId()
-        {
-            return _flagVersionId;
-        }
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = false)]
-        public string Type
-        {
-            get{ return _Type;}
-            set
-            {
-                _Type = value;
-                _flagType = true;
-            }
-        }
-        private string _Type;
-        private bool _flagType;
+        public string Type { get; set; }
 
-        /// <summary>
-        /// Returns false as Type should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeType()
-        {
-            return _flagType;
-        }
         /// <summary>
         /// Gets or Sets Slot
         /// </summary>
         [DataMember(Name = "slot", IsRequired = true, EmitDefaultValue = false)]
-        public string Slot
-        {
-            get{ return _Slot;}
-            set
-            {
-                _Slot = value;
-                _flagSlot = true;
-            }
-        }
-        private string _Slot;
-        private bool _flagSlot;
+        public string Slot { get; set; }
 
-        /// <summary>
-        /// Returns false as Slot should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSlot()
-        {
-            return _flagSlot;
-        }
         /// <summary>
         /// Gets or Sets Locked
         /// </summary>
         [DataMember(Name = "locked", EmitDefaultValue = true)]
-        public bool Locked
-        {
-            get{ return _Locked;}
-            set
-            {
-                _Locked = value;
-                _flagLocked = true;
-            }
-        }
-        private bool _Locked;
-        private bool _flagLocked;
+        public bool Locked { get; set; }
 
-        /// <summary>
-        /// Returns false as Locked should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLocked()
-        {
-            return _flagLocked;
-        }
         /// <summary>
         /// Gets or Sets Config
         /// </summary>
         [DataMember(Name = "config", EmitDefaultValue = false)]
-        public Object Config
-        {
-            get{ return _Config;}
-            set
-            {
-                _Config = value;
-                _flagConfig = true;
-            }
-        }
-        private Object _Config;
-        private bool _flagConfig;
+        public Object Config { get; set; }
 
-        /// <summary>
-        /// Returns false as Config should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeConfig()
-        {
-            return _flagConfig;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
@@ -299,50 +141,14 @@ namespace ShopwareSharp.Model
         /// Gets or Sets BlockId
         /// </summary>
         [DataMember(Name = "blockId", IsRequired = true, EmitDefaultValue = false)]
-        public string BlockId
-        {
-            get{ return _BlockId;}
-            set
-            {
-                _BlockId = value;
-                _flagBlockId = true;
-            }
-        }
-        private string _BlockId;
-        private bool _flagBlockId;
+        public string BlockId { get; set; }
 
-        /// <summary>
-        /// Returns false as BlockId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBlockId()
-        {
-            return _flagBlockId;
-        }
         /// <summary>
         /// Gets or Sets CmsBlockVersionId
         /// </summary>
         [DataMember(Name = "cmsBlockVersionId", EmitDefaultValue = false)]
-        public string CmsBlockVersionId
-        {
-            get{ return _CmsBlockVersionId;}
-            set
-            {
-                _CmsBlockVersionId = value;
-                _flagCmsBlockVersionId = true;
-            }
-        }
-        private string _CmsBlockVersionId;
-        private bool _flagCmsBlockVersionId;
+        public string CmsBlockVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as CmsBlockVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCmsBlockVersionId()
-        {
-            return _flagCmsBlockVersionId;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -375,50 +181,14 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Gets or Sets Block
         /// </summary>
         [DataMember(Name = "block", EmitDefaultValue = false)]
-        public CmsBlock Block
-        {
-            get{ return _Block;}
-            set
-            {
-                _Block = value;
-                _flagBlock = true;
-            }
-        }
-        private CmsBlock _Block;
-        private bool _flagBlock;
+        public CmsBlock Block { get; set; }
 
-        /// <summary>
-        /// Returns false as Block should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBlock()
-        {
-            return _flagBlock;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

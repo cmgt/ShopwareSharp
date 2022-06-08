@@ -53,156 +53,54 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("code is a required property for Locale and cannot be null");
             }
-            this._Code = code;
+            this.Code = code;
             // to ensure "name" is required (not null)
             if (name == null)
             {
                 throw new ArgumentNullException("name is a required property for Locale and cannot be null");
             }
-            this._Name = name;
+            this.Name = name;
             // to ensure "territory" is required (not null)
             if (territory == null)
             {
                 throw new ArgumentNullException("territory is a required property for Locale and cannot be null");
             }
-            this._Territory = territory;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
+            this.Territory = territory;
+            this.Id = id;
+            this.CustomFields = customFields;
+            this.Translated = translated;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name = "code", IsRequired = true, EmitDefaultValue = false)]
-        public string Code
-        {
-            get{ return _Code;}
-            set
-            {
-                _Code = value;
-                _flagCode = true;
-            }
-        }
-        private string _Code;
-        private bool _flagCode;
+        public string Code { get; set; }
 
-        /// <summary>
-        /// Returns false as Code should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCode()
-        {
-            return _flagCode;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Territory
         /// </summary>
         [DataMember(Name = "territory", IsRequired = true, EmitDefaultValue = false)]
-        public string Territory
-        {
-            get{ return _Territory;}
-            set
-            {
-                _Territory = value;
-                _flagTerritory = true;
-            }
-        }
-        private string _Territory;
-        private bool _flagTerritory;
+        public string Territory { get; set; }
 
-        /// <summary>
-        /// Returns false as Territory should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTerritory()
-        {
-            return _flagTerritory;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -235,26 +133,8 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

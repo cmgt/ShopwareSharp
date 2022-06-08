@@ -38,37 +38,15 @@ namespace ShopwareSharp.Model
         /// <param name="items">items.</param>
         public CartItemsAllOf(List<LineItem> items = default(List<LineItem>))
         {
-            this._Items = items;
-            if (this.Items != null)
-            {
-                this._flagItems = true;
-            }
+            this.Items = items;
         }
 
         /// <summary>
         /// Gets or Sets Items
         /// </summary>
         [DataMember(Name = "items", EmitDefaultValue = false)]
-        public List<LineItem> Items
-        {
-            get{ return _Items;}
-            set
-            {
-                _Items = value;
-                _flagItems = true;
-            }
-        }
-        private List<LineItem> _Items;
-        private bool _flagItems;
+        public List<LineItem> Items { get; set; }
 
-        /// <summary>
-        /// Returns false as Items should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeItems()
-        {
-            return _flagItems;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

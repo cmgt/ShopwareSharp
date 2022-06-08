@@ -49,13 +49,13 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("paymentMethodId is a required property for OrderSetPaymentRequest and cannot be null");
             }
-            this._PaymentMethodId = paymentMethodId;
+            this.PaymentMethodId = paymentMethodId;
             // to ensure "orderId" is required (not null)
             if (orderId == null)
             {
                 throw new ArgumentNullException("orderId is a required property for OrderSetPaymentRequest and cannot be null");
             }
-            this._OrderId = orderId;
+            this.OrderId = orderId;
         }
 
         /// <summary>
@@ -63,51 +63,15 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>The identifier of the paymentMethod to be set</value>
         [DataMember(Name = "paymentMethodId", IsRequired = true, EmitDefaultValue = false)]
-        public string PaymentMethodId
-        {
-            get{ return _PaymentMethodId;}
-            set
-            {
-                _PaymentMethodId = value;
-                _flagPaymentMethodId = true;
-            }
-        }
-        private string _PaymentMethodId;
-        private bool _flagPaymentMethodId;
+        public string PaymentMethodId { get; set; }
 
-        /// <summary>
-        /// Returns false as PaymentMethodId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePaymentMethodId()
-        {
-            return _flagPaymentMethodId;
-        }
         /// <summary>
         /// The identifier of the order.
         /// </summary>
         /// <value>The identifier of the order.</value>
         [DataMember(Name = "orderId", IsRequired = true, EmitDefaultValue = false)]
-        public string OrderId
-        {
-            get{ return _OrderId;}
-            set
-            {
-                _OrderId = value;
-                _flagOrderId = true;
-            }
-        }
-        private string _OrderId;
-        private bool _flagOrderId;
+        public string OrderId { get; set; }
 
-        /// <summary>
-        /// Returns false as OrderId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrderId()
-        {
-            return _flagOrderId;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

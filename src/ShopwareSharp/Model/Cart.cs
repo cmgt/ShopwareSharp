@@ -48,61 +48,17 @@ namespace ShopwareSharp.Model
         /// <param name="campaignCode">A campaign tracking code.</param>
         public Cart(string apiAlias = default(string), string name = default(string), string token = default(string), CartAllOfPrice price = default(CartAllOfPrice), List<LineItem> lineItems = default(List<LineItem>), List<CartAllOfErrors> errors = default(List<CartAllOfErrors>), List<CartAllOfTransactions> transactions = default(List<CartAllOfTransactions>), bool modified = default(bool), string customerComment = default(string), string affiliateCode = default(string), string campaignCode = default(string))
         {
-            this._ApiAlias = apiAlias;
-            if (this.ApiAlias != null)
-            {
-                this._flagApiAlias = true;
-            }
-            this._Name = name;
-            if (this.Name != null)
-            {
-                this._flagName = true;
-            }
-            this._Token = token;
-            if (this.Token != null)
-            {
-                this._flagToken = true;
-            }
-            this._Price = price;
-            if (this.Price != null)
-            {
-                this._flagPrice = true;
-            }
-            this._LineItems = lineItems;
-            if (this.LineItems != null)
-            {
-                this._flagLineItems = true;
-            }
-            this._Errors = errors;
-            if (this.Errors != null)
-            {
-                this._flagErrors = true;
-            }
-            this._Transactions = transactions;
-            if (this.Transactions != null)
-            {
-                this._flagTransactions = true;
-            }
-            this._Modified = modified;
-            if (this.Modified != null)
-            {
-                this._flagModified = true;
-            }
-            this._CustomerComment = customerComment;
-            if (this.CustomerComment != null)
-            {
-                this._flagCustomerComment = true;
-            }
-            this._AffiliateCode = affiliateCode;
-            if (this.AffiliateCode != null)
-            {
-                this._flagAffiliateCode = true;
-            }
-            this._CampaignCode = campaignCode;
-            if (this.CampaignCode != null)
-            {
-                this._flagCampaignCode = true;
-            }
+            this.ApiAlias = apiAlias;
+            this.Name = name;
+            this.Token = token;
+            this.Price = price;
+            this.LineItems = lineItems;
+            this.Errors = errors;
+            this.Transactions = transactions;
+            this.Modified = modified;
+            this.CustomerComment = customerComment;
+            this.AffiliateCode = affiliateCode;
+            this.CampaignCode = campaignCode;
         }
 
         /// <summary>
@@ -110,274 +66,76 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Alias which can be used to restrict response fields. For more information see [includes](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#includes-apialias).</value>
         [DataMember(Name = "apiAlias", EmitDefaultValue = false)]
-        public string ApiAlias
-        {
-            get{ return _ApiAlias;}
-            set
-            {
-                _ApiAlias = value;
-                _flagApiAlias = true;
-            }
-        }
-        private string _ApiAlias;
-        private bool _flagApiAlias;
+        public string ApiAlias { get; set; }
 
-        /// <summary>
-        /// Returns false as ApiAlias should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeApiAlias()
-        {
-            return _flagApiAlias;
-        }
         /// <summary>
         /// Name of the cart - for example &#x60;guest-cart&#x60;
         /// </summary>
         /// <value>Name of the cart - for example &#x60;guest-cart&#x60;</value>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Context token identifying the cart and the user session
         /// </summary>
         /// <value>Context token identifying the cart and the user session</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
-        public string Token
-        {
-            get{ return _Token;}
-            set
-            {
-                _Token = value;
-                _flagToken = true;
-            }
-        }
-        private string _Token;
-        private bool _flagToken;
+        public string Token { get; set; }
 
-        /// <summary>
-        /// Returns false as Token should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeToken()
-        {
-            return _flagToken;
-        }
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
         [DataMember(Name = "price", EmitDefaultValue = false)]
-        public CartAllOfPrice Price
-        {
-            get{ return _Price;}
-            set
-            {
-                _Price = value;
-                _flagPrice = true;
-            }
-        }
-        private CartAllOfPrice _Price;
-        private bool _flagPrice;
+        public CartAllOfPrice Price { get; set; }
 
-        /// <summary>
-        /// Returns false as Price should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePrice()
-        {
-            return _flagPrice;
-        }
         /// <summary>
         /// All items within the cart
         /// </summary>
         /// <value>All items within the cart</value>
         [DataMember(Name = "lineItems", EmitDefaultValue = false)]
-        public List<LineItem> LineItems
-        {
-            get{ return _LineItems;}
-            set
-            {
-                _LineItems = value;
-                _flagLineItems = true;
-            }
-        }
-        private List<LineItem> _LineItems;
-        private bool _flagLineItems;
+        public List<LineItem> LineItems { get; set; }
 
-        /// <summary>
-        /// Returns false as LineItems should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLineItems()
-        {
-            return _flagLineItems;
-        }
         /// <summary>
         /// A list of all cart errors, such as insufficient stocks, invalid addresses or vouchers.
         /// </summary>
         /// <value>A list of all cart errors, such as insufficient stocks, invalid addresses or vouchers.</value>
         [DataMember(Name = "errors", EmitDefaultValue = false)]
-        public List<CartAllOfErrors> Errors
-        {
-            get{ return _Errors;}
-            set
-            {
-                _Errors = value;
-                _flagErrors = true;
-            }
-        }
-        private List<CartAllOfErrors> _Errors;
-        private bool _flagErrors;
+        public List<CartAllOfErrors> Errors { get; set; }
 
-        /// <summary>
-        /// Returns false as Errors should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeErrors()
-        {
-            return _flagErrors;
-        }
         /// <summary>
         /// A list of all payment transactions associated with the current cart.
         /// </summary>
         /// <value>A list of all payment transactions associated with the current cart.</value>
         [DataMember(Name = "transactions", EmitDefaultValue = false)]
-        public List<CartAllOfTransactions> Transactions
-        {
-            get{ return _Transactions;}
-            set
-            {
-                _Transactions = value;
-                _flagTransactions = true;
-            }
-        }
-        private List<CartAllOfTransactions> _Transactions;
-        private bool _flagTransactions;
+        public List<CartAllOfTransactions> Transactions { get; set; }
 
-        /// <summary>
-        /// Returns false as Transactions should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTransactions()
-        {
-            return _flagTransactions;
-        }
         /// <summary>
         /// Gets or Sets Modified
         /// </summary>
         [DataMember(Name = "modified", EmitDefaultValue = true)]
-        public bool Modified
-        {
-            get{ return _Modified;}
-            set
-            {
-                _Modified = value;
-                _flagModified = true;
-            }
-        }
-        private bool _Modified;
-        private bool _flagModified;
+        public bool Modified { get; set; }
 
-        /// <summary>
-        /// Returns false as Modified should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeModified()
-        {
-            return _flagModified;
-        }
         /// <summary>
         /// A comment that can be added to the cart.
         /// </summary>
         /// <value>A comment that can be added to the cart.</value>
         [DataMember(Name = "customerComment", EmitDefaultValue = false)]
-        public string CustomerComment
-        {
-            get{ return _CustomerComment;}
-            set
-            {
-                _CustomerComment = value;
-                _flagCustomerComment = true;
-            }
-        }
-        private string _CustomerComment;
-        private bool _flagCustomerComment;
+        public string CustomerComment { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomerComment should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomerComment()
-        {
-            return _flagCustomerComment;
-        }
         /// <summary>
         /// An affiliate tracking code
         /// </summary>
         /// <value>An affiliate tracking code</value>
         [DataMember(Name = "affiliateCode", EmitDefaultValue = false)]
-        public string AffiliateCode
-        {
-            get{ return _AffiliateCode;}
-            set
-            {
-                _AffiliateCode = value;
-                _flagAffiliateCode = true;
-            }
-        }
-        private string _AffiliateCode;
-        private bool _flagAffiliateCode;
+        public string AffiliateCode { get; set; }
 
-        /// <summary>
-        /// Returns false as AffiliateCode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAffiliateCode()
-        {
-            return _flagAffiliateCode;
-        }
         /// <summary>
         /// A campaign tracking code
         /// </summary>
         /// <value>A campaign tracking code</value>
         [DataMember(Name = "campaignCode", EmitDefaultValue = false)]
-        public string CampaignCode
-        {
-            get{ return _CampaignCode;}
-            set
-            {
-                _CampaignCode = value;
-                _flagCampaignCode = true;
-            }
-        }
-        private string _CampaignCode;
-        private bool _flagCampaignCode;
+        public string CampaignCode { get; set; }
 
-        /// <summary>
-        /// Returns false as CampaignCode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCampaignCode()
-        {
-            return _flagCampaignCode;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

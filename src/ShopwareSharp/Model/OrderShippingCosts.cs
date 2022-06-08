@@ -49,199 +49,57 @@ namespace ShopwareSharp.Model
         /// <param name="listPrice">listPrice.</param>
         public OrderShippingCosts(float unitPrice = default(float), float totalPrice = default(float), long quantity = default(long), Object calculatedTaxes = default(Object), Object taxRules = default(Object), Object referencePrice = default(Object), OrderShippingCostsListPrice listPrice = default(OrderShippingCostsListPrice))
         {
-            this._UnitPrice = unitPrice;
-            this._TotalPrice = totalPrice;
-            this._Quantity = quantity;
-            this._CalculatedTaxes = calculatedTaxes;
-            if (this.CalculatedTaxes != null)
-            {
-                this._flagCalculatedTaxes = true;
-            }
-            this._TaxRules = taxRules;
-            if (this.TaxRules != null)
-            {
-                this._flagTaxRules = true;
-            }
-            this._ReferencePrice = referencePrice;
-            if (this.ReferencePrice != null)
-            {
-                this._flagReferencePrice = true;
-            }
-            this._ListPrice = listPrice;
-            if (this.ListPrice != null)
-            {
-                this._flagListPrice = true;
-            }
+            this.UnitPrice = unitPrice;
+            this.TotalPrice = totalPrice;
+            this.Quantity = quantity;
+            this.CalculatedTaxes = calculatedTaxes;
+            this.TaxRules = taxRules;
+            this.ReferencePrice = referencePrice;
+            this.ListPrice = listPrice;
         }
 
         /// <summary>
         /// Gets or Sets UnitPrice
         /// </summary>
         [DataMember(Name = "unitPrice", IsRequired = true, EmitDefaultValue = false)]
-        public float UnitPrice
-        {
-            get{ return _UnitPrice;}
-            set
-            {
-                _UnitPrice = value;
-                _flagUnitPrice = true;
-            }
-        }
-        private float _UnitPrice;
-        private bool _flagUnitPrice;
+        public float UnitPrice { get; set; }
 
-        /// <summary>
-        /// Returns false as UnitPrice should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUnitPrice()
-        {
-            return _flagUnitPrice;
-        }
         /// <summary>
         /// Gets or Sets TotalPrice
         /// </summary>
         [DataMember(Name = "totalPrice", IsRequired = true, EmitDefaultValue = false)]
-        public float TotalPrice
-        {
-            get{ return _TotalPrice;}
-            set
-            {
-                _TotalPrice = value;
-                _flagTotalPrice = true;
-            }
-        }
-        private float _TotalPrice;
-        private bool _flagTotalPrice;
+        public float TotalPrice { get; set; }
 
-        /// <summary>
-        /// Returns false as TotalPrice should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTotalPrice()
-        {
-            return _flagTotalPrice;
-        }
         /// <summary>
         /// Gets or Sets Quantity
         /// </summary>
         [DataMember(Name = "quantity", IsRequired = true, EmitDefaultValue = false)]
-        public long Quantity
-        {
-            get{ return _Quantity;}
-            set
-            {
-                _Quantity = value;
-                _flagQuantity = true;
-            }
-        }
-        private long _Quantity;
-        private bool _flagQuantity;
+        public long Quantity { get; set; }
 
-        /// <summary>
-        /// Returns false as Quantity should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeQuantity()
-        {
-            return _flagQuantity;
-        }
         /// <summary>
         /// Gets or Sets CalculatedTaxes
         /// </summary>
         [DataMember(Name = "calculatedTaxes", EmitDefaultValue = false)]
-        public Object CalculatedTaxes
-        {
-            get{ return _CalculatedTaxes;}
-            set
-            {
-                _CalculatedTaxes = value;
-                _flagCalculatedTaxes = true;
-            }
-        }
-        private Object _CalculatedTaxes;
-        private bool _flagCalculatedTaxes;
+        public Object CalculatedTaxes { get; set; }
 
-        /// <summary>
-        /// Returns false as CalculatedTaxes should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCalculatedTaxes()
-        {
-            return _flagCalculatedTaxes;
-        }
         /// <summary>
         /// Gets or Sets TaxRules
         /// </summary>
         [DataMember(Name = "taxRules", EmitDefaultValue = false)]
-        public Object TaxRules
-        {
-            get{ return _TaxRules;}
-            set
-            {
-                _TaxRules = value;
-                _flagTaxRules = true;
-            }
-        }
-        private Object _TaxRules;
-        private bool _flagTaxRules;
+        public Object TaxRules { get; set; }
 
-        /// <summary>
-        /// Returns false as TaxRules should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTaxRules()
-        {
-            return _flagTaxRules;
-        }
         /// <summary>
         /// Gets or Sets ReferencePrice
         /// </summary>
         [DataMember(Name = "referencePrice", EmitDefaultValue = false)]
-        public Object ReferencePrice
-        {
-            get{ return _ReferencePrice;}
-            set
-            {
-                _ReferencePrice = value;
-                _flagReferencePrice = true;
-            }
-        }
-        private Object _ReferencePrice;
-        private bool _flagReferencePrice;
+        public Object ReferencePrice { get; set; }
 
-        /// <summary>
-        /// Returns false as ReferencePrice should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeReferencePrice()
-        {
-            return _flagReferencePrice;
-        }
         /// <summary>
         /// Gets or Sets ListPrice
         /// </summary>
         [DataMember(Name = "listPrice", EmitDefaultValue = false)]
-        public OrderShippingCostsListPrice ListPrice
-        {
-            get{ return _ListPrice;}
-            set
-            {
-                _ListPrice = value;
-                _flagListPrice = true;
-            }
-        }
-        private OrderShippingCostsListPrice _ListPrice;
-        private bool _flagListPrice;
+        public OrderShippingCostsListPrice ListPrice { get; set; }
 
-        /// <summary>
-        /// Returns false as ListPrice should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeListPrice()
-        {
-            return _flagListPrice;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

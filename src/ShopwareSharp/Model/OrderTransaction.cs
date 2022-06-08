@@ -57,249 +57,81 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("orderId is a required property for OrderTransaction and cannot be null");
             }
-            this._OrderId = orderId;
+            this.OrderId = orderId;
             // to ensure "paymentMethodId" is required (not null)
             if (paymentMethodId == null)
             {
                 throw new ArgumentNullException("paymentMethodId is a required property for OrderTransaction and cannot be null");
             }
-            this._PaymentMethodId = paymentMethodId;
+            this.PaymentMethodId = paymentMethodId;
             // to ensure "amount" is required (not null)
             if (amount == null)
             {
                 throw new ArgumentNullException("amount is a required property for OrderTransaction and cannot be null");
             }
-            this._Amount = amount;
+            this.Amount = amount;
             // to ensure "stateId" is required (not null)
             if (stateId == null)
             {
                 throw new ArgumentNullException("stateId is a required property for OrderTransaction and cannot be null");
             }
-            this._StateId = stateId;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._VersionId = versionId;
-            if (this.VersionId != null)
-            {
-                this._flagVersionId = true;
-            }
-            this._OrderVersionId = orderVersionId;
-            if (this.OrderVersionId != null)
-            {
-                this._flagOrderVersionId = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._StateMachineState = stateMachineState;
-            if (this.StateMachineState != null)
-            {
-                this._flagStateMachineState = true;
-            }
-            this._PaymentMethod = paymentMethod;
-            if (this.PaymentMethod != null)
-            {
-                this._flagPaymentMethod = true;
-            }
+            this.StateId = stateId;
+            this.Id = id;
+            this.VersionId = versionId;
+            this.OrderVersionId = orderVersionId;
+            this.CustomFields = customFields;
+            this.StateMachineState = stateMachineState;
+            this.PaymentMethod = paymentMethod;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets VersionId
         /// </summary>
         [DataMember(Name = "versionId", EmitDefaultValue = false)]
-        public string VersionId
-        {
-            get{ return _VersionId;}
-            set
-            {
-                _VersionId = value;
-                _flagVersionId = true;
-            }
-        }
-        private string _VersionId;
-        private bool _flagVersionId;
+        public string VersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as VersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeVersionId()
-        {
-            return _flagVersionId;
-        }
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>
         [DataMember(Name = "orderId", IsRequired = true, EmitDefaultValue = false)]
-        public string OrderId
-        {
-            get{ return _OrderId;}
-            set
-            {
-                _OrderId = value;
-                _flagOrderId = true;
-            }
-        }
-        private string _OrderId;
-        private bool _flagOrderId;
+        public string OrderId { get; set; }
 
-        /// <summary>
-        /// Returns false as OrderId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrderId()
-        {
-            return _flagOrderId;
-        }
         /// <summary>
         /// Gets or Sets OrderVersionId
         /// </summary>
         [DataMember(Name = "orderVersionId", EmitDefaultValue = false)]
-        public string OrderVersionId
-        {
-            get{ return _OrderVersionId;}
-            set
-            {
-                _OrderVersionId = value;
-                _flagOrderVersionId = true;
-            }
-        }
-        private string _OrderVersionId;
-        private bool _flagOrderVersionId;
+        public string OrderVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as OrderVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrderVersionId()
-        {
-            return _flagOrderVersionId;
-        }
         /// <summary>
         /// Gets or Sets PaymentMethodId
         /// </summary>
         [DataMember(Name = "paymentMethodId", IsRequired = true, EmitDefaultValue = false)]
-        public string PaymentMethodId
-        {
-            get{ return _PaymentMethodId;}
-            set
-            {
-                _PaymentMethodId = value;
-                _flagPaymentMethodId = true;
-            }
-        }
-        private string _PaymentMethodId;
-        private bool _flagPaymentMethodId;
+        public string PaymentMethodId { get; set; }
 
-        /// <summary>
-        /// Returns false as PaymentMethodId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePaymentMethodId()
-        {
-            return _flagPaymentMethodId;
-        }
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
         [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = false)]
-        public OrderShippingCosts Amount
-        {
-            get{ return _Amount;}
-            set
-            {
-                _Amount = value;
-                _flagAmount = true;
-            }
-        }
-        private OrderShippingCosts _Amount;
-        private bool _flagAmount;
+        public OrderShippingCosts Amount { get; set; }
 
-        /// <summary>
-        /// Returns false as Amount should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAmount()
-        {
-            return _flagAmount;
-        }
         /// <summary>
         /// Gets or Sets StateId
         /// </summary>
         [DataMember(Name = "stateId", IsRequired = true, EmitDefaultValue = false)]
-        public string StateId
-        {
-            get{ return _StateId;}
-            set
-            {
-                _StateId = value;
-                _flagStateId = true;
-            }
-        }
-        private string _StateId;
-        private bool _flagStateId;
+        public string StateId { get; set; }
 
-        /// <summary>
-        /// Returns false as StateId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStateId()
-        {
-            return _flagStateId;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -332,50 +164,14 @@ namespace ShopwareSharp.Model
         /// Gets or Sets StateMachineState
         /// </summary>
         [DataMember(Name = "stateMachineState", EmitDefaultValue = false)]
-        public StateMachineState StateMachineState
-        {
-            get{ return _StateMachineState;}
-            set
-            {
-                _StateMachineState = value;
-                _flagStateMachineState = true;
-            }
-        }
-        private StateMachineState _StateMachineState;
-        private bool _flagStateMachineState;
+        public StateMachineState StateMachineState { get; set; }
 
-        /// <summary>
-        /// Returns false as StateMachineState should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStateMachineState()
-        {
-            return _flagStateMachineState;
-        }
         /// <summary>
         /// Gets or Sets PaymentMethod
         /// </summary>
         [DataMember(Name = "paymentMethod", EmitDefaultValue = false)]
-        public PaymentMethod PaymentMethod
-        {
-            get{ return _PaymentMethod;}
-            set
-            {
-                _PaymentMethod = value;
-                _flagPaymentMethod = true;
-            }
-        }
-        private PaymentMethod _PaymentMethod;
-        private bool _flagPaymentMethod;
+        public PaymentMethod PaymentMethod { get; set; }
 
-        /// <summary>
-        /// Returns false as PaymentMethod should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePaymentMethod()
-        {
-            return _flagPaymentMethod;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

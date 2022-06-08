@@ -45,46 +45,14 @@ namespace ShopwareSharp.Model
         /// <param name="countryStateId">Country State.</param>
         public UpdateContextRequest(string currencyId = default(string), string languageId = default(string), string billingAddressId = default(string), string shippingAddressId = default(string), string paymentMethodId = default(string), string shippingMethodId = default(string), string countryId = default(string), string countryStateId = default(string))
         {
-            this._CurrencyId = currencyId;
-            if (this.CurrencyId != null)
-            {
-                this._flagCurrencyId = true;
-            }
-            this._LanguageId = languageId;
-            if (this.LanguageId != null)
-            {
-                this._flagLanguageId = true;
-            }
-            this._BillingAddressId = billingAddressId;
-            if (this.BillingAddressId != null)
-            {
-                this._flagBillingAddressId = true;
-            }
-            this._ShippingAddressId = shippingAddressId;
-            if (this.ShippingAddressId != null)
-            {
-                this._flagShippingAddressId = true;
-            }
-            this._PaymentMethodId = paymentMethodId;
-            if (this.PaymentMethodId != null)
-            {
-                this._flagPaymentMethodId = true;
-            }
-            this._ShippingMethodId = shippingMethodId;
-            if (this.ShippingMethodId != null)
-            {
-                this._flagShippingMethodId = true;
-            }
-            this._CountryId = countryId;
-            if (this.CountryId != null)
-            {
-                this._flagCountryId = true;
-            }
-            this._CountryStateId = countryStateId;
-            if (this.CountryStateId != null)
-            {
-                this._flagCountryStateId = true;
-            }
+            this.CurrencyId = currencyId;
+            this.LanguageId = languageId;
+            this.BillingAddressId = billingAddressId;
+            this.ShippingAddressId = shippingAddressId;
+            this.PaymentMethodId = paymentMethodId;
+            this.ShippingMethodId = shippingMethodId;
+            this.CountryId = countryId;
+            this.CountryStateId = countryStateId;
         }
 
         /// <summary>
@@ -92,201 +60,57 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Currency</value>
         [DataMember(Name = "currencyId", EmitDefaultValue = false)]
-        public string CurrencyId
-        {
-            get{ return _CurrencyId;}
-            set
-            {
-                _CurrencyId = value;
-                _flagCurrencyId = true;
-            }
-        }
-        private string _CurrencyId;
-        private bool _flagCurrencyId;
+        public string CurrencyId { get; set; }
 
-        /// <summary>
-        /// Returns false as CurrencyId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCurrencyId()
-        {
-            return _flagCurrencyId;
-        }
         /// <summary>
         /// Language
         /// </summary>
         /// <value>Language</value>
         [DataMember(Name = "languageId", EmitDefaultValue = false)]
-        public string LanguageId
-        {
-            get{ return _LanguageId;}
-            set
-            {
-                _LanguageId = value;
-                _flagLanguageId = true;
-            }
-        }
-        private string _LanguageId;
-        private bool _flagLanguageId;
+        public string LanguageId { get; set; }
 
-        /// <summary>
-        /// Returns false as LanguageId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLanguageId()
-        {
-            return _flagLanguageId;
-        }
         /// <summary>
         /// Billing Address
         /// </summary>
         /// <value>Billing Address</value>
         [DataMember(Name = "billingAddressId", EmitDefaultValue = false)]
-        public string BillingAddressId
-        {
-            get{ return _BillingAddressId;}
-            set
-            {
-                _BillingAddressId = value;
-                _flagBillingAddressId = true;
-            }
-        }
-        private string _BillingAddressId;
-        private bool _flagBillingAddressId;
+        public string BillingAddressId { get; set; }
 
-        /// <summary>
-        /// Returns false as BillingAddressId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBillingAddressId()
-        {
-            return _flagBillingAddressId;
-        }
         /// <summary>
         /// Shipping Address
         /// </summary>
         /// <value>Shipping Address</value>
         [DataMember(Name = "shippingAddressId", EmitDefaultValue = false)]
-        public string ShippingAddressId
-        {
-            get{ return _ShippingAddressId;}
-            set
-            {
-                _ShippingAddressId = value;
-                _flagShippingAddressId = true;
-            }
-        }
-        private string _ShippingAddressId;
-        private bool _flagShippingAddressId;
+        public string ShippingAddressId { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingAddressId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingAddressId()
-        {
-            return _flagShippingAddressId;
-        }
         /// <summary>
         /// Payment Method
         /// </summary>
         /// <value>Payment Method</value>
         [DataMember(Name = "paymentMethodId", EmitDefaultValue = false)]
-        public string PaymentMethodId
-        {
-            get{ return _PaymentMethodId;}
-            set
-            {
-                _PaymentMethodId = value;
-                _flagPaymentMethodId = true;
-            }
-        }
-        private string _PaymentMethodId;
-        private bool _flagPaymentMethodId;
+        public string PaymentMethodId { get; set; }
 
-        /// <summary>
-        /// Returns false as PaymentMethodId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePaymentMethodId()
-        {
-            return _flagPaymentMethodId;
-        }
         /// <summary>
         /// Shipping Method
         /// </summary>
         /// <value>Shipping Method</value>
         [DataMember(Name = "shippingMethodId", EmitDefaultValue = false)]
-        public string ShippingMethodId
-        {
-            get{ return _ShippingMethodId;}
-            set
-            {
-                _ShippingMethodId = value;
-                _flagShippingMethodId = true;
-            }
-        }
-        private string _ShippingMethodId;
-        private bool _flagShippingMethodId;
+        public string ShippingMethodId { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingMethodId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingMethodId()
-        {
-            return _flagShippingMethodId;
-        }
         /// <summary>
         /// Country
         /// </summary>
         /// <value>Country</value>
         [DataMember(Name = "countryId", EmitDefaultValue = false)]
-        public string CountryId
-        {
-            get{ return _CountryId;}
-            set
-            {
-                _CountryId = value;
-                _flagCountryId = true;
-            }
-        }
-        private string _CountryId;
-        private bool _flagCountryId;
+        public string CountryId { get; set; }
 
-        /// <summary>
-        /// Returns false as CountryId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCountryId()
-        {
-            return _flagCountryId;
-        }
         /// <summary>
         /// Country State
         /// </summary>
         /// <value>Country State</value>
         [DataMember(Name = "countryStateId", EmitDefaultValue = false)]
-        public string CountryStateId
-        {
-            get{ return _CountryStateId;}
-            set
-            {
-                _CountryStateId = value;
-                _flagCountryStateId = true;
-            }
-        }
-        private string _CountryStateId;
-        private bool _flagCountryStateId;
+        public string CountryStateId { get; set; }
 
-        /// <summary>
-        /// Returns false as CountryStateId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCountryStateId()
-        {
-            return _flagCountryStateId;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

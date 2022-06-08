@@ -47,56 +47,16 @@ namespace ShopwareSharp.Model
         /// <param name="buildTree">Return the categories as a tree or as a flat list..</param>
         public ReadNavigationRequest(int page = default(int), int limit = default(int), List<CriteriaFilterInner> filter = default(List<CriteriaFilterInner>), List<CriteriaSortInner> sort = default(List<CriteriaSortInner>), List<CriteriaFilterInner> postFilter = default(List<CriteriaFilterInner>), Object associations = default(Object), List<CriteriaAggregationsInner> aggregations = default(List<CriteriaAggregationsInner>), List<string> grouping = default(List<string>), Object depth = default(Object), Object buildTree = default(Object))
         {
-            this._Page = page;
-            if (this.Page != null)
-            {
-                this._flagPage = true;
-            }
-            this._Limit = limit;
-            if (this.Limit != null)
-            {
-                this._flagLimit = true;
-            }
-            this._Filter = filter;
-            if (this.Filter != null)
-            {
-                this._flagFilter = true;
-            }
-            this._Sort = sort;
-            if (this.Sort != null)
-            {
-                this._flagSort = true;
-            }
-            this._PostFilter = postFilter;
-            if (this.PostFilter != null)
-            {
-                this._flagPostFilter = true;
-            }
-            this._Associations = associations;
-            if (this.Associations != null)
-            {
-                this._flagAssociations = true;
-            }
-            this._Aggregations = aggregations;
-            if (this.Aggregations != null)
-            {
-                this._flagAggregations = true;
-            }
-            this._Grouping = grouping;
-            if (this.Grouping != null)
-            {
-                this._flagGrouping = true;
-            }
-            this._Depth = depth;
-            if (this.Depth != null)
-            {
-                this._flagDepth = true;
-            }
-            this._BuildTree = buildTree;
-            if (this.BuildTree != null)
-            {
-                this._flagBuildTree = true;
-            }
+            this.Page = page;
+            this.Limit = limit;
+            this.Filter = filter;
+            this.Sort = sort;
+            this.PostFilter = postFilter;
+            this.Associations = associations;
+            this.Aggregations = aggregations;
+            this.Grouping = grouping;
+            this.Depth = depth;
+            this.BuildTree = buildTree;
         }
 
         /// <summary>
@@ -104,251 +64,71 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Search result page</value>
         [DataMember(Name = "page", EmitDefaultValue = false)]
-        public int Page
-        {
-            get{ return _Page;}
-            set
-            {
-                _Page = value;
-                _flagPage = true;
-            }
-        }
-        private int _Page;
-        private bool _flagPage;
+        public int Page { get; set; }
 
-        /// <summary>
-        /// Returns false as Page should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePage()
-        {
-            return _flagPage;
-        }
         /// <summary>
         /// Number of items per result page
         /// </summary>
         /// <value>Number of items per result page</value>
         [DataMember(Name = "limit", EmitDefaultValue = false)]
-        public int Limit
-        {
-            get{ return _Limit;}
-            set
-            {
-                _Limit = value;
-                _flagLimit = true;
-            }
-        }
-        private int _Limit;
-        private bool _flagLimit;
+        public int Limit { get; set; }
 
-        /// <summary>
-        /// Returns false as Limit should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLimit()
-        {
-            return _flagLimit;
-        }
         /// <summary>
         /// List of filters to restrict the search result. For more information, see [Search Queries &gt; Filter](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#filter)
         /// </summary>
         /// <value>List of filters to restrict the search result. For more information, see [Search Queries &gt; Filter](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#filter)</value>
         [DataMember(Name = "filter", EmitDefaultValue = false)]
-        public List<CriteriaFilterInner> Filter
-        {
-            get{ return _Filter;}
-            set
-            {
-                _Filter = value;
-                _flagFilter = true;
-            }
-        }
-        private List<CriteriaFilterInner> _Filter;
-        private bool _flagFilter;
+        public List<CriteriaFilterInner> Filter { get; set; }
 
-        /// <summary>
-        /// Returns false as Filter should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFilter()
-        {
-            return _flagFilter;
-        }
         /// <summary>
         /// Sorting in the search result.
         /// </summary>
         /// <value>Sorting in the search result.</value>
         [DataMember(Name = "sort", EmitDefaultValue = false)]
-        public List<CriteriaSortInner> Sort
-        {
-            get{ return _Sort;}
-            set
-            {
-                _Sort = value;
-                _flagSort = true;
-            }
-        }
-        private List<CriteriaSortInner> _Sort;
-        private bool _flagSort;
+        public List<CriteriaSortInner> Sort { get; set; }
 
-        /// <summary>
-        /// Returns false as Sort should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSort()
-        {
-            return _flagSort;
-        }
         /// <summary>
         /// Filters that applied without affecting aggregations. For more information, see [Search Queries &gt; Post Filter](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#post-filter)
         /// </summary>
         /// <value>Filters that applied without affecting aggregations. For more information, see [Search Queries &gt; Post Filter](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#post-filter)</value>
         [DataMember(Name = "post-filter", EmitDefaultValue = false)]
-        public List<CriteriaFilterInner> PostFilter
-        {
-            get{ return _PostFilter;}
-            set
-            {
-                _PostFilter = value;
-                _flagPostFilter = true;
-            }
-        }
-        private List<CriteriaFilterInner> _PostFilter;
-        private bool _flagPostFilter;
+        public List<CriteriaFilterInner> PostFilter { get; set; }
 
-        /// <summary>
-        /// Returns false as PostFilter should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePostFilter()
-        {
-            return _flagPostFilter;
-        }
         /// <summary>
         /// Used to fetch associations which are not fetched by default.
         /// </summary>
         /// <value>Used to fetch associations which are not fetched by default.</value>
         [DataMember(Name = "associations", EmitDefaultValue = false)]
-        public Object Associations
-        {
-            get{ return _Associations;}
-            set
-            {
-                _Associations = value;
-                _flagAssociations = true;
-            }
-        }
-        private Object _Associations;
-        private bool _flagAssociations;
+        public Object Associations { get; set; }
 
-        /// <summary>
-        /// Returns false as Associations should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAssociations()
-        {
-            return _flagAssociations;
-        }
         /// <summary>
         /// Used to perform aggregations on the search result. For more information, see [Search Queries &gt; Aggregations](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#aggregations)
         /// </summary>
         /// <value>Used to perform aggregations on the search result. For more information, see [Search Queries &gt; Aggregations](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#aggregations)</value>
         [DataMember(Name = "aggregations", EmitDefaultValue = false)]
-        public List<CriteriaAggregationsInner> Aggregations
-        {
-            get{ return _Aggregations;}
-            set
-            {
-                _Aggregations = value;
-                _flagAggregations = true;
-            }
-        }
-        private List<CriteriaAggregationsInner> _Aggregations;
-        private bool _flagAggregations;
+        public List<CriteriaAggregationsInner> Aggregations { get; set; }
 
-        /// <summary>
-        /// Returns false as Aggregations should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAggregations()
-        {
-            return _flagAggregations;
-        }
         /// <summary>
         /// Perform groupings over certain fields
         /// </summary>
         /// <value>Perform groupings over certain fields</value>
         [DataMember(Name = "grouping", EmitDefaultValue = false)]
-        public List<string> Grouping
-        {
-            get{ return _Grouping;}
-            set
-            {
-                _Grouping = value;
-                _flagGrouping = true;
-            }
-        }
-        private List<string> _Grouping;
-        private bool _flagGrouping;
+        public List<string> Grouping { get; set; }
 
-        /// <summary>
-        /// Returns false as Grouping should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeGrouping()
-        {
-            return _flagGrouping;
-        }
         /// <summary>
         /// Determines the depth of fetched navigation levels.
         /// </summary>
         /// <value>Determines the depth of fetched navigation levels.</value>
         [DataMember(Name = "depth", EmitDefaultValue = true)]
-        public Object Depth
-        {
-            get{ return _Depth;}
-            set
-            {
-                _Depth = value;
-                _flagDepth = true;
-            }
-        }
-        private Object _Depth;
-        private bool _flagDepth;
+        public Object Depth { get; set; }
 
-        /// <summary>
-        /// Returns false as Depth should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDepth()
-        {
-            return _flagDepth;
-        }
         /// <summary>
         /// Return the categories as a tree or as a flat list.
         /// </summary>
         /// <value>Return the categories as a tree or as a flat list.</value>
         [DataMember(Name = "buildTree", EmitDefaultValue = true)]
-        public Object BuildTree
-        {
-            get{ return _BuildTree;}
-            set
-            {
-                _BuildTree = value;
-                _flagBuildTree = true;
-            }
-        }
-        private Object _BuildTree;
-        private bool _flagBuildTree;
+        public Object BuildTree { get; set; }
 
-        /// <summary>
-        /// Returns false as BuildTree should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBuildTree()
-        {
-            return _flagBuildTree;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

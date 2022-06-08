@@ -38,11 +38,7 @@ namespace ShopwareSharp.Model
         /// <param name="onlyAvailable">List only available.</param>
         public ReadPaymentMethodRequestAllOf(bool onlyAvailable = default(bool))
         {
-            this._OnlyAvailable = onlyAvailable;
-            if (this.OnlyAvailable != null)
-            {
-                this._flagOnlyAvailable = true;
-            }
+            this.OnlyAvailable = onlyAvailable;
         }
 
         /// <summary>
@@ -50,26 +46,8 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>List only available</value>
         [DataMember(Name = "onlyAvailable", EmitDefaultValue = true)]
-        public bool OnlyAvailable
-        {
-            get{ return _OnlyAvailable;}
-            set
-            {
-                _OnlyAvailable = value;
-                _flagOnlyAvailable = true;
-            }
-        }
-        private bool _OnlyAvailable;
-        private bool _flagOnlyAvailable;
+        public bool OnlyAvailable { get; set; }
 
-        /// <summary>
-        /// Returns false as OnlyAvailable should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOnlyAvailable()
-        {
-            return _flagOnlyAvailable;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

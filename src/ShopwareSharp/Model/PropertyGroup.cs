@@ -58,277 +58,83 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("name is a required property for PropertyGroup and cannot be null");
             }
-            this._Name = name;
+            this.Name = name;
             // to ensure "displayType" is required (not null)
             if (displayType == null)
             {
                 throw new ArgumentNullException("displayType is a required property for PropertyGroup and cannot be null");
             }
-            this._DisplayType = displayType;
+            this.DisplayType = displayType;
             // to ensure "sortingType" is required (not null)
             if (sortingType == null)
             {
                 throw new ArgumentNullException("sortingType is a required property for PropertyGroup and cannot be null");
             }
-            this._SortingType = sortingType;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._Description = description;
-            if (this.Description != null)
-            {
-                this._flagDescription = true;
-            }
-            this._Filterable = filterable;
-            if (this.Filterable != null)
-            {
-                this._flagFilterable = true;
-            }
-            this._VisibleOnProductDetailPage = visibleOnProductDetailPage;
-            if (this.VisibleOnProductDetailPage != null)
-            {
-                this._flagVisibleOnProductDetailPage = true;
-            }
-            this._Position = position;
-            if (this.Position != null)
-            {
-                this._flagPosition = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
-            this._Options = options;
-            if (this.Options != null)
-            {
-                this._flagOptions = true;
-            }
+            this.SortingType = sortingType;
+            this.Id = id;
+            this.Description = description;
+            this.Filterable = filterable;
+            this.VisibleOnProductDetailPage = visibleOnProductDetailPage;
+            this.Position = position;
+            this.CustomFields = customFields;
+            this.Translated = translated;
+            this.Options = options;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name = "description", EmitDefaultValue = false)]
-        public string Description
-        {
-            get{ return _Description;}
-            set
-            {
-                _Description = value;
-                _flagDescription = true;
-            }
-        }
-        private string _Description;
-        private bool _flagDescription;
+        public string Description { get; set; }
 
-        /// <summary>
-        /// Returns false as Description should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDescription()
-        {
-            return _flagDescription;
-        }
         /// <summary>
         /// Gets or Sets DisplayType
         /// </summary>
         [DataMember(Name = "displayType", IsRequired = true, EmitDefaultValue = false)]
-        public string DisplayType
-        {
-            get{ return _DisplayType;}
-            set
-            {
-                _DisplayType = value;
-                _flagDisplayType = true;
-            }
-        }
-        private string _DisplayType;
-        private bool _flagDisplayType;
+        public string DisplayType { get; set; }
 
-        /// <summary>
-        /// Returns false as DisplayType should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDisplayType()
-        {
-            return _flagDisplayType;
-        }
         /// <summary>
         /// Gets or Sets SortingType
         /// </summary>
         [DataMember(Name = "sortingType", IsRequired = true, EmitDefaultValue = false)]
-        public string SortingType
-        {
-            get{ return _SortingType;}
-            set
-            {
-                _SortingType = value;
-                _flagSortingType = true;
-            }
-        }
-        private string _SortingType;
-        private bool _flagSortingType;
+        public string SortingType { get; set; }
 
-        /// <summary>
-        /// Returns false as SortingType should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSortingType()
-        {
-            return _flagSortingType;
-        }
         /// <summary>
         /// Gets or Sets Filterable
         /// </summary>
         [DataMember(Name = "filterable", EmitDefaultValue = true)]
-        public bool Filterable
-        {
-            get{ return _Filterable;}
-            set
-            {
-                _Filterable = value;
-                _flagFilterable = true;
-            }
-        }
-        private bool _Filterable;
-        private bool _flagFilterable;
+        public bool Filterable { get; set; }
 
-        /// <summary>
-        /// Returns false as Filterable should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFilterable()
-        {
-            return _flagFilterable;
-        }
         /// <summary>
         /// Gets or Sets VisibleOnProductDetailPage
         /// </summary>
         [DataMember(Name = "visibleOnProductDetailPage", EmitDefaultValue = true)]
-        public bool VisibleOnProductDetailPage
-        {
-            get{ return _VisibleOnProductDetailPage;}
-            set
-            {
-                _VisibleOnProductDetailPage = value;
-                _flagVisibleOnProductDetailPage = true;
-            }
-        }
-        private bool _VisibleOnProductDetailPage;
-        private bool _flagVisibleOnProductDetailPage;
+        public bool VisibleOnProductDetailPage { get; set; }
 
-        /// <summary>
-        /// Returns false as VisibleOnProductDetailPage should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeVisibleOnProductDetailPage()
-        {
-            return _flagVisibleOnProductDetailPage;
-        }
         /// <summary>
         /// Gets or Sets Position
         /// </summary>
         [DataMember(Name = "position", EmitDefaultValue = false)]
-        public long Position
-        {
-            get{ return _Position;}
-            set
-            {
-                _Position = value;
-                _flagPosition = true;
-            }
-        }
-        private long _Position;
-        private bool _flagPosition;
+        public long Position { get; set; }
 
-        /// <summary>
-        /// Returns false as Position should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePosition()
-        {
-            return _flagPosition;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -361,50 +167,14 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Gets or Sets Options
         /// </summary>
         [DataMember(Name = "options", EmitDefaultValue = false)]
-        public PropertyGroupOption Options
-        {
-            get{ return _Options;}
-            set
-            {
-                _Options = value;
-                _flagOptions = true;
-            }
-        }
-        private PropertyGroupOption _Options;
-        private bool _flagOptions;
+        public PropertyGroupOption Options { get; set; }
 
-        /// <summary>
-        /// Returns false as Options should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOptions()
-        {
-            return _flagOptions;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

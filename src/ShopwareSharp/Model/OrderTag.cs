@@ -53,179 +53,55 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("orderId is a required property for OrderTag and cannot be null");
             }
-            this._OrderId = orderId;
+            this.OrderId = orderId;
             // to ensure "tagId" is required (not null)
             if (tagId == null)
             {
                 throw new ArgumentNullException("tagId is a required property for OrderTag and cannot be null");
             }
-            this._TagId = tagId;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._OrderVersionId = orderVersionId;
-            if (this.OrderVersionId != null)
-            {
-                this._flagOrderVersionId = true;
-            }
-            this._Order = order;
-            if (this.Order != null)
-            {
-                this._flagOrder = true;
-            }
-            this._Tag = tag;
-            if (this.Tag != null)
-            {
-                this._flagTag = true;
-            }
+            this.TagId = tagId;
+            this.Id = id;
+            this.OrderVersionId = orderVersionId;
+            this.Order = order;
+            this.Tag = tag;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>
         [DataMember(Name = "orderId", IsRequired = true, EmitDefaultValue = false)]
-        public string OrderId
-        {
-            get{ return _OrderId;}
-            set
-            {
-                _OrderId = value;
-                _flagOrderId = true;
-            }
-        }
-        private string _OrderId;
-        private bool _flagOrderId;
+        public string OrderId { get; set; }
 
-        /// <summary>
-        /// Returns false as OrderId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrderId()
-        {
-            return _flagOrderId;
-        }
         /// <summary>
         /// Gets or Sets OrderVersionId
         /// </summary>
         [DataMember(Name = "orderVersionId", EmitDefaultValue = false)]
-        public string OrderVersionId
-        {
-            get{ return _OrderVersionId;}
-            set
-            {
-                _OrderVersionId = value;
-                _flagOrderVersionId = true;
-            }
-        }
-        private string _OrderVersionId;
-        private bool _flagOrderVersionId;
+        public string OrderVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as OrderVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrderVersionId()
-        {
-            return _flagOrderVersionId;
-        }
         /// <summary>
         /// Gets or Sets TagId
         /// </summary>
         [DataMember(Name = "tagId", IsRequired = true, EmitDefaultValue = false)]
-        public string TagId
-        {
-            get{ return _TagId;}
-            set
-            {
-                _TagId = value;
-                _flagTagId = true;
-            }
-        }
-        private string _TagId;
-        private bool _flagTagId;
+        public string TagId { get; set; }
 
-        /// <summary>
-        /// Returns false as TagId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTagId()
-        {
-            return _flagTagId;
-        }
         /// <summary>
         /// Gets or Sets Order
         /// </summary>
         [DataMember(Name = "order", EmitDefaultValue = false)]
-        public Order Order
-        {
-            get{ return _Order;}
-            set
-            {
-                _Order = value;
-                _flagOrder = true;
-            }
-        }
-        private Order _Order;
-        private bool _flagOrder;
+        public Order Order { get; set; }
 
-        /// <summary>
-        /// Returns false as Order should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrder()
-        {
-            return _flagOrder;
-        }
         /// <summary>
         /// Gets or Sets Tag
         /// </summary>
         [DataMember(Name = "tag", EmitDefaultValue = false)]
-        public Tag Tag
-        {
-            get{ return _Tag;}
-            set
-            {
-                _Tag = value;
-                _flagTag = true;
-            }
-        }
-        private Tag _Tag;
-        private bool _flagTag;
+        public Tag Tag { get; set; }
 
-        /// <summary>
-        /// Returns false as Tag should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTag()
-        {
-            return _flagTag;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

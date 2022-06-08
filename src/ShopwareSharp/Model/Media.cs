@@ -49,79 +49,25 @@ namespace ShopwareSharp.Model
         /// <param name="customFields">customFields.</param>
         /// <param name="translated">translated.</param>
         /// <param name="thumbnails">thumbnails.</param>
-        public Media(string id = default(string), string alt = default(string), string title = default(string), string url = default(string), bool hasFile = default(bool), bool _private = default(bool), Object customFields = default(Object), Object translated = default(Object), MediaThumbnail thumbnails = default(MediaThumbnail))
+        public Media(string id = default(string), string alt = default(string), string title = default(string), string url = default(string), bool hasFile = default(bool), bool _private = default(bool), Object customFields = default(Object), Object translated = default(Object), MediaThumbnail[] thumbnails = default(MediaThumbnail[]))
         {
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._Alt = alt;
-            if (this.Alt != null)
-            {
-                this._flagAlt = true;
-            }
-            this._Title = title;
-            if (this.Title != null)
-            {
-                this._flagTitle = true;
-            }
-            this._Url = url;
-            if (this.Url != null)
-            {
-                this._flagUrl = true;
-            }
-            this._HasFile = hasFile;
-            if (this.HasFile != null)
-            {
-                this._flagHasFile = true;
-            }
-            this._Private = _private;
-            if (this.Private != null)
-            {
-                this._flagPrivate = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
-            this._Thumbnails = thumbnails;
-            if (this.Thumbnails != null)
-            {
-                this._flagThumbnails = true;
-            }
+            this.Id = id;
+            this.Alt = alt;
+            this.Title = title;
+            this.Url = url;
+            this.HasFile = hasFile;
+            this.Private = _private;
+            this.CustomFields = customFields;
+            this.Translated = translated;
+            this.Thumbnails = thumbnails;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets MimeType
         /// </summary>
@@ -210,146 +156,38 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Alt
         /// </summary>
         [DataMember(Name = "alt", EmitDefaultValue = false)]
-        public string Alt
-        {
-            get{ return _Alt;}
-            set
-            {
-                _Alt = value;
-                _flagAlt = true;
-            }
-        }
-        private string _Alt;
-        private bool _flagAlt;
+        public string Alt { get; set; }
 
-        /// <summary>
-        /// Returns false as Alt should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAlt()
-        {
-            return _flagAlt;
-        }
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name = "title", EmitDefaultValue = false)]
-        public string Title
-        {
-            get{ return _Title;}
-            set
-            {
-                _Title = value;
-                _flagTitle = true;
-            }
-        }
-        private string _Title;
-        private bool _flagTitle;
+        public string Title { get; set; }
 
-        /// <summary>
-        /// Returns false as Title should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTitle()
-        {
-            return _flagTitle;
-        }
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
         [DataMember(Name = "url", EmitDefaultValue = false)]
-        public string Url
-        {
-            get{ return _Url;}
-            set
-            {
-                _Url = value;
-                _flagUrl = true;
-            }
-        }
-        private string _Url;
-        private bool _flagUrl;
+        public string Url { get; set; }
 
-        /// <summary>
-        /// Returns false as Url should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUrl()
-        {
-            return _flagUrl;
-        }
         /// <summary>
         /// Gets or Sets HasFile
         /// </summary>
         [DataMember(Name = "hasFile", EmitDefaultValue = true)]
-        public bool HasFile
-        {
-            get{ return _HasFile;}
-            set
-            {
-                _HasFile = value;
-                _flagHasFile = true;
-            }
-        }
-        private bool _HasFile;
-        private bool _flagHasFile;
+        public bool HasFile { get; set; }
 
-        /// <summary>
-        /// Returns false as HasFile should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeHasFile()
-        {
-            return _flagHasFile;
-        }
         /// <summary>
         /// Gets or Sets Private
         /// </summary>
         [DataMember(Name = "private", EmitDefaultValue = true)]
-        public bool Private
-        {
-            get{ return _Private;}
-            set
-            {
-                _Private = value;
-                _flagPrivate = true;
-            }
-        }
-        private bool _Private;
-        private bool _flagPrivate;
+        public bool Private { get; set; }
 
-        /// <summary>
-        /// Returns false as Private should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePrivate()
-        {
-            return _flagPrivate;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -382,50 +220,14 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Gets or Sets Thumbnails
         /// </summary>
         [DataMember(Name = "thumbnails", EmitDefaultValue = false)]
-        public MediaThumbnail Thumbnails
-        {
-            get{ return _Thumbnails;}
-            set
-            {
-                _Thumbnails = value;
-                _flagThumbnails = true;
-            }
-        }
-        private MediaThumbnail _Thumbnails;
-        private bool _flagThumbnails;
+        public MediaThumbnail[] Thumbnails { get; set; }
 
-        /// <summary>
-        /// Returns false as Thumbnails should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeThumbnails()
-        {
-            return _flagThumbnails;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

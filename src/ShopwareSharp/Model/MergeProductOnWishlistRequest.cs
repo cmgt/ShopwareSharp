@@ -38,11 +38,7 @@ namespace ShopwareSharp.Model
         /// <param name="productIds">List product id.</param>
         public MergeProductOnWishlistRequest(List<string> productIds = default(List<string>))
         {
-            this._ProductIds = productIds;
-            if (this.ProductIds != null)
-            {
-                this._flagProductIds = true;
-            }
+            this.ProductIds = productIds;
         }
 
         /// <summary>
@@ -50,26 +46,8 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>List product id</value>
         [DataMember(Name = "productIds", EmitDefaultValue = false)]
-        public List<string> ProductIds
-        {
-            get{ return _ProductIds;}
-            set
-            {
-                _ProductIds = value;
-                _flagProductIds = true;
-            }
-        }
-        private List<string> _ProductIds;
-        private bool _flagProductIds;
+        public List<string> ProductIds { get; set; }
 
-        /// <summary>
-        /// Returns false as ProductIds should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProductIds()
-        {
-            return _flagProductIds;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

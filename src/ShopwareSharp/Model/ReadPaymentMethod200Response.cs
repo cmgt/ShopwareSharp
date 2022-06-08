@@ -40,21 +40,9 @@ namespace ShopwareSharp.Model
         /// <param name="elements">elements.</param>
         public ReadPaymentMethod200Response(int total = default(int), Object aggregations = default(Object), List<PaymentMethod> elements = default(List<PaymentMethod>))
         {
-            this._Total = total;
-            if (this.Total != null)
-            {
-                this._flagTotal = true;
-            }
-            this._Aggregations = aggregations;
-            if (this.Aggregations != null)
-            {
-                this._flagAggregations = true;
-            }
-            this._Elements = elements;
-            if (this.Elements != null)
-            {
-                this._flagElements = true;
-            }
+            this.Total = total;
+            this.Aggregations = aggregations;
+            this.Elements = elements;
         }
 
         /// <summary>
@@ -62,75 +50,21 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Total amount</value>
         [DataMember(Name = "total", EmitDefaultValue = false)]
-        public int Total
-        {
-            get{ return _Total;}
-            set
-            {
-                _Total = value;
-                _flagTotal = true;
-            }
-        }
-        private int _Total;
-        private bool _flagTotal;
+        public int Total { get; set; }
 
-        /// <summary>
-        /// Returns false as Total should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTotal()
-        {
-            return _flagTotal;
-        }
         /// <summary>
         /// aggregation result
         /// </summary>
         /// <value>aggregation result</value>
         [DataMember(Name = "aggregations", EmitDefaultValue = false)]
-        public Object Aggregations
-        {
-            get{ return _Aggregations;}
-            set
-            {
-                _Aggregations = value;
-                _flagAggregations = true;
-            }
-        }
-        private Object _Aggregations;
-        private bool _flagAggregations;
+        public Object Aggregations { get; set; }
 
-        /// <summary>
-        /// Returns false as Aggregations should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAggregations()
-        {
-            return _flagAggregations;
-        }
         /// <summary>
         /// Gets or Sets Elements
         /// </summary>
         [DataMember(Name = "elements", EmitDefaultValue = false)]
-        public List<PaymentMethod> Elements
-        {
-            get{ return _Elements;}
-            set
-            {
-                _Elements = value;
-                _flagElements = true;
-            }
-        }
-        private List<PaymentMethod> _Elements;
-        private bool _flagElements;
+        public List<PaymentMethod> Elements { get; set; }
 
-        /// <summary>
-        /// Returns false as Elements should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeElements()
-        {
-            return _flagElements;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

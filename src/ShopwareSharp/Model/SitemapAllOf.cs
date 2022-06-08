@@ -39,66 +39,22 @@ namespace ShopwareSharp.Model
         /// <param name="created">created.</param>
         public SitemapAllOf(string filename = default(string), DateTime created = default(DateTime))
         {
-            this._Filename = filename;
-            if (this.Filename != null)
-            {
-                this._flagFilename = true;
-            }
-            this._Created = created;
-            if (this.Created != null)
-            {
-                this._flagCreated = true;
-            }
+            this.Filename = filename;
+            this.Created = created;
         }
 
         /// <summary>
         /// Gets or Sets Filename
         /// </summary>
         [DataMember(Name = "filename", EmitDefaultValue = false)]
-        public string Filename
-        {
-            get{ return _Filename;}
-            set
-            {
-                _Filename = value;
-                _flagFilename = true;
-            }
-        }
-        private string _Filename;
-        private bool _flagFilename;
+        public string Filename { get; set; }
 
-        /// <summary>
-        /// Returns false as Filename should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFilename()
-        {
-            return _flagFilename;
-        }
         /// <summary>
         /// Gets or Sets Created
         /// </summary>
         [DataMember(Name = "created", EmitDefaultValue = false)]
-        public DateTime Created
-        {
-            get{ return _Created;}
-            set
-            {
-                _Created = value;
-                _flagCreated = true;
-            }
-        }
-        private DateTime _Created;
-        private bool _flagCreated;
+        public DateTime Created { get; set; }
 
-        /// <summary>
-        /// Returns false as Created should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCreated()
-        {
-            return _flagCreated;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

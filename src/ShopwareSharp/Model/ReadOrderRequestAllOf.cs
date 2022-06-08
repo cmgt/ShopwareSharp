@@ -38,11 +38,7 @@ namespace ShopwareSharp.Model
         /// <param name="checkPromotion">Check if the payment method of the order is still changeable..</param>
         public ReadOrderRequestAllOf(bool checkPromotion = default(bool))
         {
-            this._CheckPromotion = checkPromotion;
-            if (this.CheckPromotion != null)
-            {
-                this._flagCheckPromotion = true;
-            }
+            this.CheckPromotion = checkPromotion;
         }
 
         /// <summary>
@@ -50,26 +46,8 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Check if the payment method of the order is still changeable.</value>
         [DataMember(Name = "checkPromotion", EmitDefaultValue = true)]
-        public bool CheckPromotion
-        {
-            get{ return _CheckPromotion;}
-            set
-            {
-                _CheckPromotion = value;
-                _flagCheckPromotion = true;
-            }
-        }
-        private bool _CheckPromotion;
-        private bool _flagCheckPromotion;
+        public bool CheckPromotion { get; set; }
 
-        /// <summary>
-        /// Returns false as CheckPromotion should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCheckPromotion()
-        {
-            return _flagCheckPromotion;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

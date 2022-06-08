@@ -45,46 +45,14 @@ namespace ShopwareSharp.Model
         /// <param name="meta">Non-standard meta-information that can not be represented as an attribute or relationship..</param>
         public Error(string id = default(string), Dictionary<string, Link> links = default(Dictionary<string, Link>), string status = default(string), string code = default(string), string title = default(string), string detail = default(string), ErrorSource source = default(ErrorSource), Dictionary<string, Object> meta = default(Dictionary<string, Object>))
         {
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._Links = links;
-            if (this.Links != null)
-            {
-                this._flagLinks = true;
-            }
-            this._Status = status;
-            if (this.Status != null)
-            {
-                this._flagStatus = true;
-            }
-            this._Code = code;
-            if (this.Code != null)
-            {
-                this._flagCode = true;
-            }
-            this._Title = title;
-            if (this.Title != null)
-            {
-                this._flagTitle = true;
-            }
-            this._Detail = detail;
-            if (this.Detail != null)
-            {
-                this._flagDetail = true;
-            }
-            this._Source = source;
-            if (this.Source != null)
-            {
-                this._flagSource = true;
-            }
-            this._Meta = meta;
-            if (this.Meta != null)
-            {
-                this._flagMeta = true;
-            }
+            this.Id = id;
+            this.Links = links;
+            this.Status = status;
+            this.Code = code;
+            this.Title = title;
+            this.Detail = detail;
+            this.Source = source;
+            this.Meta = meta;
         }
 
         /// <summary>
@@ -92,199 +60,55 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>A unique identifier for this particular occurrence of the problem.</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = false)]
-        public Dictionary<string, Link> Links
-        {
-            get{ return _Links;}
-            set
-            {
-                _Links = value;
-                _flagLinks = true;
-            }
-        }
-        private Dictionary<string, Link> _Links;
-        private bool _flagLinks;
+        public Dictionary<string, Link> Links { get; set; }
 
-        /// <summary>
-        /// Returns false as Links should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLinks()
-        {
-            return _flagLinks;
-        }
         /// <summary>
         /// The HTTP status code applicable to this problem, expressed as a string value.
         /// </summary>
         /// <value>The HTTP status code applicable to this problem, expressed as a string value.</value>
         [DataMember(Name = "status", EmitDefaultValue = false)]
-        public string Status
-        {
-            get{ return _Status;}
-            set
-            {
-                _Status = value;
-                _flagStatus = true;
-            }
-        }
-        private string _Status;
-        private bool _flagStatus;
+        public string Status { get; set; }
 
-        /// <summary>
-        /// Returns false as Status should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStatus()
-        {
-            return _flagStatus;
-        }
         /// <summary>
         /// An application-specific error code, expressed as a string value.
         /// </summary>
         /// <value>An application-specific error code, expressed as a string value.</value>
         [DataMember(Name = "code", EmitDefaultValue = false)]
-        public string Code
-        {
-            get{ return _Code;}
-            set
-            {
-                _Code = value;
-                _flagCode = true;
-            }
-        }
-        private string _Code;
-        private bool _flagCode;
+        public string Code { get; set; }
 
-        /// <summary>
-        /// Returns false as Code should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCode()
-        {
-            return _flagCode;
-        }
         /// <summary>
         /// A short, human-readable summary of the problem. It **SHOULD NOT** change from occurrence to occurrence of the problem, except for purposes of localization.
         /// </summary>
         /// <value>A short, human-readable summary of the problem. It **SHOULD NOT** change from occurrence to occurrence of the problem, except for purposes of localization.</value>
         [DataMember(Name = "title", EmitDefaultValue = false)]
-        public string Title
-        {
-            get{ return _Title;}
-            set
-            {
-                _Title = value;
-                _flagTitle = true;
-            }
-        }
-        private string _Title;
-        private bool _flagTitle;
+        public string Title { get; set; }
 
-        /// <summary>
-        /// Returns false as Title should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTitle()
-        {
-            return _flagTitle;
-        }
         /// <summary>
         /// A human-readable explanation specific to this occurrence of the problem.
         /// </summary>
         /// <value>A human-readable explanation specific to this occurrence of the problem.</value>
         [DataMember(Name = "detail", EmitDefaultValue = false)]
-        public string Detail
-        {
-            get{ return _Detail;}
-            set
-            {
-                _Detail = value;
-                _flagDetail = true;
-            }
-        }
-        private string _Detail;
-        private bool _flagDetail;
+        public string Detail { get; set; }
 
-        /// <summary>
-        /// Returns false as Detail should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDetail()
-        {
-            return _flagDetail;
-        }
         /// <summary>
         /// Gets or Sets Source
         /// </summary>
         [DataMember(Name = "source", EmitDefaultValue = false)]
-        public ErrorSource Source
-        {
-            get{ return _Source;}
-            set
-            {
-                _Source = value;
-                _flagSource = true;
-            }
-        }
-        private ErrorSource _Source;
-        private bool _flagSource;
+        public ErrorSource Source { get; set; }
 
-        /// <summary>
-        /// Returns false as Source should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSource()
-        {
-            return _flagSource;
-        }
         /// <summary>
         /// Non-standard meta-information that can not be represented as an attribute or relationship.
         /// </summary>
         /// <value>Non-standard meta-information that can not be represented as an attribute or relationship.</value>
         [DataMember(Name = "meta", EmitDefaultValue = false)]
-        public Dictionary<string, Object> Meta
-        {
-            get{ return _Meta;}
-            set
-            {
-                _Meta = value;
-                _flagMeta = true;
-            }
-        }
-        private Dictionary<string, Object> _Meta;
-        private bool _flagMeta;
+        public Dictionary<string, Object> Meta { get; set; }
 
-        /// <summary>
-        /// Returns false as Meta should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMeta()
-        {
-            return _flagMeta;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

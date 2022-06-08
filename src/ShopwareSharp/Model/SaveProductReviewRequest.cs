@@ -52,29 +52,21 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("title is a required property for SaveProductReviewRequest and cannot be null");
             }
-            this._Title = title;
+            this.Title = title;
             // to ensure "content" is required (not null)
             if (content == null)
             {
                 throw new ArgumentNullException("content is a required property for SaveProductReviewRequest and cannot be null");
             }
-            this._Content = content;
+            this.Content = content;
             // to ensure "points" is required (not null)
             if (points == null)
             {
                 throw new ArgumentNullException("points is a required property for SaveProductReviewRequest and cannot be null");
             }
-            this._Points = points;
-            this._Name = name;
-            if (this.Name != null)
-            {
-                this._flagName = true;
-            }
-            this._Email = email;
-            if (this.Email != null)
-            {
-                this._flagEmail = true;
-            }
+            this.Points = points;
+            this.Name = name;
+            this.Email = email;
         }
 
         /// <summary>
@@ -82,126 +74,36 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>The name of the review author. If not set, the first name of the customer is chosen.</value>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// The email address of the review author. If not set, the email of the customer is chosen.
         /// </summary>
         /// <value>The email address of the review author. If not set, the email of the customer is chosen.</value>
         [DataMember(Name = "email", EmitDefaultValue = false)]
-        public string Email
-        {
-            get{ return _Email;}
-            set
-            {
-                _Email = value;
-                _flagEmail = true;
-            }
-        }
-        private string _Email;
-        private bool _flagEmail;
+        public string Email { get; set; }
 
-        /// <summary>
-        /// Returns false as Email should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeEmail()
-        {
-            return _flagEmail;
-        }
         /// <summary>
         /// The title of the review.
         /// </summary>
         /// <value>The title of the review.</value>
         [DataMember(Name = "title", IsRequired = true, EmitDefaultValue = true)]
-        public Object Title
-        {
-            get{ return _Title;}
-            set
-            {
-                _Title = value;
-                _flagTitle = true;
-            }
-        }
-        private Object _Title;
-        private bool _flagTitle;
+        public Object Title { get; set; }
 
-        /// <summary>
-        /// Returns false as Title should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTitle()
-        {
-            return _flagTitle;
-        }
         /// <summary>
         /// The content of review.
         /// </summary>
         /// <value>The content of review.</value>
         [DataMember(Name = "content", IsRequired = true, EmitDefaultValue = true)]
-        public Object Content
-        {
-            get{ return _Content;}
-            set
-            {
-                _Content = value;
-                _flagContent = true;
-            }
-        }
-        private Object _Content;
-        private bool _flagContent;
+        public Object Content { get; set; }
 
-        /// <summary>
-        /// Returns false as Content should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeContent()
-        {
-            return _flagContent;
-        }
         /// <summary>
         /// The review rating for the product.
         /// </summary>
         /// <value>The review rating for the product.</value>
         [DataMember(Name = "points", IsRequired = true, EmitDefaultValue = true)]
-        public Object Points
-        {
-            get{ return _Points;}
-            set
-            {
-                _Points = value;
-                _flagPoints = true;
-            }
-        }
-        private Object _Points;
-        private bool _flagPoints;
+        public Object Points { get; set; }
 
-        /// <summary>
-        /// Returns false as Points should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePoints()
-        {
-            return _flagPoints;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

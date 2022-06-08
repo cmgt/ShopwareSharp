@@ -40,95 +40,29 @@ namespace ShopwareSharp.Model
         /// <param name="description">description.</param>
         public ShippingMethodPageRouteResponseInnerTranslationsInner(string shippingMethodId = default(string), string name = default(string), string description = default(string))
         {
-            this._ShippingMethodId = shippingMethodId;
-            if (this.ShippingMethodId != null)
-            {
-                this._flagShippingMethodId = true;
-            }
-            this._Name = name;
-            if (this.Name != null)
-            {
-                this._flagName = true;
-            }
-            this._Description = description;
-            if (this.Description != null)
-            {
-                this._flagDescription = true;
-            }
+            this.ShippingMethodId = shippingMethodId;
+            this.Name = name;
+            this.Description = description;
         }
 
         /// <summary>
         /// Gets or Sets ShippingMethodId
         /// </summary>
         [DataMember(Name = "shippingMethodId", EmitDefaultValue = false)]
-        public string ShippingMethodId
-        {
-            get{ return _ShippingMethodId;}
-            set
-            {
-                _ShippingMethodId = value;
-                _flagShippingMethodId = true;
-            }
-        }
-        private string _ShippingMethodId;
-        private bool _flagShippingMethodId;
+        public string ShippingMethodId { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingMethodId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingMethodId()
-        {
-            return _flagShippingMethodId;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name = "description", EmitDefaultValue = false)]
-        public string Description
-        {
-            get{ return _Description;}
-            set
-            {
-                _Description = value;
-                _flagDescription = true;
-            }
-        }
-        private string _Description;
-        private bool _flagDescription;
+        public string Description { get; set; }
 
-        /// <summary>
-        /// Returns false as Description should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDescription()
-        {
-            return _flagDescription;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

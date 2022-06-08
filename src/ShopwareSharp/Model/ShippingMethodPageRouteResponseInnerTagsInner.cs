@@ -38,37 +38,15 @@ namespace ShopwareSharp.Model
         /// <param name="name">name.</param>
         public ShippingMethodPageRouteResponseInnerTagsInner(string name = default(string))
         {
-            this._Name = name;
-            if (this.Name != null)
-            {
-                this._flagName = true;
-            }
+            this.Name = name;
         }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

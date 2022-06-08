@@ -82,762 +82,222 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("languageId is a required property for SalesChannel and cannot be null");
             }
-            this._LanguageId = languageId;
+            this.LanguageId = languageId;
             // to ensure "customerGroupId" is required (not null)
             if (customerGroupId == null)
             {
                 throw new ArgumentNullException("customerGroupId is a required property for SalesChannel and cannot be null");
             }
-            this._CustomerGroupId = customerGroupId;
+            this.CustomerGroupId = customerGroupId;
             // to ensure "currencyId" is required (not null)
             if (currencyId == null)
             {
                 throw new ArgumentNullException("currencyId is a required property for SalesChannel and cannot be null");
             }
-            this._CurrencyId = currencyId;
+            this.CurrencyId = currencyId;
             // to ensure "paymentMethodId" is required (not null)
             if (paymentMethodId == null)
             {
                 throw new ArgumentNullException("paymentMethodId is a required property for SalesChannel and cannot be null");
             }
-            this._PaymentMethodId = paymentMethodId;
+            this.PaymentMethodId = paymentMethodId;
             // to ensure "shippingMethodId" is required (not null)
             if (shippingMethodId == null)
             {
                 throw new ArgumentNullException("shippingMethodId is a required property for SalesChannel and cannot be null");
             }
-            this._ShippingMethodId = shippingMethodId;
+            this.ShippingMethodId = shippingMethodId;
             // to ensure "countryId" is required (not null)
             if (countryId == null)
             {
                 throw new ArgumentNullException("countryId is a required property for SalesChannel and cannot be null");
             }
-            this._CountryId = countryId;
+            this.CountryId = countryId;
             // to ensure "navigationCategoryId" is required (not null)
             if (navigationCategoryId == null)
             {
                 throw new ArgumentNullException("navigationCategoryId is a required property for SalesChannel and cannot be null");
             }
-            this._NavigationCategoryId = navigationCategoryId;
+            this.NavigationCategoryId = navigationCategoryId;
             // to ensure "name" is required (not null)
             if (name == null)
             {
                 throw new ArgumentNullException("name is a required property for SalesChannel and cannot be null");
             }
-            this._Name = name;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._NavigationCategoryVersionId = navigationCategoryVersionId;
-            if (this.NavigationCategoryVersionId != null)
-            {
-                this._flagNavigationCategoryVersionId = true;
-            }
-            this._NavigationCategoryDepth = navigationCategoryDepth;
-            if (this.NavigationCategoryDepth != null)
-            {
-                this._flagNavigationCategoryDepth = true;
-            }
-            this._FooterCategoryId = footerCategoryId;
-            if (this.FooterCategoryId != null)
-            {
-                this._flagFooterCategoryId = true;
-            }
-            this._FooterCategoryVersionId = footerCategoryVersionId;
-            if (this.FooterCategoryVersionId != null)
-            {
-                this._flagFooterCategoryVersionId = true;
-            }
-            this._ServiceCategoryId = serviceCategoryId;
-            if (this.ServiceCategoryId != null)
-            {
-                this._flagServiceCategoryId = true;
-            }
-            this._ServiceCategoryVersionId = serviceCategoryVersionId;
-            if (this.ServiceCategoryVersionId != null)
-            {
-                this._flagServiceCategoryVersionId = true;
-            }
-            this._MailHeaderFooterId = mailHeaderFooterId;
-            if (this.MailHeaderFooterId != null)
-            {
-                this._flagMailHeaderFooterId = true;
-            }
-            this._HreflangDefaultDomainId = hreflangDefaultDomainId;
-            if (this.HreflangDefaultDomainId != null)
-            {
-                this._flagHreflangDefaultDomainId = true;
-            }
-            this._ShortName = shortName;
-            if (this.ShortName != null)
-            {
-                this._flagShortName = true;
-            }
-            this._TaxCalculationType = taxCalculationType;
-            if (this.TaxCalculationType != null)
-            {
-                this._flagTaxCalculationType = true;
-            }
-            this.__Configuration = configuration;
-            if (this._Configuration != null)
-            {
-                this._flag_Configuration = true;
-            }
-            this._Active = active;
-            if (this.Active != null)
-            {
-                this._flagActive = true;
-            }
-            this._HreflangActive = hreflangActive;
-            if (this.HreflangActive != null)
-            {
-                this._flagHreflangActive = true;
-            }
-            this._Maintenance = maintenance;
-            if (this.Maintenance != null)
-            {
-                this._flagMaintenance = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
-            this._Language = language;
-            if (this.Language != null)
-            {
-                this._flagLanguage = true;
-            }
-            this._Currency = currency;
-            if (this.Currency != null)
-            {
-                this._flagCurrency = true;
-            }
-            this._PaymentMethod = paymentMethod;
-            if (this.PaymentMethod != null)
-            {
-                this._flagPaymentMethod = true;
-            }
-            this._ShippingMethod = shippingMethod;
-            if (this.ShippingMethod != null)
-            {
-                this._flagShippingMethod = true;
-            }
-            this._Country = country;
-            if (this.Country != null)
-            {
-                this._flagCountry = true;
-            }
-            this._Domains = domains;
-            if (this.Domains != null)
-            {
-                this._flagDomains = true;
-            }
-            this._NavigationCategory = navigationCategory;
-            if (this.NavigationCategory != null)
-            {
-                this._flagNavigationCategory = true;
-            }
-            this._FooterCategory = footerCategory;
-            if (this.FooterCategory != null)
-            {
-                this._flagFooterCategory = true;
-            }
-            this._ServiceCategory = serviceCategory;
-            if (this.ServiceCategory != null)
-            {
-                this._flagServiceCategory = true;
-            }
-            this._HreflangDefaultDomain = hreflangDefaultDomain;
-            if (this.HreflangDefaultDomain != null)
-            {
-                this._flagHreflangDefaultDomain = true;
-            }
+            this.Name = name;
+            this.Id = id;
+            this.NavigationCategoryVersionId = navigationCategoryVersionId;
+            this.NavigationCategoryDepth = navigationCategoryDepth;
+            this.FooterCategoryId = footerCategoryId;
+            this.FooterCategoryVersionId = footerCategoryVersionId;
+            this.ServiceCategoryId = serviceCategoryId;
+            this.ServiceCategoryVersionId = serviceCategoryVersionId;
+            this.MailHeaderFooterId = mailHeaderFooterId;
+            this.HreflangDefaultDomainId = hreflangDefaultDomainId;
+            this.ShortName = shortName;
+            this.TaxCalculationType = taxCalculationType;
+            this._Configuration = configuration;
+            this.Active = active;
+            this.HreflangActive = hreflangActive;
+            this.Maintenance = maintenance;
+            this.CustomFields = customFields;
+            this.Translated = translated;
+            this.Language = language;
+            this.Currency = currency;
+            this.PaymentMethod = paymentMethod;
+            this.ShippingMethod = shippingMethod;
+            this.Country = country;
+            this.Domains = domains;
+            this.NavigationCategory = navigationCategory;
+            this.FooterCategory = footerCategory;
+            this.ServiceCategory = serviceCategory;
+            this.HreflangDefaultDomain = hreflangDefaultDomain;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets LanguageId
         /// </summary>
         [DataMember(Name = "languageId", IsRequired = true, EmitDefaultValue = false)]
-        public string LanguageId
-        {
-            get{ return _LanguageId;}
-            set
-            {
-                _LanguageId = value;
-                _flagLanguageId = true;
-            }
-        }
-        private string _LanguageId;
-        private bool _flagLanguageId;
+        public string LanguageId { get; set; }
 
-        /// <summary>
-        /// Returns false as LanguageId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLanguageId()
-        {
-            return _flagLanguageId;
-        }
         /// <summary>
         /// Gets or Sets CustomerGroupId
         /// </summary>
         [DataMember(Name = "customerGroupId", IsRequired = true, EmitDefaultValue = false)]
-        public string CustomerGroupId
-        {
-            get{ return _CustomerGroupId;}
-            set
-            {
-                _CustomerGroupId = value;
-                _flagCustomerGroupId = true;
-            }
-        }
-        private string _CustomerGroupId;
-        private bool _flagCustomerGroupId;
+        public string CustomerGroupId { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomerGroupId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomerGroupId()
-        {
-            return _flagCustomerGroupId;
-        }
         /// <summary>
         /// Gets or Sets CurrencyId
         /// </summary>
         [DataMember(Name = "currencyId", IsRequired = true, EmitDefaultValue = false)]
-        public string CurrencyId
-        {
-            get{ return _CurrencyId;}
-            set
-            {
-                _CurrencyId = value;
-                _flagCurrencyId = true;
-            }
-        }
-        private string _CurrencyId;
-        private bool _flagCurrencyId;
+        public string CurrencyId { get; set; }
 
-        /// <summary>
-        /// Returns false as CurrencyId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCurrencyId()
-        {
-            return _flagCurrencyId;
-        }
         /// <summary>
         /// Gets or Sets PaymentMethodId
         /// </summary>
         [DataMember(Name = "paymentMethodId", IsRequired = true, EmitDefaultValue = false)]
-        public string PaymentMethodId
-        {
-            get{ return _PaymentMethodId;}
-            set
-            {
-                _PaymentMethodId = value;
-                _flagPaymentMethodId = true;
-            }
-        }
-        private string _PaymentMethodId;
-        private bool _flagPaymentMethodId;
+        public string PaymentMethodId { get; set; }
 
-        /// <summary>
-        /// Returns false as PaymentMethodId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePaymentMethodId()
-        {
-            return _flagPaymentMethodId;
-        }
         /// <summary>
         /// Gets or Sets ShippingMethodId
         /// </summary>
         [DataMember(Name = "shippingMethodId", IsRequired = true, EmitDefaultValue = false)]
-        public string ShippingMethodId
-        {
-            get{ return _ShippingMethodId;}
-            set
-            {
-                _ShippingMethodId = value;
-                _flagShippingMethodId = true;
-            }
-        }
-        private string _ShippingMethodId;
-        private bool _flagShippingMethodId;
+        public string ShippingMethodId { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingMethodId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingMethodId()
-        {
-            return _flagShippingMethodId;
-        }
         /// <summary>
         /// Gets or Sets CountryId
         /// </summary>
         [DataMember(Name = "countryId", IsRequired = true, EmitDefaultValue = false)]
-        public string CountryId
-        {
-            get{ return _CountryId;}
-            set
-            {
-                _CountryId = value;
-                _flagCountryId = true;
-            }
-        }
-        private string _CountryId;
-        private bool _flagCountryId;
+        public string CountryId { get; set; }
 
-        /// <summary>
-        /// Returns false as CountryId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCountryId()
-        {
-            return _flagCountryId;
-        }
         /// <summary>
         /// Gets or Sets NavigationCategoryId
         /// </summary>
         [DataMember(Name = "navigationCategoryId", IsRequired = true, EmitDefaultValue = false)]
-        public string NavigationCategoryId
-        {
-            get{ return _NavigationCategoryId;}
-            set
-            {
-                _NavigationCategoryId = value;
-                _flagNavigationCategoryId = true;
-            }
-        }
-        private string _NavigationCategoryId;
-        private bool _flagNavigationCategoryId;
+        public string NavigationCategoryId { get; set; }
 
-        /// <summary>
-        /// Returns false as NavigationCategoryId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNavigationCategoryId()
-        {
-            return _flagNavigationCategoryId;
-        }
         /// <summary>
         /// Gets or Sets NavigationCategoryVersionId
         /// </summary>
         [DataMember(Name = "navigationCategoryVersionId", EmitDefaultValue = false)]
-        public string NavigationCategoryVersionId
-        {
-            get{ return _NavigationCategoryVersionId;}
-            set
-            {
-                _NavigationCategoryVersionId = value;
-                _flagNavigationCategoryVersionId = true;
-            }
-        }
-        private string _NavigationCategoryVersionId;
-        private bool _flagNavigationCategoryVersionId;
+        public string NavigationCategoryVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as NavigationCategoryVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNavigationCategoryVersionId()
-        {
-            return _flagNavigationCategoryVersionId;
-        }
         /// <summary>
         /// Gets or Sets NavigationCategoryDepth
         /// </summary>
         [DataMember(Name = "navigationCategoryDepth", EmitDefaultValue = false)]
-        public long NavigationCategoryDepth
-        {
-            get{ return _NavigationCategoryDepth;}
-            set
-            {
-                _NavigationCategoryDepth = value;
-                _flagNavigationCategoryDepth = true;
-            }
-        }
-        private long _NavigationCategoryDepth;
-        private bool _flagNavigationCategoryDepth;
+        public long NavigationCategoryDepth { get; set; }
 
-        /// <summary>
-        /// Returns false as NavigationCategoryDepth should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNavigationCategoryDepth()
-        {
-            return _flagNavigationCategoryDepth;
-        }
         /// <summary>
         /// Gets or Sets FooterCategoryId
         /// </summary>
         [DataMember(Name = "footerCategoryId", EmitDefaultValue = false)]
-        public string FooterCategoryId
-        {
-            get{ return _FooterCategoryId;}
-            set
-            {
-                _FooterCategoryId = value;
-                _flagFooterCategoryId = true;
-            }
-        }
-        private string _FooterCategoryId;
-        private bool _flagFooterCategoryId;
+        public string FooterCategoryId { get; set; }
 
-        /// <summary>
-        /// Returns false as FooterCategoryId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFooterCategoryId()
-        {
-            return _flagFooterCategoryId;
-        }
         /// <summary>
         /// Gets or Sets FooterCategoryVersionId
         /// </summary>
         [DataMember(Name = "footerCategoryVersionId", EmitDefaultValue = false)]
-        public string FooterCategoryVersionId
-        {
-            get{ return _FooterCategoryVersionId;}
-            set
-            {
-                _FooterCategoryVersionId = value;
-                _flagFooterCategoryVersionId = true;
-            }
-        }
-        private string _FooterCategoryVersionId;
-        private bool _flagFooterCategoryVersionId;
+        public string FooterCategoryVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as FooterCategoryVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFooterCategoryVersionId()
-        {
-            return _flagFooterCategoryVersionId;
-        }
         /// <summary>
         /// Gets or Sets ServiceCategoryId
         /// </summary>
         [DataMember(Name = "serviceCategoryId", EmitDefaultValue = false)]
-        public string ServiceCategoryId
-        {
-            get{ return _ServiceCategoryId;}
-            set
-            {
-                _ServiceCategoryId = value;
-                _flagServiceCategoryId = true;
-            }
-        }
-        private string _ServiceCategoryId;
-        private bool _flagServiceCategoryId;
+        public string ServiceCategoryId { get; set; }
 
-        /// <summary>
-        /// Returns false as ServiceCategoryId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeServiceCategoryId()
-        {
-            return _flagServiceCategoryId;
-        }
         /// <summary>
         /// Gets or Sets ServiceCategoryVersionId
         /// </summary>
         [DataMember(Name = "serviceCategoryVersionId", EmitDefaultValue = false)]
-        public string ServiceCategoryVersionId
-        {
-            get{ return _ServiceCategoryVersionId;}
-            set
-            {
-                _ServiceCategoryVersionId = value;
-                _flagServiceCategoryVersionId = true;
-            }
-        }
-        private string _ServiceCategoryVersionId;
-        private bool _flagServiceCategoryVersionId;
+        public string ServiceCategoryVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as ServiceCategoryVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeServiceCategoryVersionId()
-        {
-            return _flagServiceCategoryVersionId;
-        }
         /// <summary>
         /// Gets or Sets MailHeaderFooterId
         /// </summary>
         [DataMember(Name = "mailHeaderFooterId", EmitDefaultValue = false)]
-        public string MailHeaderFooterId
-        {
-            get{ return _MailHeaderFooterId;}
-            set
-            {
-                _MailHeaderFooterId = value;
-                _flagMailHeaderFooterId = true;
-            }
-        }
-        private string _MailHeaderFooterId;
-        private bool _flagMailHeaderFooterId;
+        public string MailHeaderFooterId { get; set; }
 
-        /// <summary>
-        /// Returns false as MailHeaderFooterId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMailHeaderFooterId()
-        {
-            return _flagMailHeaderFooterId;
-        }
         /// <summary>
         /// Gets or Sets HreflangDefaultDomainId
         /// </summary>
         [DataMember(Name = "hreflangDefaultDomainId", EmitDefaultValue = false)]
-        public string HreflangDefaultDomainId
-        {
-            get{ return _HreflangDefaultDomainId;}
-            set
-            {
-                _HreflangDefaultDomainId = value;
-                _flagHreflangDefaultDomainId = true;
-            }
-        }
-        private string _HreflangDefaultDomainId;
-        private bool _flagHreflangDefaultDomainId;
+        public string HreflangDefaultDomainId { get; set; }
 
-        /// <summary>
-        /// Returns false as HreflangDefaultDomainId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeHreflangDefaultDomainId()
-        {
-            return _flagHreflangDefaultDomainId;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets ShortName
         /// </summary>
         [DataMember(Name = "shortName", EmitDefaultValue = false)]
-        public string ShortName
-        {
-            get{ return _ShortName;}
-            set
-            {
-                _ShortName = value;
-                _flagShortName = true;
-            }
-        }
-        private string _ShortName;
-        private bool _flagShortName;
+        public string ShortName { get; set; }
 
-        /// <summary>
-        /// Returns false as ShortName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShortName()
-        {
-            return _flagShortName;
-        }
         /// <summary>
         /// Gets or Sets TaxCalculationType
         /// </summary>
         [DataMember(Name = "taxCalculationType", EmitDefaultValue = false)]
-        public string TaxCalculationType
-        {
-            get{ return _TaxCalculationType;}
-            set
-            {
-                _TaxCalculationType = value;
-                _flagTaxCalculationType = true;
-            }
-        }
-        private string _TaxCalculationType;
-        private bool _flagTaxCalculationType;
+        public string TaxCalculationType { get; set; }
 
-        /// <summary>
-        /// Returns false as TaxCalculationType should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTaxCalculationType()
-        {
-            return _flagTaxCalculationType;
-        }
         /// <summary>
         /// Gets or Sets _Configuration
         /// </summary>
         [DataMember(Name = "configuration", EmitDefaultValue = false)]
-        public Object _Configuration
-        {
-            get{ return __Configuration;}
-            set
-            {
-                __Configuration = value;
-                _flag_Configuration = true;
-            }
-        }
-        private Object __Configuration;
-        private bool _flag_Configuration;
+        public Object _Configuration { get; set; }
 
-        /// <summary>
-        /// Returns false as _Configuration should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerialize_Configuration()
-        {
-            return _flag_Configuration;
-        }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", EmitDefaultValue = true)]
-        public bool Active
-        {
-            get{ return _Active;}
-            set
-            {
-                _Active = value;
-                _flagActive = true;
-            }
-        }
-        private bool _Active;
-        private bool _flagActive;
+        public bool Active { get; set; }
 
-        /// <summary>
-        /// Returns false as Active should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeActive()
-        {
-            return _flagActive;
-        }
         /// <summary>
         /// Gets or Sets HreflangActive
         /// </summary>
         [DataMember(Name = "hreflangActive", EmitDefaultValue = true)]
-        public bool HreflangActive
-        {
-            get{ return _HreflangActive;}
-            set
-            {
-                _HreflangActive = value;
-                _flagHreflangActive = true;
-            }
-        }
-        private bool _HreflangActive;
-        private bool _flagHreflangActive;
+        public bool HreflangActive { get; set; }
 
-        /// <summary>
-        /// Returns false as HreflangActive should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeHreflangActive()
-        {
-            return _flagHreflangActive;
-        }
         /// <summary>
         /// Gets or Sets Maintenance
         /// </summary>
         [DataMember(Name = "maintenance", EmitDefaultValue = true)]
-        public bool Maintenance
-        {
-            get{ return _Maintenance;}
-            set
-            {
-                _Maintenance = value;
-                _flagMaintenance = true;
-            }
-        }
-        private bool _Maintenance;
-        private bool _flagMaintenance;
+        public bool Maintenance { get; set; }
 
-        /// <summary>
-        /// Returns false as Maintenance should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMaintenance()
-        {
-            return _flagMaintenance;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -870,266 +330,68 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Gets or Sets Language
         /// </summary>
         [DataMember(Name = "language", EmitDefaultValue = false)]
-        public Language Language
-        {
-            get{ return _Language;}
-            set
-            {
-                _Language = value;
-                _flagLanguage = true;
-            }
-        }
-        private Language _Language;
-        private bool _flagLanguage;
+        public Language Language { get; set; }
 
-        /// <summary>
-        /// Returns false as Language should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLanguage()
-        {
-            return _flagLanguage;
-        }
         /// <summary>
         /// Gets or Sets Currency
         /// </summary>
         [DataMember(Name = "currency", EmitDefaultValue = false)]
-        public Currency Currency
-        {
-            get{ return _Currency;}
-            set
-            {
-                _Currency = value;
-                _flagCurrency = true;
-            }
-        }
-        private Currency _Currency;
-        private bool _flagCurrency;
+        public Currency Currency { get; set; }
 
-        /// <summary>
-        /// Returns false as Currency should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCurrency()
-        {
-            return _flagCurrency;
-        }
         /// <summary>
         /// Gets or Sets PaymentMethod
         /// </summary>
         [DataMember(Name = "paymentMethod", EmitDefaultValue = false)]
-        public PaymentMethod PaymentMethod
-        {
-            get{ return _PaymentMethod;}
-            set
-            {
-                _PaymentMethod = value;
-                _flagPaymentMethod = true;
-            }
-        }
-        private PaymentMethod _PaymentMethod;
-        private bool _flagPaymentMethod;
+        public PaymentMethod PaymentMethod { get; set; }
 
-        /// <summary>
-        /// Returns false as PaymentMethod should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePaymentMethod()
-        {
-            return _flagPaymentMethod;
-        }
         /// <summary>
         /// Gets or Sets ShippingMethod
         /// </summary>
         [DataMember(Name = "shippingMethod", EmitDefaultValue = false)]
-        public ShippingMethod ShippingMethod
-        {
-            get{ return _ShippingMethod;}
-            set
-            {
-                _ShippingMethod = value;
-                _flagShippingMethod = true;
-            }
-        }
-        private ShippingMethod _ShippingMethod;
-        private bool _flagShippingMethod;
+        public ShippingMethod ShippingMethod { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingMethod should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingMethod()
-        {
-            return _flagShippingMethod;
-        }
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
         [DataMember(Name = "country", EmitDefaultValue = false)]
-        public Country Country
-        {
-            get{ return _Country;}
-            set
-            {
-                _Country = value;
-                _flagCountry = true;
-            }
-        }
-        private Country _Country;
-        private bool _flagCountry;
+        public Country Country { get; set; }
 
-        /// <summary>
-        /// Returns false as Country should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCountry()
-        {
-            return _flagCountry;
-        }
         /// <summary>
         /// Gets or Sets Domains
         /// </summary>
         [DataMember(Name = "domains", EmitDefaultValue = false)]
-        public SalesChannelDomain Domains
-        {
-            get{ return _Domains;}
-            set
-            {
-                _Domains = value;
-                _flagDomains = true;
-            }
-        }
-        private SalesChannelDomain _Domains;
-        private bool _flagDomains;
+        public SalesChannelDomain Domains { get; set; }
 
-        /// <summary>
-        /// Returns false as Domains should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDomains()
-        {
-            return _flagDomains;
-        }
         /// <summary>
         /// Gets or Sets NavigationCategory
         /// </summary>
         [DataMember(Name = "navigationCategory", EmitDefaultValue = false)]
-        public Category NavigationCategory
-        {
-            get{ return _NavigationCategory;}
-            set
-            {
-                _NavigationCategory = value;
-                _flagNavigationCategory = true;
-            }
-        }
-        private Category _NavigationCategory;
-        private bool _flagNavigationCategory;
+        public Category NavigationCategory { get; set; }
 
-        /// <summary>
-        /// Returns false as NavigationCategory should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNavigationCategory()
-        {
-            return _flagNavigationCategory;
-        }
         /// <summary>
         /// Gets or Sets FooterCategory
         /// </summary>
         [DataMember(Name = "footerCategory", EmitDefaultValue = false)]
-        public Category FooterCategory
-        {
-            get{ return _FooterCategory;}
-            set
-            {
-                _FooterCategory = value;
-                _flagFooterCategory = true;
-            }
-        }
-        private Category _FooterCategory;
-        private bool _flagFooterCategory;
+        public Category FooterCategory { get; set; }
 
-        /// <summary>
-        /// Returns false as FooterCategory should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFooterCategory()
-        {
-            return _flagFooterCategory;
-        }
         /// <summary>
         /// Gets or Sets ServiceCategory
         /// </summary>
         [DataMember(Name = "serviceCategory", EmitDefaultValue = false)]
-        public Category ServiceCategory
-        {
-            get{ return _ServiceCategory;}
-            set
-            {
-                _ServiceCategory = value;
-                _flagServiceCategory = true;
-            }
-        }
-        private Category _ServiceCategory;
-        private bool _flagServiceCategory;
+        public Category ServiceCategory { get; set; }
 
-        /// <summary>
-        /// Returns false as ServiceCategory should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeServiceCategory()
-        {
-            return _flagServiceCategory;
-        }
         /// <summary>
         /// Gets or Sets HreflangDefaultDomain
         /// </summary>
         [DataMember(Name = "hreflangDefaultDomain", EmitDefaultValue = false)]
-        public SalesChannelDomain HreflangDefaultDomain
-        {
-            get{ return _HreflangDefaultDomain;}
-            set
-            {
-                _HreflangDefaultDomain = value;
-                _flagHreflangDefaultDomain = true;
-            }
-        }
-        private SalesChannelDomain _HreflangDefaultDomain;
-        private bool _flagHreflangDefaultDomain;
+        public SalesChannelDomain HreflangDefaultDomain { get; set; }
 
-        /// <summary>
-        /// Returns false as HreflangDefaultDomain should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeHreflangDefaultDomain()
-        {
-            return _flagHreflangDefaultDomain;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

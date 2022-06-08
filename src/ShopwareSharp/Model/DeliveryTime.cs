@@ -54,176 +54,56 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("name is a required property for DeliveryTime and cannot be null");
             }
-            this._Name = name;
-            this._Min = min;
-            this._Max = max;
+            this.Name = name;
+            this.Min = min;
+            this.Max = max;
             // to ensure "unit" is required (not null)
             if (unit == null)
             {
                 throw new ArgumentNullException("unit is a required property for DeliveryTime and cannot be null");
             }
-            this._Unit = unit;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
+            this.Unit = unit;
+            this.Id = id;
+            this.CustomFields = customFields;
+            this.Translated = translated;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Min
         /// </summary>
         [DataMember(Name = "min", IsRequired = true, EmitDefaultValue = false)]
-        public long Min
-        {
-            get{ return _Min;}
-            set
-            {
-                _Min = value;
-                _flagMin = true;
-            }
-        }
-        private long _Min;
-        private bool _flagMin;
+        public long Min { get; set; }
 
-        /// <summary>
-        /// Returns false as Min should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMin()
-        {
-            return _flagMin;
-        }
         /// <summary>
         /// Gets or Sets Max
         /// </summary>
         [DataMember(Name = "max", IsRequired = true, EmitDefaultValue = false)]
-        public long Max
-        {
-            get{ return _Max;}
-            set
-            {
-                _Max = value;
-                _flagMax = true;
-            }
-        }
-        private long _Max;
-        private bool _flagMax;
+        public long Max { get; set; }
 
-        /// <summary>
-        /// Returns false as Max should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMax()
-        {
-            return _flagMax;
-        }
         /// <summary>
         /// Gets or Sets Unit
         /// </summary>
         [DataMember(Name = "unit", IsRequired = true, EmitDefaultValue = false)]
-        public string Unit
-        {
-            get{ return _Unit;}
-            set
-            {
-                _Unit = value;
-                _flagUnit = true;
-            }
-        }
-        private string _Unit;
-        private bool _flagUnit;
+        public string Unit { get; set; }
 
-        /// <summary>
-        /// Returns false as Unit should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUnit()
-        {
-            return _flagUnit;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -256,26 +136,8 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

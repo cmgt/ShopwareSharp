@@ -38,37 +38,15 @@ namespace ShopwareSharp.Model
         /// <param name="elements">elements.</param>
         public ReadSalutation200ResponseAllOf(List<Salutation> elements = default(List<Salutation>))
         {
-            this._Elements = elements;
-            if (this.Elements != null)
-            {
-                this._flagElements = true;
-            }
+            this.Elements = elements;
         }
 
         /// <summary>
         /// Gets or Sets Elements
         /// </summary>
         [DataMember(Name = "elements", EmitDefaultValue = false)]
-        public List<Salutation> Elements
-        {
-            get{ return _Elements;}
-            set
-            {
-                _Elements = value;
-                _flagElements = true;
-            }
-        }
-        private List<Salutation> _Elements;
-        private bool _flagElements;
+        public List<Salutation> Elements { get; set; }
 
-        /// <summary>
-        /// Returns false as Elements should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeElements()
-        {
-            return _flagElements;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

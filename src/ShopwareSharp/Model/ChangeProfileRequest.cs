@@ -55,44 +55,24 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("salutationId is a required property for ChangeProfileRequest and cannot be null");
             }
-            this._SalutationId = salutationId;
+            this.SalutationId = salutationId;
             // to ensure "firstName" is required (not null)
             if (firstName == null)
             {
                 throw new ArgumentNullException("firstName is a required property for ChangeProfileRequest and cannot be null");
             }
-            this._FirstName = firstName;
+            this.FirstName = firstName;
             // to ensure "lastName" is required (not null)
             if (lastName == null)
             {
                 throw new ArgumentNullException("lastName is a required property for ChangeProfileRequest and cannot be null");
             }
-            this._LastName = lastName;
-            this._Title = title;
-            if (this.Title != null)
-            {
-                this._flagTitle = true;
-            }
-            this._Company = company;
-            if (this.Company != null)
-            {
-                this._flagCompany = true;
-            }
-            this._BirthdayDay = birthdayDay;
-            if (this.BirthdayDay != null)
-            {
-                this._flagBirthdayDay = true;
-            }
-            this._BirthdayMonth = birthdayMonth;
-            if (this.BirthdayMonth != null)
-            {
-                this._flagBirthdayMonth = true;
-            }
-            this._BirthdayYear = birthdayYear;
-            if (this.BirthdayYear != null)
-            {
-                this._flagBirthdayYear = true;
-            }
+            this.LastName = lastName;
+            this.Title = title;
+            this.Company = company;
+            this.BirthdayDay = birthdayDay;
+            this.BirthdayMonth = birthdayMonth;
+            this.BirthdayYear = birthdayYear;
         }
 
         /// <summary>
@@ -100,201 +80,57 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Id of the salutation for the customer account. Fetch options using &#x60;salutation&#x60; endpoint.</value>
         [DataMember(Name = "salutationId", IsRequired = true, EmitDefaultValue = false)]
-        public string SalutationId
-        {
-            get{ return _SalutationId;}
-            set
-            {
-                _SalutationId = value;
-                _flagSalutationId = true;
-            }
-        }
-        private string _SalutationId;
-        private bool _flagSalutationId;
+        public string SalutationId { get; set; }
 
-        /// <summary>
-        /// Returns false as SalutationId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalutationId()
-        {
-            return _flagSalutationId;
-        }
         /// <summary>
         /// (Academic) title of the customer
         /// </summary>
         /// <value>(Academic) title of the customer</value>
         [DataMember(Name = "title", EmitDefaultValue = false)]
-        public string Title
-        {
-            get{ return _Title;}
-            set
-            {
-                _Title = value;
-                _flagTitle = true;
-            }
-        }
-        private string _Title;
-        private bool _flagTitle;
+        public string Title { get; set; }
 
-        /// <summary>
-        /// Returns false as Title should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTitle()
-        {
-            return _flagTitle;
-        }
         /// <summary>
         /// Customer first name. Value will be reused for shipping and billing address if not provided explicitly.
         /// </summary>
         /// <value>Customer first name. Value will be reused for shipping and billing address if not provided explicitly.</value>
         [DataMember(Name = "firstName", IsRequired = true, EmitDefaultValue = false)]
-        public string FirstName
-        {
-            get{ return _FirstName;}
-            set
-            {
-                _FirstName = value;
-                _flagFirstName = true;
-            }
-        }
-        private string _FirstName;
-        private bool _flagFirstName;
+        public string FirstName { get; set; }
 
-        /// <summary>
-        /// Returns false as FirstName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFirstName()
-        {
-            return _flagFirstName;
-        }
         /// <summary>
         /// Customer last name. Value will be reused for shipping and billing address if not provided explicitly.
         /// </summary>
         /// <value>Customer last name. Value will be reused for shipping and billing address if not provided explicitly.</value>
         [DataMember(Name = "lastName", IsRequired = true, EmitDefaultValue = false)]
-        public string LastName
-        {
-            get{ return _LastName;}
-            set
-            {
-                _LastName = value;
-                _flagLastName = true;
-            }
-        }
-        private string _LastName;
-        private bool _flagLastName;
+        public string LastName { get; set; }
 
-        /// <summary>
-        /// Returns false as LastName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLastName()
-        {
-            return _flagLastName;
-        }
         /// <summary>
         /// Company of the customer. Only required when &#x60;accountType&#x60; is &#x60;business&#x60;.
         /// </summary>
         /// <value>Company of the customer. Only required when &#x60;accountType&#x60; is &#x60;business&#x60;.</value>
         [DataMember(Name = "company", EmitDefaultValue = false)]
-        public string Company
-        {
-            get{ return _Company;}
-            set
-            {
-                _Company = value;
-                _flagCompany = true;
-            }
-        }
-        private string _Company;
-        private bool _flagCompany;
+        public string Company { get; set; }
 
-        /// <summary>
-        /// Returns false as Company should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCompany()
-        {
-            return _flagCompany;
-        }
         /// <summary>
         /// Birthday day
         /// </summary>
         /// <value>Birthday day</value>
         [DataMember(Name = "birthdayDay", EmitDefaultValue = false)]
-        public int BirthdayDay
-        {
-            get{ return _BirthdayDay;}
-            set
-            {
-                _BirthdayDay = value;
-                _flagBirthdayDay = true;
-            }
-        }
-        private int _BirthdayDay;
-        private bool _flagBirthdayDay;
+        public int BirthdayDay { get; set; }
 
-        /// <summary>
-        /// Returns false as BirthdayDay should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBirthdayDay()
-        {
-            return _flagBirthdayDay;
-        }
         /// <summary>
         /// Birthday month
         /// </summary>
         /// <value>Birthday month</value>
         [DataMember(Name = "birthdayMonth", EmitDefaultValue = false)]
-        public int BirthdayMonth
-        {
-            get{ return _BirthdayMonth;}
-            set
-            {
-                _BirthdayMonth = value;
-                _flagBirthdayMonth = true;
-            }
-        }
-        private int _BirthdayMonth;
-        private bool _flagBirthdayMonth;
+        public int BirthdayMonth { get; set; }
 
-        /// <summary>
-        /// Returns false as BirthdayMonth should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBirthdayMonth()
-        {
-            return _flagBirthdayMonth;
-        }
         /// <summary>
         /// Birthday year
         /// </summary>
         /// <value>Birthday year</value>
         [DataMember(Name = "birthdayYear", EmitDefaultValue = false)]
-        public int BirthdayYear
-        {
-            get{ return _BirthdayYear;}
-            set
-            {
-                _BirthdayYear = value;
-                _flagBirthdayYear = true;
-            }
-        }
-        private int _BirthdayYear;
-        private bool _flagBirthdayYear;
+        public int BirthdayYear { get; set; }
 
-        /// <summary>
-        /// Returns false as BirthdayYear should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBirthdayYear()
-        {
-            return _flagBirthdayYear;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -50,92 +50,34 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("languageId is a required property for ProductKeywordDictionary and cannot be null");
             }
-            this._LanguageId = languageId;
+            this.LanguageId = languageId;
             // to ensure "keyword" is required (not null)
             if (keyword == null)
             {
                 throw new ArgumentNullException("keyword is a required property for ProductKeywordDictionary and cannot be null");
             }
-            this._Keyword = keyword;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
+            this.Keyword = keyword;
+            this.Id = id;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets LanguageId
         /// </summary>
         [DataMember(Name = "languageId", IsRequired = true, EmitDefaultValue = false)]
-        public string LanguageId
-        {
-            get{ return _LanguageId;}
-            set
-            {
-                _LanguageId = value;
-                _flagLanguageId = true;
-            }
-        }
-        private string _LanguageId;
-        private bool _flagLanguageId;
+        public string LanguageId { get; set; }
 
-        /// <summary>
-        /// Returns false as LanguageId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLanguageId()
-        {
-            return _flagLanguageId;
-        }
         /// <summary>
         /// Gets or Sets Keyword
         /// </summary>
         [DataMember(Name = "keyword", IsRequired = true, EmitDefaultValue = false)]
-        public string Keyword
-        {
-            get{ return _Keyword;}
-            set
-            {
-                _Keyword = value;
-                _flagKeyword = true;
-            }
-        }
-        private string _Keyword;
-        private bool _flagKeyword;
+        public string Keyword { get; set; }
 
-        /// <summary>
-        /// Returns false as Keyword should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeKeyword()
-        {
-            return _flagKeyword;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -63,420 +63,108 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("name is a required property for Country and cannot be null");
             }
-            this._Name = name;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._Iso = iso;
-            if (this.Iso != null)
-            {
-                this._flagIso = true;
-            }
-            this._Position = position;
-            if (this.Position != null)
-            {
-                this._flagPosition = true;
-            }
-            this._TaxFree = taxFree;
-            if (this.TaxFree != null)
-            {
-                this._flagTaxFree = true;
-            }
-            this._Active = active;
-            if (this.Active != null)
-            {
-                this._flagActive = true;
-            }
-            this._ShippingAvailable = shippingAvailable;
-            if (this.ShippingAvailable != null)
-            {
-                this._flagShippingAvailable = true;
-            }
-            this._Iso3 = iso3;
-            if (this.Iso3 != null)
-            {
-                this._flagIso3 = true;
-            }
-            this._DisplayStateInRegistration = displayStateInRegistration;
-            if (this.DisplayStateInRegistration != null)
-            {
-                this._flagDisplayStateInRegistration = true;
-            }
-            this._ForceStateInRegistration = forceStateInRegistration;
-            if (this.ForceStateInRegistration != null)
-            {
-                this._flagForceStateInRegistration = true;
-            }
-            this._CompanyTaxFree = companyTaxFree;
-            if (this.CompanyTaxFree != null)
-            {
-                this._flagCompanyTaxFree = true;
-            }
-            this._CheckVatIdPattern = checkVatIdPattern;
-            if (this.CheckVatIdPattern != null)
-            {
-                this._flagCheckVatIdPattern = true;
-            }
-            this._VatIdPattern = vatIdPattern;
-            if (this.VatIdPattern != null)
-            {
-                this._flagVatIdPattern = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
-            this._States = states;
-            if (this.States != null)
-            {
-                this._flagStates = true;
-            }
+            this.Name = name;
+            this.Id = id;
+            this.Iso = iso;
+            this.Position = position;
+            this.TaxFree = taxFree;
+            this.Active = active;
+            this.ShippingAvailable = shippingAvailable;
+            this.Iso3 = iso3;
+            this.DisplayStateInRegistration = displayStateInRegistration;
+            this.ForceStateInRegistration = forceStateInRegistration;
+            this.CompanyTaxFree = companyTaxFree;
+            this.CheckVatIdPattern = checkVatIdPattern;
+            this.VatIdPattern = vatIdPattern;
+            this.CustomFields = customFields;
+            this.Translated = translated;
+            this.States = states;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Iso
         /// </summary>
         [DataMember(Name = "iso", EmitDefaultValue = false)]
-        public string Iso
-        {
-            get{ return _Iso;}
-            set
-            {
-                _Iso = value;
-                _flagIso = true;
-            }
-        }
-        private string _Iso;
-        private bool _flagIso;
+        public string Iso { get; set; }
 
-        /// <summary>
-        /// Returns false as Iso should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeIso()
-        {
-            return _flagIso;
-        }
         /// <summary>
         /// Gets or Sets Position
         /// </summary>
         [DataMember(Name = "position", EmitDefaultValue = false)]
-        public long Position
-        {
-            get{ return _Position;}
-            set
-            {
-                _Position = value;
-                _flagPosition = true;
-            }
-        }
-        private long _Position;
-        private bool _flagPosition;
+        public long Position { get; set; }
 
-        /// <summary>
-        /// Returns false as Position should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePosition()
-        {
-            return _flagPosition;
-        }
         /// <summary>
         /// Gets or Sets TaxFree
         /// </summary>
         [DataMember(Name = "taxFree", EmitDefaultValue = true)]
-        public bool TaxFree
-        {
-            get{ return _TaxFree;}
-            set
-            {
-                _TaxFree = value;
-                _flagTaxFree = true;
-            }
-        }
-        private bool _TaxFree;
-        private bool _flagTaxFree;
+        public bool TaxFree { get; set; }
 
-        /// <summary>
-        /// Returns false as TaxFree should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTaxFree()
-        {
-            return _flagTaxFree;
-        }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", EmitDefaultValue = true)]
-        public bool Active
-        {
-            get{ return _Active;}
-            set
-            {
-                _Active = value;
-                _flagActive = true;
-            }
-        }
-        private bool _Active;
-        private bool _flagActive;
+        public bool Active { get; set; }
 
-        /// <summary>
-        /// Returns false as Active should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeActive()
-        {
-            return _flagActive;
-        }
         /// <summary>
         /// Gets or Sets ShippingAvailable
         /// </summary>
         [DataMember(Name = "shippingAvailable", EmitDefaultValue = true)]
-        public bool ShippingAvailable
-        {
-            get{ return _ShippingAvailable;}
-            set
-            {
-                _ShippingAvailable = value;
-                _flagShippingAvailable = true;
-            }
-        }
-        private bool _ShippingAvailable;
-        private bool _flagShippingAvailable;
+        public bool ShippingAvailable { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingAvailable should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingAvailable()
-        {
-            return _flagShippingAvailable;
-        }
         /// <summary>
         /// Gets or Sets Iso3
         /// </summary>
         [DataMember(Name = "iso3", EmitDefaultValue = false)]
-        public string Iso3
-        {
-            get{ return _Iso3;}
-            set
-            {
-                _Iso3 = value;
-                _flagIso3 = true;
-            }
-        }
-        private string _Iso3;
-        private bool _flagIso3;
+        public string Iso3 { get; set; }
 
-        /// <summary>
-        /// Returns false as Iso3 should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeIso3()
-        {
-            return _flagIso3;
-        }
         /// <summary>
         /// Gets or Sets DisplayStateInRegistration
         /// </summary>
         [DataMember(Name = "displayStateInRegistration", EmitDefaultValue = true)]
-        public bool DisplayStateInRegistration
-        {
-            get{ return _DisplayStateInRegistration;}
-            set
-            {
-                _DisplayStateInRegistration = value;
-                _flagDisplayStateInRegistration = true;
-            }
-        }
-        private bool _DisplayStateInRegistration;
-        private bool _flagDisplayStateInRegistration;
+        public bool DisplayStateInRegistration { get; set; }
 
-        /// <summary>
-        /// Returns false as DisplayStateInRegistration should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDisplayStateInRegistration()
-        {
-            return _flagDisplayStateInRegistration;
-        }
         /// <summary>
         /// Gets or Sets ForceStateInRegistration
         /// </summary>
         [DataMember(Name = "forceStateInRegistration", EmitDefaultValue = true)]
-        public bool ForceStateInRegistration
-        {
-            get{ return _ForceStateInRegistration;}
-            set
-            {
-                _ForceStateInRegistration = value;
-                _flagForceStateInRegistration = true;
-            }
-        }
-        private bool _ForceStateInRegistration;
-        private bool _flagForceStateInRegistration;
+        public bool ForceStateInRegistration { get; set; }
 
-        /// <summary>
-        /// Returns false as ForceStateInRegistration should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeForceStateInRegistration()
-        {
-            return _flagForceStateInRegistration;
-        }
         /// <summary>
         /// Gets or Sets CompanyTaxFree
         /// </summary>
         [DataMember(Name = "companyTaxFree", EmitDefaultValue = true)]
-        public bool CompanyTaxFree
-        {
-            get{ return _CompanyTaxFree;}
-            set
-            {
-                _CompanyTaxFree = value;
-                _flagCompanyTaxFree = true;
-            }
-        }
-        private bool _CompanyTaxFree;
-        private bool _flagCompanyTaxFree;
+        public bool CompanyTaxFree { get; set; }
 
-        /// <summary>
-        /// Returns false as CompanyTaxFree should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCompanyTaxFree()
-        {
-            return _flagCompanyTaxFree;
-        }
         /// <summary>
         /// Gets or Sets CheckVatIdPattern
         /// </summary>
         [DataMember(Name = "checkVatIdPattern", EmitDefaultValue = true)]
-        public bool CheckVatIdPattern
-        {
-            get{ return _CheckVatIdPattern;}
-            set
-            {
-                _CheckVatIdPattern = value;
-                _flagCheckVatIdPattern = true;
-            }
-        }
-        private bool _CheckVatIdPattern;
-        private bool _flagCheckVatIdPattern;
+        public bool CheckVatIdPattern { get; set; }
 
-        /// <summary>
-        /// Returns false as CheckVatIdPattern should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCheckVatIdPattern()
-        {
-            return _flagCheckVatIdPattern;
-        }
         /// <summary>
         /// Gets or Sets VatIdPattern
         /// </summary>
         [DataMember(Name = "vatIdPattern", EmitDefaultValue = false)]
-        public string VatIdPattern
-        {
-            get{ return _VatIdPattern;}
-            set
-            {
-                _VatIdPattern = value;
-                _flagVatIdPattern = true;
-            }
-        }
-        private string _VatIdPattern;
-        private bool _flagVatIdPattern;
+        public string VatIdPattern { get; set; }
 
-        /// <summary>
-        /// Returns false as VatIdPattern should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeVatIdPattern()
-        {
-            return _flagVatIdPattern;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -509,50 +197,14 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Gets or Sets States
         /// </summary>
         [DataMember(Name = "states", EmitDefaultValue = false)]
-        public CountryState States
-        {
-            get{ return _States;}
-            set
-            {
-                _States = value;
-                _flagStates = true;
-            }
-        }
-        private CountryState _States;
-        private bool _flagStates;
+        public CountryState States { get; set; }
 
-        /// <summary>
-        /// Returns false as States should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStates()
-        {
-            return _flagStates;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

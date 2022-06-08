@@ -116,779 +116,195 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("taxId is a required property for Product and cannot be null");
             }
-            this._TaxId = taxId;
+            this.TaxId = taxId;
             // to ensure "productNumber" is required (not null)
             if (productNumber == null)
             {
                 throw new ArgumentNullException("productNumber is a required property for Product and cannot be null");
             }
-            this._ProductNumber = productNumber;
-            this._Stock = stock;
+            this.ProductNumber = productNumber;
+            this.Stock = stock;
             // to ensure "name" is required (not null)
             if (name == null)
             {
                 throw new ArgumentNullException("name is a required property for Product and cannot be null");
             }
-            this._Name = name;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._VersionId = versionId;
-            if (this.VersionId != null)
-            {
-                this._flagVersionId = true;
-            }
-            this._ParentId = parentId;
-            if (this.ParentId != null)
-            {
-                this._flagParentId = true;
-            }
-            this._ParentVersionId = parentVersionId;
-            if (this.ParentVersionId != null)
-            {
-                this._flagParentVersionId = true;
-            }
-            this._ManufacturerId = manufacturerId;
-            if (this.ManufacturerId != null)
-            {
-                this._flagManufacturerId = true;
-            }
-            this._ProductManufacturerVersionId = productManufacturerVersionId;
-            if (this.ProductManufacturerVersionId != null)
-            {
-                this._flagProductManufacturerVersionId = true;
-            }
-            this._UnitId = unitId;
-            if (this.UnitId != null)
-            {
-                this._flagUnitId = true;
-            }
-            this._CoverId = coverId;
-            if (this.CoverId != null)
-            {
-                this._flagCoverId = true;
-            }
-            this._ProductMediaVersionId = productMediaVersionId;
-            if (this.ProductMediaVersionId != null)
-            {
-                this._flagProductMediaVersionId = true;
-            }
-            this._DeliveryTimeId = deliveryTimeId;
-            if (this.DeliveryTimeId != null)
-            {
-                this._flagDeliveryTimeId = true;
-            }
-            this._CanonicalProductId = canonicalProductId;
-            if (this.CanonicalProductId != null)
-            {
-                this._flagCanonicalProductId = true;
-            }
-            this._CmsPageId = cmsPageId;
-            if (this.CmsPageId != null)
-            {
-                this._flagCmsPageId = true;
-            }
-            this._CmsPageVersionId = cmsPageVersionId;
-            if (this.CmsPageVersionId != null)
-            {
-                this._flagCmsPageVersionId = true;
-            }
-            this._RestockTime = restockTime;
-            if (this.RestockTime != null)
-            {
-                this._flagRestockTime = true;
-            }
-            this._Active = active;
-            if (this.Active != null)
-            {
-                this._flagActive = true;
-            }
-            this._IsCloseout = isCloseout;
-            if (this.IsCloseout != null)
-            {
-                this._flagIsCloseout = true;
-            }
-            this._MainVariantId = mainVariantId;
-            if (this.MainVariantId != null)
-            {
-                this._flagMainVariantId = true;
-            }
-            this._ManufacturerNumber = manufacturerNumber;
-            if (this.ManufacturerNumber != null)
-            {
-                this._flagManufacturerNumber = true;
-            }
-            this._Ean = ean;
-            if (this.Ean != null)
-            {
-                this._flagEan = true;
-            }
-            this._PurchaseSteps = purchaseSteps;
-            if (this.PurchaseSteps != null)
-            {
-                this._flagPurchaseSteps = true;
-            }
-            this._MaxPurchase = maxPurchase;
-            if (this.MaxPurchase != null)
-            {
-                this._flagMaxPurchase = true;
-            }
-            this._MinPurchase = minPurchase;
-            if (this.MinPurchase != null)
-            {
-                this._flagMinPurchase = true;
-            }
-            this._PurchaseUnit = purchaseUnit;
-            if (this.PurchaseUnit != null)
-            {
-                this._flagPurchaseUnit = true;
-            }
-            this._ReferenceUnit = referenceUnit;
-            if (this.ReferenceUnit != null)
-            {
-                this._flagReferenceUnit = true;
-            }
-            this._ShippingFree = shippingFree;
-            if (this.ShippingFree != null)
-            {
-                this._flagShippingFree = true;
-            }
-            this._MarkAsTopseller = markAsTopseller;
-            if (this.MarkAsTopseller != null)
-            {
-                this._flagMarkAsTopseller = true;
-            }
-            this._Weight = weight;
-            if (this.Weight != null)
-            {
-                this._flagWeight = true;
-            }
-            this._Width = width;
-            if (this.Width != null)
-            {
-                this._flagWidth = true;
-            }
-            this._Height = height;
-            if (this.Height != null)
-            {
-                this._flagHeight = true;
-            }
-            this._Length = length;
-            if (this.Length != null)
-            {
-                this._flagLength = true;
-            }
-            this._ReleaseDate = releaseDate;
-            if (this.ReleaseDate != null)
-            {
-                this._flagReleaseDate = true;
-            }
-            this._MetaDescription = metaDescription;
-            if (this.MetaDescription != null)
-            {
-                this._flagMetaDescription = true;
-            }
-            this._Keywords = keywords;
-            if (this.Keywords != null)
-            {
-                this._flagKeywords = true;
-            }
-            this._Description = description;
-            if (this.Description != null)
-            {
-                this._flagDescription = true;
-            }
-            this._MetaTitle = metaTitle;
-            if (this.MetaTitle != null)
-            {
-                this._flagMetaTitle = true;
-            }
-            this._PackUnit = packUnit;
-            if (this.PackUnit != null)
-            {
-                this._flagPackUnit = true;
-            }
-            this._PackUnitPlural = packUnitPlural;
-            if (this.PackUnitPlural != null)
-            {
-                this._flagPackUnitPlural = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._CalculatedPrice = calculatedPrice;
-            if (this.CalculatedPrice != null)
-            {
-                this._flagCalculatedPrice = true;
-            }
-            this._CalculatedPrices = calculatedPrices;
-            if (this.CalculatedPrices != null)
-            {
-                this._flagCalculatedPrices = true;
-            }
-            this._CalculatedMaxPurchase = calculatedMaxPurchase;
-            if (this.CalculatedMaxPurchase != null)
-            {
-                this._flagCalculatedMaxPurchase = true;
-            }
-            this._CalculatedCheapestPrice = calculatedCheapestPrice;
-            if (this.CalculatedCheapestPrice != null)
-            {
-                this._flagCalculatedCheapestPrice = true;
-            }
-            this._IsNew = isNew;
-            if (this.IsNew != null)
-            {
-                this._flagIsNew = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
-            this._Parent = parent;
-            if (this.Parent != null)
-            {
-                this._flagParent = true;
-            }
-            this._Children = children;
-            if (this.Children != null)
-            {
-                this._flagChildren = true;
-            }
-            this._DeliveryTime = deliveryTime;
-            if (this.DeliveryTime != null)
-            {
-                this._flagDeliveryTime = true;
-            }
-            this._Tax = tax;
-            if (this.Tax != null)
-            {
-                this._flagTax = true;
-            }
-            this._Manufacturer = manufacturer;
-            if (this.Manufacturer != null)
-            {
-                this._flagManufacturer = true;
-            }
-            this._Unit = unit;
-            if (this.Unit != null)
-            {
-                this._flagUnit = true;
-            }
-            this._Cover = cover;
-            if (this.Cover != null)
-            {
-                this._flagCover = true;
-            }
-            this._CmsPage = cmsPage;
-            if (this.CmsPage != null)
-            {
-                this._flagCmsPage = true;
-            }
-            this._CanonicalProduct = canonicalProduct;
-            if (this.CanonicalProduct != null)
-            {
-                this._flagCanonicalProduct = true;
-            }
-            this._Media = media;
-            if (this.Media != null)
-            {
-                this._flagMedia = true;
-            }
-            this._CrossSellings = crossSellings;
-            if (this.CrossSellings != null)
-            {
-                this._flagCrossSellings = true;
-            }
-            this._ConfiguratorSettings = configuratorSettings;
-            if (this.ConfiguratorSettings != null)
-            {
-                this._flagConfiguratorSettings = true;
-            }
-            this._ProductReviews = productReviews;
-            if (this.ProductReviews != null)
-            {
-                this._flagProductReviews = true;
-            }
-            this._MainCategories = mainCategories;
-            if (this.MainCategories != null)
-            {
-                this._flagMainCategories = true;
-            }
-            this._SeoUrls = seoUrls;
-            if (this.SeoUrls != null)
-            {
-                this._flagSeoUrls = true;
-            }
-            this._Options = options;
-            if (this.Options != null)
-            {
-                this._flagOptions = true;
-            }
-            this._Properties = properties;
-            if (this.Properties != null)
-            {
-                this._flagProperties = true;
-            }
-            this._Categories = categories;
-            if (this.Categories != null)
-            {
-                this._flagCategories = true;
-            }
-            this._Streams = streams;
-            if (this.Streams != null)
-            {
-                this._flagStreams = true;
-            }
-            this._CategoriesRo = categoriesRo;
-            if (this.CategoriesRo != null)
-            {
-                this._flagCategoriesRo = true;
-            }
-            this._SeoCategory = seoCategory;
-            if (this.SeoCategory != null)
-            {
-                this._flagSeoCategory = true;
-            }
+            this.Name = name;
+            this.Id = id;
+            this.VersionId = versionId;
+            this.ParentId = parentId;
+            this.ParentVersionId = parentVersionId;
+            this.ManufacturerId = manufacturerId;
+            this.ProductManufacturerVersionId = productManufacturerVersionId;
+            this.UnitId = unitId;
+            this.CoverId = coverId;
+            this.ProductMediaVersionId = productMediaVersionId;
+            this.DeliveryTimeId = deliveryTimeId;
+            this.CanonicalProductId = canonicalProductId;
+            this.CmsPageId = cmsPageId;
+            this.CmsPageVersionId = cmsPageVersionId;
+            this.RestockTime = restockTime;
+            this.Active = active;
+            this.IsCloseout = isCloseout;
+            this.MainVariantId = mainVariantId;
+            this.ManufacturerNumber = manufacturerNumber;
+            this.Ean = ean;
+            this.PurchaseSteps = purchaseSteps;
+            this.MaxPurchase = maxPurchase;
+            this.MinPurchase = minPurchase;
+            this.PurchaseUnit = purchaseUnit;
+            this.ReferenceUnit = referenceUnit;
+            this.ShippingFree = shippingFree;
+            this.MarkAsTopseller = markAsTopseller;
+            this.Weight = weight;
+            this.Width = width;
+            this.Height = height;
+            this.Length = length;
+            this.ReleaseDate = releaseDate;
+            this.MetaDescription = metaDescription;
+            this.Keywords = keywords;
+            this.Description = description;
+            this.MetaTitle = metaTitle;
+            this.PackUnit = packUnit;
+            this.PackUnitPlural = packUnitPlural;
+            this.CustomFields = customFields;
+            this.CalculatedPrice = calculatedPrice;
+            this.CalculatedPrices = calculatedPrices;
+            this.CalculatedMaxPurchase = calculatedMaxPurchase;
+            this.CalculatedCheapestPrice = calculatedCheapestPrice;
+            this.IsNew = isNew;
+            this.Translated = translated;
+            this.Parent = parent;
+            this.Children = children;
+            this.DeliveryTime = deliveryTime;
+            this.Tax = tax;
+            this.Manufacturer = manufacturer;
+            this.Unit = unit;
+            this.Cover = cover;
+            this.CmsPage = cmsPage;
+            this.CanonicalProduct = canonicalProduct;
+            this.Media = media;
+            this.CrossSellings = crossSellings;
+            this.ConfiguratorSettings = configuratorSettings;
+            this.ProductReviews = productReviews;
+            this.MainCategories = mainCategories;
+            this.SeoUrls = seoUrls;
+            this.Options = options;
+            this.Properties = properties;
+            this.Categories = categories;
+            this.Streams = streams;
+            this.CategoriesRo = categoriesRo;
+            this.SeoCategory = seoCategory;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets VersionId
         /// </summary>
         [DataMember(Name = "versionId", EmitDefaultValue = false)]
-        public string VersionId
-        {
-            get{ return _VersionId;}
-            set
-            {
-                _VersionId = value;
-                _flagVersionId = true;
-            }
-        }
-        private string _VersionId;
-        private bool _flagVersionId;
+        public string VersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as VersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeVersionId()
-        {
-            return _flagVersionId;
-        }
         /// <summary>
         /// Gets or Sets ParentId
         /// </summary>
         [DataMember(Name = "parentId", EmitDefaultValue = false)]
-        public string ParentId
-        {
-            get{ return _ParentId;}
-            set
-            {
-                _ParentId = value;
-                _flagParentId = true;
-            }
-        }
-        private string _ParentId;
-        private bool _flagParentId;
+        public string ParentId { get; set; }
 
-        /// <summary>
-        /// Returns false as ParentId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeParentId()
-        {
-            return _flagParentId;
-        }
         /// <summary>
         /// Gets or Sets ParentVersionId
         /// </summary>
         [DataMember(Name = "parentVersionId", EmitDefaultValue = false)]
-        public string ParentVersionId
-        {
-            get{ return _ParentVersionId;}
-            set
-            {
-                _ParentVersionId = value;
-                _flagParentVersionId = true;
-            }
-        }
-        private string _ParentVersionId;
-        private bool _flagParentVersionId;
+        public string ParentVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as ParentVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeParentVersionId()
-        {
-            return _flagParentVersionId;
-        }
         /// <summary>
         /// Gets or Sets ManufacturerId
         /// </summary>
         [DataMember(Name = "manufacturerId", EmitDefaultValue = false)]
-        public string ManufacturerId
-        {
-            get{ return _ManufacturerId;}
-            set
-            {
-                _ManufacturerId = value;
-                _flagManufacturerId = true;
-            }
-        }
-        private string _ManufacturerId;
-        private bool _flagManufacturerId;
+        public string ManufacturerId { get; set; }
 
-        /// <summary>
-        /// Returns false as ManufacturerId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeManufacturerId()
-        {
-            return _flagManufacturerId;
-        }
         /// <summary>
         /// Gets or Sets ProductManufacturerVersionId
         /// </summary>
         [DataMember(Name = "productManufacturerVersionId", EmitDefaultValue = false)]
-        public string ProductManufacturerVersionId
-        {
-            get{ return _ProductManufacturerVersionId;}
-            set
-            {
-                _ProductManufacturerVersionId = value;
-                _flagProductManufacturerVersionId = true;
-            }
-        }
-        private string _ProductManufacturerVersionId;
-        private bool _flagProductManufacturerVersionId;
+        public string ProductManufacturerVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as ProductManufacturerVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProductManufacturerVersionId()
-        {
-            return _flagProductManufacturerVersionId;
-        }
         /// <summary>
         /// Gets or Sets UnitId
         /// </summary>
         [DataMember(Name = "unitId", EmitDefaultValue = false)]
-        public string UnitId
-        {
-            get{ return _UnitId;}
-            set
-            {
-                _UnitId = value;
-                _flagUnitId = true;
-            }
-        }
-        private string _UnitId;
-        private bool _flagUnitId;
+        public string UnitId { get; set; }
 
-        /// <summary>
-        /// Returns false as UnitId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUnitId()
-        {
-            return _flagUnitId;
-        }
         /// <summary>
         /// Gets or Sets TaxId
         /// </summary>
         [DataMember(Name = "taxId", IsRequired = true, EmitDefaultValue = false)]
-        public string TaxId
-        {
-            get{ return _TaxId;}
-            set
-            {
-                _TaxId = value;
-                _flagTaxId = true;
-            }
-        }
-        private string _TaxId;
-        private bool _flagTaxId;
+        public string TaxId { get; set; }
 
-        /// <summary>
-        /// Returns false as TaxId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTaxId()
-        {
-            return _flagTaxId;
-        }
         /// <summary>
         /// Gets or Sets CoverId
         /// </summary>
         [DataMember(Name = "coverId", EmitDefaultValue = false)]
-        public string CoverId
-        {
-            get{ return _CoverId;}
-            set
-            {
-                _CoverId = value;
-                _flagCoverId = true;
-            }
-        }
-        private string _CoverId;
-        private bool _flagCoverId;
+        public string CoverId { get; set; }
 
-        /// <summary>
-        /// Returns false as CoverId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCoverId()
-        {
-            return _flagCoverId;
-        }
         /// <summary>
         /// Gets or Sets ProductMediaVersionId
         /// </summary>
         [DataMember(Name = "productMediaVersionId", EmitDefaultValue = false)]
-        public string ProductMediaVersionId
-        {
-            get{ return _ProductMediaVersionId;}
-            set
-            {
-                _ProductMediaVersionId = value;
-                _flagProductMediaVersionId = true;
-            }
-        }
-        private string _ProductMediaVersionId;
-        private bool _flagProductMediaVersionId;
+        public string ProductMediaVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as ProductMediaVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProductMediaVersionId()
-        {
-            return _flagProductMediaVersionId;
-        }
         /// <summary>
         /// Gets or Sets DeliveryTimeId
         /// </summary>
         [DataMember(Name = "deliveryTimeId", EmitDefaultValue = false)]
-        public string DeliveryTimeId
-        {
-            get{ return _DeliveryTimeId;}
-            set
-            {
-                _DeliveryTimeId = value;
-                _flagDeliveryTimeId = true;
-            }
-        }
-        private string _DeliveryTimeId;
-        private bool _flagDeliveryTimeId;
+        public string DeliveryTimeId { get; set; }
 
-        /// <summary>
-        /// Returns false as DeliveryTimeId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDeliveryTimeId()
-        {
-            return _flagDeliveryTimeId;
-        }
         /// <summary>
         /// Gets or Sets CanonicalProductId
         /// </summary>
         [DataMember(Name = "canonicalProductId", EmitDefaultValue = false)]
-        public string CanonicalProductId
-        {
-            get{ return _CanonicalProductId;}
-            set
-            {
-                _CanonicalProductId = value;
-                _flagCanonicalProductId = true;
-            }
-        }
-        private string _CanonicalProductId;
-        private bool _flagCanonicalProductId;
+        public string CanonicalProductId { get; set; }
 
-        /// <summary>
-        /// Returns false as CanonicalProductId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCanonicalProductId()
-        {
-            return _flagCanonicalProductId;
-        }
         /// <summary>
         /// Gets or Sets CmsPageId
         /// </summary>
         [DataMember(Name = "cmsPageId", EmitDefaultValue = false)]
-        public string CmsPageId
-        {
-            get{ return _CmsPageId;}
-            set
-            {
-                _CmsPageId = value;
-                _flagCmsPageId = true;
-            }
-        }
-        private string _CmsPageId;
-        private bool _flagCmsPageId;
+        public string CmsPageId { get; set; }
 
-        /// <summary>
-        /// Returns false as CmsPageId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCmsPageId()
-        {
-            return _flagCmsPageId;
-        }
         /// <summary>
         /// Gets or Sets CmsPageVersionId
         /// </summary>
         [DataMember(Name = "cmsPageVersionId", EmitDefaultValue = false)]
-        public string CmsPageVersionId
-        {
-            get{ return _CmsPageVersionId;}
-            set
-            {
-                _CmsPageVersionId = value;
-                _flagCmsPageVersionId = true;
-            }
-        }
-        private string _CmsPageVersionId;
-        private bool _flagCmsPageVersionId;
+        public string CmsPageVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as CmsPageVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCmsPageVersionId()
-        {
-            return _flagCmsPageVersionId;
-        }
         /// <summary>
         /// Gets or Sets ProductNumber
         /// </summary>
         [DataMember(Name = "productNumber", IsRequired = true, EmitDefaultValue = false)]
-        public string ProductNumber
-        {
-            get{ return _ProductNumber;}
-            set
-            {
-                _ProductNumber = value;
-                _flagProductNumber = true;
-            }
-        }
-        private string _ProductNumber;
-        private bool _flagProductNumber;
+        public string ProductNumber { get; set; }
 
-        /// <summary>
-        /// Returns false as ProductNumber should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProductNumber()
-        {
-            return _flagProductNumber;
-        }
         /// <summary>
         /// Gets or Sets Stock
         /// </summary>
         [DataMember(Name = "stock", IsRequired = true, EmitDefaultValue = false)]
-        public long Stock
-        {
-            get{ return _Stock;}
-            set
-            {
-                _Stock = value;
-                _flagStock = true;
-            }
-        }
-        private long _Stock;
-        private bool _flagStock;
+        public long Stock { get; set; }
 
-        /// <summary>
-        /// Returns false as Stock should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStock()
-        {
-            return _flagStock;
-        }
         /// <summary>
         /// Gets or Sets RestockTime
         /// </summary>
         [DataMember(Name = "restockTime", EmitDefaultValue = false)]
-        public long RestockTime
-        {
-            get{ return _RestockTime;}
-            set
-            {
-                _RestockTime = value;
-                _flagRestockTime = true;
-            }
-        }
-        private long _RestockTime;
-        private bool _flagRestockTime;
+        public long RestockTime { get; set; }
 
-        /// <summary>
-        /// Returns false as RestockTime should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeRestockTime()
-        {
-            return _flagRestockTime;
-        }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", EmitDefaultValue = true)]
-        public bool Active
-        {
-            get{ return _Active;}
-            set
-            {
-                _Active = value;
-                _flagActive = true;
-            }
-        }
-        private bool _Active;
-        private bool _flagActive;
+        public bool Active { get; set; }
 
-        /// <summary>
-        /// Returns false as Active should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeActive()
-        {
-            return _flagActive;
-        }
         /// <summary>
         /// Gets or Sets AvailableStock
         /// </summary>
@@ -921,26 +337,8 @@ namespace ShopwareSharp.Model
         /// Gets or Sets IsCloseout
         /// </summary>
         [DataMember(Name = "isCloseout", EmitDefaultValue = true)]
-        public bool IsCloseout
-        {
-            get{ return _IsCloseout;}
-            set
-            {
-                _IsCloseout = value;
-                _flagIsCloseout = true;
-            }
-        }
-        private bool _IsCloseout;
-        private bool _flagIsCloseout;
+        public bool IsCloseout { get; set; }
 
-        /// <summary>
-        /// Returns false as IsCloseout should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeIsCloseout()
-        {
-            return _flagIsCloseout;
-        }
         /// <summary>
         /// Gets or Sets DisplayGroup
         /// </summary>
@@ -959,362 +357,92 @@ namespace ShopwareSharp.Model
         /// Gets or Sets MainVariantId
         /// </summary>
         [DataMember(Name = "mainVariantId", EmitDefaultValue = false)]
-        public string MainVariantId
-        {
-            get{ return _MainVariantId;}
-            set
-            {
-                _MainVariantId = value;
-                _flagMainVariantId = true;
-            }
-        }
-        private string _MainVariantId;
-        private bool _flagMainVariantId;
+        public string MainVariantId { get; set; }
 
-        /// <summary>
-        /// Returns false as MainVariantId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMainVariantId()
-        {
-            return _flagMainVariantId;
-        }
         /// <summary>
         /// Gets or Sets ManufacturerNumber
         /// </summary>
         [DataMember(Name = "manufacturerNumber", EmitDefaultValue = false)]
-        public string ManufacturerNumber
-        {
-            get{ return _ManufacturerNumber;}
-            set
-            {
-                _ManufacturerNumber = value;
-                _flagManufacturerNumber = true;
-            }
-        }
-        private string _ManufacturerNumber;
-        private bool _flagManufacturerNumber;
+        public string ManufacturerNumber { get; set; }
 
-        /// <summary>
-        /// Returns false as ManufacturerNumber should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeManufacturerNumber()
-        {
-            return _flagManufacturerNumber;
-        }
         /// <summary>
         /// Gets or Sets Ean
         /// </summary>
         [DataMember(Name = "ean", EmitDefaultValue = false)]
-        public string Ean
-        {
-            get{ return _Ean;}
-            set
-            {
-                _Ean = value;
-                _flagEan = true;
-            }
-        }
-        private string _Ean;
-        private bool _flagEan;
+        public string Ean { get; set; }
 
-        /// <summary>
-        /// Returns false as Ean should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeEan()
-        {
-            return _flagEan;
-        }
         /// <summary>
         /// Gets or Sets PurchaseSteps
         /// </summary>
         [DataMember(Name = "purchaseSteps", EmitDefaultValue = false)]
-        public long PurchaseSteps
-        {
-            get{ return _PurchaseSteps;}
-            set
-            {
-                _PurchaseSteps = value;
-                _flagPurchaseSteps = true;
-            }
-        }
-        private long _PurchaseSteps;
-        private bool _flagPurchaseSteps;
+        public long PurchaseSteps { get; set; }
 
-        /// <summary>
-        /// Returns false as PurchaseSteps should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePurchaseSteps()
-        {
-            return _flagPurchaseSteps;
-        }
         /// <summary>
         /// Gets or Sets MaxPurchase
         /// </summary>
         [DataMember(Name = "maxPurchase", EmitDefaultValue = false)]
-        public long MaxPurchase
-        {
-            get{ return _MaxPurchase;}
-            set
-            {
-                _MaxPurchase = value;
-                _flagMaxPurchase = true;
-            }
-        }
-        private long _MaxPurchase;
-        private bool _flagMaxPurchase;
+        public long MaxPurchase { get; set; }
 
-        /// <summary>
-        /// Returns false as MaxPurchase should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMaxPurchase()
-        {
-            return _flagMaxPurchase;
-        }
         /// <summary>
         /// Gets or Sets MinPurchase
         /// </summary>
         [DataMember(Name = "minPurchase", EmitDefaultValue = false)]
-        public long MinPurchase
-        {
-            get{ return _MinPurchase;}
-            set
-            {
-                _MinPurchase = value;
-                _flagMinPurchase = true;
-            }
-        }
-        private long _MinPurchase;
-        private bool _flagMinPurchase;
+        public long MinPurchase { get; set; }
 
-        /// <summary>
-        /// Returns false as MinPurchase should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMinPurchase()
-        {
-            return _flagMinPurchase;
-        }
         /// <summary>
         /// Gets or Sets PurchaseUnit
         /// </summary>
         [DataMember(Name = "purchaseUnit", EmitDefaultValue = false)]
-        public float PurchaseUnit
-        {
-            get{ return _PurchaseUnit;}
-            set
-            {
-                _PurchaseUnit = value;
-                _flagPurchaseUnit = true;
-            }
-        }
-        private float _PurchaseUnit;
-        private bool _flagPurchaseUnit;
+        public float PurchaseUnit { get; set; }
 
-        /// <summary>
-        /// Returns false as PurchaseUnit should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePurchaseUnit()
-        {
-            return _flagPurchaseUnit;
-        }
         /// <summary>
         /// Gets or Sets ReferenceUnit
         /// </summary>
         [DataMember(Name = "referenceUnit", EmitDefaultValue = false)]
-        public float ReferenceUnit
-        {
-            get{ return _ReferenceUnit;}
-            set
-            {
-                _ReferenceUnit = value;
-                _flagReferenceUnit = true;
-            }
-        }
-        private float _ReferenceUnit;
-        private bool _flagReferenceUnit;
+        public float ReferenceUnit { get; set; }
 
-        /// <summary>
-        /// Returns false as ReferenceUnit should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeReferenceUnit()
-        {
-            return _flagReferenceUnit;
-        }
         /// <summary>
         /// Gets or Sets ShippingFree
         /// </summary>
         [DataMember(Name = "shippingFree", EmitDefaultValue = true)]
-        public bool ShippingFree
-        {
-            get{ return _ShippingFree;}
-            set
-            {
-                _ShippingFree = value;
-                _flagShippingFree = true;
-            }
-        }
-        private bool _ShippingFree;
-        private bool _flagShippingFree;
+        public bool ShippingFree { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingFree should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingFree()
-        {
-            return _flagShippingFree;
-        }
         /// <summary>
         /// Gets or Sets MarkAsTopseller
         /// </summary>
         [DataMember(Name = "markAsTopseller", EmitDefaultValue = true)]
-        public bool MarkAsTopseller
-        {
-            get{ return _MarkAsTopseller;}
-            set
-            {
-                _MarkAsTopseller = value;
-                _flagMarkAsTopseller = true;
-            }
-        }
-        private bool _MarkAsTopseller;
-        private bool _flagMarkAsTopseller;
+        public bool MarkAsTopseller { get; set; }
 
-        /// <summary>
-        /// Returns false as MarkAsTopseller should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMarkAsTopseller()
-        {
-            return _flagMarkAsTopseller;
-        }
         /// <summary>
         /// Gets or Sets Weight
         /// </summary>
         [DataMember(Name = "weight", EmitDefaultValue = false)]
-        public float Weight
-        {
-            get{ return _Weight;}
-            set
-            {
-                _Weight = value;
-                _flagWeight = true;
-            }
-        }
-        private float _Weight;
-        private bool _flagWeight;
+        public float Weight { get; set; }
 
-        /// <summary>
-        /// Returns false as Weight should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeWeight()
-        {
-            return _flagWeight;
-        }
         /// <summary>
         /// Gets or Sets Width
         /// </summary>
         [DataMember(Name = "width", EmitDefaultValue = false)]
-        public float Width
-        {
-            get{ return _Width;}
-            set
-            {
-                _Width = value;
-                _flagWidth = true;
-            }
-        }
-        private float _Width;
-        private bool _flagWidth;
+        public float Width { get; set; }
 
-        /// <summary>
-        /// Returns false as Width should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeWidth()
-        {
-            return _flagWidth;
-        }
         /// <summary>
         /// Gets or Sets Height
         /// </summary>
         [DataMember(Name = "height", EmitDefaultValue = false)]
-        public float Height
-        {
-            get{ return _Height;}
-            set
-            {
-                _Height = value;
-                _flagHeight = true;
-            }
-        }
-        private float _Height;
-        private bool _flagHeight;
+        public float Height { get; set; }
 
-        /// <summary>
-        /// Returns false as Height should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeHeight()
-        {
-            return _flagHeight;
-        }
         /// <summary>
         /// Gets or Sets Length
         /// </summary>
         [DataMember(Name = "length", EmitDefaultValue = false)]
-        public float Length
-        {
-            get{ return _Length;}
-            set
-            {
-                _Length = value;
-                _flagLength = true;
-            }
-        }
-        private float _Length;
-        private bool _flagLength;
+        public float Length { get; set; }
 
-        /// <summary>
-        /// Returns false as Length should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLength()
-        {
-            return _flagLength;
-        }
         /// <summary>
         /// Gets or Sets ReleaseDate
         /// </summary>
         [DataMember(Name = "releaseDate", EmitDefaultValue = false)]
-        public DateTime ReleaseDate
-        {
-            get{ return _ReleaseDate;}
-            set
-            {
-                _ReleaseDate = value;
-                _flagReleaseDate = true;
-            }
-        }
-        private DateTime _ReleaseDate;
-        private bool _flagReleaseDate;
+        public DateTime ReleaseDate { get; set; }
 
-        /// <summary>
-        /// Returns false as ReleaseDate should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeReleaseDate()
-        {
-            return _flagReleaseDate;
-        }
         /// <summary>
         /// Gets or Sets RatingAverage
         /// </summary>
@@ -1417,314 +545,80 @@ namespace ShopwareSharp.Model
         /// Gets or Sets MetaDescription
         /// </summary>
         [DataMember(Name = "metaDescription", EmitDefaultValue = false)]
-        public string MetaDescription
-        {
-            get{ return _MetaDescription;}
-            set
-            {
-                _MetaDescription = value;
-                _flagMetaDescription = true;
-            }
-        }
-        private string _MetaDescription;
-        private bool _flagMetaDescription;
+        public string MetaDescription { get; set; }
 
-        /// <summary>
-        /// Returns false as MetaDescription should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMetaDescription()
-        {
-            return _flagMetaDescription;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Keywords
         /// </summary>
         [DataMember(Name = "keywords", EmitDefaultValue = false)]
-        public string Keywords
-        {
-            get{ return _Keywords;}
-            set
-            {
-                _Keywords = value;
-                _flagKeywords = true;
-            }
-        }
-        private string _Keywords;
-        private bool _flagKeywords;
+        public string Keywords { get; set; }
 
-        /// <summary>
-        /// Returns false as Keywords should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeKeywords()
-        {
-            return _flagKeywords;
-        }
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name = "description", EmitDefaultValue = false)]
-        public string Description
-        {
-            get{ return _Description;}
-            set
-            {
-                _Description = value;
-                _flagDescription = true;
-            }
-        }
-        private string _Description;
-        private bool _flagDescription;
+        public string Description { get; set; }
 
-        /// <summary>
-        /// Returns false as Description should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDescription()
-        {
-            return _flagDescription;
-        }
         /// <summary>
         /// Gets or Sets MetaTitle
         /// </summary>
         [DataMember(Name = "metaTitle", EmitDefaultValue = false)]
-        public string MetaTitle
-        {
-            get{ return _MetaTitle;}
-            set
-            {
-                _MetaTitle = value;
-                _flagMetaTitle = true;
-            }
-        }
-        private string _MetaTitle;
-        private bool _flagMetaTitle;
+        public string MetaTitle { get; set; }
 
-        /// <summary>
-        /// Returns false as MetaTitle should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMetaTitle()
-        {
-            return _flagMetaTitle;
-        }
         /// <summary>
         /// Gets or Sets PackUnit
         /// </summary>
         [DataMember(Name = "packUnit", EmitDefaultValue = false)]
-        public string PackUnit
-        {
-            get{ return _PackUnit;}
-            set
-            {
-                _PackUnit = value;
-                _flagPackUnit = true;
-            }
-        }
-        private string _PackUnit;
-        private bool _flagPackUnit;
+        public string PackUnit { get; set; }
 
-        /// <summary>
-        /// Returns false as PackUnit should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePackUnit()
-        {
-            return _flagPackUnit;
-        }
         /// <summary>
         /// Gets or Sets PackUnitPlural
         /// </summary>
         [DataMember(Name = "packUnitPlural", EmitDefaultValue = false)]
-        public string PackUnitPlural
-        {
-            get{ return _PackUnitPlural;}
-            set
-            {
-                _PackUnitPlural = value;
-                _flagPackUnitPlural = true;
-            }
-        }
-        private string _PackUnitPlural;
-        private bool _flagPackUnitPlural;
+        public string PackUnitPlural { get; set; }
 
-        /// <summary>
-        /// Returns false as PackUnitPlural should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePackUnitPlural()
-        {
-            return _flagPackUnitPlural;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CalculatedPrice
         /// </summary>
         [DataMember(Name = "calculatedPrice", EmitDefaultValue = false)]
-        public Object CalculatedPrice
-        {
-            get{ return _CalculatedPrice;}
-            set
-            {
-                _CalculatedPrice = value;
-                _flagCalculatedPrice = true;
-            }
-        }
-        private Object _CalculatedPrice;
-        private bool _flagCalculatedPrice;
+        public Object CalculatedPrice { get; set; }
 
-        /// <summary>
-        /// Returns false as CalculatedPrice should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCalculatedPrice()
-        {
-            return _flagCalculatedPrice;
-        }
         /// <summary>
         /// Gets or Sets CalculatedPrices
         /// </summary>
         [DataMember(Name = "calculatedPrices", EmitDefaultValue = false)]
-        public List<Object> CalculatedPrices
-        {
-            get{ return _CalculatedPrices;}
-            set
-            {
-                _CalculatedPrices = value;
-                _flagCalculatedPrices = true;
-            }
-        }
-        private List<Object> _CalculatedPrices;
-        private bool _flagCalculatedPrices;
+        public List<Object> CalculatedPrices { get; set; }
 
-        /// <summary>
-        /// Returns false as CalculatedPrices should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCalculatedPrices()
-        {
-            return _flagCalculatedPrices;
-        }
         /// <summary>
         /// Gets or Sets CalculatedMaxPurchase
         /// </summary>
         [DataMember(Name = "calculatedMaxPurchase", EmitDefaultValue = false)]
-        public long CalculatedMaxPurchase
-        {
-            get{ return _CalculatedMaxPurchase;}
-            set
-            {
-                _CalculatedMaxPurchase = value;
-                _flagCalculatedMaxPurchase = true;
-            }
-        }
-        private long _CalculatedMaxPurchase;
-        private bool _flagCalculatedMaxPurchase;
+        public long CalculatedMaxPurchase { get; set; }
 
-        /// <summary>
-        /// Returns false as CalculatedMaxPurchase should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCalculatedMaxPurchase()
-        {
-            return _flagCalculatedMaxPurchase;
-        }
         /// <summary>
         /// Gets or Sets CalculatedCheapestPrice
         /// </summary>
         [DataMember(Name = "calculatedCheapestPrice", EmitDefaultValue = false)]
-        public Object CalculatedCheapestPrice
-        {
-            get{ return _CalculatedCheapestPrice;}
-            set
-            {
-                _CalculatedCheapestPrice = value;
-                _flagCalculatedCheapestPrice = true;
-            }
-        }
-        private Object _CalculatedCheapestPrice;
-        private bool _flagCalculatedCheapestPrice;
+        public Object CalculatedCheapestPrice { get; set; }
 
-        /// <summary>
-        /// Returns false as CalculatedCheapestPrice should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCalculatedCheapestPrice()
-        {
-            return _flagCalculatedCheapestPrice;
-        }
         /// <summary>
         /// Gets or Sets IsNew
         /// </summary>
         [DataMember(Name = "isNew", EmitDefaultValue = true)]
-        public bool IsNew
-        {
-            get{ return _IsNew;}
-            set
-            {
-                _IsNew = value;
-                _flagIsNew = true;
-            }
-        }
-        private bool _IsNew;
-        private bool _flagIsNew;
+        public bool IsNew { get; set; }
 
-        /// <summary>
-        /// Returns false as IsNew should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeIsNew()
-        {
-            return _flagIsNew;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -1757,530 +651,134 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Gets or Sets Parent
         /// </summary>
         [DataMember(Name = "parent", EmitDefaultValue = false)]
-        public Product Parent
-        {
-            get{ return _Parent;}
-            set
-            {
-                _Parent = value;
-                _flagParent = true;
-            }
-        }
-        private Product _Parent;
-        private bool _flagParent;
+        public Product Parent { get; set; }
 
-        /// <summary>
-        /// Returns false as Parent should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeParent()
-        {
-            return _flagParent;
-        }
         /// <summary>
         /// Gets or Sets Children
         /// </summary>
         [DataMember(Name = "children", EmitDefaultValue = false)]
-        public Product Children
-        {
-            get{ return _Children;}
-            set
-            {
-                _Children = value;
-                _flagChildren = true;
-            }
-        }
-        private Product _Children;
-        private bool _flagChildren;
+        public Product Children { get; set; }
 
-        /// <summary>
-        /// Returns false as Children should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeChildren()
-        {
-            return _flagChildren;
-        }
         /// <summary>
         /// Gets or Sets DeliveryTime
         /// </summary>
         [DataMember(Name = "deliveryTime", EmitDefaultValue = false)]
-        public DeliveryTime DeliveryTime
-        {
-            get{ return _DeliveryTime;}
-            set
-            {
-                _DeliveryTime = value;
-                _flagDeliveryTime = true;
-            }
-        }
-        private DeliveryTime _DeliveryTime;
-        private bool _flagDeliveryTime;
+        public DeliveryTime DeliveryTime { get; set; }
 
-        /// <summary>
-        /// Returns false as DeliveryTime should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDeliveryTime()
-        {
-            return _flagDeliveryTime;
-        }
         /// <summary>
         /// Gets or Sets Tax
         /// </summary>
         [DataMember(Name = "tax", EmitDefaultValue = false)]
-        public Tax Tax
-        {
-            get{ return _Tax;}
-            set
-            {
-                _Tax = value;
-                _flagTax = true;
-            }
-        }
-        private Tax _Tax;
-        private bool _flagTax;
+        public Tax Tax { get; set; }
 
-        /// <summary>
-        /// Returns false as Tax should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTax()
-        {
-            return _flagTax;
-        }
         /// <summary>
         /// Gets or Sets Manufacturer
         /// </summary>
         [DataMember(Name = "manufacturer", EmitDefaultValue = false)]
-        public ProductManufacturer Manufacturer
-        {
-            get{ return _Manufacturer;}
-            set
-            {
-                _Manufacturer = value;
-                _flagManufacturer = true;
-            }
-        }
-        private ProductManufacturer _Manufacturer;
-        private bool _flagManufacturer;
+        public ProductManufacturer Manufacturer { get; set; }
 
-        /// <summary>
-        /// Returns false as Manufacturer should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeManufacturer()
-        {
-            return _flagManufacturer;
-        }
         /// <summary>
         /// Gets or Sets Unit
         /// </summary>
         [DataMember(Name = "unit", EmitDefaultValue = false)]
-        public Unit Unit
-        {
-            get{ return _Unit;}
-            set
-            {
-                _Unit = value;
-                _flagUnit = true;
-            }
-        }
-        private Unit _Unit;
-        private bool _flagUnit;
+        public Unit Unit { get; set; }
 
-        /// <summary>
-        /// Returns false as Unit should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUnit()
-        {
-            return _flagUnit;
-        }
         /// <summary>
         /// Gets or Sets Cover
         /// </summary>
         [DataMember(Name = "cover", EmitDefaultValue = false)]
-        public ProductMedia Cover
-        {
-            get{ return _Cover;}
-            set
-            {
-                _Cover = value;
-                _flagCover = true;
-            }
-        }
-        private ProductMedia _Cover;
-        private bool _flagCover;
+        public ProductMedia Cover { get; set; }
 
-        /// <summary>
-        /// Returns false as Cover should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCover()
-        {
-            return _flagCover;
-        }
         /// <summary>
         /// Gets or Sets CmsPage
         /// </summary>
         [DataMember(Name = "cmsPage", EmitDefaultValue = false)]
-        public CmsPage CmsPage
-        {
-            get{ return _CmsPage;}
-            set
-            {
-                _CmsPage = value;
-                _flagCmsPage = true;
-            }
-        }
-        private CmsPage _CmsPage;
-        private bool _flagCmsPage;
+        public CmsPage CmsPage { get; set; }
 
-        /// <summary>
-        /// Returns false as CmsPage should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCmsPage()
-        {
-            return _flagCmsPage;
-        }
         /// <summary>
         /// Gets or Sets CanonicalProduct
         /// </summary>
         [DataMember(Name = "canonicalProduct", EmitDefaultValue = false)]
-        public Product CanonicalProduct
-        {
-            get{ return _CanonicalProduct;}
-            set
-            {
-                _CanonicalProduct = value;
-                _flagCanonicalProduct = true;
-            }
-        }
-        private Product _CanonicalProduct;
-        private bool _flagCanonicalProduct;
+        public Product CanonicalProduct { get; set; }
 
-        /// <summary>
-        /// Returns false as CanonicalProduct should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCanonicalProduct()
-        {
-            return _flagCanonicalProduct;
-        }
         /// <summary>
         /// Gets or Sets Media
         /// </summary>
         [DataMember(Name = "media", EmitDefaultValue = false)]
-        public ProductMedia Media
-        {
-            get{ return _Media;}
-            set
-            {
-                _Media = value;
-                _flagMedia = true;
-            }
-        }
-        private ProductMedia _Media;
-        private bool _flagMedia;
+        public ProductMedia Media { get; set; }
 
-        /// <summary>
-        /// Returns false as Media should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMedia()
-        {
-            return _flagMedia;
-        }
         /// <summary>
         /// Gets or Sets CrossSellings
         /// </summary>
         [DataMember(Name = "crossSellings", EmitDefaultValue = false)]
-        public ProductCrossSelling CrossSellings
-        {
-            get{ return _CrossSellings;}
-            set
-            {
-                _CrossSellings = value;
-                _flagCrossSellings = true;
-            }
-        }
-        private ProductCrossSelling _CrossSellings;
-        private bool _flagCrossSellings;
+        public ProductCrossSelling CrossSellings { get; set; }
 
-        /// <summary>
-        /// Returns false as CrossSellings should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCrossSellings()
-        {
-            return _flagCrossSellings;
-        }
         /// <summary>
         /// Gets or Sets ConfiguratorSettings
         /// </summary>
         [DataMember(Name = "configuratorSettings", EmitDefaultValue = false)]
-        public ProductConfiguratorSetting ConfiguratorSettings
-        {
-            get{ return _ConfiguratorSettings;}
-            set
-            {
-                _ConfiguratorSettings = value;
-                _flagConfiguratorSettings = true;
-            }
-        }
-        private ProductConfiguratorSetting _ConfiguratorSettings;
-        private bool _flagConfiguratorSettings;
+        public ProductConfiguratorSetting ConfiguratorSettings { get; set; }
 
-        /// <summary>
-        /// Returns false as ConfiguratorSettings should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeConfiguratorSettings()
-        {
-            return _flagConfiguratorSettings;
-        }
         /// <summary>
         /// Gets or Sets ProductReviews
         /// </summary>
         [DataMember(Name = "productReviews", EmitDefaultValue = false)]
-        public ProductReview ProductReviews
-        {
-            get{ return _ProductReviews;}
-            set
-            {
-                _ProductReviews = value;
-                _flagProductReviews = true;
-            }
-        }
-        private ProductReview _ProductReviews;
-        private bool _flagProductReviews;
+        public ProductReview ProductReviews { get; set; }
 
-        /// <summary>
-        /// Returns false as ProductReviews should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProductReviews()
-        {
-            return _flagProductReviews;
-        }
         /// <summary>
         /// Gets or Sets MainCategories
         /// </summary>
         [DataMember(Name = "mainCategories", EmitDefaultValue = false)]
-        public MainCategory MainCategories
-        {
-            get{ return _MainCategories;}
-            set
-            {
-                _MainCategories = value;
-                _flagMainCategories = true;
-            }
-        }
-        private MainCategory _MainCategories;
-        private bool _flagMainCategories;
+        public MainCategory MainCategories { get; set; }
 
-        /// <summary>
-        /// Returns false as MainCategories should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMainCategories()
-        {
-            return _flagMainCategories;
-        }
         /// <summary>
         /// Gets or Sets SeoUrls
         /// </summary>
         [DataMember(Name = "seoUrls", EmitDefaultValue = false)]
-        public SeoUrl SeoUrls
-        {
-            get{ return _SeoUrls;}
-            set
-            {
-                _SeoUrls = value;
-                _flagSeoUrls = true;
-            }
-        }
-        private SeoUrl _SeoUrls;
-        private bool _flagSeoUrls;
+        public SeoUrl SeoUrls { get; set; }
 
-        /// <summary>
-        /// Returns false as SeoUrls should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSeoUrls()
-        {
-            return _flagSeoUrls;
-        }
         /// <summary>
         /// Gets or Sets Options
         /// </summary>
         [DataMember(Name = "options", EmitDefaultValue = false)]
-        public PropertyGroupOption Options
-        {
-            get{ return _Options;}
-            set
-            {
-                _Options = value;
-                _flagOptions = true;
-            }
-        }
-        private PropertyGroupOption _Options;
-        private bool _flagOptions;
+        public PropertyGroupOption Options { get; set; }
 
-        /// <summary>
-        /// Returns false as Options should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOptions()
-        {
-            return _flagOptions;
-        }
         /// <summary>
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name = "properties", EmitDefaultValue = false)]
-        public PropertyGroupOption Properties
-        {
-            get{ return _Properties;}
-            set
-            {
-                _Properties = value;
-                _flagProperties = true;
-            }
-        }
-        private PropertyGroupOption _Properties;
-        private bool _flagProperties;
+        public PropertyGroupOption Properties { get; set; }
 
-        /// <summary>
-        /// Returns false as Properties should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProperties()
-        {
-            return _flagProperties;
-        }
         /// <summary>
         /// Gets or Sets Categories
         /// </summary>
         [DataMember(Name = "categories", EmitDefaultValue = false)]
-        public Category Categories
-        {
-            get{ return _Categories;}
-            set
-            {
-                _Categories = value;
-                _flagCategories = true;
-            }
-        }
-        private Category _Categories;
-        private bool _flagCategories;
+        public Category Categories { get; set; }
 
-        /// <summary>
-        /// Returns false as Categories should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCategories()
-        {
-            return _flagCategories;
-        }
         /// <summary>
         /// Gets or Sets Streams
         /// </summary>
         [DataMember(Name = "streams", EmitDefaultValue = false)]
-        public ProductStream Streams
-        {
-            get{ return _Streams;}
-            set
-            {
-                _Streams = value;
-                _flagStreams = true;
-            }
-        }
-        private ProductStream _Streams;
-        private bool _flagStreams;
+        public ProductStream Streams { get; set; }
 
-        /// <summary>
-        /// Returns false as Streams should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStreams()
-        {
-            return _flagStreams;
-        }
         /// <summary>
         /// Gets or Sets CategoriesRo
         /// </summary>
         [DataMember(Name = "categoriesRo", EmitDefaultValue = false)]
-        public Category CategoriesRo
-        {
-            get{ return _CategoriesRo;}
-            set
-            {
-                _CategoriesRo = value;
-                _flagCategoriesRo = true;
-            }
-        }
-        private Category _CategoriesRo;
-        private bool _flagCategoriesRo;
+        public Category CategoriesRo { get; set; }
 
-        /// <summary>
-        /// Returns false as CategoriesRo should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCategoriesRo()
-        {
-            return _flagCategoriesRo;
-        }
         /// <summary>
         /// Gets or Sets SeoCategory
         /// </summary>
         [DataMember(Name = "seoCategory", EmitDefaultValue = false)]
-        public Category SeoCategory
-        {
-            get{ return _SeoCategory;}
-            set
-            {
-                _SeoCategory = value;
-                _flagSeoCategory = true;
-            }
-        }
-        private Category _SeoCategory;
-        private bool _flagSeoCategory;
+        public Category SeoCategory { get; set; }
 
-        /// <summary>
-        /// Returns false as SeoCategory should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSeoCategory()
-        {
-            return _flagSeoCategory;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -40,21 +40,9 @@ namespace ShopwareSharp.Model
         /// <param name="campaignCode">The campaign code is used to track which action the customer came from. An example could be &#x60;Summer-Deals&#x60;.</param>
         public CreateOrderRequest(string customerComment = default(string), string affiliateCode = default(string), string campaignCode = default(string))
         {
-            this._CustomerComment = customerComment;
-            if (this.CustomerComment != null)
-            {
-                this._flagCustomerComment = true;
-            }
-            this._AffiliateCode = affiliateCode;
-            if (this.AffiliateCode != null)
-            {
-                this._flagAffiliateCode = true;
-            }
-            this._CampaignCode = campaignCode;
-            if (this.CampaignCode != null)
-            {
-                this._flagCampaignCode = true;
-            }
+            this.CustomerComment = customerComment;
+            this.AffiliateCode = affiliateCode;
+            this.CampaignCode = campaignCode;
         }
 
         /// <summary>
@@ -62,76 +50,22 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Adds a comment from the customer to the order.</value>
         [DataMember(Name = "customerComment", EmitDefaultValue = false)]
-        public string CustomerComment
-        {
-            get{ return _CustomerComment;}
-            set
-            {
-                _CustomerComment = value;
-                _flagCustomerComment = true;
-            }
-        }
-        private string _CustomerComment;
-        private bool _flagCustomerComment;
+        public string CustomerComment { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomerComment should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomerComment()
-        {
-            return _flagCustomerComment;
-        }
         /// <summary>
         /// The affiliate code can be used to track which referrer the customer came through. An example could be &#x60;Price-comparison-company-XY&#x60;.
         /// </summary>
         /// <value>The affiliate code can be used to track which referrer the customer came through. An example could be &#x60;Price-comparison-company-XY&#x60;.</value>
         [DataMember(Name = "affiliateCode", EmitDefaultValue = false)]
-        public string AffiliateCode
-        {
-            get{ return _AffiliateCode;}
-            set
-            {
-                _AffiliateCode = value;
-                _flagAffiliateCode = true;
-            }
-        }
-        private string _AffiliateCode;
-        private bool _flagAffiliateCode;
+        public string AffiliateCode { get; set; }
 
-        /// <summary>
-        /// Returns false as AffiliateCode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAffiliateCode()
-        {
-            return _flagAffiliateCode;
-        }
         /// <summary>
         /// The campaign code is used to track which action the customer came from. An example could be &#x60;Summer-Deals&#x60;
         /// </summary>
         /// <value>The campaign code is used to track which action the customer came from. An example could be &#x60;Summer-Deals&#x60;</value>
         [DataMember(Name = "campaignCode", EmitDefaultValue = false)]
-        public string CampaignCode
-        {
-            get{ return _CampaignCode;}
-            set
-            {
-                _CampaignCode = value;
-                _flagCampaignCode = true;
-            }
-        }
-        private string _CampaignCode;
-        private bool _flagCampaignCode;
+        public string CampaignCode { get; set; }
 
-        /// <summary>
-        /// Returns false as CampaignCode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCampaignCode()
-        {
-            return _flagCampaignCode;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

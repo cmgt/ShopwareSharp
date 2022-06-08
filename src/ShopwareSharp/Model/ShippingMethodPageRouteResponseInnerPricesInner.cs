@@ -45,240 +45,64 @@ namespace ShopwareSharp.Model
         /// <param name="calculationRuleId">calculationRuleId.</param>
         public ShippingMethodPageRouteResponseInnerPricesInner(string shippingMethodId = default(string), string currencyId = default(string), string ruleId = default(string), int calculation = default(int), float quantityStart = default(float), float quantityEnd = default(float), float price = default(float), string calculationRuleId = default(string))
         {
-            this._ShippingMethodId = shippingMethodId;
-            if (this.ShippingMethodId != null)
-            {
-                this._flagShippingMethodId = true;
-            }
-            this._CurrencyId = currencyId;
-            if (this.CurrencyId != null)
-            {
-                this._flagCurrencyId = true;
-            }
-            this._RuleId = ruleId;
-            if (this.RuleId != null)
-            {
-                this._flagRuleId = true;
-            }
-            this._Calculation = calculation;
-            if (this.Calculation != null)
-            {
-                this._flagCalculation = true;
-            }
-            this._QuantityStart = quantityStart;
-            if (this.QuantityStart != null)
-            {
-                this._flagQuantityStart = true;
-            }
-            this._QuantityEnd = quantityEnd;
-            if (this.QuantityEnd != null)
-            {
-                this._flagQuantityEnd = true;
-            }
-            this._Price = price;
-            if (this.Price != null)
-            {
-                this._flagPrice = true;
-            }
-            this._CalculationRuleId = calculationRuleId;
-            if (this.CalculationRuleId != null)
-            {
-                this._flagCalculationRuleId = true;
-            }
+            this.ShippingMethodId = shippingMethodId;
+            this.CurrencyId = currencyId;
+            this.RuleId = ruleId;
+            this.Calculation = calculation;
+            this.QuantityStart = quantityStart;
+            this.QuantityEnd = quantityEnd;
+            this.Price = price;
+            this.CalculationRuleId = calculationRuleId;
         }
 
         /// <summary>
         /// Gets or Sets ShippingMethodId
         /// </summary>
         [DataMember(Name = "shippingMethodId", EmitDefaultValue = false)]
-        public string ShippingMethodId
-        {
-            get{ return _ShippingMethodId;}
-            set
-            {
-                _ShippingMethodId = value;
-                _flagShippingMethodId = true;
-            }
-        }
-        private string _ShippingMethodId;
-        private bool _flagShippingMethodId;
+        public string ShippingMethodId { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingMethodId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingMethodId()
-        {
-            return _flagShippingMethodId;
-        }
         /// <summary>
         /// Gets or Sets CurrencyId
         /// </summary>
         [DataMember(Name = "currencyId", EmitDefaultValue = false)]
-        public string CurrencyId
-        {
-            get{ return _CurrencyId;}
-            set
-            {
-                _CurrencyId = value;
-                _flagCurrencyId = true;
-            }
-        }
-        private string _CurrencyId;
-        private bool _flagCurrencyId;
+        public string CurrencyId { get; set; }
 
-        /// <summary>
-        /// Returns false as CurrencyId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCurrencyId()
-        {
-            return _flagCurrencyId;
-        }
         /// <summary>
         /// Gets or Sets RuleId
         /// </summary>
         [DataMember(Name = "ruleId", EmitDefaultValue = false)]
-        public string RuleId
-        {
-            get{ return _RuleId;}
-            set
-            {
-                _RuleId = value;
-                _flagRuleId = true;
-            }
-        }
-        private string _RuleId;
-        private bool _flagRuleId;
+        public string RuleId { get; set; }
 
-        /// <summary>
-        /// Returns false as RuleId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeRuleId()
-        {
-            return _flagRuleId;
-        }
         /// <summary>
         /// Gets or Sets Calculation
         /// </summary>
         [DataMember(Name = "calculation", EmitDefaultValue = false)]
-        public int Calculation
-        {
-            get{ return _Calculation;}
-            set
-            {
-                _Calculation = value;
-                _flagCalculation = true;
-            }
-        }
-        private int _Calculation;
-        private bool _flagCalculation;
+        public int Calculation { get; set; }
 
-        /// <summary>
-        /// Returns false as Calculation should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCalculation()
-        {
-            return _flagCalculation;
-        }
         /// <summary>
         /// Gets or Sets QuantityStart
         /// </summary>
         [DataMember(Name = "quantityStart", EmitDefaultValue = false)]
-        public float QuantityStart
-        {
-            get{ return _QuantityStart;}
-            set
-            {
-                _QuantityStart = value;
-                _flagQuantityStart = true;
-            }
-        }
-        private float _QuantityStart;
-        private bool _flagQuantityStart;
+        public float QuantityStart { get; set; }
 
-        /// <summary>
-        /// Returns false as QuantityStart should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeQuantityStart()
-        {
-            return _flagQuantityStart;
-        }
         /// <summary>
         /// Gets or Sets QuantityEnd
         /// </summary>
         [DataMember(Name = "quantityEnd", EmitDefaultValue = false)]
-        public float QuantityEnd
-        {
-            get{ return _QuantityEnd;}
-            set
-            {
-                _QuantityEnd = value;
-                _flagQuantityEnd = true;
-            }
-        }
-        private float _QuantityEnd;
-        private bool _flagQuantityEnd;
+        public float QuantityEnd { get; set; }
 
-        /// <summary>
-        /// Returns false as QuantityEnd should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeQuantityEnd()
-        {
-            return _flagQuantityEnd;
-        }
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
         [DataMember(Name = "price", EmitDefaultValue = false)]
-        public float Price
-        {
-            get{ return _Price;}
-            set
-            {
-                _Price = value;
-                _flagPrice = true;
-            }
-        }
-        private float _Price;
-        private bool _flagPrice;
+        public float Price { get; set; }
 
-        /// <summary>
-        /// Returns false as Price should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePrice()
-        {
-            return _flagPrice;
-        }
         /// <summary>
         /// Gets or Sets CalculationRuleId
         /// </summary>
         [DataMember(Name = "calculationRuleId", EmitDefaultValue = false)]
-        public string CalculationRuleId
-        {
-            get{ return _CalculationRuleId;}
-            set
-            {
-                _CalculationRuleId = value;
-                _flagCalculationRuleId = true;
-            }
-        }
-        private string _CalculationRuleId;
-        private bool _flagCalculationRuleId;
+        public string CalculationRuleId { get; set; }
 
-        /// <summary>
-        /// Returns false as CalculationRuleId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCalculationRuleId()
-        {
-            return _flagCalculationRuleId;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -64,79 +64,54 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("email is a required property for RegisterRequest and cannot be null");
             }
-            this._Email = email;
+            this.Email = email;
             // to ensure "password" is required (not null)
             if (password == null)
             {
                 throw new ArgumentNullException("password is a required property for RegisterRequest and cannot be null");
             }
-            this._Password = password;
+            this.Password = password;
             // to ensure "salutationId" is required (not null)
             if (salutationId == null)
             {
                 throw new ArgumentNullException("salutationId is a required property for RegisterRequest and cannot be null");
             }
-            this._SalutationId = salutationId;
+            this.SalutationId = salutationId;
             // to ensure "firstName" is required (not null)
             if (firstName == null)
             {
                 throw new ArgumentNullException("firstName is a required property for RegisterRequest and cannot be null");
             }
-            this._FirstName = firstName;
+            this.FirstName = firstName;
             // to ensure "lastName" is required (not null)
             if (lastName == null)
             {
                 throw new ArgumentNullException("lastName is a required property for RegisterRequest and cannot be null");
             }
-            this._LastName = lastName;
-            this._AcceptedDataProtection = acceptedDataProtection;
+            this.LastName = lastName;
+            this.AcceptedDataProtection = acceptedDataProtection;
             // to ensure "storefrontUrl" is required (not null)
             if (storefrontUrl == null)
             {
                 throw new ArgumentNullException("storefrontUrl is a required property for RegisterRequest and cannot be null");
             }
-            this._StorefrontUrl = storefrontUrl;
+            this.StorefrontUrl = storefrontUrl;
             // to ensure "billingAddress" is required (not null)
             if (billingAddress == null)
             {
                 throw new ArgumentNullException("billingAddress is a required property for RegisterRequest and cannot be null");
             }
-            this._BillingAddress = billingAddress;
-            this._ShippingAddress = shippingAddress;
-            if (this.ShippingAddress != null)
-            {
-                this._flagShippingAddress = true;
-            }
-            this._BirthdayDay = birthdayDay;
-            if (this.BirthdayDay != null)
-            {
-                this._flagBirthdayDay = true;
-            }
-            this._BirthdayMonth = birthdayMonth;
-            if (this.BirthdayMonth != null)
-            {
-                this._flagBirthdayMonth = true;
-            }
-            this._BirthdayYear = birthdayYear;
-            if (this.BirthdayYear != null)
-            {
-                this._flagBirthdayYear = true;
-            }
-            this._Title = title;
-            if (this.Title != null)
-            {
-                this._flagTitle = true;
-            }
-            this._AffiliateCode = affiliateCode;
-            if (this.AffiliateCode != null)
-            {
-                this._flagAffiliateCode = true;
-            }
-            this._CampaignCode = campaignCode;
-            if (this.CampaignCode != null)
-            {
-                this._flagCampaignCode = true;
-            }
+            this.BillingAddress = billingAddress;
+            this.ShippingAddress = shippingAddress;
+            // use default value if no "accountType" provided
+            this.AccountType = accountType ?? "private";
+            this.Guest = guest;
+            this.BirthdayDay = birthdayDay;
+            this.BirthdayMonth = birthdayMonth;
+            this.BirthdayYear = birthdayYear;
+            this.Title = title;
+            this.AffiliateCode = affiliateCode;
+            this.CampaignCode = campaignCode;
         }
 
         /// <summary>
@@ -144,424 +119,118 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Email of the customer. Has to be unique, unless &#x60;guest&#x60; is &#x60;true&#x60;</value>
         [DataMember(Name = "email", IsRequired = true, EmitDefaultValue = false)]
-        public string Email
-        {
-            get{ return _Email;}
-            set
-            {
-                _Email = value;
-                _flagEmail = true;
-            }
-        }
-        private string _Email;
-        private bool _flagEmail;
+        public string Email { get; set; }
 
-        /// <summary>
-        /// Returns false as Email should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeEmail()
-        {
-            return _flagEmail;
-        }
         /// <summary>
         /// Password for the customer. Required, unless &#x60;guest&#x60; is &#x60;true&#x60;
         /// </summary>
         /// <value>Password for the customer. Required, unless &#x60;guest&#x60; is &#x60;true&#x60;</value>
         [DataMember(Name = "password", IsRequired = true, EmitDefaultValue = false)]
-        public string Password
-        {
-            get{ return _Password;}
-            set
-            {
-                _Password = value;
-                _flagPassword = true;
-            }
-        }
-        private string _Password;
-        private bool _flagPassword;
+        public string Password { get; set; }
 
-        /// <summary>
-        /// Returns false as Password should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePassword()
-        {
-            return _flagPassword;
-        }
         /// <summary>
         /// Id of the salutation for the customer account. Fetch options using &#x60;salutation&#x60; endpoint.
         /// </summary>
         /// <value>Id of the salutation for the customer account. Fetch options using &#x60;salutation&#x60; endpoint.</value>
         [DataMember(Name = "salutationId", IsRequired = true, EmitDefaultValue = false)]
-        public string SalutationId
-        {
-            get{ return _SalutationId;}
-            set
-            {
-                _SalutationId = value;
-                _flagSalutationId = true;
-            }
-        }
-        private string _SalutationId;
-        private bool _flagSalutationId;
+        public string SalutationId { get; set; }
 
-        /// <summary>
-        /// Returns false as SalutationId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalutationId()
-        {
-            return _flagSalutationId;
-        }
         /// <summary>
         /// Customer first name. Value will be reused for shipping and billing address if not provided explicitly.
         /// </summary>
         /// <value>Customer first name. Value will be reused for shipping and billing address if not provided explicitly.</value>
         [DataMember(Name = "firstName", IsRequired = true, EmitDefaultValue = false)]
-        public string FirstName
-        {
-            get{ return _FirstName;}
-            set
-            {
-                _FirstName = value;
-                _flagFirstName = true;
-            }
-        }
-        private string _FirstName;
-        private bool _flagFirstName;
+        public string FirstName { get; set; }
 
-        /// <summary>
-        /// Returns false as FirstName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFirstName()
-        {
-            return _flagFirstName;
-        }
         /// <summary>
         /// Customer last name. Value will be reused for shipping and billing address if not provided explicitly.
         /// </summary>
         /// <value>Customer last name. Value will be reused for shipping and billing address if not provided explicitly.</value>
         [DataMember(Name = "lastName", IsRequired = true, EmitDefaultValue = false)]
-        public string LastName
-        {
-            get{ return _LastName;}
-            set
-            {
-                _LastName = value;
-                _flagLastName = true;
-            }
-        }
-        private string _LastName;
-        private bool _flagLastName;
+        public string LastName { get; set; }
 
-        /// <summary>
-        /// Returns false as LastName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLastName()
-        {
-            return _flagLastName;
-        }
         /// <summary>
         /// Flag indicating accepted data protection
         /// </summary>
         /// <value>Flag indicating accepted data protection</value>
         [DataMember(Name = "acceptedDataProtection", IsRequired = true, EmitDefaultValue = true)]
-        public bool AcceptedDataProtection
-        {
-            get{ return _AcceptedDataProtection;}
-            set
-            {
-                _AcceptedDataProtection = value;
-                _flagAcceptedDataProtection = true;
-            }
-        }
-        private bool _AcceptedDataProtection;
-        private bool _flagAcceptedDataProtection;
+        public bool AcceptedDataProtection { get; set; }
 
-        /// <summary>
-        /// Returns false as AcceptedDataProtection should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAcceptedDataProtection()
-        {
-            return _flagAcceptedDataProtection;
-        }
         /// <summary>
         /// URL of the storefront for that registration. Used in confirmation emails. Has to be one of the configured domains of the sales channel.
         /// </summary>
         /// <value>URL of the storefront for that registration. Used in confirmation emails. Has to be one of the configured domains of the sales channel.</value>
         [DataMember(Name = "storefrontUrl", IsRequired = true, EmitDefaultValue = false)]
-        public string StorefrontUrl
-        {
-            get{ return _StorefrontUrl;}
-            set
-            {
-                _StorefrontUrl = value;
-                _flagStorefrontUrl = true;
-            }
-        }
-        private string _StorefrontUrl;
-        private bool _flagStorefrontUrl;
+        public string StorefrontUrl { get; set; }
 
-        /// <summary>
-        /// Returns false as StorefrontUrl should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeStorefrontUrl()
-        {
-            return _flagStorefrontUrl;
-        }
         /// <summary>
         /// Gets or Sets BillingAddress
         /// </summary>
         [DataMember(Name = "billingAddress", IsRequired = true, EmitDefaultValue = false)]
-        public CustomerAddress BillingAddress
-        {
-            get{ return _BillingAddress;}
-            set
-            {
-                _BillingAddress = value;
-                _flagBillingAddress = true;
-            }
-        }
-        private CustomerAddress _BillingAddress;
-        private bool _flagBillingAddress;
+        public CustomerAddress BillingAddress { get; set; }
 
-        /// <summary>
-        /// Returns false as BillingAddress should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBillingAddress()
-        {
-            return _flagBillingAddress;
-        }
         /// <summary>
         /// Gets or Sets ShippingAddress
         /// </summary>
         [DataMember(Name = "shippingAddress", EmitDefaultValue = false)]
-        public CustomerAddress ShippingAddress
-        {
-            get{ return _ShippingAddress;}
-            set
-            {
-                _ShippingAddress = value;
-                _flagShippingAddress = true;
-            }
-        }
-        private CustomerAddress _ShippingAddress;
-        private bool _flagShippingAddress;
+        public CustomerAddress ShippingAddress { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingAddress should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingAddress()
-        {
-            return _flagShippingAddress;
-        }
         /// <summary>
         /// Account type of the customer which can be either &#x60;private&#x60; or &#x60;business&#x60;.
         /// </summary>
         /// <value>Account type of the customer which can be either &#x60;private&#x60; or &#x60;business&#x60;.</value>
         [DataMember(Name = "accountType", EmitDefaultValue = false)]
-        public string AccountType
-        {
-            get{ return _AccountType;}
-            set
-            {
-                _AccountType = value;
-                _flagAccountType = true;
-            }
-        }
-        private string _AccountType;
-        private bool _flagAccountType;
+        public string AccountType { get; set; }
 
-        /// <summary>
-        /// Returns false as AccountType should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAccountType()
-        {
-            return _flagAccountType;
-        }
         /// <summary>
         /// If set, will create a guest customer. Guest customers can re-use an email address and don&#39;t need a password.
         /// </summary>
         /// <value>If set, will create a guest customer. Guest customers can re-use an email address and don&#39;t need a password.</value>
         [DataMember(Name = "guest", EmitDefaultValue = true)]
-        public bool Guest
-        {
-            get{ return _Guest;}
-            set
-            {
-                _Guest = value;
-                _flagGuest = true;
-            }
-        }
-        private bool _Guest;
-        private bool _flagGuest;
+        public bool Guest { get; set; }
 
-        /// <summary>
-        /// Returns false as Guest should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeGuest()
-        {
-            return _flagGuest;
-        }
         /// <summary>
         /// Birthday day
         /// </summary>
         /// <value>Birthday day</value>
         [DataMember(Name = "birthdayDay", EmitDefaultValue = false)]
-        public int BirthdayDay
-        {
-            get{ return _BirthdayDay;}
-            set
-            {
-                _BirthdayDay = value;
-                _flagBirthdayDay = true;
-            }
-        }
-        private int _BirthdayDay;
-        private bool _flagBirthdayDay;
+        public int BirthdayDay { get; set; }
 
-        /// <summary>
-        /// Returns false as BirthdayDay should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBirthdayDay()
-        {
-            return _flagBirthdayDay;
-        }
         /// <summary>
         /// Birthday month
         /// </summary>
         /// <value>Birthday month</value>
         [DataMember(Name = "birthdayMonth", EmitDefaultValue = false)]
-        public int BirthdayMonth
-        {
-            get{ return _BirthdayMonth;}
-            set
-            {
-                _BirthdayMonth = value;
-                _flagBirthdayMonth = true;
-            }
-        }
-        private int _BirthdayMonth;
-        private bool _flagBirthdayMonth;
+        public int BirthdayMonth { get; set; }
 
-        /// <summary>
-        /// Returns false as BirthdayMonth should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBirthdayMonth()
-        {
-            return _flagBirthdayMonth;
-        }
         /// <summary>
         /// Birthday year
         /// </summary>
         /// <value>Birthday year</value>
         [DataMember(Name = "birthdayYear", EmitDefaultValue = false)]
-        public int BirthdayYear
-        {
-            get{ return _BirthdayYear;}
-            set
-            {
-                _BirthdayYear = value;
-                _flagBirthdayYear = true;
-            }
-        }
-        private int _BirthdayYear;
-        private bool _flagBirthdayYear;
+        public int BirthdayYear { get; set; }
 
-        /// <summary>
-        /// Returns false as BirthdayYear should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBirthdayYear()
-        {
-            return _flagBirthdayYear;
-        }
         /// <summary>
         /// (Academic) title of the customer
         /// </summary>
         /// <value>(Academic) title of the customer</value>
         [DataMember(Name = "title", EmitDefaultValue = false)]
-        public string Title
-        {
-            get{ return _Title;}
-            set
-            {
-                _Title = value;
-                _flagTitle = true;
-            }
-        }
-        private string _Title;
-        private bool _flagTitle;
+        public string Title { get; set; }
 
-        /// <summary>
-        /// Returns false as Title should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTitle()
-        {
-            return _flagTitle;
-        }
         /// <summary>
         /// Field can be used to store an affiliate tracking code
         /// </summary>
         /// <value>Field can be used to store an affiliate tracking code</value>
         [DataMember(Name = "affiliateCode", EmitDefaultValue = false)]
-        public string AffiliateCode
-        {
-            get{ return _AffiliateCode;}
-            set
-            {
-                _AffiliateCode = value;
-                _flagAffiliateCode = true;
-            }
-        }
-        private string _AffiliateCode;
-        private bool _flagAffiliateCode;
+        public string AffiliateCode { get; set; }
 
-        /// <summary>
-        /// Returns false as AffiliateCode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAffiliateCode()
-        {
-            return _flagAffiliateCode;
-        }
         /// <summary>
         /// Field can be used to store a campaign tracking code
         /// </summary>
         /// <value>Field can be used to store a campaign tracking code</value>
         [DataMember(Name = "campaignCode", EmitDefaultValue = false)]
-        public string CampaignCode
-        {
-            get{ return _CampaignCode;}
-            set
-            {
-                _CampaignCode = value;
-                _flagCampaignCode = true;
-            }
-        }
-        private string _CampaignCode;
-        private bool _flagCampaignCode;
+        public string CampaignCode { get; set; }
 
-        /// <summary>
-        /// Returns false as CampaignCode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCampaignCode()
-        {
-            return _flagCampaignCode;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

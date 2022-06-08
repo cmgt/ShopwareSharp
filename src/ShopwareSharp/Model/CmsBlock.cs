@@ -61,509 +61,139 @@ namespace ShopwareSharp.Model
         /// <param name="slots">slots.</param>
         public CmsBlock(string id = default(string), long position = default(long), string type = default(string), string name = default(string), string sectionPosition = default(string), string marginTop = default(string), string marginBottom = default(string), string marginLeft = default(string), string marginRight = default(string), string backgroundColor = default(string), string backgroundMediaId = default(string), string backgroundMediaMode = default(string), string cssClass = default(string), string sectionId = default(string), Object customFields = default(Object), string versionId = default(string), string cmsSectionVersionId = default(string), Media backgroundMedia = default(Media), CmsSlot slots = default(CmsSlot))
         {
-            this._Position = position;
+            this.Position = position;
             // to ensure "type" is required (not null)
             if (type == null)
             {
                 throw new ArgumentNullException("type is a required property for CmsBlock and cannot be null");
             }
-            this._Type = type;
+            this.Type = type;
             // to ensure "sectionId" is required (not null)
             if (sectionId == null)
             {
                 throw new ArgumentNullException("sectionId is a required property for CmsBlock and cannot be null");
             }
-            this._SectionId = sectionId;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._Name = name;
-            if (this.Name != null)
-            {
-                this._flagName = true;
-            }
-            this._SectionPosition = sectionPosition;
-            if (this.SectionPosition != null)
-            {
-                this._flagSectionPosition = true;
-            }
-            this._MarginTop = marginTop;
-            if (this.MarginTop != null)
-            {
-                this._flagMarginTop = true;
-            }
-            this._MarginBottom = marginBottom;
-            if (this.MarginBottom != null)
-            {
-                this._flagMarginBottom = true;
-            }
-            this._MarginLeft = marginLeft;
-            if (this.MarginLeft != null)
-            {
-                this._flagMarginLeft = true;
-            }
-            this._MarginRight = marginRight;
-            if (this.MarginRight != null)
-            {
-                this._flagMarginRight = true;
-            }
-            this._BackgroundColor = backgroundColor;
-            if (this.BackgroundColor != null)
-            {
-                this._flagBackgroundColor = true;
-            }
-            this._BackgroundMediaId = backgroundMediaId;
-            if (this.BackgroundMediaId != null)
-            {
-                this._flagBackgroundMediaId = true;
-            }
-            this._BackgroundMediaMode = backgroundMediaMode;
-            if (this.BackgroundMediaMode != null)
-            {
-                this._flagBackgroundMediaMode = true;
-            }
-            this._CssClass = cssClass;
-            if (this.CssClass != null)
-            {
-                this._flagCssClass = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._VersionId = versionId;
-            if (this.VersionId != null)
-            {
-                this._flagVersionId = true;
-            }
-            this._CmsSectionVersionId = cmsSectionVersionId;
-            if (this.CmsSectionVersionId != null)
-            {
-                this._flagCmsSectionVersionId = true;
-            }
-            this._BackgroundMedia = backgroundMedia;
-            if (this.BackgroundMedia != null)
-            {
-                this._flagBackgroundMedia = true;
-            }
-            this._Slots = slots;
-            if (this.Slots != null)
-            {
-                this._flagSlots = true;
-            }
+            this.SectionId = sectionId;
+            this.Id = id;
+            this.Name = name;
+            this.SectionPosition = sectionPosition;
+            this.MarginTop = marginTop;
+            this.MarginBottom = marginBottom;
+            this.MarginLeft = marginLeft;
+            this.MarginRight = marginRight;
+            this.BackgroundColor = backgroundColor;
+            this.BackgroundMediaId = backgroundMediaId;
+            this.BackgroundMediaMode = backgroundMediaMode;
+            this.CssClass = cssClass;
+            this.CustomFields = customFields;
+            this.VersionId = versionId;
+            this.CmsSectionVersionId = cmsSectionVersionId;
+            this.BackgroundMedia = backgroundMedia;
+            this.Slots = slots;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Position
         /// </summary>
         [DataMember(Name = "position", IsRequired = true, EmitDefaultValue = false)]
-        public long Position
-        {
-            get{ return _Position;}
-            set
-            {
-                _Position = value;
-                _flagPosition = true;
-            }
-        }
-        private long _Position;
-        private bool _flagPosition;
+        public long Position { get; set; }
 
-        /// <summary>
-        /// Returns false as Position should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePosition()
-        {
-            return _flagPosition;
-        }
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = false)]
-        public string Type
-        {
-            get{ return _Type;}
-            set
-            {
-                _Type = value;
-                _flagType = true;
-            }
-        }
-        private string _Type;
-        private bool _flagType;
+        public string Type { get; set; }
 
-        /// <summary>
-        /// Returns false as Type should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeType()
-        {
-            return _flagType;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets SectionPosition
         /// </summary>
         [DataMember(Name = "sectionPosition", EmitDefaultValue = false)]
-        public string SectionPosition
-        {
-            get{ return _SectionPosition;}
-            set
-            {
-                _SectionPosition = value;
-                _flagSectionPosition = true;
-            }
-        }
-        private string _SectionPosition;
-        private bool _flagSectionPosition;
+        public string SectionPosition { get; set; }
 
-        /// <summary>
-        /// Returns false as SectionPosition should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSectionPosition()
-        {
-            return _flagSectionPosition;
-        }
         /// <summary>
         /// Gets or Sets MarginTop
         /// </summary>
         [DataMember(Name = "marginTop", EmitDefaultValue = false)]
-        public string MarginTop
-        {
-            get{ return _MarginTop;}
-            set
-            {
-                _MarginTop = value;
-                _flagMarginTop = true;
-            }
-        }
-        private string _MarginTop;
-        private bool _flagMarginTop;
+        public string MarginTop { get; set; }
 
-        /// <summary>
-        /// Returns false as MarginTop should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMarginTop()
-        {
-            return _flagMarginTop;
-        }
         /// <summary>
         /// Gets or Sets MarginBottom
         /// </summary>
         [DataMember(Name = "marginBottom", EmitDefaultValue = false)]
-        public string MarginBottom
-        {
-            get{ return _MarginBottom;}
-            set
-            {
-                _MarginBottom = value;
-                _flagMarginBottom = true;
-            }
-        }
-        private string _MarginBottom;
-        private bool _flagMarginBottom;
+        public string MarginBottom { get; set; }
 
-        /// <summary>
-        /// Returns false as MarginBottom should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMarginBottom()
-        {
-            return _flagMarginBottom;
-        }
         /// <summary>
         /// Gets or Sets MarginLeft
         /// </summary>
         [DataMember(Name = "marginLeft", EmitDefaultValue = false)]
-        public string MarginLeft
-        {
-            get{ return _MarginLeft;}
-            set
-            {
-                _MarginLeft = value;
-                _flagMarginLeft = true;
-            }
-        }
-        private string _MarginLeft;
-        private bool _flagMarginLeft;
+        public string MarginLeft { get; set; }
 
-        /// <summary>
-        /// Returns false as MarginLeft should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMarginLeft()
-        {
-            return _flagMarginLeft;
-        }
         /// <summary>
         /// Gets or Sets MarginRight
         /// </summary>
         [DataMember(Name = "marginRight", EmitDefaultValue = false)]
-        public string MarginRight
-        {
-            get{ return _MarginRight;}
-            set
-            {
-                _MarginRight = value;
-                _flagMarginRight = true;
-            }
-        }
-        private string _MarginRight;
-        private bool _flagMarginRight;
+        public string MarginRight { get; set; }
 
-        /// <summary>
-        /// Returns false as MarginRight should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMarginRight()
-        {
-            return _flagMarginRight;
-        }
         /// <summary>
         /// Gets or Sets BackgroundColor
         /// </summary>
         [DataMember(Name = "backgroundColor", EmitDefaultValue = false)]
-        public string BackgroundColor
-        {
-            get{ return _BackgroundColor;}
-            set
-            {
-                _BackgroundColor = value;
-                _flagBackgroundColor = true;
-            }
-        }
-        private string _BackgroundColor;
-        private bool _flagBackgroundColor;
+        public string BackgroundColor { get; set; }
 
-        /// <summary>
-        /// Returns false as BackgroundColor should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBackgroundColor()
-        {
-            return _flagBackgroundColor;
-        }
         /// <summary>
         /// Gets or Sets BackgroundMediaId
         /// </summary>
         [DataMember(Name = "backgroundMediaId", EmitDefaultValue = false)]
-        public string BackgroundMediaId
-        {
-            get{ return _BackgroundMediaId;}
-            set
-            {
-                _BackgroundMediaId = value;
-                _flagBackgroundMediaId = true;
-            }
-        }
-        private string _BackgroundMediaId;
-        private bool _flagBackgroundMediaId;
+        public string BackgroundMediaId { get; set; }
 
-        /// <summary>
-        /// Returns false as BackgroundMediaId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBackgroundMediaId()
-        {
-            return _flagBackgroundMediaId;
-        }
         /// <summary>
         /// Gets or Sets BackgroundMediaMode
         /// </summary>
         [DataMember(Name = "backgroundMediaMode", EmitDefaultValue = false)]
-        public string BackgroundMediaMode
-        {
-            get{ return _BackgroundMediaMode;}
-            set
-            {
-                _BackgroundMediaMode = value;
-                _flagBackgroundMediaMode = true;
-            }
-        }
-        private string _BackgroundMediaMode;
-        private bool _flagBackgroundMediaMode;
+        public string BackgroundMediaMode { get; set; }
 
-        /// <summary>
-        /// Returns false as BackgroundMediaMode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBackgroundMediaMode()
-        {
-            return _flagBackgroundMediaMode;
-        }
         /// <summary>
         /// Gets or Sets CssClass
         /// </summary>
         [DataMember(Name = "cssClass", EmitDefaultValue = false)]
-        public string CssClass
-        {
-            get{ return _CssClass;}
-            set
-            {
-                _CssClass = value;
-                _flagCssClass = true;
-            }
-        }
-        private string _CssClass;
-        private bool _flagCssClass;
+        public string CssClass { get; set; }
 
-        /// <summary>
-        /// Returns false as CssClass should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCssClass()
-        {
-            return _flagCssClass;
-        }
         /// <summary>
         /// Gets or Sets SectionId
         /// </summary>
         [DataMember(Name = "sectionId", IsRequired = true, EmitDefaultValue = false)]
-        public string SectionId
-        {
-            get{ return _SectionId;}
-            set
-            {
-                _SectionId = value;
-                _flagSectionId = true;
-            }
-        }
-        private string _SectionId;
-        private bool _flagSectionId;
+        public string SectionId { get; set; }
 
-        /// <summary>
-        /// Returns false as SectionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSectionId()
-        {
-            return _flagSectionId;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets VersionId
         /// </summary>
         [DataMember(Name = "versionId", EmitDefaultValue = false)]
-        public string VersionId
-        {
-            get{ return _VersionId;}
-            set
-            {
-                _VersionId = value;
-                _flagVersionId = true;
-            }
-        }
-        private string _VersionId;
-        private bool _flagVersionId;
+        public string VersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as VersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeVersionId()
-        {
-            return _flagVersionId;
-        }
         /// <summary>
         /// Gets or Sets CmsSectionVersionId
         /// </summary>
         [DataMember(Name = "cmsSectionVersionId", EmitDefaultValue = false)]
-        public string CmsSectionVersionId
-        {
-            get{ return _CmsSectionVersionId;}
-            set
-            {
-                _CmsSectionVersionId = value;
-                _flagCmsSectionVersionId = true;
-            }
-        }
-        private string _CmsSectionVersionId;
-        private bool _flagCmsSectionVersionId;
+        public string CmsSectionVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as CmsSectionVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCmsSectionVersionId()
-        {
-            return _flagCmsSectionVersionId;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -596,50 +226,14 @@ namespace ShopwareSharp.Model
         /// Gets or Sets BackgroundMedia
         /// </summary>
         [DataMember(Name = "backgroundMedia", EmitDefaultValue = false)]
-        public Media BackgroundMedia
-        {
-            get{ return _BackgroundMedia;}
-            set
-            {
-                _BackgroundMedia = value;
-                _flagBackgroundMedia = true;
-            }
-        }
-        private Media _BackgroundMedia;
-        private bool _flagBackgroundMedia;
+        public Media BackgroundMedia { get; set; }
 
-        /// <summary>
-        /// Returns false as BackgroundMedia should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBackgroundMedia()
-        {
-            return _flagBackgroundMedia;
-        }
         /// <summary>
         /// Gets or Sets Slots
         /// </summary>
         [DataMember(Name = "slots", EmitDefaultValue = false)]
-        public CmsSlot Slots
-        {
-            get{ return _Slots;}
-            set
-            {
-                _Slots = value;
-                _flagSlots = true;
-            }
-        }
-        private CmsSlot _Slots;
-        private bool _flagSlots;
+        public CmsSlot Slots { get; set; }
 
-        /// <summary>
-        /// Returns false as Slots should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSlots()
-        {
-            return _flagSlots;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

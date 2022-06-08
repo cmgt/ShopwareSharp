@@ -62,368 +62,100 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("name is a required property for LandingPage and cannot be null");
             }
-            this._Name = name;
+            this.Name = name;
             // to ensure "url" is required (not null)
             if (url == null)
             {
                 throw new ArgumentNullException("url is a required property for LandingPage and cannot be null");
             }
-            this._Url = url;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._VersionId = versionId;
-            if (this.VersionId != null)
-            {
-                this._flagVersionId = true;
-            }
-            this._Active = active;
-            if (this.Active != null)
-            {
-                this._flagActive = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._SlotConfig = slotConfig;
-            if (this.SlotConfig != null)
-            {
-                this._flagSlotConfig = true;
-            }
-            this._MetaTitle = metaTitle;
-            if (this.MetaTitle != null)
-            {
-                this._flagMetaTitle = true;
-            }
-            this._MetaDescription = metaDescription;
-            if (this.MetaDescription != null)
-            {
-                this._flagMetaDescription = true;
-            }
-            this._Keywords = keywords;
-            if (this.Keywords != null)
-            {
-                this._flagKeywords = true;
-            }
-            this._CmsPageId = cmsPageId;
-            if (this.CmsPageId != null)
-            {
-                this._flagCmsPageId = true;
-            }
-            this._CmsPageVersionId = cmsPageVersionId;
-            if (this.CmsPageVersionId != null)
-            {
-                this._flagCmsPageVersionId = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
-            this._CmsPage = cmsPage;
-            if (this.CmsPage != null)
-            {
-                this._flagCmsPage = true;
-            }
-            this._SeoUrls = seoUrls;
-            if (this.SeoUrls != null)
-            {
-                this._flagSeoUrls = true;
-            }
+            this.Url = url;
+            this.Id = id;
+            this.VersionId = versionId;
+            this.Active = active;
+            this.CustomFields = customFields;
+            this.SlotConfig = slotConfig;
+            this.MetaTitle = metaTitle;
+            this.MetaDescription = metaDescription;
+            this.Keywords = keywords;
+            this.CmsPageId = cmsPageId;
+            this.CmsPageVersionId = cmsPageVersionId;
+            this.Translated = translated;
+            this.CmsPage = cmsPage;
+            this.SeoUrls = seoUrls;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets VersionId
         /// </summary>
         [DataMember(Name = "versionId", EmitDefaultValue = false)]
-        public string VersionId
-        {
-            get{ return _VersionId;}
-            set
-            {
-                _VersionId = value;
-                _flagVersionId = true;
-            }
-        }
-        private string _VersionId;
-        private bool _flagVersionId;
+        public string VersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as VersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeVersionId()
-        {
-            return _flagVersionId;
-        }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", EmitDefaultValue = true)]
-        public bool Active
-        {
-            get{ return _Active;}
-            set
-            {
-                _Active = value;
-                _flagActive = true;
-            }
-        }
-        private bool _Active;
-        private bool _flagActive;
+        public bool Active { get; set; }
 
-        /// <summary>
-        /// Returns false as Active should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeActive()
-        {
-            return _flagActive;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets SlotConfig
         /// </summary>
         [DataMember(Name = "slotConfig", EmitDefaultValue = false)]
-        public Object SlotConfig
-        {
-            get{ return _SlotConfig;}
-            set
-            {
-                _SlotConfig = value;
-                _flagSlotConfig = true;
-            }
-        }
-        private Object _SlotConfig;
-        private bool _flagSlotConfig;
+        public Object SlotConfig { get; set; }
 
-        /// <summary>
-        /// Returns false as SlotConfig should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSlotConfig()
-        {
-            return _flagSlotConfig;
-        }
         /// <summary>
         /// Gets or Sets MetaTitle
         /// </summary>
         [DataMember(Name = "metaTitle", EmitDefaultValue = false)]
-        public string MetaTitle
-        {
-            get{ return _MetaTitle;}
-            set
-            {
-                _MetaTitle = value;
-                _flagMetaTitle = true;
-            }
-        }
-        private string _MetaTitle;
-        private bool _flagMetaTitle;
+        public string MetaTitle { get; set; }
 
-        /// <summary>
-        /// Returns false as MetaTitle should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMetaTitle()
-        {
-            return _flagMetaTitle;
-        }
         /// <summary>
         /// Gets or Sets MetaDescription
         /// </summary>
         [DataMember(Name = "metaDescription", EmitDefaultValue = false)]
-        public string MetaDescription
-        {
-            get{ return _MetaDescription;}
-            set
-            {
-                _MetaDescription = value;
-                _flagMetaDescription = true;
-            }
-        }
-        private string _MetaDescription;
-        private bool _flagMetaDescription;
+        public string MetaDescription { get; set; }
 
-        /// <summary>
-        /// Returns false as MetaDescription should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMetaDescription()
-        {
-            return _flagMetaDescription;
-        }
         /// <summary>
         /// Gets or Sets Keywords
         /// </summary>
         [DataMember(Name = "keywords", EmitDefaultValue = false)]
-        public string Keywords
-        {
-            get{ return _Keywords;}
-            set
-            {
-                _Keywords = value;
-                _flagKeywords = true;
-            }
-        }
-        private string _Keywords;
-        private bool _flagKeywords;
+        public string Keywords { get; set; }
 
-        /// <summary>
-        /// Returns false as Keywords should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeKeywords()
-        {
-            return _flagKeywords;
-        }
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
         [DataMember(Name = "url", IsRequired = true, EmitDefaultValue = false)]
-        public string Url
-        {
-            get{ return _Url;}
-            set
-            {
-                _Url = value;
-                _flagUrl = true;
-            }
-        }
-        private string _Url;
-        private bool _flagUrl;
+        public string Url { get; set; }
 
-        /// <summary>
-        /// Returns false as Url should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUrl()
-        {
-            return _flagUrl;
-        }
         /// <summary>
         /// Gets or Sets CmsPageId
         /// </summary>
         [DataMember(Name = "cmsPageId", EmitDefaultValue = false)]
-        public string CmsPageId
-        {
-            get{ return _CmsPageId;}
-            set
-            {
-                _CmsPageId = value;
-                _flagCmsPageId = true;
-            }
-        }
-        private string _CmsPageId;
-        private bool _flagCmsPageId;
+        public string CmsPageId { get; set; }
 
-        /// <summary>
-        /// Returns false as CmsPageId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCmsPageId()
-        {
-            return _flagCmsPageId;
-        }
         /// <summary>
         /// Gets or Sets CmsPageVersionId
         /// </summary>
         [DataMember(Name = "cmsPageVersionId", EmitDefaultValue = false)]
-        public string CmsPageVersionId
-        {
-            get{ return _CmsPageVersionId;}
-            set
-            {
-                _CmsPageVersionId = value;
-                _flagCmsPageVersionId = true;
-            }
-        }
-        private string _CmsPageVersionId;
-        private bool _flagCmsPageVersionId;
+        public string CmsPageVersionId { get; set; }
 
-        /// <summary>
-        /// Returns false as CmsPageVersionId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCmsPageVersionId()
-        {
-            return _flagCmsPageVersionId;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -456,74 +188,20 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Gets or Sets CmsPage
         /// </summary>
         [DataMember(Name = "cmsPage", EmitDefaultValue = false)]
-        public CmsPage CmsPage
-        {
-            get{ return _CmsPage;}
-            set
-            {
-                _CmsPage = value;
-                _flagCmsPage = true;
-            }
-        }
-        private CmsPage _CmsPage;
-        private bool _flagCmsPage;
+        public CmsPage CmsPage { get; set; }
 
-        /// <summary>
-        /// Returns false as CmsPage should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCmsPage()
-        {
-            return _flagCmsPage;
-        }
         /// <summary>
         /// Gets or Sets SeoUrls
         /// </summary>
         [DataMember(Name = "seoUrls", EmitDefaultValue = false)]
-        public SeoUrl SeoUrls
-        {
-            get{ return _SeoUrls;}
-            set
-            {
-                _SeoUrls = value;
-                _flagSeoUrls = true;
-            }
-        }
-        private SeoUrl _SeoUrls;
-        private bool _flagSeoUrls;
+        public SeoUrl SeoUrls { get; set; }
 
-        /// <summary>
-        /// Returns false as SeoUrls should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSeoUrls()
-        {
-            return _flagSeoUrls;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

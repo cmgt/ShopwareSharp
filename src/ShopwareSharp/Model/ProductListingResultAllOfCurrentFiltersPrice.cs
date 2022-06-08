@@ -39,66 +39,22 @@ namespace ShopwareSharp.Model
         /// <param name="max">max.</param>
         public ProductListingResultAllOfCurrentFiltersPrice(int min = default(int), int max = default(int))
         {
-            this._Min = min;
-            if (this.Min != null)
-            {
-                this._flagMin = true;
-            }
-            this._Max = max;
-            if (this.Max != null)
-            {
-                this._flagMax = true;
-            }
+            this.Min = min;
+            this.Max = max;
         }
 
         /// <summary>
         /// Gets or Sets Min
         /// </summary>
         [DataMember(Name = "min", EmitDefaultValue = false)]
-        public int Min
-        {
-            get{ return _Min;}
-            set
-            {
-                _Min = value;
-                _flagMin = true;
-            }
-        }
-        private int _Min;
-        private bool _flagMin;
+        public int Min { get; set; }
 
-        /// <summary>
-        /// Returns false as Min should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMin()
-        {
-            return _flagMin;
-        }
         /// <summary>
         /// Gets or Sets Max
         /// </summary>
         [DataMember(Name = "max", EmitDefaultValue = false)]
-        public int Max
-        {
-            get{ return _Max;}
-            set
-            {
-                _Max = value;
-                _flagMax = true;
-            }
-        }
-        private int _Max;
-        private bool _flagMax;
+        public int Max { get; set; }
 
-        /// <summary>
-        /// Returns false as Max should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMax()
-        {
-            return _flagMax;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -50,17 +50,9 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("meta is a required property for Info and cannot be null");
             }
-            this._Meta = meta;
-            this._Links = links;
-            if (this.Links != null)
-            {
-                this._flagLinks = true;
-            }
-            this._Jsonapi = jsonapi;
-            if (this.Jsonapi != null)
-            {
-                this._flagJsonapi = true;
-            }
+            this.Meta = meta;
+            this.Links = links;
+            this.Jsonapi = jsonapi;
         }
 
         /// <summary>
@@ -68,74 +60,20 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Non-standard meta-information that can not be represented as an attribute or relationship.</value>
         [DataMember(Name = "meta", IsRequired = true, EmitDefaultValue = false)]
-        public Dictionary<string, Object> Meta
-        {
-            get{ return _Meta;}
-            set
-            {
-                _Meta = value;
-                _flagMeta = true;
-            }
-        }
-        private Dictionary<string, Object> _Meta;
-        private bool _flagMeta;
+        public Dictionary<string, Object> Meta { get; set; }
 
-        /// <summary>
-        /// Returns false as Meta should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMeta()
-        {
-            return _flagMeta;
-        }
         /// <summary>
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = false)]
-        public Dictionary<string, Link> Links
-        {
-            get{ return _Links;}
-            set
-            {
-                _Links = value;
-                _flagLinks = true;
-            }
-        }
-        private Dictionary<string, Link> _Links;
-        private bool _flagLinks;
+        public Dictionary<string, Link> Links { get; set; }
 
-        /// <summary>
-        /// Returns false as Links should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLinks()
-        {
-            return _flagLinks;
-        }
         /// <summary>
         /// Gets or Sets Jsonapi
         /// </summary>
         [DataMember(Name = "jsonapi", EmitDefaultValue = false)]
-        public Jsonapi Jsonapi
-        {
-            get{ return _Jsonapi;}
-            set
-            {
-                _Jsonapi = value;
-                _flagJsonapi = true;
-            }
-        }
-        private Jsonapi _Jsonapi;
-        private bool _flagJsonapi;
+        public Jsonapi Jsonapi { get; set; }
 
-        /// <summary>
-        /// Returns false as Jsonapi should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeJsonapi()
-        {
-            return _flagJsonapi;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

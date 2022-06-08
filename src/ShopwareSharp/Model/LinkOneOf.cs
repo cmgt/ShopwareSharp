@@ -49,12 +49,8 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("href is a required property for LinkOneOf and cannot be null");
             }
-            this._Href = href;
-            this._Meta = meta;
-            if (this.Meta != null)
-            {
-                this._flagMeta = true;
-            }
+            this.Href = href;
+            this.Meta = meta;
         }
 
         /// <summary>
@@ -62,51 +58,15 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>A string containing the link&#39;s URL.</value>
         [DataMember(Name = "href", IsRequired = true, EmitDefaultValue = false)]
-        public string Href
-        {
-            get{ return _Href;}
-            set
-            {
-                _Href = value;
-                _flagHref = true;
-            }
-        }
-        private string _Href;
-        private bool _flagHref;
+        public string Href { get; set; }
 
-        /// <summary>
-        /// Returns false as Href should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeHref()
-        {
-            return _flagHref;
-        }
         /// <summary>
         /// Non-standard meta-information that can not be represented as an attribute or relationship.
         /// </summary>
         /// <value>Non-standard meta-information that can not be represented as an attribute or relationship.</value>
         [DataMember(Name = "meta", EmitDefaultValue = false)]
-        public Dictionary<string, Object> Meta
-        {
-            get{ return _Meta;}
-            set
-            {
-                _Meta = value;
-                _flagMeta = true;
-            }
-        }
-        private Dictionary<string, Object> _Meta;
-        private bool _flagMeta;
+        public Dictionary<string, Object> Meta { get; set; }
 
-        /// <summary>
-        /// Returns false as Meta should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMeta()
-        {
-            return _flagMeta;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

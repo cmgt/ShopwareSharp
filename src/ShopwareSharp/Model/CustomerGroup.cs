@@ -57,270 +57,72 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("name is a required property for CustomerGroup and cannot be null");
             }
-            this._Name = name;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._DisplayGross = displayGross;
-            if (this.DisplayGross != null)
-            {
-                this._flagDisplayGross = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._RegistrationActive = registrationActive;
-            if (this.RegistrationActive != null)
-            {
-                this._flagRegistrationActive = true;
-            }
-            this._RegistrationTitle = registrationTitle;
-            if (this.RegistrationTitle != null)
-            {
-                this._flagRegistrationTitle = true;
-            }
-            this._RegistrationIntroduction = registrationIntroduction;
-            if (this.RegistrationIntroduction != null)
-            {
-                this._flagRegistrationIntroduction = true;
-            }
-            this._RegistrationOnlyCompanyRegistration = registrationOnlyCompanyRegistration;
-            if (this.RegistrationOnlyCompanyRegistration != null)
-            {
-                this._flagRegistrationOnlyCompanyRegistration = true;
-            }
-            this._RegistrationSeoMetaDescription = registrationSeoMetaDescription;
-            if (this.RegistrationSeoMetaDescription != null)
-            {
-                this._flagRegistrationSeoMetaDescription = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
+            this.Name = name;
+            this.Id = id;
+            this.DisplayGross = displayGross;
+            this.CustomFields = customFields;
+            this.RegistrationActive = registrationActive;
+            this.RegistrationTitle = registrationTitle;
+            this.RegistrationIntroduction = registrationIntroduction;
+            this.RegistrationOnlyCompanyRegistration = registrationOnlyCompanyRegistration;
+            this.RegistrationSeoMetaDescription = registrationSeoMetaDescription;
+            this.Translated = translated;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets DisplayGross
         /// </summary>
         [DataMember(Name = "displayGross", EmitDefaultValue = true)]
-        public bool DisplayGross
-        {
-            get{ return _DisplayGross;}
-            set
-            {
-                _DisplayGross = value;
-                _flagDisplayGross = true;
-            }
-        }
-        private bool _DisplayGross;
-        private bool _flagDisplayGross;
+        public bool DisplayGross { get; set; }
 
-        /// <summary>
-        /// Returns false as DisplayGross should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDisplayGross()
-        {
-            return _flagDisplayGross;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets RegistrationActive
         /// </summary>
         [DataMember(Name = "registrationActive", EmitDefaultValue = true)]
-        public bool RegistrationActive
-        {
-            get{ return _RegistrationActive;}
-            set
-            {
-                _RegistrationActive = value;
-                _flagRegistrationActive = true;
-            }
-        }
-        private bool _RegistrationActive;
-        private bool _flagRegistrationActive;
+        public bool RegistrationActive { get; set; }
 
-        /// <summary>
-        /// Returns false as RegistrationActive should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeRegistrationActive()
-        {
-            return _flagRegistrationActive;
-        }
         /// <summary>
         /// Gets or Sets RegistrationTitle
         /// </summary>
         [DataMember(Name = "registrationTitle", EmitDefaultValue = false)]
-        public string RegistrationTitle
-        {
-            get{ return _RegistrationTitle;}
-            set
-            {
-                _RegistrationTitle = value;
-                _flagRegistrationTitle = true;
-            }
-        }
-        private string _RegistrationTitle;
-        private bool _flagRegistrationTitle;
+        public string RegistrationTitle { get; set; }
 
-        /// <summary>
-        /// Returns false as RegistrationTitle should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeRegistrationTitle()
-        {
-            return _flagRegistrationTitle;
-        }
         /// <summary>
         /// Gets or Sets RegistrationIntroduction
         /// </summary>
         [DataMember(Name = "registrationIntroduction", EmitDefaultValue = false)]
-        public string RegistrationIntroduction
-        {
-            get{ return _RegistrationIntroduction;}
-            set
-            {
-                _RegistrationIntroduction = value;
-                _flagRegistrationIntroduction = true;
-            }
-        }
-        private string _RegistrationIntroduction;
-        private bool _flagRegistrationIntroduction;
+        public string RegistrationIntroduction { get; set; }
 
-        /// <summary>
-        /// Returns false as RegistrationIntroduction should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeRegistrationIntroduction()
-        {
-            return _flagRegistrationIntroduction;
-        }
         /// <summary>
         /// Gets or Sets RegistrationOnlyCompanyRegistration
         /// </summary>
         [DataMember(Name = "registrationOnlyCompanyRegistration", EmitDefaultValue = true)]
-        public bool RegistrationOnlyCompanyRegistration
-        {
-            get{ return _RegistrationOnlyCompanyRegistration;}
-            set
-            {
-                _RegistrationOnlyCompanyRegistration = value;
-                _flagRegistrationOnlyCompanyRegistration = true;
-            }
-        }
-        private bool _RegistrationOnlyCompanyRegistration;
-        private bool _flagRegistrationOnlyCompanyRegistration;
+        public bool RegistrationOnlyCompanyRegistration { get; set; }
 
-        /// <summary>
-        /// Returns false as RegistrationOnlyCompanyRegistration should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeRegistrationOnlyCompanyRegistration()
-        {
-            return _flagRegistrationOnlyCompanyRegistration;
-        }
         /// <summary>
         /// Gets or Sets RegistrationSeoMetaDescription
         /// </summary>
         [DataMember(Name = "registrationSeoMetaDescription", EmitDefaultValue = false)]
-        public string RegistrationSeoMetaDescription
-        {
-            get{ return _RegistrationSeoMetaDescription;}
-            set
-            {
-                _RegistrationSeoMetaDescription = value;
-                _flagRegistrationSeoMetaDescription = true;
-            }
-        }
-        private string _RegistrationSeoMetaDescription;
-        private bool _flagRegistrationSeoMetaDescription;
+        public string RegistrationSeoMetaDescription { get; set; }
 
-        /// <summary>
-        /// Returns false as RegistrationSeoMetaDescription should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeRegistrationSeoMetaDescription()
-        {
-            return _flagRegistrationSeoMetaDescription;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -353,26 +155,8 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

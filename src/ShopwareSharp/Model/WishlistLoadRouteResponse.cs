@@ -39,66 +39,22 @@ namespace ShopwareSharp.Model
         /// <param name="products">products.</param>
         public WishlistLoadRouteResponse(WishlistLoadRouteResponseWishlist wishlist = default(WishlistLoadRouteResponseWishlist), List<ProductListingResult> products = default(List<ProductListingResult>))
         {
-            this._Wishlist = wishlist;
-            if (this.Wishlist != null)
-            {
-                this._flagWishlist = true;
-            }
-            this._Products = products;
-            if (this.Products != null)
-            {
-                this._flagProducts = true;
-            }
+            this.Wishlist = wishlist;
+            this.Products = products;
         }
 
         /// <summary>
         /// Gets or Sets Wishlist
         /// </summary>
         [DataMember(Name = "wishlist", EmitDefaultValue = false)]
-        public WishlistLoadRouteResponseWishlist Wishlist
-        {
-            get{ return _Wishlist;}
-            set
-            {
-                _Wishlist = value;
-                _flagWishlist = true;
-            }
-        }
-        private WishlistLoadRouteResponseWishlist _Wishlist;
-        private bool _flagWishlist;
+        public WishlistLoadRouteResponseWishlist Wishlist { get; set; }
 
-        /// <summary>
-        /// Returns false as Wishlist should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeWishlist()
-        {
-            return _flagWishlist;
-        }
         /// <summary>
         /// Gets or Sets Products
         /// </summary>
         [DataMember(Name = "products", EmitDefaultValue = false)]
-        public List<ProductListingResult> Products
-        {
-            get{ return _Products;}
-            set
-            {
-                _Products = value;
-                _flagProducts = true;
-            }
-        }
-        private List<ProductListingResult> _Products;
-        private bool _flagProducts;
+        public List<ProductListingResult> Products { get; set; }
 
-        /// <summary>
-        /// Returns false as Products should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProducts()
-        {
-            return _flagProducts;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

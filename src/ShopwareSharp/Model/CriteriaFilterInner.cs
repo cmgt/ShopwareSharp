@@ -50,93 +50,39 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("type is a required property for CriteriaFilterInner and cannot be null");
             }
-            this._Type = type;
+            this.Type = type;
             // to ensure "field" is required (not null)
             if (field == null)
             {
                 throw new ArgumentNullException("field is a required property for CriteriaFilterInner and cannot be null");
             }
-            this._Field = field;
+            this.Field = field;
             // to ensure "value" is required (not null)
             if (value == null)
             {
                 throw new ArgumentNullException("value is a required property for CriteriaFilterInner and cannot be null");
             }
-            this._Value = value;
+            this.Value = value;
         }
 
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = false)]
-        public string Type
-        {
-            get{ return _Type;}
-            set
-            {
-                _Type = value;
-                _flagType = true;
-            }
-        }
-        private string _Type;
-        private bool _flagType;
+        public string Type { get; set; }
 
-        /// <summary>
-        /// Returns false as Type should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeType()
-        {
-            return _flagType;
-        }
         /// <summary>
         /// Gets or Sets Field
         /// </summary>
         [DataMember(Name = "field", IsRequired = true, EmitDefaultValue = false)]
-        public string Field
-        {
-            get{ return _Field;}
-            set
-            {
-                _Field = value;
-                _flagField = true;
-            }
-        }
-        private string _Field;
-        private bool _flagField;
+        public string Field { get; set; }
 
-        /// <summary>
-        /// Returns false as Field should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeField()
-        {
-            return _flagField;
-        }
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name = "value", IsRequired = true, EmitDefaultValue = false)]
-        public string Value
-        {
-            get{ return _Value;}
-            set
-            {
-                _Value = value;
-                _flagValue = true;
-            }
-        }
-        private string _Value;
-        private bool _flagValue;
+        public string Value { get; set; }
 
-        /// <summary>
-        /// Returns false as Value should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeValue()
-        {
-            return _flagValue;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

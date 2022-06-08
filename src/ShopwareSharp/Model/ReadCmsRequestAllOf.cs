@@ -38,11 +38,7 @@ namespace ShopwareSharp.Model
         /// <param name="slots">Resolves only the given slot identifiers. The identifiers have to be seperated by a &#x60;|&#x60; character..</param>
         public ReadCmsRequestAllOf(string slots = default(string))
         {
-            this._Slots = slots;
-            if (this.Slots != null)
-            {
-                this._flagSlots = true;
-            }
+            this.Slots = slots;
         }
 
         /// <summary>
@@ -50,26 +46,8 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Resolves only the given slot identifiers. The identifiers have to be seperated by a &#x60;|&#x60; character.</value>
         [DataMember(Name = "slots", EmitDefaultValue = false)]
-        public string Slots
-        {
-            get{ return _Slots;}
-            set
-            {
-                _Slots = value;
-                _flagSlots = true;
-            }
-        }
-        private string _Slots;
-        private bool _flagSlots;
+        public string Slots { get; set; }
 
-        /// <summary>
-        /// Returns false as Slots should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSlots()
-        {
-            return _flagSlots;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

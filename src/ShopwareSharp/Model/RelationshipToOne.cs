@@ -50,93 +50,35 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("type is a required property for RelationshipToOne and cannot be null");
             }
-            this._Type = type;
+            this.Type = type;
             // to ensure "id" is required (not null)
             if (id == null)
             {
                 throw new ArgumentNullException("id is a required property for RelationshipToOne and cannot be null");
             }
-            this._Id = id;
-            this._Meta = meta;
-            if (this.Meta != null)
-            {
-                this._flagMeta = true;
-            }
+            this.Id = id;
+            this.Meta = meta;
         }
 
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = false)]
-        public string Type
-        {
-            get{ return _Type;}
-            set
-            {
-                _Type = value;
-                _flagType = true;
-            }
-        }
-        private string _Type;
-        private bool _flagType;
+        public string Type { get; set; }
 
-        /// <summary>
-        /// Returns false as Type should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeType()
-        {
-            return _flagType;
-        }
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Non-standard meta-information that can not be represented as an attribute or relationship.
         /// </summary>
         /// <value>Non-standard meta-information that can not be represented as an attribute or relationship.</value>
         [DataMember(Name = "meta", EmitDefaultValue = false)]
-        public Dictionary<string, Object> Meta
-        {
-            get{ return _Meta;}
-            set
-            {
-                _Meta = value;
-                _flagMeta = true;
-            }
-        }
-        private Dictionary<string, Object> _Meta;
-        private bool _flagMeta;
+        public Dictionary<string, Object> Meta { get; set; }
 
-        /// <summary>
-        /// Returns false as Meta should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMeta()
-        {
-            return _flagMeta;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

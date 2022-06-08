@@ -38,11 +38,7 @@ namespace ShopwareSharp.Model
         /// <param name="contextToken">Context token identifying the current user session..</param>
         public ContextTokenResponse(string contextToken = default(string))
         {
-            this._ContextToken = contextToken;
-            if (this.ContextToken != null)
-            {
-                this._flagContextToken = true;
-            }
+            this.ContextToken = contextToken;
         }
 
         /// <summary>
@@ -50,26 +46,8 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Context token identifying the current user session.</value>
         [DataMember(Name = "contextToken", EmitDefaultValue = false)]
-        public string ContextToken
-        {
-            get{ return _ContextToken;}
-            set
-            {
-                _ContextToken = value;
-                _flagContextToken = true;
-            }
-        }
-        private string _ContextToken;
-        private bool _flagContextToken;
+        public string ContextToken { get; set; }
 
-        /// <summary>
-        /// Returns false as ContextToken should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeContextToken()
-        {
-            return _flagContextToken;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

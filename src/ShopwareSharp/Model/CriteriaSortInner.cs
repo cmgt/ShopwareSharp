@@ -50,91 +50,29 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("field is a required property for CriteriaSortInner and cannot be null");
             }
-            this._Field = field;
-            this._Order = order;
-            if (this.Order != null)
-            {
-                this._flagOrder = true;
-            }
-            this._NaturalSorting = naturalSorting;
-            if (this.NaturalSorting != null)
-            {
-                this._flagNaturalSorting = true;
-            }
+            this.Field = field;
+            this.Order = order;
+            this.NaturalSorting = naturalSorting;
         }
 
         /// <summary>
         /// Gets or Sets Field
         /// </summary>
         [DataMember(Name = "field", IsRequired = true, EmitDefaultValue = false)]
-        public string Field
-        {
-            get{ return _Field;}
-            set
-            {
-                _Field = value;
-                _flagField = true;
-            }
-        }
-        private string _Field;
-        private bool _flagField;
+        public string Field { get; set; }
 
-        /// <summary>
-        /// Returns false as Field should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeField()
-        {
-            return _flagField;
-        }
         /// <summary>
         /// Gets or Sets Order
         /// </summary>
         [DataMember(Name = "order", EmitDefaultValue = false)]
-        public string Order
-        {
-            get{ return _Order;}
-            set
-            {
-                _Order = value;
-                _flagOrder = true;
-            }
-        }
-        private string _Order;
-        private bool _flagOrder;
+        public string Order { get; set; }
 
-        /// <summary>
-        /// Returns false as Order should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrder()
-        {
-            return _flagOrder;
-        }
         /// <summary>
         /// Gets or Sets NaturalSorting
         /// </summary>
         [DataMember(Name = "naturalSorting", EmitDefaultValue = true)]
-        public bool NaturalSorting
-        {
-            get{ return _NaturalSorting;}
-            set
-            {
-                _NaturalSorting = value;
-                _flagNaturalSorting = true;
-            }
-        }
-        private bool _NaturalSorting;
-        private bool _flagNaturalSorting;
+        public bool NaturalSorting { get; set; }
 
-        /// <summary>
-        /// Returns false as NaturalSorting should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNaturalSorting()
-        {
-            return _flagNaturalSorting;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

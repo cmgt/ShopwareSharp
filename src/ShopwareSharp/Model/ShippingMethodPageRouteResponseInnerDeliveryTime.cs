@@ -41,124 +41,36 @@ namespace ShopwareSharp.Model
         /// <param name="unit">unit.</param>
         public ShippingMethodPageRouteResponseInnerDeliveryTime(string name = default(string), int min = default(int), int max = default(int), string unit = default(string))
         {
-            this._Name = name;
-            if (this.Name != null)
-            {
-                this._flagName = true;
-            }
-            this._Min = min;
-            if (this.Min != null)
-            {
-                this._flagMin = true;
-            }
-            this._Max = max;
-            if (this.Max != null)
-            {
-                this._flagMax = true;
-            }
-            this._Unit = unit;
-            if (this.Unit != null)
-            {
-                this._flagUnit = true;
-            }
+            this.Name = name;
+            this.Min = min;
+            this.Max = max;
+            this.Unit = unit;
         }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Min
         /// </summary>
         [DataMember(Name = "min", EmitDefaultValue = false)]
-        public int Min
-        {
-            get{ return _Min;}
-            set
-            {
-                _Min = value;
-                _flagMin = true;
-            }
-        }
-        private int _Min;
-        private bool _flagMin;
+        public int Min { get; set; }
 
-        /// <summary>
-        /// Returns false as Min should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMin()
-        {
-            return _flagMin;
-        }
         /// <summary>
         /// Gets or Sets Max
         /// </summary>
         [DataMember(Name = "max", EmitDefaultValue = false)]
-        public int Max
-        {
-            get{ return _Max;}
-            set
-            {
-                _Max = value;
-                _flagMax = true;
-            }
-        }
-        private int _Max;
-        private bool _flagMax;
+        public int Max { get; set; }
 
-        /// <summary>
-        /// Returns false as Max should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMax()
-        {
-            return _flagMax;
-        }
         /// <summary>
         /// Gets or Sets Unit
         /// </summary>
         [DataMember(Name = "unit", EmitDefaultValue = false)]
-        public string Unit
-        {
-            get{ return _Unit;}
-            set
-            {
-                _Unit = value;
-                _flagUnit = true;
-            }
-        }
-        private string _Unit;
-        private bool _flagUnit;
+        public string Unit { get; set; }
 
-        /// <summary>
-        /// Returns false as Unit should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUnit()
-        {
-            return _flagUnit;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

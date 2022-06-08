@@ -73,87 +73,32 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("search is a required property for SearchPageRequest and cannot be null");
             }
-            this._Search = search;
-            this._Page = page;
-            if (this.Page != null)
-            {
-                this._flagPage = true;
-            }
-            this._Limit = limit;
-            if (this.Limit != null)
-            {
-                this._flagLimit = true;
-            }
-            this._Filter = filter;
-            if (this.Filter != null)
-            {
-                this._flagFilter = true;
-            }
-            this._Sort = sort;
-            if (this.Sort != null)
-            {
-                this._flagSort = true;
-            }
-            this._PostFilter = postFilter;
-            if (this.PostFilter != null)
-            {
-                this._flagPostFilter = true;
-            }
-            this._Associations = associations;
-            if (this.Associations != null)
-            {
-                this._flagAssociations = true;
-            }
-            this._Aggregations = aggregations;
-            if (this.Aggregations != null)
-            {
-                this._flagAggregations = true;
-            }
-            this._Grouping = grouping;
-            if (this.Grouping != null)
-            {
-                this._flagGrouping = true;
-            }
-            this._Order = order;
-            if (this.Order != null)
-            {
-                this._flagOrder = true;
-            }
-            this._Manufacturer = manufacturer;
-            if (this.Manufacturer != null)
-            {
-                this._flagManufacturer = true;
-            }
-            this._Rating = rating;
-            if (this.Rating != null)
-            {
-                this._flagRating = true;
-            }
-            this._Properties = properties;
-            if (this.Properties != null)
-            {
-                this._flagProperties = true;
-            }
-            this._PropertyWhitelist = propertyWhitelist;
-            if (this.PropertyWhitelist != null)
-            {
-                this._flagPropertyWhitelist = true;
-            }
-            this._ReduceAggregations = reduceAggregations;
-            if (this.ReduceAggregations != null)
-            {
-                this._flagReduceAggregations = true;
-            }
-            this._NoAggregations = noAggregations;
-            if (this.NoAggregations != null)
-            {
-                this._flagNoAggregations = true;
-            }
-            this._OnlyAggregations = onlyAggregations;
-            if (this.OnlyAggregations != null)
-            {
-                this._flagOnlyAggregations = true;
-            }
+            this.Search = search;
+            this.Page = page;
+            this.Limit = limit;
+            this.Filter = filter;
+            this.Sort = sort;
+            this.PostFilter = postFilter;
+            this.Associations = associations;
+            this.Aggregations = aggregations;
+            this.Grouping = grouping;
+            this.Order = order;
+            this.P = p;
+            this.Manufacturer = manufacturer;
+            this.MinPrice = minPrice;
+            this.MaxPrice = maxPrice;
+            this.Rating = rating;
+            this.ShippingFree = shippingFree;
+            this.Properties = properties;
+            this.ManufacturerFilter = manufacturerFilter;
+            this.PriceFilter = priceFilter;
+            this.RatingFilter = ratingFilter;
+            this.ShippingFreeFilter = shippingFreeFilter;
+            this.PropertyFilter = propertyFilter;
+            this.PropertyWhitelist = propertyWhitelist;
+            this.ReduceAggregations = reduceAggregations;
+            this.NoAggregations = noAggregations;
+            this.OnlyAggregations = onlyAggregations;
         }
 
         /// <summary>
@@ -161,651 +106,183 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Search result page</value>
         [DataMember(Name = "page", EmitDefaultValue = false)]
-        public int Page
-        {
-            get{ return _Page;}
-            set
-            {
-                _Page = value;
-                _flagPage = true;
-            }
-        }
-        private int _Page;
-        private bool _flagPage;
+        public int Page { get; set; }
 
-        /// <summary>
-        /// Returns false as Page should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePage()
-        {
-            return _flagPage;
-        }
         /// <summary>
         /// Number of items per result page. If not set, the limit will be set according to the default products per page, defined in the system settings.
         /// </summary>
         /// <value>Number of items per result page. If not set, the limit will be set according to the default products per page, defined in the system settings.</value>
         [DataMember(Name = "limit", EmitDefaultValue = false)]
-        public int Limit
-        {
-            get{ return _Limit;}
-            set
-            {
-                _Limit = value;
-                _flagLimit = true;
-            }
-        }
-        private int _Limit;
-        private bool _flagLimit;
+        public int Limit { get; set; }
 
-        /// <summary>
-        /// Returns false as Limit should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLimit()
-        {
-            return _flagLimit;
-        }
         /// <summary>
         /// List of filters to restrict the search result. For more information, see [Search Queries &gt; Filter](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#filter)
         /// </summary>
         /// <value>List of filters to restrict the search result. For more information, see [Search Queries &gt; Filter](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#filter)</value>
         [DataMember(Name = "filter", EmitDefaultValue = false)]
-        public List<CriteriaFilterInner> Filter
-        {
-            get{ return _Filter;}
-            set
-            {
-                _Filter = value;
-                _flagFilter = true;
-            }
-        }
-        private List<CriteriaFilterInner> _Filter;
-        private bool _flagFilter;
+        public List<CriteriaFilterInner> Filter { get; set; }
 
-        /// <summary>
-        /// Returns false as Filter should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFilter()
-        {
-            return _flagFilter;
-        }
         /// <summary>
         /// Sorting in the search result.
         /// </summary>
         /// <value>Sorting in the search result.</value>
         [DataMember(Name = "sort", EmitDefaultValue = false)]
-        public List<CriteriaSortInner> Sort
-        {
-            get{ return _Sort;}
-            set
-            {
-                _Sort = value;
-                _flagSort = true;
-            }
-        }
-        private List<CriteriaSortInner> _Sort;
-        private bool _flagSort;
+        public List<CriteriaSortInner> Sort { get; set; }
 
-        /// <summary>
-        /// Returns false as Sort should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSort()
-        {
-            return _flagSort;
-        }
         /// <summary>
         /// Filters that applied without affecting aggregations. For more information, see [Search Queries &gt; Post Filter](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#post-filter)
         /// </summary>
         /// <value>Filters that applied without affecting aggregations. For more information, see [Search Queries &gt; Post Filter](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#post-filter)</value>
         [DataMember(Name = "post-filter", EmitDefaultValue = false)]
-        public List<CriteriaFilterInner> PostFilter
-        {
-            get{ return _PostFilter;}
-            set
-            {
-                _PostFilter = value;
-                _flagPostFilter = true;
-            }
-        }
-        private List<CriteriaFilterInner> _PostFilter;
-        private bool _flagPostFilter;
+        public List<CriteriaFilterInner> PostFilter { get; set; }
 
-        /// <summary>
-        /// Returns false as PostFilter should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePostFilter()
-        {
-            return _flagPostFilter;
-        }
         /// <summary>
         /// Used to fetch associations which are not fetched by default.
         /// </summary>
         /// <value>Used to fetch associations which are not fetched by default.</value>
         [DataMember(Name = "associations", EmitDefaultValue = false)]
-        public Object Associations
-        {
-            get{ return _Associations;}
-            set
-            {
-                _Associations = value;
-                _flagAssociations = true;
-            }
-        }
-        private Object _Associations;
-        private bool _flagAssociations;
+        public Object Associations { get; set; }
 
-        /// <summary>
-        /// Returns false as Associations should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAssociations()
-        {
-            return _flagAssociations;
-        }
         /// <summary>
         /// Used to perform aggregations on the search result. For more information, see [Search Queries &gt; Aggregations](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#aggregations)
         /// </summary>
         /// <value>Used to perform aggregations on the search result. For more information, see [Search Queries &gt; Aggregations](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#aggregations)</value>
         [DataMember(Name = "aggregations", EmitDefaultValue = false)]
-        public List<CriteriaAggregationsInner> Aggregations
-        {
-            get{ return _Aggregations;}
-            set
-            {
-                _Aggregations = value;
-                _flagAggregations = true;
-            }
-        }
-        private List<CriteriaAggregationsInner> _Aggregations;
-        private bool _flagAggregations;
+        public List<CriteriaAggregationsInner> Aggregations { get; set; }
 
-        /// <summary>
-        /// Returns false as Aggregations should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAggregations()
-        {
-            return _flagAggregations;
-        }
         /// <summary>
         /// Perform groupings over certain fields
         /// </summary>
         /// <value>Perform groupings over certain fields</value>
         [DataMember(Name = "grouping", EmitDefaultValue = false)]
-        public List<string> Grouping
-        {
-            get{ return _Grouping;}
-            set
-            {
-                _Grouping = value;
-                _flagGrouping = true;
-            }
-        }
-        private List<string> _Grouping;
-        private bool _flagGrouping;
+        public List<string> Grouping { get; set; }
 
-        /// <summary>
-        /// Returns false as Grouping should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeGrouping()
-        {
-            return _flagGrouping;
-        }
         /// <summary>
         /// Specifies the sorting of the products by &#x60;availableSortings&#x60;. If not set, the default sorting will be set according to the shop settings. The available sorting options are sent within the response under the &#x60;availableSortings&#x60; key. In order to sort by a field, consider using the &#x60;sort&#x60; parameter from the listing criteria. Do not use both parameters together, as it might lead to unexpected results.
         /// </summary>
         /// <value>Specifies the sorting of the products by &#x60;availableSortings&#x60;. If not set, the default sorting will be set according to the shop settings. The available sorting options are sent within the response under the &#x60;availableSortings&#x60; key. In order to sort by a field, consider using the &#x60;sort&#x60; parameter from the listing criteria. Do not use both parameters together, as it might lead to unexpected results.</value>
         [DataMember(Name = "order", EmitDefaultValue = false)]
-        public string Order
-        {
-            get{ return _Order;}
-            set
-            {
-                _Order = value;
-                _flagOrder = true;
-            }
-        }
-        private string _Order;
-        private bool _flagOrder;
+        public string Order { get; set; }
 
-        /// <summary>
-        /// Returns false as Order should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrder()
-        {
-            return _flagOrder;
-        }
         /// <summary>
         /// Search result page
         /// </summary>
         /// <value>Search result page</value>
         [DataMember(Name = "p", EmitDefaultValue = false)]
-        public int P
-        {
-            get{ return _P;}
-            set
-            {
-                _P = value;
-                _flagP = true;
-            }
-        }
-        private int _P;
-        private bool _flagP;
+        public int P { get; set; }
 
-        /// <summary>
-        /// Returns false as P should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeP()
-        {
-            return _flagP;
-        }
         /// <summary>
         /// Filter by manufacturers. List of manufacturer identifiers separated by a &#x60;|&#x60;.
         /// </summary>
         /// <value>Filter by manufacturers. List of manufacturer identifiers separated by a &#x60;|&#x60;.</value>
         [DataMember(Name = "manufacturer", EmitDefaultValue = false)]
-        public string Manufacturer
-        {
-            get{ return _Manufacturer;}
-            set
-            {
-                _Manufacturer = value;
-                _flagManufacturer = true;
-            }
-        }
-        private string _Manufacturer;
-        private bool _flagManufacturer;
+        public string Manufacturer { get; set; }
 
-        /// <summary>
-        /// Returns false as Manufacturer should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeManufacturer()
-        {
-            return _flagManufacturer;
-        }
         /// <summary>
         /// Filters by a minimum product price. Has to be lower than the &#x60;max-price&#x60; filter.
         /// </summary>
         /// <value>Filters by a minimum product price. Has to be lower than the &#x60;max-price&#x60; filter.</value>
         [DataMember(Name = "min-price", EmitDefaultValue = false)]
-        public int MinPrice
-        {
-            get{ return _MinPrice;}
-            set
-            {
-                _MinPrice = value;
-                _flagMinPrice = true;
-            }
-        }
-        private int _MinPrice;
-        private bool _flagMinPrice;
+        public int MinPrice { get; set; }
 
-        /// <summary>
-        /// Returns false as MinPrice should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMinPrice()
-        {
-            return _flagMinPrice;
-        }
         /// <summary>
         /// Filters by a maximum product price. Has to be higher than the &#x60;min-price&#x60; filter.
         /// </summary>
         /// <value>Filters by a maximum product price. Has to be higher than the &#x60;min-price&#x60; filter.</value>
         [DataMember(Name = "max-price", EmitDefaultValue = false)]
-        public int MaxPrice
-        {
-            get{ return _MaxPrice;}
-            set
-            {
-                _MaxPrice = value;
-                _flagMaxPrice = true;
-            }
-        }
-        private int _MaxPrice;
-        private bool _flagMaxPrice;
+        public int MaxPrice { get; set; }
 
-        /// <summary>
-        /// Returns false as MaxPrice should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMaxPrice()
-        {
-            return _flagMaxPrice;
-        }
         /// <summary>
         /// Filter products with a minimum average rating.
         /// </summary>
         /// <value>Filter products with a minimum average rating.</value>
         [DataMember(Name = "rating", EmitDefaultValue = false)]
-        public int Rating
-        {
-            get{ return _Rating;}
-            set
-            {
-                _Rating = value;
-                _flagRating = true;
-            }
-        }
-        private int _Rating;
-        private bool _flagRating;
+        public int Rating { get; set; }
 
-        /// <summary>
-        /// Returns false as Rating should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeRating()
-        {
-            return _flagRating;
-        }
         /// <summary>
         /// Filters products that are marked as shipping-free.
         /// </summary>
         /// <value>Filters products that are marked as shipping-free.</value>
         [DataMember(Name = "shipping-free", EmitDefaultValue = true)]
-        public bool ShippingFree
-        {
-            get{ return _ShippingFree;}
-            set
-            {
-                _ShippingFree = value;
-                _flagShippingFree = true;
-            }
-        }
-        private bool _ShippingFree;
-        private bool _flagShippingFree;
+        public bool ShippingFree { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingFree should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingFree()
-        {
-            return _flagShippingFree;
-        }
         /// <summary>
         /// Filters products by their properties. List of property identifiers separated by a &#x60;|&#x60;.
         /// </summary>
         /// <value>Filters products by their properties. List of property identifiers separated by a &#x60;|&#x60;.</value>
         [DataMember(Name = "properties", EmitDefaultValue = false)]
-        public string Properties
-        {
-            get{ return _Properties;}
-            set
-            {
-                _Properties = value;
-                _flagProperties = true;
-            }
-        }
-        private string _Properties;
-        private bool _flagProperties;
+        public string Properties { get; set; }
 
-        /// <summary>
-        /// Returns false as Properties should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProperties()
-        {
-            return _flagProperties;
-        }
         /// <summary>
         /// Enables/disabled filtering by manufacturer. If set to false, the &#x60;manufacturer&#x60; filter will be ignored. Also the &#x60;aggregations[manufacturer]&#x60; key will be removed from the response.
         /// </summary>
         /// <value>Enables/disabled filtering by manufacturer. If set to false, the &#x60;manufacturer&#x60; filter will be ignored. Also the &#x60;aggregations[manufacturer]&#x60; key will be removed from the response.</value>
         [DataMember(Name = "manufacturer-filter", EmitDefaultValue = true)]
-        public bool ManufacturerFilter
-        {
-            get{ return _ManufacturerFilter;}
-            set
-            {
-                _ManufacturerFilter = value;
-                _flagManufacturerFilter = true;
-            }
-        }
-        private bool _ManufacturerFilter;
-        private bool _flagManufacturerFilter;
+        public bool ManufacturerFilter { get; set; }
 
-        /// <summary>
-        /// Returns false as ManufacturerFilter should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeManufacturerFilter()
-        {
-            return _flagManufacturerFilter;
-        }
         /// <summary>
         /// Enables/disabled filtering by price. If set to false, the &#x60;min-price&#x60; and &#x60;max-price&#x60; filter will be ignored. Also the &#x60;aggregations[price]&#x60; key will be removed from the response.
         /// </summary>
         /// <value>Enables/disabled filtering by price. If set to false, the &#x60;min-price&#x60; and &#x60;max-price&#x60; filter will be ignored. Also the &#x60;aggregations[price]&#x60; key will be removed from the response.</value>
         [DataMember(Name = "price-filter", EmitDefaultValue = true)]
-        public bool PriceFilter
-        {
-            get{ return _PriceFilter;}
-            set
-            {
-                _PriceFilter = value;
-                _flagPriceFilter = true;
-            }
-        }
-        private bool _PriceFilter;
-        private bool _flagPriceFilter;
+        public bool PriceFilter { get; set; }
 
-        /// <summary>
-        /// Returns false as PriceFilter should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePriceFilter()
-        {
-            return _flagPriceFilter;
-        }
         /// <summary>
         /// Enables/disabled filtering by rating. If set to false, the &#x60;rating&#x60; filter will be ignored. Also the &#x60;aggregations[rating]&#x60; key will be removed from the response.
         /// </summary>
         /// <value>Enables/disabled filtering by rating. If set to false, the &#x60;rating&#x60; filter will be ignored. Also the &#x60;aggregations[rating]&#x60; key will be removed from the response.</value>
         [DataMember(Name = "rating-filter", EmitDefaultValue = true)]
-        public bool RatingFilter
-        {
-            get{ return _RatingFilter;}
-            set
-            {
-                _RatingFilter = value;
-                _flagRatingFilter = true;
-            }
-        }
-        private bool _RatingFilter;
-        private bool _flagRatingFilter;
+        public bool RatingFilter { get; set; }
 
-        /// <summary>
-        /// Returns false as RatingFilter should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeRatingFilter()
-        {
-            return _flagRatingFilter;
-        }
         /// <summary>
         /// Enables/disabled filtering by shipping-free products. If set to false, the &#x60;shipping-free&#x60; filter will be ignored. Also the &#x60;aggregations[shipping-free]&#x60; key will be removed from the response.
         /// </summary>
         /// <value>Enables/disabled filtering by shipping-free products. If set to false, the &#x60;shipping-free&#x60; filter will be ignored. Also the &#x60;aggregations[shipping-free]&#x60; key will be removed from the response.</value>
         [DataMember(Name = "shipping-free-filter", EmitDefaultValue = true)]
-        public bool ShippingFreeFilter
-        {
-            get{ return _ShippingFreeFilter;}
-            set
-            {
-                _ShippingFreeFilter = value;
-                _flagShippingFreeFilter = true;
-            }
-        }
-        private bool _ShippingFreeFilter;
-        private bool _flagShippingFreeFilter;
+        public bool ShippingFreeFilter { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingFreeFilter should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingFreeFilter()
-        {
-            return _flagShippingFreeFilter;
-        }
         /// <summary>
         /// Enables/disabled filtering by properties products. If set to false, the &#x60;properties&#x60; filter will be ignored. Also the &#x60;aggregations[properties]&#x60; key will be removed from the response.
         /// </summary>
         /// <value>Enables/disabled filtering by properties products. If set to false, the &#x60;properties&#x60; filter will be ignored. Also the &#x60;aggregations[properties]&#x60; key will be removed from the response.</value>
         [DataMember(Name = "property-filter", EmitDefaultValue = true)]
-        public bool PropertyFilter
-        {
-            get{ return _PropertyFilter;}
-            set
-            {
-                _PropertyFilter = value;
-                _flagPropertyFilter = true;
-            }
-        }
-        private bool _PropertyFilter;
-        private bool _flagPropertyFilter;
+        public bool PropertyFilter { get; set; }
 
-        /// <summary>
-        /// Returns false as PropertyFilter should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePropertyFilter()
-        {
-            return _flagPropertyFilter;
-        }
         /// <summary>
         /// A whitelist of property identifiers which can be used for filtering. List of property identifiers separated by a &#x60;|&#x60;. The &#x60;property-filter&#x60; must be &#x60;true&#x60;, otherwise the whitelist has no effect.
         /// </summary>
         /// <value>A whitelist of property identifiers which can be used for filtering. List of property identifiers separated by a &#x60;|&#x60;. The &#x60;property-filter&#x60; must be &#x60;true&#x60;, otherwise the whitelist has no effect.</value>
         [DataMember(Name = "property-whitelist", EmitDefaultValue = false)]
-        public string PropertyWhitelist
-        {
-            get{ return _PropertyWhitelist;}
-            set
-            {
-                _PropertyWhitelist = value;
-                _flagPropertyWhitelist = true;
-            }
-        }
-        private string _PropertyWhitelist;
-        private bool _flagPropertyWhitelist;
+        public string PropertyWhitelist { get; set; }
 
-        /// <summary>
-        /// Returns false as PropertyWhitelist should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePropertyWhitelist()
-        {
-            return _flagPropertyWhitelist;
-        }
         /// <summary>
         /// By sending the parameter &#x60;reduce-aggregations&#x60; , the post-filters that were applied by the customer, are also applied to the aggregations. This has the consequence that only values are returned in the aggregations that would lead to further filter results. This parameter is a flag, the value has no effect.
         /// </summary>
         /// <value>By sending the parameter &#x60;reduce-aggregations&#x60; , the post-filters that were applied by the customer, are also applied to the aggregations. This has the consequence that only values are returned in the aggregations that would lead to further filter results. This parameter is a flag, the value has no effect.</value>
         [DataMember(Name = "reduce-aggregations", EmitDefaultValue = true)]
-        public string ReduceAggregations
-        {
-            get{ return _ReduceAggregations;}
-            set
-            {
-                _ReduceAggregations = value;
-                _flagReduceAggregations = true;
-            }
-        }
-        private string _ReduceAggregations;
-        private bool _flagReduceAggregations;
+        public string ReduceAggregations { get; set; }
 
-        /// <summary>
-        /// Returns false as ReduceAggregations should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeReduceAggregations()
-        {
-            return _flagReduceAggregations;
-        }
         /// <summary>
         /// Resets all aggregations in the criteria. This parameter is a flag, the value has no effect.
         /// </summary>
         /// <value>Resets all aggregations in the criteria. This parameter is a flag, the value has no effect.</value>
         [DataMember(Name = "no-aggregations", EmitDefaultValue = true)]
-        public string NoAggregations
-        {
-            get{ return _NoAggregations;}
-            set
-            {
-                _NoAggregations = value;
-                _flagNoAggregations = true;
-            }
-        }
-        private string _NoAggregations;
-        private bool _flagNoAggregations;
+        public string NoAggregations { get; set; }
 
-        /// <summary>
-        /// Returns false as NoAggregations should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNoAggregations()
-        {
-            return _flagNoAggregations;
-        }
         /// <summary>
         /// If this flag is set, no products are fetched. Sorting and associations are also ignored. This parameter is a flag, the value has no effect.
         /// </summary>
         /// <value>If this flag is set, no products are fetched. Sorting and associations are also ignored. This parameter is a flag, the value has no effect.</value>
         [DataMember(Name = "only-aggregations", EmitDefaultValue = true)]
-        public string OnlyAggregations
-        {
-            get{ return _OnlyAggregations;}
-            set
-            {
-                _OnlyAggregations = value;
-                _flagOnlyAggregations = true;
-            }
-        }
-        private string _OnlyAggregations;
-        private bool _flagOnlyAggregations;
+        public string OnlyAggregations { get; set; }
 
-        /// <summary>
-        /// Returns false as OnlyAggregations should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOnlyAggregations()
-        {
-            return _flagOnlyAggregations;
-        }
         /// <summary>
         /// Using the search parameter, the server performs a text search on all records based on their data model and weighting as defined in the entity definition using the SearchRanking flag.
         /// </summary>
         /// <value>Using the search parameter, the server performs a text search on all records based on their data model and weighting as defined in the entity definition using the SearchRanking flag.</value>
         [DataMember(Name = "search", IsRequired = true, EmitDefaultValue = false)]
-        public string Search
-        {
-            get{ return _Search;}
-            set
-            {
-                _Search = value;
-                _flagSearch = true;
-            }
-        }
-        private string _Search;
-        private bool _flagSearch;
+        public string Search { get; set; }
 
-        /// <summary>
-        /// Returns false as Search should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSearch()
-        {
-            return _flagSearch;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

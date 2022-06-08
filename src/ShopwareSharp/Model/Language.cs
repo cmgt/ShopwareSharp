@@ -57,199 +57,59 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("localeId is a required property for Language and cannot be null");
             }
-            this._LocaleId = localeId;
+            this.LocaleId = localeId;
             // to ensure "name" is required (not null)
             if (name == null)
             {
                 throw new ArgumentNullException("name is a required property for Language and cannot be null");
             }
-            this._Name = name;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._ParentId = parentId;
-            if (this.ParentId != null)
-            {
-                this._flagParentId = true;
-            }
-            this._TranslationCodeId = translationCodeId;
-            if (this.TranslationCodeId != null)
-            {
-                this._flagTranslationCodeId = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._Parent = parent;
-            if (this.Parent != null)
-            {
-                this._flagParent = true;
-            }
-            this._Locale = locale;
-            if (this.Locale != null)
-            {
-                this._flagLocale = true;
-            }
-            this._TranslationCode = translationCode;
-            if (this.TranslationCode != null)
-            {
-                this._flagTranslationCode = true;
-            }
-            this._Children = children;
-            if (this.Children != null)
-            {
-                this._flagChildren = true;
-            }
+            this.Name = name;
+            this.Id = id;
+            this.ParentId = parentId;
+            this.TranslationCodeId = translationCodeId;
+            this.CustomFields = customFields;
+            this.Parent = parent;
+            this.Locale = locale;
+            this.TranslationCode = translationCode;
+            this.Children = children;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets ParentId
         /// </summary>
         [DataMember(Name = "parentId", EmitDefaultValue = false)]
-        public string ParentId
-        {
-            get{ return _ParentId;}
-            set
-            {
-                _ParentId = value;
-                _flagParentId = true;
-            }
-        }
-        private string _ParentId;
-        private bool _flagParentId;
+        public string ParentId { get; set; }
 
-        /// <summary>
-        /// Returns false as ParentId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeParentId()
-        {
-            return _flagParentId;
-        }
         /// <summary>
         /// Gets or Sets LocaleId
         /// </summary>
         [DataMember(Name = "localeId", IsRequired = true, EmitDefaultValue = false)]
-        public string LocaleId
-        {
-            get{ return _LocaleId;}
-            set
-            {
-                _LocaleId = value;
-                _flagLocaleId = true;
-            }
-        }
-        private string _LocaleId;
-        private bool _flagLocaleId;
+        public string LocaleId { get; set; }
 
-        /// <summary>
-        /// Returns false as LocaleId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLocaleId()
-        {
-            return _flagLocaleId;
-        }
         /// <summary>
         /// Gets or Sets TranslationCodeId
         /// </summary>
         [DataMember(Name = "translationCodeId", EmitDefaultValue = false)]
-        public string TranslationCodeId
-        {
-            get{ return _TranslationCodeId;}
-            set
-            {
-                _TranslationCodeId = value;
-                _flagTranslationCodeId = true;
-            }
-        }
-        private string _TranslationCodeId;
-        private bool _flagTranslationCodeId;
+        public string TranslationCodeId { get; set; }
 
-        /// <summary>
-        /// Returns false as TranslationCodeId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslationCodeId()
-        {
-            return _flagTranslationCodeId;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -282,98 +142,26 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Parent
         /// </summary>
         [DataMember(Name = "parent", EmitDefaultValue = false)]
-        public Language Parent
-        {
-            get{ return _Parent;}
-            set
-            {
-                _Parent = value;
-                _flagParent = true;
-            }
-        }
-        private Language _Parent;
-        private bool _flagParent;
+        public Language Parent { get; set; }
 
-        /// <summary>
-        /// Returns false as Parent should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeParent()
-        {
-            return _flagParent;
-        }
         /// <summary>
         /// Gets or Sets Locale
         /// </summary>
         [DataMember(Name = "locale", EmitDefaultValue = false)]
-        public Locale Locale
-        {
-            get{ return _Locale;}
-            set
-            {
-                _Locale = value;
-                _flagLocale = true;
-            }
-        }
-        private Locale _Locale;
-        private bool _flagLocale;
+        public Locale Locale { get; set; }
 
-        /// <summary>
-        /// Returns false as Locale should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLocale()
-        {
-            return _flagLocale;
-        }
         /// <summary>
         /// Gets or Sets TranslationCode
         /// </summary>
         [DataMember(Name = "translationCode", EmitDefaultValue = false)]
-        public Locale TranslationCode
-        {
-            get{ return _TranslationCode;}
-            set
-            {
-                _TranslationCode = value;
-                _flagTranslationCode = true;
-            }
-        }
-        private Locale _TranslationCode;
-        private bool _flagTranslationCode;
+        public Locale TranslationCode { get; set; }
 
-        /// <summary>
-        /// Returns false as TranslationCode should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslationCode()
-        {
-            return _flagTranslationCode;
-        }
         /// <summary>
         /// Gets or Sets Children
         /// </summary>
         [DataMember(Name = "children", EmitDefaultValue = false)]
-        public Language Children
-        {
-            get{ return _Children;}
-            set
-            {
-                _Children = value;
-                _flagChildren = true;
-            }
-        }
-        private Language _Children;
-        private bool _flagChildren;
+        public Language Children { get; set; }
 
-        /// <summary>
-        /// Returns false as Children should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeChildren()
-        {
-            return _flagChildren;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

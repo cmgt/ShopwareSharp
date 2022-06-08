@@ -62,388 +62,106 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("name is a required property for Theme and cannot be null");
             }
-            this._Name = name;
+            this.Name = name;
             // to ensure "author" is required (not null)
             if (author == null)
             {
                 throw new ArgumentNullException("author is a required property for Theme and cannot be null");
             }
-            this._Author = author;
-            this._Active = active;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._TechnicalName = technicalName;
-            if (this.TechnicalName != null)
-            {
-                this._flagTechnicalName = true;
-            }
-            this._Description = description;
-            if (this.Description != null)
-            {
-                this._flagDescription = true;
-            }
-            this._Labels = labels;
-            if (this.Labels != null)
-            {
-                this._flagLabels = true;
-            }
-            this._HelpTexts = helpTexts;
-            if (this.HelpTexts != null)
-            {
-                this._flagHelpTexts = true;
-            }
-            this._CustomFields = customFields;
-            if (this.CustomFields != null)
-            {
-                this._flagCustomFields = true;
-            }
-            this._PreviewMediaId = previewMediaId;
-            if (this.PreviewMediaId != null)
-            {
-                this._flagPreviewMediaId = true;
-            }
-            this._ParentThemeId = parentThemeId;
-            if (this.ParentThemeId != null)
-            {
-                this._flagParentThemeId = true;
-            }
-            this._BaseConfig = baseConfig;
-            if (this.BaseConfig != null)
-            {
-                this._flagBaseConfig = true;
-            }
-            this._ConfigValues = configValues;
-            if (this.ConfigValues != null)
-            {
-                this._flagConfigValues = true;
-            }
-            this._Translated = translated;
-            if (this.Translated != null)
-            {
-                this._flagTranslated = true;
-            }
-            this._Media = media;
-            if (this.Media != null)
-            {
-                this._flagMedia = true;
-            }
+            this.Author = author;
+            this.Active = active;
+            this.Id = id;
+            this.TechnicalName = technicalName;
+            this.Description = description;
+            this.Labels = labels;
+            this.HelpTexts = helpTexts;
+            this.CustomFields = customFields;
+            this.PreviewMediaId = previewMediaId;
+            this.ParentThemeId = parentThemeId;
+            this.BaseConfig = baseConfig;
+            this.ConfigValues = configValues;
+            this.Translated = translated;
+            this.Media = media;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets TechnicalName
         /// </summary>
         [DataMember(Name = "technicalName", EmitDefaultValue = false)]
-        public string TechnicalName
-        {
-            get{ return _TechnicalName;}
-            set
-            {
-                _TechnicalName = value;
-                _flagTechnicalName = true;
-            }
-        }
-        private string _TechnicalName;
-        private bool _flagTechnicalName;
+        public string TechnicalName { get; set; }
 
-        /// <summary>
-        /// Returns false as TechnicalName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTechnicalName()
-        {
-            return _flagTechnicalName;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Author
         /// </summary>
         [DataMember(Name = "author", IsRequired = true, EmitDefaultValue = false)]
-        public string Author
-        {
-            get{ return _Author;}
-            set
-            {
-                _Author = value;
-                _flagAuthor = true;
-            }
-        }
-        private string _Author;
-        private bool _flagAuthor;
+        public string Author { get; set; }
 
-        /// <summary>
-        /// Returns false as Author should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAuthor()
-        {
-            return _flagAuthor;
-        }
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name = "description", EmitDefaultValue = false)]
-        public string Description
-        {
-            get{ return _Description;}
-            set
-            {
-                _Description = value;
-                _flagDescription = true;
-            }
-        }
-        private string _Description;
-        private bool _flagDescription;
+        public string Description { get; set; }
 
-        /// <summary>
-        /// Returns false as Description should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDescription()
-        {
-            return _flagDescription;
-        }
         /// <summary>
         /// Gets or Sets Labels
         /// </summary>
         [DataMember(Name = "labels", EmitDefaultValue = false)]
-        public Object Labels
-        {
-            get{ return _Labels;}
-            set
-            {
-                _Labels = value;
-                _flagLabels = true;
-            }
-        }
-        private Object _Labels;
-        private bool _flagLabels;
+        public Object Labels { get; set; }
 
-        /// <summary>
-        /// Returns false as Labels should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLabels()
-        {
-            return _flagLabels;
-        }
         /// <summary>
         /// Gets or Sets HelpTexts
         /// </summary>
         [DataMember(Name = "helpTexts", EmitDefaultValue = false)]
-        public Object HelpTexts
-        {
-            get{ return _HelpTexts;}
-            set
-            {
-                _HelpTexts = value;
-                _flagHelpTexts = true;
-            }
-        }
-        private Object _HelpTexts;
-        private bool _flagHelpTexts;
+        public Object HelpTexts { get; set; }
 
-        /// <summary>
-        /// Returns false as HelpTexts should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeHelpTexts()
-        {
-            return _flagHelpTexts;
-        }
         /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name = "customFields", EmitDefaultValue = false)]
-        public Object CustomFields
-        {
-            get{ return _CustomFields;}
-            set
-            {
-                _CustomFields = value;
-                _flagCustomFields = true;
-            }
-        }
-        private Object _CustomFields;
-        private bool _flagCustomFields;
+        public Object CustomFields { get; set; }
 
-        /// <summary>
-        /// Returns false as CustomFields should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomFields()
-        {
-            return _flagCustomFields;
-        }
         /// <summary>
         /// Gets or Sets PreviewMediaId
         /// </summary>
         [DataMember(Name = "previewMediaId", EmitDefaultValue = false)]
-        public string PreviewMediaId
-        {
-            get{ return _PreviewMediaId;}
-            set
-            {
-                _PreviewMediaId = value;
-                _flagPreviewMediaId = true;
-            }
-        }
-        private string _PreviewMediaId;
-        private bool _flagPreviewMediaId;
+        public string PreviewMediaId { get; set; }
 
-        /// <summary>
-        /// Returns false as PreviewMediaId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePreviewMediaId()
-        {
-            return _flagPreviewMediaId;
-        }
         /// <summary>
         /// Gets or Sets ParentThemeId
         /// </summary>
         [DataMember(Name = "parentThemeId", EmitDefaultValue = false)]
-        public string ParentThemeId
-        {
-            get{ return _ParentThemeId;}
-            set
-            {
-                _ParentThemeId = value;
-                _flagParentThemeId = true;
-            }
-        }
-        private string _ParentThemeId;
-        private bool _flagParentThemeId;
+        public string ParentThemeId { get; set; }
 
-        /// <summary>
-        /// Returns false as ParentThemeId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeParentThemeId()
-        {
-            return _flagParentThemeId;
-        }
         /// <summary>
         /// Gets or Sets BaseConfig
         /// </summary>
         [DataMember(Name = "baseConfig", EmitDefaultValue = false)]
-        public Object BaseConfig
-        {
-            get{ return _BaseConfig;}
-            set
-            {
-                _BaseConfig = value;
-                _flagBaseConfig = true;
-            }
-        }
-        private Object _BaseConfig;
-        private bool _flagBaseConfig;
+        public Object BaseConfig { get; set; }
 
-        /// <summary>
-        /// Returns false as BaseConfig should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeBaseConfig()
-        {
-            return _flagBaseConfig;
-        }
         /// <summary>
         /// Gets or Sets ConfigValues
         /// </summary>
         [DataMember(Name = "configValues", EmitDefaultValue = false)]
-        public Object ConfigValues
-        {
-            get{ return _ConfigValues;}
-            set
-            {
-                _ConfigValues = value;
-                _flagConfigValues = true;
-            }
-        }
-        private Object _ConfigValues;
-        private bool _flagConfigValues;
+        public Object ConfigValues { get; set; }
 
-        /// <summary>
-        /// Returns false as ConfigValues should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeConfigValues()
-        {
-            return _flagConfigValues;
-        }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", IsRequired = true, EmitDefaultValue = true)]
-        public bool Active
-        {
-            get{ return _Active;}
-            set
-            {
-                _Active = value;
-                _flagActive = true;
-            }
-        }
-        private bool _Active;
-        private bool _flagActive;
+        public bool Active { get; set; }
 
-        /// <summary>
-        /// Returns false as Active should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeActive()
-        {
-            return _flagActive;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -476,50 +194,14 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [DataMember(Name = "translated", EmitDefaultValue = false)]
-        public Object Translated
-        {
-            get{ return _Translated;}
-            set
-            {
-                _Translated = value;
-                _flagTranslated = true;
-            }
-        }
-        private Object _Translated;
-        private bool _flagTranslated;
+        public Object Translated { get; set; }
 
-        /// <summary>
-        /// Returns false as Translated should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTranslated()
-        {
-            return _flagTranslated;
-        }
         /// <summary>
         /// Gets or Sets Media
         /// </summary>
         [DataMember(Name = "media", EmitDefaultValue = false)]
-        public Media Media
-        {
-            get{ return _Media;}
-            set
-            {
-                _Media = value;
-                _flagMedia = true;
-            }
-        }
-        private Media _Media;
-        private bool _flagMedia;
+        public Media Media { get; set; }
 
-        /// <summary>
-        /// Returns false as Media should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMedia()
-        {
-            return _flagMedia;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

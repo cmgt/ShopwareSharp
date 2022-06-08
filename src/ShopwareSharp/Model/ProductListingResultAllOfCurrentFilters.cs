@@ -43,182 +43,50 @@ namespace ShopwareSharp.Model
         /// <param name="properties">properties.</param>
         public ProductListingResultAllOfCurrentFilters(string navigationId = default(string), List<Object> manufacturer = default(List<Object>), ProductListingResultAllOfCurrentFiltersPrice price = default(ProductListingResultAllOfCurrentFiltersPrice), int rating = default(int), bool shippingFree = default(bool), List<Object> properties = default(List<Object>))
         {
-            this._NavigationId = navigationId;
-            if (this.NavigationId != null)
-            {
-                this._flagNavigationId = true;
-            }
-            this._Manufacturer = manufacturer;
-            if (this.Manufacturer != null)
-            {
-                this._flagManufacturer = true;
-            }
-            this._Price = price;
-            if (this.Price != null)
-            {
-                this._flagPrice = true;
-            }
-            this._Rating = rating;
-            if (this.Rating != null)
-            {
-                this._flagRating = true;
-            }
-            this._ShippingFree = shippingFree;
-            if (this.ShippingFree != null)
-            {
-                this._flagShippingFree = true;
-            }
-            this._Properties = properties;
-            if (this.Properties != null)
-            {
-                this._flagProperties = true;
-            }
+            this.NavigationId = navigationId;
+            this.Manufacturer = manufacturer;
+            this.Price = price;
+            this.Rating = rating;
+            this.ShippingFree = shippingFree;
+            this.Properties = properties;
         }
 
         /// <summary>
         /// Gets or Sets NavigationId
         /// </summary>
         [DataMember(Name = "navigationId", EmitDefaultValue = false)]
-        public string NavigationId
-        {
-            get{ return _NavigationId;}
-            set
-            {
-                _NavigationId = value;
-                _flagNavigationId = true;
-            }
-        }
-        private string _NavigationId;
-        private bool _flagNavigationId;
+        public string NavigationId { get; set; }
 
-        /// <summary>
-        /// Returns false as NavigationId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNavigationId()
-        {
-            return _flagNavigationId;
-        }
         /// <summary>
         /// Gets or Sets Manufacturer
         /// </summary>
         [DataMember(Name = "manufacturer", EmitDefaultValue = false)]
-        public List<Object> Manufacturer
-        {
-            get{ return _Manufacturer;}
-            set
-            {
-                _Manufacturer = value;
-                _flagManufacturer = true;
-            }
-        }
-        private List<Object> _Manufacturer;
-        private bool _flagManufacturer;
+        public List<Object> Manufacturer { get; set; }
 
-        /// <summary>
-        /// Returns false as Manufacturer should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeManufacturer()
-        {
-            return _flagManufacturer;
-        }
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
         [DataMember(Name = "price", EmitDefaultValue = false)]
-        public ProductListingResultAllOfCurrentFiltersPrice Price
-        {
-            get{ return _Price;}
-            set
-            {
-                _Price = value;
-                _flagPrice = true;
-            }
-        }
-        private ProductListingResultAllOfCurrentFiltersPrice _Price;
-        private bool _flagPrice;
+        public ProductListingResultAllOfCurrentFiltersPrice Price { get; set; }
 
-        /// <summary>
-        /// Returns false as Price should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePrice()
-        {
-            return _flagPrice;
-        }
         /// <summary>
         /// Gets or Sets Rating
         /// </summary>
         [DataMember(Name = "rating", EmitDefaultValue = false)]
-        public int Rating
-        {
-            get{ return _Rating;}
-            set
-            {
-                _Rating = value;
-                _flagRating = true;
-            }
-        }
-        private int _Rating;
-        private bool _flagRating;
+        public int Rating { get; set; }
 
-        /// <summary>
-        /// Returns false as Rating should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeRating()
-        {
-            return _flagRating;
-        }
         /// <summary>
         /// Gets or Sets ShippingFree
         /// </summary>
         [DataMember(Name = "shipping-free", EmitDefaultValue = true)]
-        public bool ShippingFree
-        {
-            get{ return _ShippingFree;}
-            set
-            {
-                _ShippingFree = value;
-                _flagShippingFree = true;
-            }
-        }
-        private bool _ShippingFree;
-        private bool _flagShippingFree;
+        public bool ShippingFree { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingFree should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingFree()
-        {
-            return _flagShippingFree;
-        }
         /// <summary>
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name = "properties", EmitDefaultValue = false)]
-        public List<Object> Properties
-        {
-            get{ return _Properties;}
-            set
-            {
-                _Properties = value;
-                _flagProperties = true;
-            }
-        }
-        private List<Object> _Properties;
-        private bool _flagProperties;
+        public List<Object> Properties { get; set; }
 
-        /// <summary>
-        /// Returns false as Properties should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProperties()
-        {
-            return _flagProperties;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

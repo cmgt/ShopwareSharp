@@ -40,95 +40,29 @@ namespace ShopwareSharp.Model
         /// <param name="message">message.</param>
         public CartAllOfErrors(string key = default(string), string level = default(string), string message = default(string))
         {
-            this._Key = key;
-            if (this.Key != null)
-            {
-                this._flagKey = true;
-            }
-            this._Level = level;
-            if (this.Level != null)
-            {
-                this._flagLevel = true;
-            }
-            this._Message = message;
-            if (this.Message != null)
-            {
-                this._flagMessage = true;
-            }
+            this.Key = key;
+            this.Level = level;
+            this.Message = message;
         }
 
         /// <summary>
         /// Gets or Sets Key
         /// </summary>
         [DataMember(Name = "key", EmitDefaultValue = false)]
-        public string Key
-        {
-            get{ return _Key;}
-            set
-            {
-                _Key = value;
-                _flagKey = true;
-            }
-        }
-        private string _Key;
-        private bool _flagKey;
+        public string Key { get; set; }
 
-        /// <summary>
-        /// Returns false as Key should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeKey()
-        {
-            return _flagKey;
-        }
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
         [DataMember(Name = "level", EmitDefaultValue = false)]
-        public string Level
-        {
-            get{ return _Level;}
-            set
-            {
-                _Level = value;
-                _flagLevel = true;
-            }
-        }
-        private string _Level;
-        private bool _flagLevel;
+        public string Level { get; set; }
 
-        /// <summary>
-        /// Returns false as Level should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLevel()
-        {
-            return _flagLevel;
-        }
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name = "message", EmitDefaultValue = false)]
-        public string Message
-        {
-            get{ return _Message;}
-            set
-            {
-                _Message = value;
-                _flagMessage = true;
-            }
-        }
-        private string _Message;
-        private bool _flagMessage;
+        public string Message { get; set; }
 
-        /// <summary>
-        /// Returns false as Message should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMessage()
-        {
-            return _flagMessage;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

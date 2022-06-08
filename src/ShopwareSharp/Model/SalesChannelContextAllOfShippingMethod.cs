@@ -44,211 +44,57 @@ namespace ShopwareSharp.Model
         /// <param name="mediaId">mediaId.</param>
         public SalesChannelContextAllOfShippingMethod(string name = default(string), bool active = default(bool), string description = default(string), string trackingUrl = default(string), string deliveryTimeId = default(string), string availabilityRuleId = default(string), string mediaId = default(string))
         {
-            this._Name = name;
-            if (this.Name != null)
-            {
-                this._flagName = true;
-            }
-            this._Active = active;
-            if (this.Active != null)
-            {
-                this._flagActive = true;
-            }
-            this._Description = description;
-            if (this.Description != null)
-            {
-                this._flagDescription = true;
-            }
-            this._TrackingUrl = trackingUrl;
-            if (this.TrackingUrl != null)
-            {
-                this._flagTrackingUrl = true;
-            }
-            this._DeliveryTimeId = deliveryTimeId;
-            if (this.DeliveryTimeId != null)
-            {
-                this._flagDeliveryTimeId = true;
-            }
-            this._AvailabilityRuleId = availabilityRuleId;
-            if (this.AvailabilityRuleId != null)
-            {
-                this._flagAvailabilityRuleId = true;
-            }
-            this._MediaId = mediaId;
-            if (this.MediaId != null)
-            {
-                this._flagMediaId = true;
-            }
+            this.Name = name;
+            this.Active = active;
+            this.Description = description;
+            this.TrackingUrl = trackingUrl;
+            this.DeliveryTimeId = deliveryTimeId;
+            this.AvailabilityRuleId = availabilityRuleId;
+            this.MediaId = mediaId;
         }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", EmitDefaultValue = true)]
-        public bool Active
-        {
-            get{ return _Active;}
-            set
-            {
-                _Active = value;
-                _flagActive = true;
-            }
-        }
-        private bool _Active;
-        private bool _flagActive;
+        public bool Active { get; set; }
 
-        /// <summary>
-        /// Returns false as Active should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeActive()
-        {
-            return _flagActive;
-        }
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name = "description", EmitDefaultValue = false)]
-        public string Description
-        {
-            get{ return _Description;}
-            set
-            {
-                _Description = value;
-                _flagDescription = true;
-            }
-        }
-        private string _Description;
-        private bool _flagDescription;
+        public string Description { get; set; }
 
-        /// <summary>
-        /// Returns false as Description should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDescription()
-        {
-            return _flagDescription;
-        }
         /// <summary>
         /// Gets or Sets TrackingUrl
         /// </summary>
         [DataMember(Name = "trackingUrl", EmitDefaultValue = false)]
-        public string TrackingUrl
-        {
-            get{ return _TrackingUrl;}
-            set
-            {
-                _TrackingUrl = value;
-                _flagTrackingUrl = true;
-            }
-        }
-        private string _TrackingUrl;
-        private bool _flagTrackingUrl;
+        public string TrackingUrl { get; set; }
 
-        /// <summary>
-        /// Returns false as TrackingUrl should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTrackingUrl()
-        {
-            return _flagTrackingUrl;
-        }
         /// <summary>
         /// Gets or Sets DeliveryTimeId
         /// </summary>
         [DataMember(Name = "deliveryTimeId", EmitDefaultValue = false)]
-        public string DeliveryTimeId
-        {
-            get{ return _DeliveryTimeId;}
-            set
-            {
-                _DeliveryTimeId = value;
-                _flagDeliveryTimeId = true;
-            }
-        }
-        private string _DeliveryTimeId;
-        private bool _flagDeliveryTimeId;
+        public string DeliveryTimeId { get; set; }
 
-        /// <summary>
-        /// Returns false as DeliveryTimeId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDeliveryTimeId()
-        {
-            return _flagDeliveryTimeId;
-        }
         /// <summary>
         /// Gets or Sets AvailabilityRuleId
         /// </summary>
         [DataMember(Name = "availabilityRuleId", EmitDefaultValue = false)]
-        public string AvailabilityRuleId
-        {
-            get{ return _AvailabilityRuleId;}
-            set
-            {
-                _AvailabilityRuleId = value;
-                _flagAvailabilityRuleId = true;
-            }
-        }
-        private string _AvailabilityRuleId;
-        private bool _flagAvailabilityRuleId;
+        public string AvailabilityRuleId { get; set; }
 
-        /// <summary>
-        /// Returns false as AvailabilityRuleId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAvailabilityRuleId()
-        {
-            return _flagAvailabilityRuleId;
-        }
         /// <summary>
         /// Gets or Sets MediaId
         /// </summary>
         [DataMember(Name = "mediaId", EmitDefaultValue = false)]
-        public string MediaId
-        {
-            get{ return _MediaId;}
-            set
-            {
-                _MediaId = value;
-                _flagMediaId = true;
-            }
-        }
-        private string _MediaId;
-        private bool _flagMediaId;
+        public string MediaId { get; set; }
 
-        /// <summary>
-        /// Returns false as MediaId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMediaId()
-        {
-            return _flagMediaId;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

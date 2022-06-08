@@ -45,47 +45,17 @@ namespace ShopwareSharp.Model
         /// <param name="toStateMachineState">toStateMachineState.</param>
         public StateMachineHistory(string id = default(string), StateMachineState fromStateMachineState = default(StateMachineState), StateMachineState toStateMachineState = default(StateMachineState))
         {
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._FromStateMachineState = fromStateMachineState;
-            if (this.FromStateMachineState != null)
-            {
-                this._flagFromStateMachineState = true;
-            }
-            this._ToStateMachineState = toStateMachineState;
-            if (this.ToStateMachineState != null)
-            {
-                this._flagToStateMachineState = true;
-            }
+            this.Id = id;
+            this.FromStateMachineState = fromStateMachineState;
+            this.ToStateMachineState = toStateMachineState;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
@@ -118,50 +88,14 @@ namespace ShopwareSharp.Model
         /// Gets or Sets FromStateMachineState
         /// </summary>
         [DataMember(Name = "fromStateMachineState", EmitDefaultValue = false)]
-        public StateMachineState FromStateMachineState
-        {
-            get{ return _FromStateMachineState;}
-            set
-            {
-                _FromStateMachineState = value;
-                _flagFromStateMachineState = true;
-            }
-        }
-        private StateMachineState _FromStateMachineState;
-        private bool _flagFromStateMachineState;
+        public StateMachineState FromStateMachineState { get; set; }
 
-        /// <summary>
-        /// Returns false as FromStateMachineState should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFromStateMachineState()
-        {
-            return _flagFromStateMachineState;
-        }
         /// <summary>
         /// Gets or Sets ToStateMachineState
         /// </summary>
         [DataMember(Name = "toStateMachineState", EmitDefaultValue = false)]
-        public StateMachineState ToStateMachineState
-        {
-            get{ return _ToStateMachineState;}
-            set
-            {
-                _ToStateMachineState = value;
-                _flagToStateMachineState = true;
-            }
-        }
-        private StateMachineState _ToStateMachineState;
-        private bool _flagToStateMachineState;
+        public StateMachineState ToStateMachineState { get; set; }
 
-        /// <summary>
-        /// Returns false as ToStateMachineState should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeToStateMachineState()
-        {
-            return _flagToStateMachineState;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -50,17 +50,9 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("orderId is a required property for HandlePaymentMethodRequest and cannot be null");
             }
-            this._OrderId = orderId;
-            this._FinishUrl = finishUrl;
-            if (this.FinishUrl != null)
-            {
-                this._flagFinishUrl = true;
-            }
-            this._ErrorUrl = errorUrl;
-            if (this.ErrorUrl != null)
-            {
-                this._flagErrorUrl = true;
-            }
+            this.OrderId = orderId;
+            this.FinishUrl = finishUrl;
+            this.ErrorUrl = errorUrl;
         }
 
         /// <summary>
@@ -68,76 +60,22 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Identifier of an order</value>
         [DataMember(Name = "orderId", IsRequired = true, EmitDefaultValue = false)]
-        public string OrderId
-        {
-            get{ return _OrderId;}
-            set
-            {
-                _OrderId = value;
-                _flagOrderId = true;
-            }
-        }
-        private string _OrderId;
-        private bool _flagOrderId;
+        public string OrderId { get; set; }
 
-        /// <summary>
-        /// Returns false as OrderId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrderId()
-        {
-            return _flagOrderId;
-        }
         /// <summary>
         /// URL to which the client should be redirected after successful payment
         /// </summary>
         /// <value>URL to which the client should be redirected after successful payment</value>
         [DataMember(Name = "finishUrl", EmitDefaultValue = false)]
-        public string FinishUrl
-        {
-            get{ return _FinishUrl;}
-            set
-            {
-                _FinishUrl = value;
-                _flagFinishUrl = true;
-            }
-        }
-        private string _FinishUrl;
-        private bool _flagFinishUrl;
+        public string FinishUrl { get; set; }
 
-        /// <summary>
-        /// Returns false as FinishUrl should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFinishUrl()
-        {
-            return _flagFinishUrl;
-        }
         /// <summary>
         /// URL to which the client should be redirected after erroneous payment
         /// </summary>
         /// <value>URL to which the client should be redirected after erroneous payment</value>
         [DataMember(Name = "errorUrl", EmitDefaultValue = false)]
-        public string ErrorUrl
-        {
-            get{ return _ErrorUrl;}
-            set
-            {
-                _ErrorUrl = value;
-                _flagErrorUrl = true;
-            }
-        }
-        private string _ErrorUrl;
-        private bool _flagErrorUrl;
+        public string ErrorUrl { get; set; }
 
-        /// <summary>
-        /// Returns false as ErrorUrl should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeErrorUrl()
-        {
-            return _flagErrorUrl;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

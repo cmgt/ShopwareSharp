@@ -40,95 +40,29 @@ namespace ShopwareSharp.Model
         /// <param name="total">total.</param>
         public CrossSellingElementCollectionInner(CrossSellingElementCollectionInnerCrossSelling crossSelling = default(CrossSellingElementCollectionInnerCrossSelling), List<Product> products = default(List<Product>), int total = default(int))
         {
-            this._CrossSelling = crossSelling;
-            if (this.CrossSelling != null)
-            {
-                this._flagCrossSelling = true;
-            }
-            this._Products = products;
-            if (this.Products != null)
-            {
-                this._flagProducts = true;
-            }
-            this._Total = total;
-            if (this.Total != null)
-            {
-                this._flagTotal = true;
-            }
+            this.CrossSelling = crossSelling;
+            this.Products = products;
+            this.Total = total;
         }
 
         /// <summary>
         /// Gets or Sets CrossSelling
         /// </summary>
         [DataMember(Name = "crossSelling", EmitDefaultValue = false)]
-        public CrossSellingElementCollectionInnerCrossSelling CrossSelling
-        {
-            get{ return _CrossSelling;}
-            set
-            {
-                _CrossSelling = value;
-                _flagCrossSelling = true;
-            }
-        }
-        private CrossSellingElementCollectionInnerCrossSelling _CrossSelling;
-        private bool _flagCrossSelling;
+        public CrossSellingElementCollectionInnerCrossSelling CrossSelling { get; set; }
 
-        /// <summary>
-        /// Returns false as CrossSelling should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCrossSelling()
-        {
-            return _flagCrossSelling;
-        }
         /// <summary>
         /// Gets or Sets Products
         /// </summary>
         [DataMember(Name = "products", EmitDefaultValue = false)]
-        public List<Product> Products
-        {
-            get{ return _Products;}
-            set
-            {
-                _Products = value;
-                _flagProducts = true;
-            }
-        }
-        private List<Product> _Products;
-        private bool _flagProducts;
+        public List<Product> Products { get; set; }
 
-        /// <summary>
-        /// Returns false as Products should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeProducts()
-        {
-            return _flagProducts;
-        }
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name = "total", EmitDefaultValue = false)]
-        public int Total
-        {
-            get{ return _Total;}
-            set
-            {
-                _Total = value;
-                _flagTotal = true;
-            }
-        }
-        private int _Total;
-        private bool _flagTotal;
+        public int Total { get; set; }
 
-        /// <summary>
-        /// Returns false as Total should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTotal()
-        {
-            return _flagTotal;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

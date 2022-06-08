@@ -38,11 +38,7 @@ namespace ShopwareSharp.Model
         /// <param name="apiAlias">Alias which can be used to restrict response fields. For more information see [includes](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#includes-apialias)..</param>
         public ArrayStruct(string apiAlias = default(string))
         {
-            this._ApiAlias = apiAlias;
-            if (this.ApiAlias != null)
-            {
-                this._flagApiAlias = true;
-            }
+            this.ApiAlias = apiAlias;
         }
 
         /// <summary>
@@ -50,26 +46,8 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Alias which can be used to restrict response fields. For more information see [includes](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#includes-apialias).</value>
         [DataMember(Name = "apiAlias", EmitDefaultValue = false)]
-        public string ApiAlias
-        {
-            get{ return _ApiAlias;}
-            set
-            {
-                _ApiAlias = value;
-                _flagApiAlias = true;
-            }
-        }
-        private string _ApiAlias;
-        private bool _flagApiAlias;
+        public string ApiAlias { get; set; }
 
-        /// <summary>
-        /// Returns false as ApiAlias should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeApiAlias()
-        {
-            return _flagApiAlias;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

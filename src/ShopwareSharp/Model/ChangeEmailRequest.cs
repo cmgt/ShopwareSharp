@@ -50,19 +50,19 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("email is a required property for ChangeEmailRequest and cannot be null");
             }
-            this._Email = email;
+            this.Email = email;
             // to ensure "emailConfirmation" is required (not null)
             if (emailConfirmation == null)
             {
                 throw new ArgumentNullException("emailConfirmation is a required property for ChangeEmailRequest and cannot be null");
             }
-            this._EmailConfirmation = emailConfirmation;
+            this.EmailConfirmation = emailConfirmation;
             // to ensure "password" is required (not null)
             if (password == null)
             {
                 throw new ArgumentNullException("password is a required property for ChangeEmailRequest and cannot be null");
             }
-            this._Password = password;
+            this.Password = password;
         }
 
         /// <summary>
@@ -70,76 +70,22 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>New email address. Has to be unique amongst all customers</value>
         [DataMember(Name = "email", IsRequired = true, EmitDefaultValue = false)]
-        public string Email
-        {
-            get{ return _Email;}
-            set
-            {
-                _Email = value;
-                _flagEmail = true;
-            }
-        }
-        private string _Email;
-        private bool _flagEmail;
+        public string Email { get; set; }
 
-        /// <summary>
-        /// Returns false as Email should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeEmail()
-        {
-            return _flagEmail;
-        }
         /// <summary>
         /// Confirmation of the new email address.
         /// </summary>
         /// <value>Confirmation of the new email address.</value>
         [DataMember(Name = "emailConfirmation", IsRequired = true, EmitDefaultValue = false)]
-        public string EmailConfirmation
-        {
-            get{ return _EmailConfirmation;}
-            set
-            {
-                _EmailConfirmation = value;
-                _flagEmailConfirmation = true;
-            }
-        }
-        private string _EmailConfirmation;
-        private bool _flagEmailConfirmation;
+        public string EmailConfirmation { get; set; }
 
-        /// <summary>
-        /// Returns false as EmailConfirmation should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeEmailConfirmation()
-        {
-            return _flagEmailConfirmation;
-        }
         /// <summary>
         /// Customer&#39;s current password
         /// </summary>
         /// <value>Customer&#39;s current password</value>
         [DataMember(Name = "password", IsRequired = true, EmitDefaultValue = false)]
-        public string Password
-        {
-            get{ return _Password;}
-            set
-            {
-                _Password = value;
-                _flagPassword = true;
-            }
-        }
-        private string _Password;
-        private bool _flagPassword;
+        public string Password { get; set; }
 
-        /// <summary>
-        /// Returns false as Password should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePassword()
-        {
-            return _flagPassword;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

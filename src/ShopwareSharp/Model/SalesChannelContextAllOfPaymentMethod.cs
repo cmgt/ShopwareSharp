@@ -46,269 +46,71 @@ namespace ShopwareSharp.Model
         /// <param name="formattedHandlerIdentifier">formattedHandlerIdentifier.</param>
         public SalesChannelContextAllOfPaymentMethod(string pluginId = default(string), string handlerIdentifier = default(string), string name = default(string), string description = default(string), int position = default(int), bool active = default(bool), string availabilityRuleId = default(string), string mediaId = default(string), string formattedHandlerIdentifier = default(string))
         {
-            this._PluginId = pluginId;
-            if (this.PluginId != null)
-            {
-                this._flagPluginId = true;
-            }
-            this._HandlerIdentifier = handlerIdentifier;
-            if (this.HandlerIdentifier != null)
-            {
-                this._flagHandlerIdentifier = true;
-            }
-            this._Name = name;
-            if (this.Name != null)
-            {
-                this._flagName = true;
-            }
-            this._Description = description;
-            if (this.Description != null)
-            {
-                this._flagDescription = true;
-            }
-            this._Position = position;
-            if (this.Position != null)
-            {
-                this._flagPosition = true;
-            }
-            this._Active = active;
-            if (this.Active != null)
-            {
-                this._flagActive = true;
-            }
-            this._AvailabilityRuleId = availabilityRuleId;
-            if (this.AvailabilityRuleId != null)
-            {
-                this._flagAvailabilityRuleId = true;
-            }
-            this._MediaId = mediaId;
-            if (this.MediaId != null)
-            {
-                this._flagMediaId = true;
-            }
-            this._FormattedHandlerIdentifier = formattedHandlerIdentifier;
-            if (this.FormattedHandlerIdentifier != null)
-            {
-                this._flagFormattedHandlerIdentifier = true;
-            }
+            this.PluginId = pluginId;
+            this.HandlerIdentifier = handlerIdentifier;
+            this.Name = name;
+            this.Description = description;
+            this.Position = position;
+            this.Active = active;
+            this.AvailabilityRuleId = availabilityRuleId;
+            this.MediaId = mediaId;
+            this.FormattedHandlerIdentifier = formattedHandlerIdentifier;
         }
 
         /// <summary>
         /// Gets or Sets PluginId
         /// </summary>
         [DataMember(Name = "pluginId", EmitDefaultValue = false)]
-        public string PluginId
-        {
-            get{ return _PluginId;}
-            set
-            {
-                _PluginId = value;
-                _flagPluginId = true;
-            }
-        }
-        private string _PluginId;
-        private bool _flagPluginId;
+        public string PluginId { get; set; }
 
-        /// <summary>
-        /// Returns false as PluginId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePluginId()
-        {
-            return _flagPluginId;
-        }
         /// <summary>
         /// Gets or Sets HandlerIdentifier
         /// </summary>
         [DataMember(Name = "handlerIdentifier", EmitDefaultValue = false)]
-        public string HandlerIdentifier
-        {
-            get{ return _HandlerIdentifier;}
-            set
-            {
-                _HandlerIdentifier = value;
-                _flagHandlerIdentifier = true;
-            }
-        }
-        private string _HandlerIdentifier;
-        private bool _flagHandlerIdentifier;
+        public string HandlerIdentifier { get; set; }
 
-        /// <summary>
-        /// Returns false as HandlerIdentifier should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeHandlerIdentifier()
-        {
-            return _flagHandlerIdentifier;
-        }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name = "description", EmitDefaultValue = false)]
-        public string Description
-        {
-            get{ return _Description;}
-            set
-            {
-                _Description = value;
-                _flagDescription = true;
-            }
-        }
-        private string _Description;
-        private bool _flagDescription;
+        public string Description { get; set; }
 
-        /// <summary>
-        /// Returns false as Description should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDescription()
-        {
-            return _flagDescription;
-        }
         /// <summary>
         /// Gets or Sets Position
         /// </summary>
         [DataMember(Name = "position", EmitDefaultValue = false)]
-        public int Position
-        {
-            get{ return _Position;}
-            set
-            {
-                _Position = value;
-                _flagPosition = true;
-            }
-        }
-        private int _Position;
-        private bool _flagPosition;
+        public int Position { get; set; }
 
-        /// <summary>
-        /// Returns false as Position should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePosition()
-        {
-            return _flagPosition;
-        }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name = "active", EmitDefaultValue = true)]
-        public bool Active
-        {
-            get{ return _Active;}
-            set
-            {
-                _Active = value;
-                _flagActive = true;
-            }
-        }
-        private bool _Active;
-        private bool _flagActive;
+        public bool Active { get; set; }
 
-        /// <summary>
-        /// Returns false as Active should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeActive()
-        {
-            return _flagActive;
-        }
         /// <summary>
         /// Gets or Sets AvailabilityRuleId
         /// </summary>
         [DataMember(Name = "availabilityRuleId", EmitDefaultValue = false)]
-        public string AvailabilityRuleId
-        {
-            get{ return _AvailabilityRuleId;}
-            set
-            {
-                _AvailabilityRuleId = value;
-                _flagAvailabilityRuleId = true;
-            }
-        }
-        private string _AvailabilityRuleId;
-        private bool _flagAvailabilityRuleId;
+        public string AvailabilityRuleId { get; set; }
 
-        /// <summary>
-        /// Returns false as AvailabilityRuleId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAvailabilityRuleId()
-        {
-            return _flagAvailabilityRuleId;
-        }
         /// <summary>
         /// Gets or Sets MediaId
         /// </summary>
         [DataMember(Name = "mediaId", EmitDefaultValue = false)]
-        public string MediaId
-        {
-            get{ return _MediaId;}
-            set
-            {
-                _MediaId = value;
-                _flagMediaId = true;
-            }
-        }
-        private string _MediaId;
-        private bool _flagMediaId;
+        public string MediaId { get; set; }
 
-        /// <summary>
-        /// Returns false as MediaId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMediaId()
-        {
-            return _flagMediaId;
-        }
         /// <summary>
         /// Gets or Sets FormattedHandlerIdentifier
         /// </summary>
         [DataMember(Name = "formattedHandlerIdentifier", EmitDefaultValue = false)]
-        public string FormattedHandlerIdentifier
-        {
-            get{ return _FormattedHandlerIdentifier;}
-            set
-            {
-                _FormattedHandlerIdentifier = value;
-                _flagFormattedHandlerIdentifier = true;
-            }
-        }
-        private string _FormattedHandlerIdentifier;
-        private bool _flagFormattedHandlerIdentifier;
+        public string FormattedHandlerIdentifier { get; set; }
 
-        /// <summary>
-        /// Returns false as FormattedHandlerIdentifier should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFormattedHandlerIdentifier()
-        {
-            return _flagFormattedHandlerIdentifier;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

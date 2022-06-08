@@ -39,16 +39,8 @@ namespace ShopwareSharp.Model
         /// <param name="related">related.</param>
         public RelationshipLinks(RelationshipLinksSelf self = default(RelationshipLinksSelf), Link related = default(Link)) : base()
         {
-            this._Self = self;
-            if (this.Self != null)
-            {
-                this._flagSelf = true;
-            }
-            this._Related = related;
-            if (this.Related != null)
-            {
-                this._flagRelated = true;
-            }
+            this.Self = self;
+            this.Related = related;
             this.AdditionalProperties = new Dictionary<string, object>();
         }
 
@@ -56,50 +48,14 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Self
         /// </summary>
         [DataMember(Name = "self", EmitDefaultValue = false)]
-        public RelationshipLinksSelf Self
-        {
-            get{ return _Self;}
-            set
-            {
-                _Self = value;
-                _flagSelf = true;
-            }
-        }
-        private RelationshipLinksSelf _Self;
-        private bool _flagSelf;
+        public RelationshipLinksSelf Self { get; set; }
 
-        /// <summary>
-        /// Returns false as Self should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSelf()
-        {
-            return _flagSelf;
-        }
         /// <summary>
         /// Gets or Sets Related
         /// </summary>
         [DataMember(Name = "related", EmitDefaultValue = false)]
-        public Link Related
-        {
-            get{ return _Related;}
-            set
-            {
-                _Related = value;
-                _flagRelated = true;
-            }
-        }
-        private Link _Related;
-        private bool _flagRelated;
+        public Link Related { get; set; }
 
-        /// <summary>
-        /// Returns false as Related should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeRelated()
-        {
-            return _flagRelated;
-        }
         /// <summary>
         /// Gets or Sets additional properties
         /// </summary>

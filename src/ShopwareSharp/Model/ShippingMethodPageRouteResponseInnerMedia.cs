@@ -51,414 +51,106 @@ namespace ShopwareSharp.Model
         /// <param name="thumbnailsRo">thumbnailsRo.</param>
         public ShippingMethodPageRouteResponseInnerMedia(string userId = default(string), string mimeType = default(string), string fileExtension = default(string), int fileSize = default(int), string title = default(string), string metaDataRaw = default(string), string mediaTypeRaw = default(string), DateTime uploadedAt = default(DateTime), string alt = default(string), string url = default(string), string fileName = default(string), string mediaFolderId = default(string), bool _private = default(bool), string thumbnailsRo = default(string))
         {
-            this._UserId = userId;
-            if (this.UserId != null)
-            {
-                this._flagUserId = true;
-            }
-            this._MimeType = mimeType;
-            if (this.MimeType != null)
-            {
-                this._flagMimeType = true;
-            }
-            this._FileExtension = fileExtension;
-            if (this.FileExtension != null)
-            {
-                this._flagFileExtension = true;
-            }
-            this._FileSize = fileSize;
-            if (this.FileSize != null)
-            {
-                this._flagFileSize = true;
-            }
-            this._Title = title;
-            if (this.Title != null)
-            {
-                this._flagTitle = true;
-            }
-            this._MetaDataRaw = metaDataRaw;
-            if (this.MetaDataRaw != null)
-            {
-                this._flagMetaDataRaw = true;
-            }
-            this._MediaTypeRaw = mediaTypeRaw;
-            if (this.MediaTypeRaw != null)
-            {
-                this._flagMediaTypeRaw = true;
-            }
-            this._UploadedAt = uploadedAt;
-            if (this.UploadedAt != null)
-            {
-                this._flagUploadedAt = true;
-            }
-            this._Alt = alt;
-            if (this.Alt != null)
-            {
-                this._flagAlt = true;
-            }
-            this._Url = url;
-            if (this.Url != null)
-            {
-                this._flagUrl = true;
-            }
-            this._FileName = fileName;
-            if (this.FileName != null)
-            {
-                this._flagFileName = true;
-            }
-            this._MediaFolderId = mediaFolderId;
-            if (this.MediaFolderId != null)
-            {
-                this._flagMediaFolderId = true;
-            }
-            this._Private = _private;
-            if (this.Private != null)
-            {
-                this._flagPrivate = true;
-            }
-            this._ThumbnailsRo = thumbnailsRo;
-            if (this.ThumbnailsRo != null)
-            {
-                this._flagThumbnailsRo = true;
-            }
+            this.UserId = userId;
+            this.MimeType = mimeType;
+            this.FileExtension = fileExtension;
+            this.FileSize = fileSize;
+            this.Title = title;
+            this.MetaDataRaw = metaDataRaw;
+            this.MediaTypeRaw = mediaTypeRaw;
+            this.UploadedAt = uploadedAt;
+            this.Alt = alt;
+            this.Url = url;
+            this.FileName = fileName;
+            this.MediaFolderId = mediaFolderId;
+            this.Private = _private;
+            this.ThumbnailsRo = thumbnailsRo;
         }
 
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name = "userId", EmitDefaultValue = false)]
-        public string UserId
-        {
-            get{ return _UserId;}
-            set
-            {
-                _UserId = value;
-                _flagUserId = true;
-            }
-        }
-        private string _UserId;
-        private bool _flagUserId;
+        public string UserId { get; set; }
 
-        /// <summary>
-        /// Returns false as UserId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUserId()
-        {
-            return _flagUserId;
-        }
         /// <summary>
         /// Gets or Sets MimeType
         /// </summary>
         [DataMember(Name = "mimeType", EmitDefaultValue = false)]
-        public string MimeType
-        {
-            get{ return _MimeType;}
-            set
-            {
-                _MimeType = value;
-                _flagMimeType = true;
-            }
-        }
-        private string _MimeType;
-        private bool _flagMimeType;
+        public string MimeType { get; set; }
 
-        /// <summary>
-        /// Returns false as MimeType should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMimeType()
-        {
-            return _flagMimeType;
-        }
         /// <summary>
         /// Gets or Sets FileExtension
         /// </summary>
         [DataMember(Name = "fileExtension", EmitDefaultValue = false)]
-        public string FileExtension
-        {
-            get{ return _FileExtension;}
-            set
-            {
-                _FileExtension = value;
-                _flagFileExtension = true;
-            }
-        }
-        private string _FileExtension;
-        private bool _flagFileExtension;
+        public string FileExtension { get; set; }
 
-        /// <summary>
-        /// Returns false as FileExtension should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFileExtension()
-        {
-            return _flagFileExtension;
-        }
         /// <summary>
         /// Gets or Sets FileSize
         /// </summary>
         [DataMember(Name = "fileSize", EmitDefaultValue = false)]
-        public int FileSize
-        {
-            get{ return _FileSize;}
-            set
-            {
-                _FileSize = value;
-                _flagFileSize = true;
-            }
-        }
-        private int _FileSize;
-        private bool _flagFileSize;
+        public int FileSize { get; set; }
 
-        /// <summary>
-        /// Returns false as FileSize should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFileSize()
-        {
-            return _flagFileSize;
-        }
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name = "title", EmitDefaultValue = false)]
-        public string Title
-        {
-            get{ return _Title;}
-            set
-            {
-                _Title = value;
-                _flagTitle = true;
-            }
-        }
-        private string _Title;
-        private bool _flagTitle;
+        public string Title { get; set; }
 
-        /// <summary>
-        /// Returns false as Title should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTitle()
-        {
-            return _flagTitle;
-        }
         /// <summary>
         /// Gets or Sets MetaDataRaw
         /// </summary>
         [DataMember(Name = "metaDataRaw", EmitDefaultValue = false)]
-        public string MetaDataRaw
-        {
-            get{ return _MetaDataRaw;}
-            set
-            {
-                _MetaDataRaw = value;
-                _flagMetaDataRaw = true;
-            }
-        }
-        private string _MetaDataRaw;
-        private bool _flagMetaDataRaw;
+        public string MetaDataRaw { get; set; }
 
-        /// <summary>
-        /// Returns false as MetaDataRaw should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMetaDataRaw()
-        {
-            return _flagMetaDataRaw;
-        }
         /// <summary>
         /// Gets or Sets MediaTypeRaw
         /// </summary>
         [DataMember(Name = "mediaTypeRaw", EmitDefaultValue = false)]
-        public string MediaTypeRaw
-        {
-            get{ return _MediaTypeRaw;}
-            set
-            {
-                _MediaTypeRaw = value;
-                _flagMediaTypeRaw = true;
-            }
-        }
-        private string _MediaTypeRaw;
-        private bool _flagMediaTypeRaw;
+        public string MediaTypeRaw { get; set; }
 
-        /// <summary>
-        /// Returns false as MediaTypeRaw should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMediaTypeRaw()
-        {
-            return _flagMediaTypeRaw;
-        }
         /// <summary>
         /// Gets or Sets UploadedAt
         /// </summary>
         [DataMember(Name = "uploadedAt", EmitDefaultValue = false)]
-        public DateTime UploadedAt
-        {
-            get{ return _UploadedAt;}
-            set
-            {
-                _UploadedAt = value;
-                _flagUploadedAt = true;
-            }
-        }
-        private DateTime _UploadedAt;
-        private bool _flagUploadedAt;
+        public DateTime UploadedAt { get; set; }
 
-        /// <summary>
-        /// Returns false as UploadedAt should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUploadedAt()
-        {
-            return _flagUploadedAt;
-        }
         /// <summary>
         /// Gets or Sets Alt
         /// </summary>
         [DataMember(Name = "alt", EmitDefaultValue = false)]
-        public string Alt
-        {
-            get{ return _Alt;}
-            set
-            {
-                _Alt = value;
-                _flagAlt = true;
-            }
-        }
-        private string _Alt;
-        private bool _flagAlt;
+        public string Alt { get; set; }
 
-        /// <summary>
-        /// Returns false as Alt should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeAlt()
-        {
-            return _flagAlt;
-        }
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
         [DataMember(Name = "url", EmitDefaultValue = false)]
-        public string Url
-        {
-            get{ return _Url;}
-            set
-            {
-                _Url = value;
-                _flagUrl = true;
-            }
-        }
-        private string _Url;
-        private bool _flagUrl;
+        public string Url { get; set; }
 
-        /// <summary>
-        /// Returns false as Url should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeUrl()
-        {
-            return _flagUrl;
-        }
         /// <summary>
         /// Gets or Sets FileName
         /// </summary>
         [DataMember(Name = "fileName", EmitDefaultValue = false)]
-        public string FileName
-        {
-            get{ return _FileName;}
-            set
-            {
-                _FileName = value;
-                _flagFileName = true;
-            }
-        }
-        private string _FileName;
-        private bool _flagFileName;
+        public string FileName { get; set; }
 
-        /// <summary>
-        /// Returns false as FileName should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFileName()
-        {
-            return _flagFileName;
-        }
         /// <summary>
         /// Gets or Sets MediaFolderId
         /// </summary>
         [DataMember(Name = "mediaFolderId", EmitDefaultValue = false)]
-        public string MediaFolderId
-        {
-            get{ return _MediaFolderId;}
-            set
-            {
-                _MediaFolderId = value;
-                _flagMediaFolderId = true;
-            }
-        }
-        private string _MediaFolderId;
-        private bool _flagMediaFolderId;
+        public string MediaFolderId { get; set; }
 
-        /// <summary>
-        /// Returns false as MediaFolderId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMediaFolderId()
-        {
-            return _flagMediaFolderId;
-        }
         /// <summary>
         /// Gets or Sets Private
         /// </summary>
         [DataMember(Name = "private", EmitDefaultValue = true)]
-        public bool Private
-        {
-            get{ return _Private;}
-            set
-            {
-                _Private = value;
-                _flagPrivate = true;
-            }
-        }
-        private bool _Private;
-        private bool _flagPrivate;
+        public bool Private { get; set; }
 
-        /// <summary>
-        /// Returns false as Private should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePrivate()
-        {
-            return _flagPrivate;
-        }
         /// <summary>
         /// Gets or Sets ThumbnailsRo
         /// </summary>
         [DataMember(Name = "thumbnailsRo", EmitDefaultValue = false)]
-        public string ThumbnailsRo
-        {
-            get{ return _ThumbnailsRo;}
-            set
-            {
-                _ThumbnailsRo = value;
-                _flagThumbnailsRo = true;
-            }
-        }
-        private string _ThumbnailsRo;
-        private bool _flagThumbnailsRo;
+        public string ThumbnailsRo { get; set; }
 
-        /// <summary>
-        /// Returns false as ThumbnailsRo should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeThumbnailsRo()
-        {
-            return _flagThumbnailsRo;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -50,19 +50,19 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("hash is a required property for RecoveryPasswordRequest and cannot be null");
             }
-            this._Hash = hash;
+            this.Hash = hash;
             // to ensure "newPassword" is required (not null)
             if (newPassword == null)
             {
                 throw new ArgumentNullException("newPassword is a required property for RecoveryPasswordRequest and cannot be null");
             }
-            this._NewPassword = newPassword;
+            this.NewPassword = newPassword;
             // to ensure "newPasswordConfirm" is required (not null)
             if (newPasswordConfirm == null)
             {
                 throw new ArgumentNullException("newPasswordConfirm is a required property for RecoveryPasswordRequest and cannot be null");
             }
-            this._NewPasswordConfirm = newPasswordConfirm;
+            this.NewPasswordConfirm = newPasswordConfirm;
         }
 
         /// <summary>
@@ -70,76 +70,22 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Parameter from the link in the confirmation mail sent in Step 1</value>
         [DataMember(Name = "hash", IsRequired = true, EmitDefaultValue = false)]
-        public string Hash
-        {
-            get{ return _Hash;}
-            set
-            {
-                _Hash = value;
-                _flagHash = true;
-            }
-        }
-        private string _Hash;
-        private bool _flagHash;
+        public string Hash { get; set; }
 
-        /// <summary>
-        /// Returns false as Hash should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeHash()
-        {
-            return _flagHash;
-        }
         /// <summary>
         /// New password for the customer
         /// </summary>
         /// <value>New password for the customer</value>
         [DataMember(Name = "newPassword", IsRequired = true, EmitDefaultValue = false)]
-        public string NewPassword
-        {
-            get{ return _NewPassword;}
-            set
-            {
-                _NewPassword = value;
-                _flagNewPassword = true;
-            }
-        }
-        private string _NewPassword;
-        private bool _flagNewPassword;
+        public string NewPassword { get; set; }
 
-        /// <summary>
-        /// Returns false as NewPassword should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNewPassword()
-        {
-            return _flagNewPassword;
-        }
         /// <summary>
         /// Confirmation of the new password
         /// </summary>
         /// <value>Confirmation of the new password</value>
         [DataMember(Name = "newPasswordConfirm", IsRequired = true, EmitDefaultValue = false)]
-        public string NewPasswordConfirm
-        {
-            get{ return _NewPasswordConfirm;}
-            set
-            {
-                _NewPasswordConfirm = value;
-                _flagNewPasswordConfirm = true;
-            }
-        }
-        private string _NewPasswordConfirm;
-        private bool _flagNewPasswordConfirm;
+        public string NewPasswordConfirm { get; set; }
 
-        /// <summary>
-        /// Returns false as NewPasswordConfirm should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNewPasswordConfirm()
-        {
-            return _flagNewPasswordConfirm;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

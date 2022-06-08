@@ -52,150 +52,48 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("mediaId is a required property for MediaTag and cannot be null");
             }
-            this._MediaId = mediaId;
+            this.MediaId = mediaId;
             // to ensure "tagId" is required (not null)
             if (tagId == null)
             {
                 throw new ArgumentNullException("tagId is a required property for MediaTag and cannot be null");
             }
-            this._TagId = tagId;
-            this._Id = id;
-            if (this.Id != null)
-            {
-                this._flagId = true;
-            }
-            this._Media = media;
-            if (this.Media != null)
-            {
-                this._flagMedia = true;
-            }
-            this._Tag = tag;
-            if (this.Tag != null)
-            {
-                this._flagTag = true;
-            }
+            this.TagId = tagId;
+            this.Id = id;
+            this.Media = media;
+            this.Tag = tag;
         }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id
-        {
-            get{ return _Id;}
-            set
-            {
-                _Id = value;
-                _flagId = true;
-            }
-        }
-        private string _Id;
-        private bool _flagId;
+        public string Id { get; set; }
 
-        /// <summary>
-        /// Returns false as Id should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeId()
-        {
-            return _flagId;
-        }
         /// <summary>
         /// Gets or Sets MediaId
         /// </summary>
         [DataMember(Name = "mediaId", IsRequired = true, EmitDefaultValue = false)]
-        public string MediaId
-        {
-            get{ return _MediaId;}
-            set
-            {
-                _MediaId = value;
-                _flagMediaId = true;
-            }
-        }
-        private string _MediaId;
-        private bool _flagMediaId;
+        public string MediaId { get; set; }
 
-        /// <summary>
-        /// Returns false as MediaId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMediaId()
-        {
-            return _flagMediaId;
-        }
         /// <summary>
         /// Gets or Sets TagId
         /// </summary>
         [DataMember(Name = "tagId", IsRequired = true, EmitDefaultValue = false)]
-        public string TagId
-        {
-            get{ return _TagId;}
-            set
-            {
-                _TagId = value;
-                _flagTagId = true;
-            }
-        }
-        private string _TagId;
-        private bool _flagTagId;
+        public string TagId { get; set; }
 
-        /// <summary>
-        /// Returns false as TagId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTagId()
-        {
-            return _flagTagId;
-        }
         /// <summary>
         /// Gets or Sets Media
         /// </summary>
         [DataMember(Name = "media", EmitDefaultValue = false)]
-        public Media Media
-        {
-            get{ return _Media;}
-            set
-            {
-                _Media = value;
-                _flagMedia = true;
-            }
-        }
-        private Media _Media;
-        private bool _flagMedia;
+        public Media Media { get; set; }
 
-        /// <summary>
-        /// Returns false as Media should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMedia()
-        {
-            return _flagMedia;
-        }
         /// <summary>
         /// Gets or Sets Tag
         /// </summary>
         [DataMember(Name = "tag", EmitDefaultValue = false)]
-        public Tag Tag
-        {
-            get{ return _Tag;}
-            set
-            {
-                _Tag = value;
-                _flagTag = true;
-            }
-        }
-        private Tag _Tag;
-        private bool _flagTag;
+        public Tag Tag { get; set; }
 
-        /// <summary>
-        /// Returns false as Tag should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTag()
-        {
-            return _flagTag;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

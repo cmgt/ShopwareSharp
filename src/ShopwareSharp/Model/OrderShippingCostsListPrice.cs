@@ -40,95 +40,29 @@ namespace ShopwareSharp.Model
         /// <param name="percentage">percentage.</param>
         public OrderShippingCostsListPrice(float price = default(float), float discount = default(float), float percentage = default(float))
         {
-            this._Price = price;
-            if (this.Price != null)
-            {
-                this._flagPrice = true;
-            }
-            this._Discount = discount;
-            if (this.Discount != null)
-            {
-                this._flagDiscount = true;
-            }
-            this._Percentage = percentage;
-            if (this.Percentage != null)
-            {
-                this._flagPercentage = true;
-            }
+            this.Price = price;
+            this.Discount = discount;
+            this.Percentage = percentage;
         }
 
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
         [DataMember(Name = "price", EmitDefaultValue = false)]
-        public float Price
-        {
-            get{ return _Price;}
-            set
-            {
-                _Price = value;
-                _flagPrice = true;
-            }
-        }
-        private float _Price;
-        private bool _flagPrice;
+        public float Price { get; set; }
 
-        /// <summary>
-        /// Returns false as Price should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePrice()
-        {
-            return _flagPrice;
-        }
         /// <summary>
         /// Gets or Sets Discount
         /// </summary>
         [DataMember(Name = "discount", EmitDefaultValue = false)]
-        public float Discount
-        {
-            get{ return _Discount;}
-            set
-            {
-                _Discount = value;
-                _flagDiscount = true;
-            }
-        }
-        private float _Discount;
-        private bool _flagDiscount;
+        public float Discount { get; set; }
 
-        /// <summary>
-        /// Returns false as Discount should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDiscount()
-        {
-            return _flagDiscount;
-        }
         /// <summary>
         /// Gets or Sets Percentage
         /// </summary>
         [DataMember(Name = "percentage", EmitDefaultValue = false)]
-        public float Percentage
-        {
-            get{ return _Percentage;}
-            set
-            {
-                _Percentage = value;
-                _flagPercentage = true;
-            }
-        }
-        private float _Percentage;
-        private bool _flagPercentage;
+        public float Percentage { get; set; }
 
-        /// <summary>
-        /// Returns false as Percentage should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePercentage()
-        {
-            return _flagPercentage;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

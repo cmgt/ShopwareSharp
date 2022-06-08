@@ -41,26 +41,10 @@ namespace ShopwareSharp.Model
         /// <param name="taxStatus">Tax calculation for the cart. One of &#x60;gross&#x60;, &#x60;net&#x60; or &#x60;tax-free&#x60;.</param>
         public CartAllOfPrice(float netPrice = default(float), float totalPrice = default(float), float positionPrice = default(float), string taxStatus = default(string))
         {
-            this._NetPrice = netPrice;
-            if (this.NetPrice != null)
-            {
-                this._flagNetPrice = true;
-            }
-            this._TotalPrice = totalPrice;
-            if (this.TotalPrice != null)
-            {
-                this._flagTotalPrice = true;
-            }
-            this._PositionPrice = positionPrice;
-            if (this.PositionPrice != null)
-            {
-                this._flagPositionPrice = true;
-            }
-            this._TaxStatus = taxStatus;
-            if (this.TaxStatus != null)
-            {
-                this._flagTaxStatus = true;
-            }
+            this.NetPrice = netPrice;
+            this.TotalPrice = totalPrice;
+            this.PositionPrice = positionPrice;
+            this.TaxStatus = taxStatus;
         }
 
         /// <summary>
@@ -68,101 +52,29 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Net price of the cart</value>
         [DataMember(Name = "netPrice", EmitDefaultValue = false)]
-        public float NetPrice
-        {
-            get{ return _NetPrice;}
-            set
-            {
-                _NetPrice = value;
-                _flagNetPrice = true;
-            }
-        }
-        private float _NetPrice;
-        private bool _flagNetPrice;
+        public float NetPrice { get; set; }
 
-        /// <summary>
-        /// Returns false as NetPrice should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeNetPrice()
-        {
-            return _flagNetPrice;
-        }
         /// <summary>
         /// Total price of the cart, including shipping costs, discounts and taxes
         /// </summary>
         /// <value>Total price of the cart, including shipping costs, discounts and taxes</value>
         [DataMember(Name = "totalPrice", EmitDefaultValue = false)]
-        public float TotalPrice
-        {
-            get{ return _TotalPrice;}
-            set
-            {
-                _TotalPrice = value;
-                _flagTotalPrice = true;
-            }
-        }
-        private float _TotalPrice;
-        private bool _flagTotalPrice;
+        public float TotalPrice { get; set; }
 
-        /// <summary>
-        /// Returns false as TotalPrice should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTotalPrice()
-        {
-            return _flagTotalPrice;
-        }
         /// <summary>
         /// Price for all line items in the cart
         /// </summary>
         /// <value>Price for all line items in the cart</value>
         [DataMember(Name = "positionPrice", EmitDefaultValue = false)]
-        public float PositionPrice
-        {
-            get{ return _PositionPrice;}
-            set
-            {
-                _PositionPrice = value;
-                _flagPositionPrice = true;
-            }
-        }
-        private float _PositionPrice;
-        private bool _flagPositionPrice;
+        public float PositionPrice { get; set; }
 
-        /// <summary>
-        /// Returns false as PositionPrice should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePositionPrice()
-        {
-            return _flagPositionPrice;
-        }
         /// <summary>
         /// Tax calculation for the cart. One of &#x60;gross&#x60;, &#x60;net&#x60; or &#x60;tax-free&#x60;
         /// </summary>
         /// <value>Tax calculation for the cart. One of &#x60;gross&#x60;, &#x60;net&#x60; or &#x60;tax-free&#x60;</value>
         [DataMember(Name = "taxStatus", EmitDefaultValue = false)]
-        public string TaxStatus
-        {
-            get{ return _TaxStatus;}
-            set
-            {
-                _TaxStatus = value;
-                _flagTaxStatus = true;
-            }
-        }
-        private string _TaxStatus;
-        private bool _flagTaxStatus;
+        public string TaxStatus { get; set; }
 
-        /// <summary>
-        /// Returns false as TaxStatus should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTaxStatus()
-        {
-            return _flagTaxStatus;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

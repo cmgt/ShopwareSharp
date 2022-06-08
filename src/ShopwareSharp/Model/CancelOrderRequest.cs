@@ -38,11 +38,7 @@ namespace ShopwareSharp.Model
         /// <param name="orderId">The identifier of the order to be canceled..</param>
         public CancelOrderRequest(string orderId = default(string))
         {
-            this._OrderId = orderId;
-            if (this.OrderId != null)
-            {
-                this._flagOrderId = true;
-            }
+            this.OrderId = orderId;
         }
 
         /// <summary>
@@ -50,26 +46,8 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>The identifier of the order to be canceled.</value>
         [DataMember(Name = "orderId", EmitDefaultValue = false)]
-        public string OrderId
-        {
-            get{ return _OrderId;}
-            set
-            {
-                _OrderId = value;
-                _flagOrderId = true;
-            }
-        }
-        private string _OrderId;
-        private bool _flagOrderId;
+        public string OrderId { get; set; }
 
-        /// <summary>
-        /// Returns false as OrderId should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeOrderId()
-        {
-            return _flagOrderId;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

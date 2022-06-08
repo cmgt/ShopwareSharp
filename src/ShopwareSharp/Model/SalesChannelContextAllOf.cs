@@ -47,56 +47,16 @@ namespace ShopwareSharp.Model
         /// <param name="context">context.</param>
         public SalesChannelContextAllOf(string token = default(string), SalesChannelContextAllOfCurrentCustomerGroup currentCustomerGroup = default(SalesChannelContextAllOfCurrentCustomerGroup), SalesChannelContextAllOfFallbackCustomerGroup fallbackCustomerGroup = default(SalesChannelContextAllOfFallbackCustomerGroup), SalesChannelContextAllOfCurrency currency = default(SalesChannelContextAllOfCurrency), SalesChannelContextAllOfSalesChannel salesChannel = default(SalesChannelContextAllOfSalesChannel), List<SalesChannelContextAllOfTaxRules> taxRules = default(List<SalesChannelContextAllOfTaxRules>), SalesChannelContextAllOfCustomer customer = default(SalesChannelContextAllOfCustomer), SalesChannelContextAllOfPaymentMethod paymentMethod = default(SalesChannelContextAllOfPaymentMethod), SalesChannelContextAllOfShippingMethod shippingMethod = default(SalesChannelContextAllOfShippingMethod), SalesChannelContextAllOfContext context = default(SalesChannelContextAllOfContext))
         {
-            this._Token = token;
-            if (this.Token != null)
-            {
-                this._flagToken = true;
-            }
-            this._CurrentCustomerGroup = currentCustomerGroup;
-            if (this.CurrentCustomerGroup != null)
-            {
-                this._flagCurrentCustomerGroup = true;
-            }
-            this._FallbackCustomerGroup = fallbackCustomerGroup;
-            if (this.FallbackCustomerGroup != null)
-            {
-                this._flagFallbackCustomerGroup = true;
-            }
-            this._Currency = currency;
-            if (this.Currency != null)
-            {
-                this._flagCurrency = true;
-            }
-            this._SalesChannel = salesChannel;
-            if (this.SalesChannel != null)
-            {
-                this._flagSalesChannel = true;
-            }
-            this._TaxRules = taxRules;
-            if (this.TaxRules != null)
-            {
-                this._flagTaxRules = true;
-            }
-            this._Customer = customer;
-            if (this.Customer != null)
-            {
-                this._flagCustomer = true;
-            }
-            this._PaymentMethod = paymentMethod;
-            if (this.PaymentMethod != null)
-            {
-                this._flagPaymentMethod = true;
-            }
-            this._ShippingMethod = shippingMethod;
-            if (this.ShippingMethod != null)
-            {
-                this._flagShippingMethod = true;
-            }
-            this._Context = context;
-            if (this.Context != null)
-            {
-                this._flagContext = true;
-            }
+            this.Token = token;
+            this.CurrentCustomerGroup = currentCustomerGroup;
+            this.FallbackCustomerGroup = fallbackCustomerGroup;
+            this.Currency = currency;
+            this.SalesChannel = salesChannel;
+            this.TaxRules = taxRules;
+            this.Customer = customer;
+            this.PaymentMethod = paymentMethod;
+            this.ShippingMethod = shippingMethod;
+            this.Context = context;
         }
 
         /// <summary>
@@ -104,243 +64,63 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Context the user session</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
-        public string Token
-        {
-            get{ return _Token;}
-            set
-            {
-                _Token = value;
-                _flagToken = true;
-            }
-        }
-        private string _Token;
-        private bool _flagToken;
+        public string Token { get; set; }
 
-        /// <summary>
-        /// Returns false as Token should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeToken()
-        {
-            return _flagToken;
-        }
         /// <summary>
         /// Gets or Sets CurrentCustomerGroup
         /// </summary>
         [DataMember(Name = "currentCustomerGroup", EmitDefaultValue = false)]
-        public SalesChannelContextAllOfCurrentCustomerGroup CurrentCustomerGroup
-        {
-            get{ return _CurrentCustomerGroup;}
-            set
-            {
-                _CurrentCustomerGroup = value;
-                _flagCurrentCustomerGroup = true;
-            }
-        }
-        private SalesChannelContextAllOfCurrentCustomerGroup _CurrentCustomerGroup;
-        private bool _flagCurrentCustomerGroup;
+        public SalesChannelContextAllOfCurrentCustomerGroup CurrentCustomerGroup { get; set; }
 
-        /// <summary>
-        /// Returns false as CurrentCustomerGroup should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCurrentCustomerGroup()
-        {
-            return _flagCurrentCustomerGroup;
-        }
         /// <summary>
         /// Gets or Sets FallbackCustomerGroup
         /// </summary>
         [DataMember(Name = "fallbackCustomerGroup", EmitDefaultValue = false)]
-        public SalesChannelContextAllOfFallbackCustomerGroup FallbackCustomerGroup
-        {
-            get{ return _FallbackCustomerGroup;}
-            set
-            {
-                _FallbackCustomerGroup = value;
-                _flagFallbackCustomerGroup = true;
-            }
-        }
-        private SalesChannelContextAllOfFallbackCustomerGroup _FallbackCustomerGroup;
-        private bool _flagFallbackCustomerGroup;
+        public SalesChannelContextAllOfFallbackCustomerGroup FallbackCustomerGroup { get; set; }
 
-        /// <summary>
-        /// Returns false as FallbackCustomerGroup should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeFallbackCustomerGroup()
-        {
-            return _flagFallbackCustomerGroup;
-        }
         /// <summary>
         /// Gets or Sets Currency
         /// </summary>
         [DataMember(Name = "currency", EmitDefaultValue = false)]
-        public SalesChannelContextAllOfCurrency Currency
-        {
-            get{ return _Currency;}
-            set
-            {
-                _Currency = value;
-                _flagCurrency = true;
-            }
-        }
-        private SalesChannelContextAllOfCurrency _Currency;
-        private bool _flagCurrency;
+        public SalesChannelContextAllOfCurrency Currency { get; set; }
 
-        /// <summary>
-        /// Returns false as Currency should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCurrency()
-        {
-            return _flagCurrency;
-        }
         /// <summary>
         /// Gets or Sets SalesChannel
         /// </summary>
         [DataMember(Name = "salesChannel", EmitDefaultValue = false)]
-        public SalesChannelContextAllOfSalesChannel SalesChannel
-        {
-            get{ return _SalesChannel;}
-            set
-            {
-                _SalesChannel = value;
-                _flagSalesChannel = true;
-            }
-        }
-        private SalesChannelContextAllOfSalesChannel _SalesChannel;
-        private bool _flagSalesChannel;
+        public SalesChannelContextAllOfSalesChannel SalesChannel { get; set; }
 
-        /// <summary>
-        /// Returns false as SalesChannel should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeSalesChannel()
-        {
-            return _flagSalesChannel;
-        }
         /// <summary>
         /// Currently active tax rules and/or rates
         /// </summary>
         /// <value>Currently active tax rules and/or rates</value>
         [DataMember(Name = "taxRules", EmitDefaultValue = false)]
-        public List<SalesChannelContextAllOfTaxRules> TaxRules
-        {
-            get{ return _TaxRules;}
-            set
-            {
-                _TaxRules = value;
-                _flagTaxRules = true;
-            }
-        }
-        private List<SalesChannelContextAllOfTaxRules> _TaxRules;
-        private bool _flagTaxRules;
+        public List<SalesChannelContextAllOfTaxRules> TaxRules { get; set; }
 
-        /// <summary>
-        /// Returns false as TaxRules should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeTaxRules()
-        {
-            return _flagTaxRules;
-        }
         /// <summary>
         /// Gets or Sets Customer
         /// </summary>
         [DataMember(Name = "customer", EmitDefaultValue = false)]
-        public SalesChannelContextAllOfCustomer Customer
-        {
-            get{ return _Customer;}
-            set
-            {
-                _Customer = value;
-                _flagCustomer = true;
-            }
-        }
-        private SalesChannelContextAllOfCustomer _Customer;
-        private bool _flagCustomer;
+        public SalesChannelContextAllOfCustomer Customer { get; set; }
 
-        /// <summary>
-        /// Returns false as Customer should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeCustomer()
-        {
-            return _flagCustomer;
-        }
         /// <summary>
         /// Gets or Sets PaymentMethod
         /// </summary>
         [DataMember(Name = "paymentMethod", EmitDefaultValue = false)]
-        public SalesChannelContextAllOfPaymentMethod PaymentMethod
-        {
-            get{ return _PaymentMethod;}
-            set
-            {
-                _PaymentMethod = value;
-                _flagPaymentMethod = true;
-            }
-        }
-        private SalesChannelContextAllOfPaymentMethod _PaymentMethod;
-        private bool _flagPaymentMethod;
+        public SalesChannelContextAllOfPaymentMethod PaymentMethod { get; set; }
 
-        /// <summary>
-        /// Returns false as PaymentMethod should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePaymentMethod()
-        {
-            return _flagPaymentMethod;
-        }
         /// <summary>
         /// Gets or Sets ShippingMethod
         /// </summary>
         [DataMember(Name = "shippingMethod", EmitDefaultValue = false)]
-        public SalesChannelContextAllOfShippingMethod ShippingMethod
-        {
-            get{ return _ShippingMethod;}
-            set
-            {
-                _ShippingMethod = value;
-                _flagShippingMethod = true;
-            }
-        }
-        private SalesChannelContextAllOfShippingMethod _ShippingMethod;
-        private bool _flagShippingMethod;
+        public SalesChannelContextAllOfShippingMethod ShippingMethod { get; set; }
 
-        /// <summary>
-        /// Returns false as ShippingMethod should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeShippingMethod()
-        {
-            return _flagShippingMethod;
-        }
         /// <summary>
         /// Gets or Sets Context
         /// </summary>
         [DataMember(Name = "context", EmitDefaultValue = false)]
-        public SalesChannelContextAllOfContext Context
-        {
-            get{ return _Context;}
-            set
-            {
-                _Context = value;
-                _flagContext = true;
-            }
-        }
-        private SalesChannelContextAllOfContext _Context;
-        private bool _flagContext;
+        public SalesChannelContextAllOfContext Context { get; set; }
 
-        /// <summary>
-        /// Returns false as Context should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeContext()
-        {
-            return _flagContext;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

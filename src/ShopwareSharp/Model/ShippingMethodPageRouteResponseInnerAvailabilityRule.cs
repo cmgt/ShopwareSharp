@@ -41,124 +41,36 @@ namespace ShopwareSharp.Model
         /// <param name="invalid">invalid.</param>
         public ShippingMethodPageRouteResponseInnerAvailabilityRule(string name = default(string), string description = default(string), int priority = default(int), bool invalid = default(bool))
         {
-            this._Name = name;
-            if (this.Name != null)
-            {
-                this._flagName = true;
-            }
-            this._Description = description;
-            if (this.Description != null)
-            {
-                this._flagDescription = true;
-            }
-            this._Priority = priority;
-            if (this.Priority != null)
-            {
-                this._flagPriority = true;
-            }
-            this._Invalid = invalid;
-            if (this.Invalid != null)
-            {
-                this._flagInvalid = true;
-            }
+            this.Name = name;
+            this.Description = description;
+            this.Priority = priority;
+            this.Invalid = invalid;
         }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name
-        {
-            get{ return _Name;}
-            set
-            {
-                _Name = value;
-                _flagName = true;
-            }
-        }
-        private string _Name;
-        private bool _flagName;
+        public string Name { get; set; }
 
-        /// <summary>
-        /// Returns false as Name should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeName()
-        {
-            return _flagName;
-        }
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name = "description", EmitDefaultValue = false)]
-        public string Description
-        {
-            get{ return _Description;}
-            set
-            {
-                _Description = value;
-                _flagDescription = true;
-            }
-        }
-        private string _Description;
-        private bool _flagDescription;
+        public string Description { get; set; }
 
-        /// <summary>
-        /// Returns false as Description should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeDescription()
-        {
-            return _flagDescription;
-        }
         /// <summary>
         /// Gets or Sets Priority
         /// </summary>
         [DataMember(Name = "priority", EmitDefaultValue = false)]
-        public int Priority
-        {
-            get{ return _Priority;}
-            set
-            {
-                _Priority = value;
-                _flagPriority = true;
-            }
-        }
-        private int _Priority;
-        private bool _flagPriority;
+        public int Priority { get; set; }
 
-        /// <summary>
-        /// Returns false as Priority should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializePriority()
-        {
-            return _flagPriority;
-        }
         /// <summary>
         /// Gets or Sets Invalid
         /// </summary>
         [DataMember(Name = "invalid", EmitDefaultValue = true)]
-        public bool Invalid
-        {
-            get{ return _Invalid;}
-            set
-            {
-                _Invalid = value;
-                _flagInvalid = true;
-            }
-        }
-        private bool _Invalid;
-        private bool _flagInvalid;
+        public bool Invalid { get; set; }
 
-        /// <summary>
-        /// Returns false as Invalid should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeInvalid()
-        {
-            return _flagInvalid;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

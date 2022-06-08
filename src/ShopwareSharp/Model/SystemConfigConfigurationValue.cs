@@ -38,37 +38,15 @@ namespace ShopwareSharp.Model
         /// <param name="value">value.</param>
         public SystemConfigConfigurationValue(Object value = default(Object))
         {
-            this._Value = value;
-            if (this.Value != null)
-            {
-                this._flagValue = true;
-            }
+            this.Value = value;
         }
 
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name = "_value", EmitDefaultValue = false)]
-        public Object Value
-        {
-            get{ return _Value;}
-            set
-            {
-                _Value = value;
-                _flagValue = true;
-            }
-        }
-        private Object _Value;
-        private bool _flagValue;
+        public Object Value { get; set; }
 
-        /// <summary>
-        /// Returns false as Value should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeValue()
-        {
-            return _flagValue;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -49,13 +49,13 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("hash is a required property for RegisterConfirmRequest and cannot be null");
             }
-            this._Hash = hash;
+            this.Hash = hash;
             // to ensure "em" is required (not null)
             if (em == null)
             {
                 throw new ArgumentNullException("em is a required property for RegisterConfirmRequest and cannot be null");
             }
-            this._Em = em;
+            this.Em = em;
         }
 
         /// <summary>
@@ -63,51 +63,15 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Hash from the email received</value>
         [DataMember(Name = "hash", IsRequired = true, EmitDefaultValue = false)]
-        public string Hash
-        {
-            get{ return _Hash;}
-            set
-            {
-                _Hash = value;
-                _flagHash = true;
-            }
-        }
-        private string _Hash;
-        private bool _flagHash;
+        public string Hash { get; set; }
 
-        /// <summary>
-        /// Returns false as Hash should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeHash()
-        {
-            return _flagHash;
-        }
         /// <summary>
         /// Email hash from the email received
         /// </summary>
         /// <value>Email hash from the email received</value>
         [DataMember(Name = "em", IsRequired = true, EmitDefaultValue = false)]
-        public string Em
-        {
-            get{ return _Em;}
-            set
-            {
-                _Em = value;
-                _flagEm = true;
-            }
-        }
-        private string _Em;
-        private bool _flagEm;
+        public string Em { get; set; }
 
-        /// <summary>
-        /// Returns false as Em should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeEm()
-        {
-            return _flagEm;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

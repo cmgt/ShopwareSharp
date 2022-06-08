@@ -50,17 +50,9 @@ namespace ShopwareSharp.Model
             {
                 throw new ArgumentNullException("errors is a required property for Failure and cannot be null");
             }
-            this._Errors = errors;
-            this._Meta = meta;
-            if (this.Meta != null)
-            {
-                this._flagMeta = true;
-            }
-            this._Links = links;
-            if (this.Links != null)
-            {
-                this._flagLinks = true;
-            }
+            this.Errors = errors;
+            this.Meta = meta;
+            this.Links = links;
         }
 
         /// <summary>
@@ -68,74 +60,20 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Non-standard meta-information that can not be represented as an attribute or relationship.</value>
         [DataMember(Name = "meta", EmitDefaultValue = false)]
-        public Dictionary<string, Object> Meta
-        {
-            get{ return _Meta;}
-            set
-            {
-                _Meta = value;
-                _flagMeta = true;
-            }
-        }
-        private Dictionary<string, Object> _Meta;
-        private bool _flagMeta;
+        public Dictionary<string, Object> Meta { get; set; }
 
-        /// <summary>
-        /// Returns false as Meta should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeMeta()
-        {
-            return _flagMeta;
-        }
         /// <summary>
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "links", EmitDefaultValue = false)]
-        public Dictionary<string, Link> Links
-        {
-            get{ return _Links;}
-            set
-            {
-                _Links = value;
-                _flagLinks = true;
-            }
-        }
-        private Dictionary<string, Link> _Links;
-        private bool _flagLinks;
+        public Dictionary<string, Link> Links { get; set; }
 
-        /// <summary>
-        /// Returns false as Links should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeLinks()
-        {
-            return _flagLinks;
-        }
         /// <summary>
         /// Gets or Sets Errors
         /// </summary>
         [DataMember(Name = "errors", IsRequired = true, EmitDefaultValue = false)]
-        public List<Error> Errors
-        {
-            get{ return _Errors;}
-            set
-            {
-                _Errors = value;
-                _flagErrors = true;
-            }
-        }
-        private List<Error> _Errors;
-        private bool _flagErrors;
+        public List<Error> Errors { get; set; }
 
-        /// <summary>
-        /// Returns false as Errors should not be serialized given that it's read-only.
-        /// </summary>
-        /// <returns>false (boolean)</returns>
-        public bool ShouldSerializeErrors()
-        {
-            return _flagErrors;
-        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
