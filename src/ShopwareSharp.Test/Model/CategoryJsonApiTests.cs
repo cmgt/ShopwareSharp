@@ -57,12 +57,108 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'CreatedAt'
+        /// Test the property 'Type'
         /// </summary>
         [Fact]
-        public void CreatedAtTest()
+        public void TypeTest()
         {
-            // TODO unit test for the property 'CreatedAt'
+            // TODO unit test for the property 'Type'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'Attributes'
+        /// </summary>
+        [Fact]
+        public void AttributesTest()
+        {
+            // TODO unit test for the property 'Attributes'
+        }
+        /// <summary>
+        /// Test the property 'Relationships'
+        /// </summary>
+        [Fact]
+        public void RelationshipsTest()
+        {
+            // TODO unit test for the property 'Relationships'
+        }
+        /// <summary>
+        /// Test the property 'Links'
+        /// </summary>
+        [Fact]
+        public void LinksTest()
+        {
+            // TODO unit test for the property 'Links'
+        }
+        /// <summary>
+        /// Test the property 'Meta'
+        /// </summary>
+        [Fact]
+        public void MetaTest()
+        {
+            // TODO unit test for the property 'Meta'
+        }
+        /// <summary>
+        /// Test the property 'VersionId'
+        /// </summary>
+        [Fact]
+        public void VersionIdTest()
+        {
+            // TODO unit test for the property 'VersionId'
+        }
+        /// <summary>
+        /// Test the property 'ParentId'
+        /// </summary>
+        [Fact]
+        public void ParentIdTest()
+        {
+            // TODO unit test for the property 'ParentId'
+        }
+        /// <summary>
+        /// Test the property 'ParentVersionId'
+        /// </summary>
+        [Fact]
+        public void ParentVersionIdTest()
+        {
+            // TODO unit test for the property 'ParentVersionId'
+        }
+        /// <summary>
+        /// Test the property 'AfterCategoryId'
+        /// </summary>
+        [Fact]
+        public void AfterCategoryIdTest()
+        {
+            // TODO unit test for the property 'AfterCategoryId'
+        }
+        /// <summary>
+        /// Test the property 'AfterCategoryVersionId'
+        /// </summary>
+        [Fact]
+        public void AfterCategoryVersionIdTest()
+        {
+            // TODO unit test for the property 'AfterCategoryVersionId'
+        }
+        /// <summary>
+        /// Test the property 'MediaId'
+        /// </summary>
+        [Fact]
+        public void MediaIdTest()
+        {
+            // TODO unit test for the property 'MediaId'
+        }
+        /// <summary>
+        /// Test the property 'DisplayNestedProducts'
+        /// </summary>
+        [Fact]
+        public void DisplayNestedProductsTest()
+        {
+            // TODO unit test for the property 'DisplayNestedProducts'
         }
         /// <summary>
         /// Test the property 'Breadcrumb'
@@ -97,12 +193,148 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'ChildCount'
         }
         /// <summary>
+        /// Test the property 'ProductAssignmentType'
+        /// </summary>
+        [Fact]
+        public void ProductAssignmentTypeTest()
+        {
+            // TODO unit test for the property 'ProductAssignmentType'
+        }
+        /// <summary>
+        /// Test the property 'Visible'
+        /// </summary>
+        [Fact]
+        public void VisibleTest()
+        {
+            // TODO unit test for the property 'Visible'
+        }
+        /// <summary>
+        /// Test the property 'Active'
+        /// </summary>
+        [Fact]
+        public void ActiveTest()
+        {
+            // TODO unit test for the property 'Active'
+        }
+        /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Fact]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
+        }
+        /// <summary>
+        /// Test the property 'CustomFields'
+        /// </summary>
+        [Fact]
+        public void CustomFieldsTest()
+        {
+            // TODO unit test for the property 'CustomFields'
+        }
+        /// <summary>
+        /// Test the property 'LinkType'
+        /// </summary>
+        [Fact]
+        public void LinkTypeTest()
+        {
+            // TODO unit test for the property 'LinkType'
+        }
+        /// <summary>
+        /// Test the property 'InternalLink'
+        /// </summary>
+        [Fact]
+        public void InternalLinkTest()
+        {
+            // TODO unit test for the property 'InternalLink'
+        }
+        /// <summary>
+        /// Test the property 'ExternalLink'
+        /// </summary>
+        [Fact]
+        public void ExternalLinkTest()
+        {
+            // TODO unit test for the property 'ExternalLink'
+        }
+        /// <summary>
+        /// Test the property 'LinkNewTab'
+        /// </summary>
+        [Fact]
+        public void LinkNewTabTest()
+        {
+            // TODO unit test for the property 'LinkNewTab'
+        }
+        /// <summary>
+        /// Test the property 'Description'
+        /// </summary>
+        [Fact]
+        public void DescriptionTest()
+        {
+            // TODO unit test for the property 'Description'
+        }
+        /// <summary>
+        /// Test the property 'MetaTitle'
+        /// </summary>
+        [Fact]
+        public void MetaTitleTest()
+        {
+            // TODO unit test for the property 'MetaTitle'
+        }
+        /// <summary>
+        /// Test the property 'MetaDescription'
+        /// </summary>
+        [Fact]
+        public void MetaDescriptionTest()
+        {
+            // TODO unit test for the property 'MetaDescription'
+        }
+        /// <summary>
+        /// Test the property 'Keywords'
+        /// </summary>
+        [Fact]
+        public void KeywordsTest()
+        {
+            // TODO unit test for the property 'Keywords'
+        }
+        /// <summary>
+        /// Test the property 'CmsPageId'
+        /// </summary>
+        [Fact]
+        public void CmsPageIdTest()
+        {
+            // TODO unit test for the property 'CmsPageId'
+        }
+        /// <summary>
+        /// Test the property 'CmsPageVersionId'
+        /// </summary>
+        [Fact]
+        public void CmsPageVersionIdTest()
+        {
+            // TODO unit test for the property 'CmsPageVersionId'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
         /// Test the property 'UpdatedAt'
         /// </summary>
         [Fact]
         public void UpdatedAtTest()
         {
             // TODO unit test for the property 'UpdatedAt'
+        }
+        /// <summary>
+        /// Test the property 'Translated'
+        /// </summary>
+        [Fact]
+        public void TranslatedTest()
+        {
+            // TODO unit test for the property 'Translated'
         }
 
     }

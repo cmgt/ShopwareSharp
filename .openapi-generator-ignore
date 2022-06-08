@@ -2,3 +2,17 @@
 # Lines beginning with a # are comments
 
 src/ShopwareSharp/Model/Data.cs
+src/ShopwareSharp/Model/Success.cs
+src/ShopwareSharp/Model/RelationshipsAnyOf.cs
+src/ShopwareSharp/Model/Resource.cs
+src/ShopwareSharp/Model/Relationships.cs
+
+src/ShopwareSharp/Model/SubscribeToNewsletterRequest.cs
+
+#src/ShopwareSharp/Model/SalutationJsonApi.cs
+#src/ShopwareSharp/Model/CountryStateJsonApi.cs
+#src/ShopwareSharp/Model/CurrencyJsonApi.cs
+#src/ShopwareSharp/Model/CategoryJsonApi.cs
+#src/ShopwareSharp/Model/MainCategoryJsonApi.cs
+#src/ShopwareSharp/Model/SeoUrlJsonApi.cs
+src/ShopwareSharp/Model/*JsonApi*.cs

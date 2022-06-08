@@ -56,6 +56,22 @@ namespace ShopwareSharp.Test.Model
         }
 
 
+        /// <summary>
+        /// Test the property 'Links'
+        /// </summary>
+        [Fact]
+        public void LinksTest()
+        {
+            // TODO unit test for the property 'Links'
+        }
+        /// <summary>
+        /// Test the property 'Data'
+        /// </summary>
+        [Fact]
+        public void DataTest()
+        {
+            // TODO unit test for the property 'Data'
+        }
 
     }
 

@@ -56,6 +56,30 @@ namespace ShopwareSharp.Test.Model
         }
 
 
+        /// <summary>
+        /// Test the property 'NoAggregations'
+        /// </summary>
+        [Fact]
+        public void NoAggregationsTest()
+        {
+            // TODO unit test for the property 'NoAggregations'
+        }
+        /// <summary>
+        /// Test the property 'OnlyAggregations'
+        /// </summary>
+        [Fact]
+        public void OnlyAggregationsTest()
+        {
+            // TODO unit test for the property 'OnlyAggregations'
+        }
+        /// <summary>
+        /// Test the property 'Search'
+        /// </summary>
+        [Fact]
+        public void SearchTest()
+        {
+            // TODO unit test for the property 'Search'
+        }
 
     }
 

@@ -56,6 +56,94 @@ namespace ShopwareSharp.Test.Model
         }
 
 
+        /// <summary>
+        /// Test the property 'ApiAlias'
+        /// </summary>
+        [Fact]
+        public void ApiAliasTest()
+        {
+            // TODO unit test for the property 'ApiAlias'
+        }
+        /// <summary>
+        /// Test the property 'Token'
+        /// </summary>
+        [Fact]
+        public void TokenTest()
+        {
+            // TODO unit test for the property 'Token'
+        }
+        /// <summary>
+        /// Test the property 'CurrentCustomerGroup'
+        /// </summary>
+        [Fact]
+        public void CurrentCustomerGroupTest()
+        {
+            // TODO unit test for the property 'CurrentCustomerGroup'
+        }
+        /// <summary>
+        /// Test the property 'FallbackCustomerGroup'
+        /// </summary>
+        [Fact]
+        public void FallbackCustomerGroupTest()
+        {
+            // TODO unit test for the property 'FallbackCustomerGroup'
+        }
+        /// <summary>
+        /// Test the property 'Currency'
+        /// </summary>
+        [Fact]
+        public void CurrencyTest()
+        {
+            // TODO unit test for the property 'Currency'
+        }
+        /// <summary>
+        /// Test the property 'SalesChannel'
+        /// </summary>
+        [Fact]
+        public void SalesChannelTest()
+        {
+            // TODO unit test for the property 'SalesChannel'
+        }
+        /// <summary>
+        /// Test the property 'TaxRules'
+        /// </summary>
+        [Fact]
+        public void TaxRulesTest()
+        {
+            // TODO unit test for the property 'TaxRules'
+        }
+        /// <summary>
+        /// Test the property 'Customer'
+        /// </summary>
+        [Fact]
+        public void CustomerTest()
+        {
+            // TODO unit test for the property 'Customer'
+        }
+        /// <summary>
+        /// Test the property 'PaymentMethod'
+        /// </summary>
+        [Fact]
+        public void PaymentMethodTest()
+        {
+            // TODO unit test for the property 'PaymentMethod'
+        }
+        /// <summary>
+        /// Test the property 'ShippingMethod'
+        /// </summary>
+        [Fact]
+        public void ShippingMethodTest()
+        {
+            // TODO unit test for the property 'ShippingMethod'
+        }
+        /// <summary>
+        /// Test the property 'Context'
+        /// </summary>
+        [Fact]
+        public void ContextTest()
+        {
+            // TODO unit test for the property 'Context'
+        }
 
     }
 

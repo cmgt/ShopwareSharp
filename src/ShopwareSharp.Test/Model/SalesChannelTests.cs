@@ -57,6 +57,14 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
         /// Test the property 'LanguageId'
         /// </summary>
         [Fact]
@@ -111,30 +119,6 @@ namespace ShopwareSharp.Test.Model
         public void NavigationCategoryIdTest()
         {
             // TODO unit test for the property 'NavigationCategoryId'
-        }
-        /// <summary>
-        /// Test the property 'Name'
-        /// </summary>
-        [Fact]
-        public void NameTest()
-        {
-            // TODO unit test for the property 'Name'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
-        }
-        /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
         }
         /// <summary>
         /// Test the property 'NavigationCategoryVersionId'
@@ -201,6 +185,14 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'HreflangDefaultDomainId'
         }
         /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Fact]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
+        }
+        /// <summary>
         /// Test the property 'ShortName'
         /// </summary>
         [Fact]
@@ -255,6 +247,14 @@ namespace ShopwareSharp.Test.Model
         public void CustomFieldsTest()
         {
             // TODO unit test for the property 'CustomFields'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

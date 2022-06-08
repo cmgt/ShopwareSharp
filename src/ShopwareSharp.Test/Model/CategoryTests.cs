@@ -57,46 +57,6 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'DisplayNestedProducts'
-        /// </summary>
-        [Fact]
-        public void DisplayNestedProductsTest()
-        {
-            // TODO unit test for the property 'DisplayNestedProducts'
-        }
-        /// <summary>
-        /// Test the property 'Type'
-        /// </summary>
-        [Fact]
-        public void TypeTest()
-        {
-            // TODO unit test for the property 'Type'
-        }
-        /// <summary>
-        /// Test the property 'ProductAssignmentType'
-        /// </summary>
-        [Fact]
-        public void ProductAssignmentTypeTest()
-        {
-            // TODO unit test for the property 'ProductAssignmentType'
-        }
-        /// <summary>
-        /// Test the property 'Name'
-        /// </summary>
-        [Fact]
-        public void NameTest()
-        {
-            // TODO unit test for the property 'Name'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
-        }
-        /// <summary>
         /// Test the property 'Id'
         /// </summary>
         [Fact]
@@ -153,6 +113,14 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'MediaId'
         }
         /// <summary>
+        /// Test the property 'DisplayNestedProducts'
+        /// </summary>
+        [Fact]
+        public void DisplayNestedProductsTest()
+        {
+            // TODO unit test for the property 'DisplayNestedProducts'
+        }
+        /// <summary>
         /// Test the property 'Breadcrumb'
         /// </summary>
         [Fact]
@@ -185,6 +153,22 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'ChildCount'
         }
         /// <summary>
+        /// Test the property 'Type'
+        /// </summary>
+        [Fact]
+        public void TypeTest()
+        {
+            // TODO unit test for the property 'Type'
+        }
+        /// <summary>
+        /// Test the property 'ProductAssignmentType'
+        /// </summary>
+        [Fact]
+        public void ProductAssignmentTypeTest()
+        {
+            // TODO unit test for the property 'ProductAssignmentType'
+        }
+        /// <summary>
         /// Test the property 'Visible'
         /// </summary>
         [Fact]
@@ -199,6 +183,14 @@ namespace ShopwareSharp.Test.Model
         public void ActiveTest()
         {
             // TODO unit test for the property 'Active'
+        }
+        /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Fact]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
         }
         /// <summary>
         /// Test the property 'CustomFields'
@@ -287,6 +279,14 @@ namespace ShopwareSharp.Test.Model
         public void CmsPageVersionIdTest()
         {
             // TODO unit test for the property 'CmsPageVersionId'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

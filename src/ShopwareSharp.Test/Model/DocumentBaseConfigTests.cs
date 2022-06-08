@@ -57,38 +57,6 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'DocumentTypeId'
-        /// </summary>
-        [Fact]
-        public void DocumentTypeIdTest()
-        {
-            // TODO unit test for the property 'DocumentTypeId'
-        }
-        /// <summary>
-        /// Test the property 'Name'
-        /// </summary>
-        [Fact]
-        public void NameTest()
-        {
-            // TODO unit test for the property 'Name'
-        }
-        /// <summary>
-        /// Test the property 'Global'
-        /// </summary>
-        [Fact]
-        public void GlobalTest()
-        {
-            // TODO unit test for the property 'Global'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
-        }
-        /// <summary>
         /// Test the property 'Id'
         /// </summary>
         [Fact]
@@ -97,12 +65,28 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'Id'
         }
         /// <summary>
+        /// Test the property 'DocumentTypeId'
+        /// </summary>
+        [Fact]
+        public void DocumentTypeIdTest()
+        {
+            // TODO unit test for the property 'DocumentTypeId'
+        }
+        /// <summary>
         /// Test the property 'LogoId'
         /// </summary>
         [Fact]
         public void LogoIdTest()
         {
             // TODO unit test for the property 'LogoId'
+        }
+        /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Fact]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
         }
         /// <summary>
         /// Test the property 'FilenamePrefix'
@@ -121,6 +105,14 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'FilenameSuffix'
         }
         /// <summary>
+        /// Test the property 'Global'
+        /// </summary>
+        [Fact]
+        public void GlobalTest()
+        {
+            // TODO unit test for the property 'Global'
+        }
+        /// <summary>
         /// Test the property 'DocumentNumber'
         /// </summary>
         [Fact]
@@ -135,6 +127,14 @@ namespace ShopwareSharp.Test.Model
         public void ConfigTest()
         {
             // TODO unit test for the property 'Config'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'CustomFields'

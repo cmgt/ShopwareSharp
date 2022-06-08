@@ -57,30 +57,6 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'ProductId'
-        /// </summary>
-        [Fact]
-        public void ProductIdTest()
-        {
-            // TODO unit test for the property 'ProductId'
-        }
-        /// <summary>
-        /// Test the property 'OptionId'
-        /// </summary>
-        [Fact]
-        public void OptionIdTest()
-        {
-            // TODO unit test for the property 'OptionId'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
-        }
-        /// <summary>
         /// Test the property 'Id'
         /// </summary>
         [Fact]
@@ -95,6 +71,14 @@ namespace ShopwareSharp.Test.Model
         public void VersionIdTest()
         {
             // TODO unit test for the property 'VersionId'
+        }
+        /// <summary>
+        /// Test the property 'ProductId'
+        /// </summary>
+        [Fact]
+        public void ProductIdTest()
+        {
+            // TODO unit test for the property 'ProductId'
         }
         /// <summary>
         /// Test the property 'ProductVersionId'
@@ -113,6 +97,14 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'MediaId'
         }
         /// <summary>
+        /// Test the property 'OptionId'
+        /// </summary>
+        [Fact]
+        public void OptionIdTest()
+        {
+            // TODO unit test for the property 'OptionId'
+        }
+        /// <summary>
         /// Test the property 'Position'
         /// </summary>
         [Fact]
@@ -127,6 +119,14 @@ namespace ShopwareSharp.Test.Model
         public void CustomFieldsTest()
         {
             // TODO unit test for the property 'CustomFields'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

@@ -57,30 +57,6 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'LocaleId'
-        /// </summary>
-        [Fact]
-        public void LocaleIdTest()
-        {
-            // TODO unit test for the property 'LocaleId'
-        }
-        /// <summary>
-        /// Test the property 'Name'
-        /// </summary>
-        [Fact]
-        public void NameTest()
-        {
-            // TODO unit test for the property 'Name'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
-        }
-        /// <summary>
         /// Test the property 'Id'
         /// </summary>
         [Fact]
@@ -97,6 +73,14 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'ParentId'
         }
         /// <summary>
+        /// Test the property 'LocaleId'
+        /// </summary>
+        [Fact]
+        public void LocaleIdTest()
+        {
+            // TODO unit test for the property 'LocaleId'
+        }
+        /// <summary>
         /// Test the property 'TranslationCodeId'
         /// </summary>
         [Fact]
@@ -105,12 +89,28 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'TranslationCodeId'
         }
         /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Fact]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
+        }
+        /// <summary>
         /// Test the property 'CustomFields'
         /// </summary>
         [Fact]
         public void CustomFieldsTest()
         {
             // TODO unit test for the property 'CustomFields'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

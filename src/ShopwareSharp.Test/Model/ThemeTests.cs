@@ -57,38 +57,6 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'Name'
-        /// </summary>
-        [Fact]
-        public void NameTest()
-        {
-            // TODO unit test for the property 'Name'
-        }
-        /// <summary>
-        /// Test the property 'Author'
-        /// </summary>
-        [Fact]
-        public void AuthorTest()
-        {
-            // TODO unit test for the property 'Author'
-        }
-        /// <summary>
-        /// Test the property 'Active'
-        /// </summary>
-        [Fact]
-        public void ActiveTest()
-        {
-            // TODO unit test for the property 'Active'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
-        }
-        /// <summary>
         /// Test the property 'Id'
         /// </summary>
         [Fact]
@@ -103,6 +71,22 @@ namespace ShopwareSharp.Test.Model
         public void TechnicalNameTest()
         {
             // TODO unit test for the property 'TechnicalName'
+        }
+        /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Fact]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
+        }
+        /// <summary>
+        /// Test the property 'Author'
+        /// </summary>
+        [Fact]
+        public void AuthorTest()
+        {
+            // TODO unit test for the property 'Author'
         }
         /// <summary>
         /// Test the property 'Description'
@@ -167,6 +151,22 @@ namespace ShopwareSharp.Test.Model
         public void ConfigValuesTest()
         {
             // TODO unit test for the property 'ConfigValues'
+        }
+        /// <summary>
+        /// Test the property 'Active'
+        /// </summary>
+        [Fact]
+        public void ActiveTest()
+        {
+            // TODO unit test for the property 'Active'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

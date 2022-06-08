@@ -56,6 +56,190 @@ namespace ShopwareSharp.Test.Model
         }
 
 
+        /// <summary>
+        /// Test the property 'Page'
+        /// </summary>
+        [Fact]
+        public void PageTest()
+        {
+            // TODO unit test for the property 'Page'
+        }
+        /// <summary>
+        /// Test the property 'Limit'
+        /// </summary>
+        [Fact]
+        public void LimitTest()
+        {
+            // TODO unit test for the property 'Limit'
+        }
+        /// <summary>
+        /// Test the property 'Filter'
+        /// </summary>
+        [Fact]
+        public void FilterTest()
+        {
+            // TODO unit test for the property 'Filter'
+        }
+        /// <summary>
+        /// Test the property 'Sort'
+        /// </summary>
+        [Fact]
+        public void SortTest()
+        {
+            // TODO unit test for the property 'Sort'
+        }
+        /// <summary>
+        /// Test the property 'PostFilter'
+        /// </summary>
+        [Fact]
+        public void PostFilterTest()
+        {
+            // TODO unit test for the property 'PostFilter'
+        }
+        /// <summary>
+        /// Test the property 'Associations'
+        /// </summary>
+        [Fact]
+        public void AssociationsTest()
+        {
+            // TODO unit test for the property 'Associations'
+        }
+        /// <summary>
+        /// Test the property 'Aggregations'
+        /// </summary>
+        [Fact]
+        public void AggregationsTest()
+        {
+            // TODO unit test for the property 'Aggregations'
+        }
+        /// <summary>
+        /// Test the property 'Grouping'
+        /// </summary>
+        [Fact]
+        public void GroupingTest()
+        {
+            // TODO unit test for the property 'Grouping'
+        }
+        /// <summary>
+        /// Test the property 'Order'
+        /// </summary>
+        [Fact]
+        public void OrderTest()
+        {
+            // TODO unit test for the property 'Order'
+        }
+        /// <summary>
+        /// Test the property 'P'
+        /// </summary>
+        [Fact]
+        public void PTest()
+        {
+            // TODO unit test for the property 'P'
+        }
+        /// <summary>
+        /// Test the property 'Manufacturer'
+        /// </summary>
+        [Fact]
+        public void ManufacturerTest()
+        {
+            // TODO unit test for the property 'Manufacturer'
+        }
+        /// <summary>
+        /// Test the property 'MinPrice'
+        /// </summary>
+        [Fact]
+        public void MinPriceTest()
+        {
+            // TODO unit test for the property 'MinPrice'
+        }
+        /// <summary>
+        /// Test the property 'MaxPrice'
+        /// </summary>
+        [Fact]
+        public void MaxPriceTest()
+        {
+            // TODO unit test for the property 'MaxPrice'
+        }
+        /// <summary>
+        /// Test the property 'Rating'
+        /// </summary>
+        [Fact]
+        public void RatingTest()
+        {
+            // TODO unit test for the property 'Rating'
+        }
+        /// <summary>
+        /// Test the property 'ShippingFree'
+        /// </summary>
+        [Fact]
+        public void ShippingFreeTest()
+        {
+            // TODO unit test for the property 'ShippingFree'
+        }
+        /// <summary>
+        /// Test the property 'Properties'
+        /// </summary>
+        [Fact]
+        public void PropertiesTest()
+        {
+            // TODO unit test for the property 'Properties'
+        }
+        /// <summary>
+        /// Test the property 'ManufacturerFilter'
+        /// </summary>
+        [Fact]
+        public void ManufacturerFilterTest()
+        {
+            // TODO unit test for the property 'ManufacturerFilter'
+        }
+        /// <summary>
+        /// Test the property 'PriceFilter'
+        /// </summary>
+        [Fact]
+        public void PriceFilterTest()
+        {
+            // TODO unit test for the property 'PriceFilter'
+        }
+        /// <summary>
+        /// Test the property 'RatingFilter'
+        /// </summary>
+        [Fact]
+        public void RatingFilterTest()
+        {
+            // TODO unit test for the property 'RatingFilter'
+        }
+        /// <summary>
+        /// Test the property 'ShippingFreeFilter'
+        /// </summary>
+        [Fact]
+        public void ShippingFreeFilterTest()
+        {
+            // TODO unit test for the property 'ShippingFreeFilter'
+        }
+        /// <summary>
+        /// Test the property 'PropertyFilter'
+        /// </summary>
+        [Fact]
+        public void PropertyFilterTest()
+        {
+            // TODO unit test for the property 'PropertyFilter'
+        }
+        /// <summary>
+        /// Test the property 'PropertyWhitelist'
+        /// </summary>
+        [Fact]
+        public void PropertyWhitelistTest()
+        {
+            // TODO unit test for the property 'PropertyWhitelist'
+        }
+        /// <summary>
+        /// Test the property 'ReduceAggregations'
+        /// </summary>
+        [Fact]
+        public void ReduceAggregationsTest()
+        {
+            // TODO unit test for the property 'ReduceAggregations'
+        }
 
     }
 

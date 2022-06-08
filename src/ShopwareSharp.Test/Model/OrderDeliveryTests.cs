@@ -57,6 +57,22 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'VersionId'
+        /// </summary>
+        [Fact]
+        public void VersionIdTest()
+        {
+            // TODO unit test for the property 'VersionId'
+        }
+        /// <summary>
         /// Test the property 'OrderId'
         /// </summary>
         [Fact]
@@ -65,12 +81,28 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'OrderId'
         }
         /// <summary>
+        /// Test the property 'OrderVersionId'
+        /// </summary>
+        [Fact]
+        public void OrderVersionIdTest()
+        {
+            // TODO unit test for the property 'OrderVersionId'
+        }
+        /// <summary>
         /// Test the property 'ShippingOrderAddressId'
         /// </summary>
         [Fact]
         public void ShippingOrderAddressIdTest()
         {
             // TODO unit test for the property 'ShippingOrderAddressId'
+        }
+        /// <summary>
+        /// Test the property 'ShippingOrderAddressVersionId'
+        /// </summary>
+        [Fact]
+        public void ShippingOrderAddressVersionIdTest()
+        {
+            // TODO unit test for the property 'ShippingOrderAddressVersionId'
         }
         /// <summary>
         /// Test the property 'ShippingMethodId'
@@ -113,46 +145,6 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'ShippingDateLatest'
         }
         /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
-        }
-        /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
-        }
-        /// <summary>
-        /// Test the property 'VersionId'
-        /// </summary>
-        [Fact]
-        public void VersionIdTest()
-        {
-            // TODO unit test for the property 'VersionId'
-        }
-        /// <summary>
-        /// Test the property 'OrderVersionId'
-        /// </summary>
-        [Fact]
-        public void OrderVersionIdTest()
-        {
-            // TODO unit test for the property 'OrderVersionId'
-        }
-        /// <summary>
-        /// Test the property 'ShippingOrderAddressVersionId'
-        /// </summary>
-        [Fact]
-        public void ShippingOrderAddressVersionIdTest()
-        {
-            // TODO unit test for the property 'ShippingOrderAddressVersionId'
-        }
-        /// <summary>
         /// Test the property 'ShippingCosts'
         /// </summary>
         [Fact]
@@ -167,6 +159,14 @@ namespace ShopwareSharp.Test.Model
         public void CustomFieldsTest()
         {
             // TODO unit test for the property 'CustomFields'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

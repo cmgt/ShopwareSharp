@@ -56,6 +56,22 @@ namespace ShopwareSharp.Test.Model
         }
 
 
+        /// <summary>
+        /// Test the property 'Href'
+        /// </summary>
+        [Fact]
+        public void HrefTest()
+        {
+            // TODO unit test for the property 'Href'
+        }
+        /// <summary>
+        /// Test the property 'Meta'
+        /// </summary>
+        [Fact]
+        public void MetaTest()
+        {
+            // TODO unit test for the property 'Meta'
+        }
 
     }
 

@@ -57,6 +57,142 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
+        /// Test the property 'Type'
+        /// </summary>
+        [Fact]
+        public void TypeTest()
+        {
+            // TODO unit test for the property 'Type'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'Attributes'
+        /// </summary>
+        [Fact]
+        public void AttributesTest()
+        {
+            // TODO unit test for the property 'Attributes'
+        }
+        /// <summary>
+        /// Test the property 'Relationships'
+        /// </summary>
+        [Fact]
+        public void RelationshipsTest()
+        {
+            // TODO unit test for the property 'Relationships'
+        }
+        /// <summary>
+        /// Test the property 'Links'
+        /// </summary>
+        [Fact]
+        public void LinksTest()
+        {
+            // TODO unit test for the property 'Links'
+        }
+        /// <summary>
+        /// Test the property 'Meta'
+        /// </summary>
+        [Fact]
+        public void MetaTest()
+        {
+            // TODO unit test for the property 'Meta'
+        }
+        /// <summary>
+        /// Test the property 'SalesChannelId'
+        /// </summary>
+        [Fact]
+        public void SalesChannelIdTest()
+        {
+            // TODO unit test for the property 'SalesChannelId'
+        }
+        /// <summary>
+        /// Test the property 'LanguageId'
+        /// </summary>
+        [Fact]
+        public void LanguageIdTest()
+        {
+            // TODO unit test for the property 'LanguageId'
+        }
+        /// <summary>
+        /// Test the property 'ForeignKey'
+        /// </summary>
+        [Fact]
+        public void ForeignKeyTest()
+        {
+            // TODO unit test for the property 'ForeignKey'
+        }
+        /// <summary>
+        /// Test the property 'RouteName'
+        /// </summary>
+        [Fact]
+        public void RouteNameTest()
+        {
+            // TODO unit test for the property 'RouteName'
+        }
+        /// <summary>
+        /// Test the property 'PathInfo'
+        /// </summary>
+        [Fact]
+        public void PathInfoTest()
+        {
+            // TODO unit test for the property 'PathInfo'
+        }
+        /// <summary>
+        /// Test the property 'SeoPathInfo'
+        /// </summary>
+        [Fact]
+        public void SeoPathInfoTest()
+        {
+            // TODO unit test for the property 'SeoPathInfo'
+        }
+        /// <summary>
+        /// Test the property 'IsCanonical'
+        /// </summary>
+        [Fact]
+        public void IsCanonicalTest()
+        {
+            // TODO unit test for the property 'IsCanonical'
+        }
+        /// <summary>
+        /// Test the property 'IsModified'
+        /// </summary>
+        [Fact]
+        public void IsModifiedTest()
+        {
+            // TODO unit test for the property 'IsModified'
+        }
+        /// <summary>
+        /// Test the property 'IsDeleted'
+        /// </summary>
+        [Fact]
+        public void IsDeletedTest()
+        {
+            // TODO unit test for the property 'IsDeleted'
+        }
+        /// <summary>
+        /// Test the property 'Url'
+        /// </summary>
+        [Fact]
+        public void UrlTest()
+        {
+            // TODO unit test for the property 'Url'
+        }
+        /// <summary>
+        /// Test the property 'CustomFields'
+        /// </summary>
+        [Fact]
+        public void CustomFieldsTest()
+        {
+            // TODO unit test for the property 'CustomFields'
+        }
+        /// <summary>
         /// Test the property 'CreatedAt'
         /// </summary>
         [Fact]

@@ -56,6 +56,54 @@ namespace ShopwareSharp.Test.Model
         }
 
 
+        /// <summary>
+        /// Test the property 'ApiAlias'
+        /// </summary>
+        [Fact]
+        public void ApiAliasTest()
+        {
+            // TODO unit test for the property 'ApiAlias'
+        }
+        /// <summary>
+        /// Test the property 'Entity'
+        /// </summary>
+        [Fact]
+        public void EntityTest()
+        {
+            // TODO unit test for the property 'Entity'
+        }
+        /// <summary>
+        /// Test the property 'Total'
+        /// </summary>
+        [Fact]
+        public void TotalTest()
+        {
+            // TODO unit test for the property 'Total'
+        }
+        /// <summary>
+        /// Test the property 'Aggregations'
+        /// </summary>
+        [Fact]
+        public void AggregationsTest()
+        {
+            // TODO unit test for the property 'Aggregations'
+        }
+        /// <summary>
+        /// Test the property 'Page'
+        /// </summary>
+        [Fact]
+        public void PageTest()
+        {
+            // TODO unit test for the property 'Page'
+        }
+        /// <summary>
+        /// Test the property 'Limit'
+        /// </summary>
+        [Fact]
+        public void LimitTest()
+        {
+            // TODO unit test for the property 'Limit'
+        }
 
     }
 

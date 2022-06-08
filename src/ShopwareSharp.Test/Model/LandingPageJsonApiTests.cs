@@ -57,6 +57,142 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
+        /// Test the property 'Type'
+        /// </summary>
+        [Fact]
+        public void TypeTest()
+        {
+            // TODO unit test for the property 'Type'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'Attributes'
+        /// </summary>
+        [Fact]
+        public void AttributesTest()
+        {
+            // TODO unit test for the property 'Attributes'
+        }
+        /// <summary>
+        /// Test the property 'Relationships'
+        /// </summary>
+        [Fact]
+        public void RelationshipsTest()
+        {
+            // TODO unit test for the property 'Relationships'
+        }
+        /// <summary>
+        /// Test the property 'Links'
+        /// </summary>
+        [Fact]
+        public void LinksTest()
+        {
+            // TODO unit test for the property 'Links'
+        }
+        /// <summary>
+        /// Test the property 'Meta'
+        /// </summary>
+        [Fact]
+        public void MetaTest()
+        {
+            // TODO unit test for the property 'Meta'
+        }
+        /// <summary>
+        /// Test the property 'VersionId'
+        /// </summary>
+        [Fact]
+        public void VersionIdTest()
+        {
+            // TODO unit test for the property 'VersionId'
+        }
+        /// <summary>
+        /// Test the property 'Active'
+        /// </summary>
+        [Fact]
+        public void ActiveTest()
+        {
+            // TODO unit test for the property 'Active'
+        }
+        /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Fact]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
+        }
+        /// <summary>
+        /// Test the property 'CustomFields'
+        /// </summary>
+        [Fact]
+        public void CustomFieldsTest()
+        {
+            // TODO unit test for the property 'CustomFields'
+        }
+        /// <summary>
+        /// Test the property 'SlotConfig'
+        /// </summary>
+        [Fact]
+        public void SlotConfigTest()
+        {
+            // TODO unit test for the property 'SlotConfig'
+        }
+        /// <summary>
+        /// Test the property 'MetaTitle'
+        /// </summary>
+        [Fact]
+        public void MetaTitleTest()
+        {
+            // TODO unit test for the property 'MetaTitle'
+        }
+        /// <summary>
+        /// Test the property 'MetaDescription'
+        /// </summary>
+        [Fact]
+        public void MetaDescriptionTest()
+        {
+            // TODO unit test for the property 'MetaDescription'
+        }
+        /// <summary>
+        /// Test the property 'Keywords'
+        /// </summary>
+        [Fact]
+        public void KeywordsTest()
+        {
+            // TODO unit test for the property 'Keywords'
+        }
+        /// <summary>
+        /// Test the property 'Url'
+        /// </summary>
+        [Fact]
+        public void UrlTest()
+        {
+            // TODO unit test for the property 'Url'
+        }
+        /// <summary>
+        /// Test the property 'CmsPageId'
+        /// </summary>
+        [Fact]
+        public void CmsPageIdTest()
+        {
+            // TODO unit test for the property 'CmsPageId'
+        }
+        /// <summary>
+        /// Test the property 'CmsPageVersionId'
+        /// </summary>
+        [Fact]
+        public void CmsPageVersionIdTest()
+        {
+            // TODO unit test for the property 'CmsPageVersionId'
+        }
+        /// <summary>
         /// Test the property 'CreatedAt'
         /// </summary>
         [Fact]
@@ -71,6 +207,14 @@ namespace ShopwareSharp.Test.Model
         public void UpdatedAtTest()
         {
             // TODO unit test for the property 'UpdatedAt'
+        }
+        /// <summary>
+        /// Test the property 'Translated'
+        /// </summary>
+        [Fact]
+        public void TranslatedTest()
+        {
+            // TODO unit test for the property 'Translated'
         }
 
     }

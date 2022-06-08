@@ -73,52 +73,20 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'Limit'
         }
         /// <summary>
-        /// Test the property 'Manufacturer'
-        /// </summary>
-        [Fact]
-        public void ManufacturerTest()
-        {
-            // TODO unit test for the property 'Manufacturer'
-        }
-        /// <summary>
-        /// Test the property 'Rating'
-        /// </summary>
-        [Fact]
-        public void RatingTest()
-        {
-            // TODO unit test for the property 'Rating'
-        }
-        /// <summary>
-        /// Test the property 'Properties'
-        /// </summary>
-        [Fact]
-        public void PropertiesTest()
-        {
-            // TODO unit test for the property 'Properties'
-        }
-        /// <summary>
-        /// Test the property 'PropertyWhitelist'
-        /// </summary>
-        [Fact]
-        public void PropertyWhitelistTest()
-        {
-            // TODO unit test for the property 'PropertyWhitelist'
-        }
-        /// <summary>
-        /// Test the property 'ReduceAggregations'
-        /// </summary>
-        [Fact]
-        public void ReduceAggregationsTest()
-        {
-            // TODO unit test for the property 'ReduceAggregations'
-        }
-        /// <summary>
         /// Test the property 'P'
         /// </summary>
         [Fact]
         public void PTest()
         {
             // TODO unit test for the property 'P'
+        }
+        /// <summary>
+        /// Test the property 'Manufacturer'
+        /// </summary>
+        [Fact]
+        public void ManufacturerTest()
+        {
+            // TODO unit test for the property 'Manufacturer'
         }
         /// <summary>
         /// Test the property 'MinPrice'
@@ -137,12 +105,28 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'MaxPrice'
         }
         /// <summary>
+        /// Test the property 'Rating'
+        /// </summary>
+        [Fact]
+        public void RatingTest()
+        {
+            // TODO unit test for the property 'Rating'
+        }
+        /// <summary>
         /// Test the property 'ShippingFree'
         /// </summary>
         [Fact]
         public void ShippingFreeTest()
         {
             // TODO unit test for the property 'ShippingFree'
+        }
+        /// <summary>
+        /// Test the property 'Properties'
+        /// </summary>
+        [Fact]
+        public void PropertiesTest()
+        {
+            // TODO unit test for the property 'Properties'
         }
         /// <summary>
         /// Test the property 'ManufacturerFilter'
@@ -183,6 +167,22 @@ namespace ShopwareSharp.Test.Model
         public void PropertyFilterTest()
         {
             // TODO unit test for the property 'PropertyFilter'
+        }
+        /// <summary>
+        /// Test the property 'PropertyWhitelist'
+        /// </summary>
+        [Fact]
+        public void PropertyWhitelistTest()
+        {
+            // TODO unit test for the property 'PropertyWhitelist'
+        }
+        /// <summary>
+        /// Test the property 'ReduceAggregations'
+        /// </summary>
+        [Fact]
+        public void ReduceAggregationsTest()
+        {
+            // TODO unit test for the property 'ReduceAggregations'
         }
 
     }

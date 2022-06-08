@@ -57,6 +57,14 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Fact]
@@ -71,30 +79,6 @@ namespace ShopwareSharp.Test.Model
         public void PositionTest()
         {
             // TODO unit test for the property 'Position'
-        }
-        /// <summary>
-        /// Test the property 'Type'
-        /// </summary>
-        [Fact]
-        public void TypeTest()
-        {
-            // TODO unit test for the property 'Type'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
-        }
-        /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
         }
         /// <summary>
         /// Test the property 'SortBy'
@@ -113,6 +97,14 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'SortDirection'
         }
         /// <summary>
+        /// Test the property 'Type'
+        /// </summary>
+        [Fact]
+        public void TypeTest()
+        {
+            // TODO unit test for the property 'Type'
+        }
+        /// <summary>
         /// Test the property 'Active'
         /// </summary>
         [Fact]
@@ -127,6 +119,14 @@ namespace ShopwareSharp.Test.Model
         public void LimitTest()
         {
             // TODO unit test for the property 'Limit'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'
