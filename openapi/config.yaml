@@ -1,8 +1,8 @@
 skipValidateSpec:
 gitRepoId: ShopwareSharp
 gitUserId: cmgt
-# library: generichost
-library: httpclient
+library: generichost
+# library: httpclient
 additionalProperties:
   netCoreProjectFile: true
   packageName: ShopwareSharp
