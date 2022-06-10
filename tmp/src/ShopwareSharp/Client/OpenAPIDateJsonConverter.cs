@@ -28,7 +28,8 @@ namespace ShopwareSharp.Client
         /// <param name="options"></param>
         /// <returns></returns>
         public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
-            DateTime.ParseExact(reader.GetString()!, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            DateTime.ParseExact(reader.GetString()!, new[] {"yyyy-MM-dd", "o", "yyyy-MM-ddTHH:mm:ss.fffK"},
+                CultureInfo.InvariantCulture);
 
         /// <summary>
         /// Writes the DateTime to the json writer

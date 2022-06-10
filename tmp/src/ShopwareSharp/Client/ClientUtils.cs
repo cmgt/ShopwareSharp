@@ -253,7 +253,7 @@ namespace ShopwareSharp.Client
         /// <summary>
         /// The scheme of the API
         /// </summary>
-        public const string SCHEME = "http";
+        public const string SCHEME = "https";
 
         /// <summary>
         /// The context path of the API

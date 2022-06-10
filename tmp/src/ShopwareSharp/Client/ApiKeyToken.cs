@@ -31,7 +31,7 @@ namespace ShopwareSharp.Client
         /// <param name="cookieName"></param>
         public virtual void UseInCookie(System.Net.Http.HttpRequestMessage request, string cookieName)
         {
-            request.Headers.Add("Cookie", $"{ cookieName }=_raw");
+            request.Headers.Add("Cookie", $"{cookieName}={_raw}");
         }
 
         /// <summary>

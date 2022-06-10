@@ -319,11 +319,7 @@ namespace ShopwareSharp.Api
 
                     apiKey.UseInHeader(request, "sw-access-key");
 
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-
-                    tokens.Add(apiKey);
-
-                    apiKey.UseInHeader(request, "sw-context-token");
+                    //contextToken.UseInHeader(request, "sw-context-token");
 
                     request.RequestUri = uriBuilder.Uri;
 
@@ -369,9 +365,6 @@ namespace ShopwareSharp.Api
 
                         if (apiResponse.IsSuccessStatusCode)
                             apiResponse.Content = JsonSerializer.Deserialize<StateMachineState>(apiResponse.RawContent, _jsonSerializerOptions);
-                        else if (apiResponse.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase token in tokens)
-                                token.BeginRateLimit();
                         else if (apiResponse.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase token in tokens)
                                 token.BeginRateLimit();
@@ -451,10 +444,6 @@ namespace ShopwareSharp.Api
                     uriBuilder.Scheme = ClientUtils.SCHEME;
                     uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/checkout/order";
 
-                    
-
-                    
-
                     request.Content = (createOrderRequest as object) is System.IO.Stream stream
                         ? request.Content = new StreamContent(stream)
                         : request.Content = new StringContent(JsonSerializer.Serialize(createOrderRequest, _jsonSerializerOptions));
@@ -467,11 +456,7 @@ namespace ShopwareSharp.Api
 
                     apiKey.UseInHeader(request, "sw-access-key");
 
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-
-                    tokens.Add(apiKey);
-
-                    apiKey.UseInHeader(request, "sw-context-token");
+                    //contextToken.UseInHeader(request, "sw-context-token");
 
                     request.RequestUri = uriBuilder.Uri;
 
@@ -517,9 +502,6 @@ namespace ShopwareSharp.Api
 
                         if (apiResponse.IsSuccessStatusCode)
                             apiResponse.Content = JsonSerializer.Deserialize<Order>(apiResponse.RawContent, _jsonSerializerOptions);
-                        else if (apiResponse.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase token in tokens)
-                                token.BeginRateLimit();
                         else if (apiResponse.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase token in tokens)
                                 token.BeginRateLimit();
@@ -618,11 +600,7 @@ namespace ShopwareSharp.Api
 
                     apiKey.UseInHeader(request, "sw-access-key");
 
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-
-                    tokens.Add(apiKey);
-
-                    apiKey.UseInHeader(request, "sw-context-token");
+                    //contextToken.UseInHeader(request, "sw-context-token");
 
                     request.RequestUri = uriBuilder.Uri;
 
@@ -668,9 +646,6 @@ namespace ShopwareSharp.Api
 
                         if (apiResponse.IsSuccessStatusCode)
                             apiResponse.Content = JsonSerializer.Deserialize<SuccessResponse>(apiResponse.RawContent, _jsonSerializerOptions);
-                        else if (apiResponse.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase token in tokens)
-                                token.BeginRateLimit();
                         else if (apiResponse.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase token in tokens)
                                 token.BeginRateLimit();

@@ -58,9 +58,9 @@ namespace ShopwareSharp.Test.Api
         public async Task HandlePaymentMethodAsyncTest()
         {
             HandlePaymentMethodRequest handlePaymentMethodRequest = default;
-            string contentType = default;
-            string accept = default;
-            await _instance.HandlePaymentMethodAsync(handlePaymentMethodRequest, contentType, accept);
+            
+            
+            await _instance.HandlePaymentMethodAsync(handlePaymentMethodRequest);
         }
 
         /// <summary>
@@ -69,11 +69,11 @@ namespace ShopwareSharp.Test.Api
         [Fact (Skip = "not implemented")]
         public async Task ReadShippingMethodAsyncTest()
         {
-            string contentType = default;
-            string accept = default;
+            
+            
             bool? onlyAvailable = default;
             ReadCustomerRequest? readCustomerRequest = default;
-            var response = await _instance.ReadShippingMethodAsync(contentType, accept, onlyAvailable, readCustomerRequest);
+            var response = await _instance.ReadShippingMethodAsync(onlyAvailable, readCustomerRequest);
             Assert.IsType<ReadShippingMethod200Response>(response);
         }
     }

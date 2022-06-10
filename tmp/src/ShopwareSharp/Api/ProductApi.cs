@@ -531,9 +531,7 @@ namespace ShopwareSharp.Api
                     List<TokenBase> tokens = new List<TokenBase>();
 
                     ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-
                     tokens.Add(apiKey);
-
                     apiKey.UseInHeader(request, "sw-access-key");
 
                     request.RequestUri = uriBuilder.Uri;
@@ -657,12 +655,6 @@ namespace ShopwareSharp.Api
                 if (productId == null)
                     throw new ArgumentNullException(nameof(productId));
 
-                if (contentType == null)
-                    throw new ArgumentNullException(nameof(contentType));
-
-                if (accept == null)
-                    throw new ArgumentNullException(nameof(accept));
-
                 #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
                 using (HttpRequestMessage request = new HttpRequestMessage())
@@ -672,10 +664,6 @@ namespace ShopwareSharp.Api
                     uriBuilder.Scheme = ClientUtils.SCHEME;
                     uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/product/{productId}/cross-selling";
                     uriBuilder.Path = uriBuilder.Path.Replace("%7BproductId%7D", Uri.EscapeDataString(productId.ToString()));
-
-                    
-
-                    
 
                     List<TokenBase> tokens = new List<TokenBase>();
 
@@ -797,12 +785,6 @@ namespace ShopwareSharp.Api
                 if (productId == null)
                     throw new ArgumentNullException(nameof(productId));
 
-                if (contentType == null)
-                    throw new ArgumentNullException(nameof(contentType));
-
-                if (accept == null)
-                    throw new ArgumentNullException(nameof(accept));
-
                 #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
                 using (HttpRequestMessage request = new HttpRequestMessage())
@@ -812,10 +794,6 @@ namespace ShopwareSharp.Api
                     uriBuilder.Scheme = ClientUtils.SCHEME;
                     uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/product/{productId}";
                     uriBuilder.Path = uriBuilder.Path.Replace("%7BproductId%7D", Uri.EscapeDataString(productId.ToString()));
-
-                    
-
-                    
 
                     List<TokenBase> tokens = new List<TokenBase>();
 
@@ -943,12 +921,6 @@ namespace ShopwareSharp.Api
                 if (fileName == null)
                     throw new ArgumentNullException(nameof(fileName));
 
-                if (contentType == null)
-                    throw new ArgumentNullException(nameof(contentType));
-
-                if (accept == null)
-                    throw new ArgumentNullException(nameof(accept));
-
                 #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
                 using (HttpRequestMessage request = new HttpRequestMessage())
@@ -959,10 +931,6 @@ namespace ShopwareSharp.Api
                     uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/product-export/{accessKey}/{fileName}";
                     uriBuilder.Path = uriBuilder.Path.Replace("%7BaccessKey%7D", Uri.EscapeDataString(accessKey.ToString()));
                     uriBuilder.Path = uriBuilder.Path.Replace("%7BfileName%7D", Uri.EscapeDataString(fileName.ToString()));
-
-                    
-
-                    
 
                     List<TokenBase> tokens = new List<TokenBase>();
 
@@ -1078,12 +1046,6 @@ namespace ShopwareSharp.Api
                 if (categoryId == null)
                     throw new ArgumentNullException(nameof(categoryId));
 
-                if (contentType == null)
-                    throw new ArgumentNullException(nameof(contentType));
-
-                if (accept == null)
-                    throw new ArgumentNullException(nameof(accept));
-
                 #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
                 using (HttpRequestMessage request = new HttpRequestMessage())
@@ -1093,10 +1055,6 @@ namespace ShopwareSharp.Api
                     uriBuilder.Scheme = ClientUtils.SCHEME;
                     uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/product-listing/{categoryId}";
                     uriBuilder.Path = uriBuilder.Path.Replace("%7BcategoryId%7D", Uri.EscapeDataString(categoryId.ToString()));
-
-                    
-
-                    
 
                     request.Content = (readProductListingRequest as object) is System.IO.Stream stream
                         ? request.Content = new StreamContent(stream)
@@ -1234,12 +1192,6 @@ namespace ShopwareSharp.Api
                 if (productId == null)
                     throw new ArgumentNullException(nameof(productId));
 
-                if (contentType == null)
-                    throw new ArgumentNullException(nameof(contentType));
-
-                if (accept == null)
-                    throw new ArgumentNullException(nameof(accept));
-
                 #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
                 using (HttpRequestMessage request = new HttpRequestMessage())
@@ -1249,10 +1201,6 @@ namespace ShopwareSharp.Api
                     uriBuilder.Scheme = ClientUtils.SCHEME;
                     uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/product/{productId}/reviews";
                     uriBuilder.Path = uriBuilder.Path.Replace("%7BproductId%7D", Uri.EscapeDataString(productId.ToString()));
-
-                    
-
-                    
 
                     request.Content = (readCustomerRequest as object) is System.IO.Stream stream
                         ? request.Content = new StreamContent(stream)
@@ -1390,12 +1338,6 @@ namespace ShopwareSharp.Api
                 if (productId == null)
                     throw new ArgumentNullException(nameof(productId));
 
-                if (contentType == null)
-                    throw new ArgumentNullException(nameof(contentType));
-
-                if (accept == null)
-                    throw new ArgumentNullException(nameof(accept));
-
                 #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
                 using (HttpRequestMessage request = new HttpRequestMessage())
@@ -1405,10 +1347,6 @@ namespace ShopwareSharp.Api
                     uriBuilder.Scheme = ClientUtils.SCHEME;
                     uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/product/{productId}/review";
                     uriBuilder.Path = uriBuilder.Path.Replace("%7BproductId%7D", Uri.EscapeDataString(productId.ToString()));
-
-                    
-
-                    
 
                     request.Content = (saveProductReviewRequest as object) is System.IO.Stream stream
                         ? request.Content = new StreamContent(stream)
@@ -1422,11 +1360,7 @@ namespace ShopwareSharp.Api
 
                     apiKey.UseInHeader(request, "sw-access-key");
 
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-
-                    tokens.Add(apiKey);
-
-                    apiKey.UseInHeader(request, "sw-context-token");
+                    //contextToken.UseInHeader(request, "sw-context-token");
 
                     request.RequestUri = uriBuilder.Uri;
 
@@ -1463,9 +1397,6 @@ namespace ShopwareSharp.Api
 
                         if (apiResponse.IsSuccessStatusCode)
                             apiResponse.Content = JsonSerializer.Deserialize<object>(apiResponse.RawContent, _jsonSerializerOptions);
-                        else if (apiResponse.StatusCode == (HttpStatusCode) 429)
-                            foreach(TokenBase token in tokens)
-                                token.BeginRateLimit();
                         else if (apiResponse.StatusCode == (HttpStatusCode) 429)
                             foreach(TokenBase token in tokens)
                                 token.BeginRateLimit();
@@ -1540,12 +1471,6 @@ namespace ShopwareSharp.Api
             {
                 #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                if (contentType == null)
-                    throw new ArgumentNullException(nameof(contentType));
-
-                if (accept == null)
-                    throw new ArgumentNullException(nameof(accept));
-
                 #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
                 using (HttpRequestMessage request = new HttpRequestMessage())
@@ -1554,10 +1479,6 @@ namespace ShopwareSharp.Api
                     uriBuilder.Host = HttpClient.BaseAddress!.Host;
                     uriBuilder.Scheme = ClientUtils.SCHEME;
                     uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/search";
-
-                    
-
-                    
 
                     request.Content = (searchPageRequest as object) is System.IO.Stream stream
                         ? request.Content = new StreamContent(stream)
@@ -1692,12 +1613,6 @@ namespace ShopwareSharp.Api
                 if (searchSuggestRequest == null)
                     throw new ArgumentNullException(nameof(searchSuggestRequest));
 
-                if (contentType == null)
-                    throw new ArgumentNullException(nameof(contentType));
-
-                if (accept == null)
-                    throw new ArgumentNullException(nameof(accept));
-
                 #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
                 using (HttpRequestMessage request = new HttpRequestMessage())
@@ -1706,10 +1621,6 @@ namespace ShopwareSharp.Api
                     uriBuilder.Host = HttpClient.BaseAddress!.Host;
                     uriBuilder.Scheme = ClientUtils.SCHEME;
                     uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/search-suggest";
-
-                    
-
-                    
 
                     request.Content = (searchSuggestRequest as object) is System.IO.Stream stream
                         ? request.Content = new StreamContent(stream)

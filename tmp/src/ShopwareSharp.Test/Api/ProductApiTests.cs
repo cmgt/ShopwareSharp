@@ -50,17 +50,14 @@ namespace ShopwareSharp.Test.Api
             _instance = _host.Services.GetRequiredService<IProductApi>();
         }
 
-
         /// <summary>
         /// Test ReadProduct
         /// </summary>
-        [Fact (Skip = "not implemented")]
+        [Fact]
         public async Task ReadProductAsyncTest()
         {
-            string contentType = default;
-            string accept = default;
             ReadCustomerRequest? readCustomerRequest = default;
-            var response = await _instance.ReadProductAsync(contentType, accept, readCustomerRequest);
+            var response = await _instance.ReadProductAsync(readCustomerRequest);
             Assert.IsType<ReadProduct200Response>(response);
         }
 
@@ -71,22 +68,21 @@ namespace ShopwareSharp.Test.Api
         public async Task ReadProductCrossSellingsAsyncTest()
         {
             string productId = default;
-            string contentType = default;
-            string accept = default;
-            var response = await _instance.ReadProductCrossSellingsAsync(productId, contentType, accept);
+            
+            
+            var response = await _instance.ReadProductCrossSellingsAsync(productId);
             Assert.IsType<List<CrossSellingElementCollectionInner>>(response);
         }
 
         /// <summary>
         /// Test ReadProductDetail
         /// </summary>
-        [Fact (Skip = "not implemented")]
+        [Fact]
         public async Task ReadProductDetailAsyncTest()
         {
-            string productId = default;
-            string contentType = default;
-            string accept = default;
-            var response = await _instance.ReadProductDetailAsync(productId, contentType, accept);
+            string productId = "0f683a27c45a4e408814a97fd7150ffa";
+            
+            var response = await _instance.ReadProductDetailAsync(productId);
             Assert.IsType<ProductDetailResponse>(response);
         }
 
@@ -98,9 +94,9 @@ namespace ShopwareSharp.Test.Api
         {
             string accessKey = default;
             string fileName = default;
-            string contentType = default;
-            string accept = default;
-            await _instance.ReadProductExportAsync(accessKey, fileName, contentType, accept);
+            
+            
+            await _instance.ReadProductExportAsync(accessKey, fileName);
         }
 
         /// <summary>
@@ -110,10 +106,10 @@ namespace ShopwareSharp.Test.Api
         public async Task ReadProductListingAsyncTest()
         {
             string categoryId = default;
-            string contentType = default;
-            string accept = default;
+            
+            
             ReadProductListingRequest? readProductListingRequest = default;
-            var response = await _instance.ReadProductListingAsync(categoryId, contentType, accept, readProductListingRequest);
+            var response = await _instance.ReadProductListingAsync(categoryId, readProductListingRequest);
             Assert.IsType<ProductListingResult>(response);
         }
 
@@ -124,10 +120,10 @@ namespace ShopwareSharp.Test.Api
         public async Task ReadProductReviewsAsyncTest()
         {
             string productId = default;
-            string contentType = default;
-            string accept = default;
+            
+            
             ReadCustomerRequest? readCustomerRequest = default;
-            var response = await _instance.ReadProductReviewsAsync(productId, contentType, accept, readCustomerRequest);
+            var response = await _instance.ReadProductReviewsAsync(productId, readCustomerRequest);
             Assert.IsType<ReadProductReviews200Response>(response);
         }
 
@@ -138,10 +134,10 @@ namespace ShopwareSharp.Test.Api
         public async Task SaveProductReviewAsyncTest()
         {
             string productId = default;
-            string contentType = default;
-            string accept = default;
+            
+            
             SaveProductReviewRequest? saveProductReviewRequest = default;
-            await _instance.SaveProductReviewAsync(productId, contentType, accept, saveProductReviewRequest);
+            await _instance.SaveProductReviewAsync(productId, saveProductReviewRequest);
         }
 
         /// <summary>
@@ -150,10 +146,10 @@ namespace ShopwareSharp.Test.Api
         [Fact (Skip = "not implemented")]
         public async Task SearchPageAsyncTest()
         {
-            string contentType = default;
-            string accept = default;
+            
+            
             SearchPageRequest? searchPageRequest = default;
-            var response = await _instance.SearchPageAsync(contentType, accept, searchPageRequest);
+            var response = await _instance.SearchPageAsync(searchPageRequest);
             Assert.IsType<ProductListingResult>(response);
         }
 
@@ -164,9 +160,9 @@ namespace ShopwareSharp.Test.Api
         public async Task SearchSuggestAsyncTest()
         {
             SearchSuggestRequest searchSuggestRequest = default;
-            string contentType = default;
-            string accept = default;
-            var response = await _instance.SearchSuggestAsync(searchSuggestRequest, contentType, accept);
+            
+            
+            var response = await _instance.SearchSuggestAsync(searchSuggestRequest);
             Assert.IsType<ProductListingResult>(response);
         }
     }

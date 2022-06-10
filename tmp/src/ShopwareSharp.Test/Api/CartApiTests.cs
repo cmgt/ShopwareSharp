@@ -57,10 +57,10 @@ namespace ShopwareSharp.Test.Api
         [Fact (Skip = "not implemented")]
         public async Task AddLineItemAsyncTest()
         {
-            string contentType = default;
-            string accept = default;
+            
+            
             CartItems? cartItems = default;
-            var response = await _instance.AddLineItemAsync(contentType, accept, cartItems);
+            var response = await _instance.AddLineItemAsync(cartItems);
             Assert.IsType<Cart>(response);
         }
 
@@ -70,9 +70,9 @@ namespace ShopwareSharp.Test.Api
         [Fact (Skip = "not implemented")]
         public async Task DeleteCartAsyncTest()
         {
-            string contentType = default;
-            string accept = default;
-            var response = await _instance.DeleteCartAsync(contentType, accept);
+            
+            
+            var response = await _instance.DeleteCartAsync();
             Assert.IsType<SuccessResponse>(response);
         }
 
@@ -82,10 +82,10 @@ namespace ShopwareSharp.Test.Api
         [Fact (Skip = "not implemented")]
         public async Task ReadCartAsyncTest()
         {
-            string contentType = default;
-            string accept = default;
+            
+            
             string? name = default;
-            var response = await _instance.ReadCartAsync(contentType, accept, name);
+            var response = await _instance.ReadCartAsync(name);
             Assert.IsType<Cart>(response);
         }
 
@@ -96,9 +96,9 @@ namespace ShopwareSharp.Test.Api
         public async Task RemoveLineItemAsyncTest()
         {
             List<string> ids = default;
-            string contentType = default;
-            string accept = default;
-            var response = await _instance.RemoveLineItemAsync(ids, contentType, accept);
+            
+            
+            var response = await _instance.RemoveLineItemAsync(ids);
             Assert.IsType<Cart>(response);
         }
 
@@ -108,10 +108,10 @@ namespace ShopwareSharp.Test.Api
         [Fact (Skip = "not implemented")]
         public async Task UpdateLineItemAsyncTest()
         {
-            string contentType = default;
-            string accept = default;
+            
+            
             CartItems? cartItems = default;
-            var response = await _instance.UpdateLineItemAsync(contentType, accept, cartItems);
+            var response = await _instance.UpdateLineItemAsync(cartItems);
             Assert.IsType<Cart>(response);
         }
     }

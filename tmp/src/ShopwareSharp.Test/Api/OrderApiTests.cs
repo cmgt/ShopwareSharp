@@ -58,9 +58,9 @@ namespace ShopwareSharp.Test.Api
         public async Task CancelOrderAsyncTest()
         {
             CancelOrderRequest cancelOrderRequest = default;
-            string contentType = default;
-            string accept = default;
-            var response = await _instance.CancelOrderAsync(cancelOrderRequest, contentType, accept);
+            
+            
+            var response = await _instance.CancelOrderAsync(cancelOrderRequest);
             Assert.IsType<StateMachineState>(response);
         }
 
@@ -70,10 +70,10 @@ namespace ShopwareSharp.Test.Api
         [Fact (Skip = "not implemented")]
         public async Task CreateOrderAsyncTest()
         {
-            string contentType = default;
-            string accept = default;
+            
+            
             CreateOrderRequest? createOrderRequest = default;
-            var response = await _instance.CreateOrderAsync(contentType, accept, createOrderRequest);
+            var response = await _instance.CreateOrderAsync(createOrderRequest);
             Assert.IsType<Order>(response);
         }
 
@@ -84,9 +84,9 @@ namespace ShopwareSharp.Test.Api
         public async Task OrderSetPaymentAsyncTest()
         {
             OrderSetPaymentRequest orderSetPaymentRequest = default;
-            string contentType = default;
-            string accept = default;
-            var response = await _instance.OrderSetPaymentAsync(orderSetPaymentRequest, contentType, accept);
+            
+            
+            var response = await _instance.OrderSetPaymentAsync(orderSetPaymentRequest);
             Assert.IsType<SuccessResponse>(response);
         }
 
@@ -97,9 +97,9 @@ namespace ShopwareSharp.Test.Api
         public async Task ReadOrderAsyncTest()
         {
             ReadOrderRequest readOrderRequest = default;
-            string contentType = default;
-            string accept = default;
-            var response = await _instance.ReadOrderAsync(readOrderRequest, contentType, accept);
+            
+            
+            var response = await _instance.ReadOrderAsync(readOrderRequest);
             Assert.IsType<OrderRouteResponse>(response);
         }
     }

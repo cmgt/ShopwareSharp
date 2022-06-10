@@ -58,9 +58,9 @@ namespace ShopwareSharp.Test.Api
         public async Task ReadPaymentMethodAsyncTest()
         {
             ReadPaymentMethodRequest readPaymentMethodRequest = default;
-            string contentType = default;
-            string accept = default;
-            var response = await _instance.ReadPaymentMethodAsync(readPaymentMethodRequest, contentType, accept);
+            
+            
+            var response = await _instance.ReadPaymentMethodAsync(readPaymentMethodRequest);
             Assert.IsType<ReadPaymentMethod200Response>(response);
         }
     }
