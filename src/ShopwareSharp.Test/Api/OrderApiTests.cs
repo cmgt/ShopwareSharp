@@ -72,8 +72,7 @@ namespace ShopwareSharp.Test.Api
         public async Task CreateOrderAsyncTest()
         {
             CreateOrderRequest? createOrderRequest = default;
-            var response = await _instance.CreateOrderAsync(createOrderRequest,
-                new RequestOptions() {ContextKey = new ContextKeyToken("qnEIHRHOt1Nz8xWkHL0PFbvnrDjRWazS")});
+            var response = await _instance.CreateOrderAsync(createOrderRequest);
             Assert.IsType<Order>(response);
         }
 

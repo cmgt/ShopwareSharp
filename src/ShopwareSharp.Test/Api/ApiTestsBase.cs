@@ -52,7 +52,7 @@ namespace ShopwareSharp.Test.Api
             .ConfigureApi((context, options) =>
             {
                 options.AddTokens(new ApiKeyToken("SWSCUJDICHA0SDMYA1BPRNLKAG"));
-                options.AddTokens(ContextKeyToken.Empty);
+                options.AddTokens(new ContextKeyToken("qnEIHRHOt1Nz8xWkHL0PFbvnrDjRWazS"));
 
                 options.AddApiHttpClients(c => c.BaseAddress = new Uri("https://stage.shopware.cledeploy.com/store-api"));
                 

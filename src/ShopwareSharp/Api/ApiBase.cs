@@ -71,9 +71,11 @@ namespace ShopwareSharp.Api
                     : request.Content =
                         new StringContent(JsonSerializer.Serialize(content, jsonSerializerOptions));
 
-                ApiKeyToken apiKey =
-                    (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
+                var apiKey = await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
                 apiKey.UseInHeader(request, "sw-access-key");
+
+                var contextKey = await ContextKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
+                contextKey.UseInHeader(request, "sw-context-token");
 
                 request.PrepareRequestOptions(requestOptions);
 

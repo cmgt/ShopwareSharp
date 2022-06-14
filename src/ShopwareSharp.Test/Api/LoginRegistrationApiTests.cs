@@ -95,7 +95,7 @@ namespace ShopwareSharp.Test.Api
                 "Doe", true, ClientUtils.BASE_ADDRESS,
                 new CustomerAddress(countryId, salutationId, "94066", "Chicago", "136 Ave"), guest: true);
 
-            var response = await _instance.RegisterAsync(registerRequest, new RequestOptions(){ContextKey = new ContextKeyToken("qnEIHRHOt1Nz8xWkHL0PFbvnrDjRWazS")});
+            var response = await _instance.RegisterAsync(registerRequest);
             Assert.IsType<Customer>(response);
         }
 
