@@ -50,16 +50,30 @@ namespace ShopwareSharp.Test.Api
             _instance = _host.Services.GetRequiredService<ICartApi>();
         }
 
+        /// <summary>
+        /// Test CreateCart
+        /// </summary>
+        [Fact]
+        public async Task CreateCartAsyncTest()
+        {
+            var name = Guid.NewGuid().ToString();
+            var response = await _instance.ReadCartAsync(name);
+            Assert.IsType<Cart>(response);
+        }
+
 
         /// <summary>
         /// Test AddLineItem
         /// </summary>
-        [Fact (Skip = "not implemented")]
+        [Fact]
         public async Task AddLineItemAsyncTest()
         {
-            
-            
-            CartItems? cartItems = default;
+            var name = Guid.NewGuid().ToString();
+            var cart = await _instance.ReadCartAsync(name);
+
+            CartItems? cartItems = new CartItems(cartItemsAllOf: new CartItemsAllOf(new List<LineItem>()
+                {new LineItem() {ReferencedId = "0f683a27c45a4e408814a97fd7150ffa", Quantity = 1}}));
+
             var response = await _instance.AddLineItemAsync(cartItems);
             Assert.IsType<Cart>(response);
         }
@@ -79,7 +93,7 @@ namespace ShopwareSharp.Test.Api
         /// <summary>
         /// Test ReadCart
         /// </summary>
-        [Fact (Skip = "not implemented")]
+        [Fact]
         public async Task ReadCartAsyncTest()
         {
             

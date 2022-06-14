@@ -35,7 +35,7 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <param name="arrayStruct"></param>
         /// <param name="cartItemsAllOf"></param>
-        public CartItems(ArrayStruct arrayStruct, CartItemsAllOf cartItemsAllOf)
+        public CartItems(ArrayStruct? arrayStruct = default, CartItemsAllOf? cartItemsAllOf = default)
         {
             ArrayStruct = arrayStruct;
             CartItemsAllOf = cartItemsAllOf;
@@ -44,12 +44,12 @@ namespace ShopwareSharp.Model
         /// <summary>
         /// Gets or Sets ArrayStruct
         /// </summary>
-        public ArrayStruct ArrayStruct { get; set; }
+        public ArrayStruct? ArrayStruct { get; set; }
 
         /// <summary>
         /// Gets or Sets CartItemsAllOf
         /// </summary>
-        public CartItemsAllOf CartItemsAllOf { get; set; }
+        public CartItemsAllOf? CartItemsAllOf { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -171,6 +171,10 @@ namespace ShopwareSharp.Model
         /// <param name="cartItems"></param>
         /// <param name="options"></param>
         /// <exception cref="NotImplementedException"></exception>
-        public override void Write(Utf8JsonWriter writer, CartItems cartItems, JsonSerializerOptions options) => throw new NotImplementedException();
+        public override void Write(Utf8JsonWriter writer, CartItems cartItems, JsonSerializerOptions options)
+        {
+            JsonSerializer.Serialize(writer, new
+                {apiAlias = cartItems.ArrayStruct?.ApiAlias, items = cartItems.CartItemsAllOf?.Items}, options);
+        }
     }
 }

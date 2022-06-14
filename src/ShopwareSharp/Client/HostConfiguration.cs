@@ -27,7 +27,9 @@ namespace ShopwareSharp.Client
     public class HostConfiguration
     {
         private readonly IServiceCollection services;
-        private readonly JsonSerializerOptions jsonOptions = new JsonSerializerOptions();
+
+        private readonly JsonSerializerOptions jsonOptions = new JsonSerializerOptions(JsonSerializerDefaults.Web)
+            {DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull};
 
         internal bool HttpClientsAdded { get; private set; }
 
