@@ -16,5 +16,12 @@ namespace ShopwareSharp.Client
         {
             return ValueTask.FromResult(_tokens.First());
         }
+
+        public override ValueTask SetAsync(TTokenBase value, CancellationToken? cancellation = null)
+        {
+            _tokens = new [] {value};
+
+            return ValueTask.CompletedTask;
+        }
     }
 }

@@ -39,7 +39,8 @@ namespace ShopwareSharp.Api
         /// <param name="cartItems"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;Cart?&gt;&gt;</returns>
-        Task<ApiResponse<Cart?>> AddLineItemWithHttpInfoAsync(CartItems? cartItems = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<Cart?>> AddLineItemWithHttpInfoAsync(CartItems? cartItems = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Add items to the cart
@@ -51,7 +52,8 @@ namespace ShopwareSharp.Api
         /// <param name="cartItems"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;Cart&gt;</returns>
-        Task<Cart?> AddLineItemAsync(CartItems? cartItems = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<Cart?> AddLineItemAsync(CartItems? cartItems = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Add items to the cart
@@ -62,9 +64,10 @@ namespace ShopwareSharp.Api
         /// <param name="cartItems"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;Cart?&gt;</returns>
-        Task<Cart?> AddLineItemOrDefaultAsync(CartItems? cartItems = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<Cart?> AddLineItemOrDefaultAsync(CartItems? cartItems = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Delete a cart
         /// </summary>
@@ -74,7 +77,8 @@ namespace ShopwareSharp.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;SuccessResponse?&gt;&gt;</returns>
-        Task<ApiResponse<SuccessResponse?>> DeleteCartWithHttpInfoAsync(System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<SuccessResponse?>> DeleteCartWithHttpInfoAsync(RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Delete a cart
@@ -85,7 +89,8 @@ namespace ShopwareSharp.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;SuccessResponse&gt;</returns>
-        Task<SuccessResponse?> DeleteCartAsync(System.Threading.CancellationToken? cancellationToken = null);
+        Task<SuccessResponse?> DeleteCartAsync(RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Delete a cart
@@ -95,9 +100,10 @@ namespace ShopwareSharp.Api
         /// </remarks>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;SuccessResponse?&gt;</returns>
-        Task<SuccessResponse?> DeleteCartOrDefaultAsync(System.Threading.CancellationToken? cancellationToken = null);
+        Task<SuccessResponse?> DeleteCartOrDefaultAsync(RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Fetch or create a cart
         /// </summary>
@@ -108,7 +114,9 @@ namespace ShopwareSharp.Api
         /// <param name="name">The name of the new cart. This parameter will only be used when creating a new cart. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;Cart?&gt;&gt;</returns>
-        Task<ApiResponse<Cart?>> ReadCartWithHttpInfoAsync(string? name = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<Cart?>> ReadCartWithHttpInfoAsync(string? name = null,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch or create a cart
@@ -120,7 +128,8 @@ namespace ShopwareSharp.Api
         /// <param name="name">The name of the new cart. This parameter will only be used when creating a new cart. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;Cart&gt;</returns>
-        Task<Cart?> ReadCartAsync(string? name = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<Cart?> ReadCartAsync(string? name = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch or create a cart
@@ -131,9 +140,10 @@ namespace ShopwareSharp.Api
         /// <param name="name">The name of the new cart. This parameter will only be used when creating a new cart. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;Cart?&gt;</returns>
-        Task<Cart?> ReadCartOrDefaultAsync(string? name = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<Cart?> ReadCartOrDefaultAsync(string? name = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Remove items from the cart
         /// </summary>
@@ -144,7 +154,9 @@ namespace ShopwareSharp.Api
         /// <param name="ids">A list of product identifiers.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;Cart?&gt;&gt;</returns>
-        Task<ApiResponse<Cart?>> RemoveLineItemWithHttpInfoAsync(List<string> ids, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<Cart?>> RemoveLineItemWithHttpInfoAsync(IEnumerable<string> ids,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Remove items from the cart
@@ -156,7 +168,8 @@ namespace ShopwareSharp.Api
         /// <param name="ids">A list of product identifiers.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;Cart&gt;</returns>
-        Task<Cart?> RemoveLineItemAsync(List<string> ids, System.Threading.CancellationToken? cancellationToken = null);
+        Task<Cart?> RemoveLineItemAsync(IEnumerable<string> ids, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Remove items from the cart
@@ -167,9 +180,10 @@ namespace ShopwareSharp.Api
         /// <param name="ids">A list of product identifiers.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;Cart?&gt;</returns>
-        Task<Cart?> RemoveLineItemOrDefaultAsync(List<string> ids, System.Threading.CancellationToken? cancellationToken = null);
+        Task<Cart?> RemoveLineItemOrDefaultAsync(IEnumerable<string> ids, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Update items in the cart
         /// </summary>
@@ -180,7 +194,9 @@ namespace ShopwareSharp.Api
         /// <param name="cartItems"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;Cart?&gt;&gt;</returns>
-        Task<ApiResponse<Cart?>> UpdateLineItemWithHttpInfoAsync(CartItems? cartItems = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<Cart?>> UpdateLineItemWithHttpInfoAsync(CartItems? cartItems = null,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Update items in the cart
@@ -192,7 +208,8 @@ namespace ShopwareSharp.Api
         /// <param name="cartItems"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;Cart&gt;</returns>
-        Task<Cart?> UpdateLineItemAsync(CartItems? cartItems = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<Cart?> UpdateLineItemAsync(CartItems? cartItems = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Update items in the cart
@@ -203,9 +220,10 @@ namespace ShopwareSharp.Api
         /// <param name="cartItems"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;Cart?&gt;</returns>
-        Task<Cart?> UpdateLineItemOrDefaultAsync(CartItems? cartItems = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<Cart?> UpdateLineItemOrDefaultAsync(CartItems? cartItems = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
-            }
+    }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -231,21 +249,28 @@ namespace ShopwareSharp.Api
         public HttpClient HttpClient { get; }
 
         /// <summary>
-        /// A token provider of type <see cref="ApiKeyProvider"/>
+        /// A token provider of type <see cref="ApiKeyToken"/>
         /// </summary>
         public TokenProvider<ApiKeyToken> ApiKeyProvider { get; }
+
+        /// <summary>
+        /// A token provider of type <see cref="ContextKeyToken"/>
+        /// </summary>
+        public TokenProvider<ContextKeyToken> ContextKeyProvider { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CartApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public CartApi(ILogger<CartApi> logger, HttpClient httpClient, JsonSerializerOptionsProvider jsonSerializerOptionsProvider, 
-            TokenProvider<ApiKeyToken> apiKeyProvider)
+        public CartApi(ILogger<CartApi> logger, HttpClient httpClient,
+            JsonSerializerOptionsProvider jsonSerializerOptionsProvider,
+            TokenProvider<ApiKeyToken> apiKeyProvider, TokenProvider<ContextKeyToken> contextKeyProvider)
         {
             _jsonSerializerOptions = jsonSerializerOptionsProvider.Options;
             Logger = logger;
             HttpClient = httpClient;
             ApiKeyProvider = apiKeyProvider;
+            ContextKeyProvider = contextKeyProvider;
         }
 
         /// <summary>
@@ -255,9 +280,11 @@ namespace ShopwareSharp.Api
         /// <param name="cartItems"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Cart"/>&gt;</returns>
-        public async Task<Cart?> AddLineItemAsync(CartItems? cartItems = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<Cart?> AddLineItemAsync(CartItems? cartItems = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<Cart?> result = await AddLineItemWithHttpInfoAsync(cartItems, cancellationToken).ConfigureAwait(false);
+            ApiResponse<Cart?> result = await AddLineItemWithHttpInfoAsync(cartItems, requestOptions, cancellationToken)
+                .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -272,12 +299,14 @@ namespace ShopwareSharp.Api
         /// <param name="cartItems"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Cart"/>&gt;</returns>
-        public async Task<Cart?> AddLineItemOrDefaultAsync(CartItems? cartItems = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<Cart?> AddLineItemOrDefaultAsync(CartItems? cartItems = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<Cart?>? result = null;
-            try 
+            try
             {
-                result = await AddLineItemWithHttpInfoAsync(cartItems, cancellationToken).ConfigureAwait(false);
+                result = await AddLineItemWithHttpInfoAsync(cartItems, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -295,74 +324,92 @@ namespace ShopwareSharp.Api
         /// <param name="cartItems"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="Cart"/></returns>
-        public async Task<ApiResponse<Cart?>> AddLineItemWithHttpInfoAsync(CartItems? cartItems = null, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<Cart?>> AddLineItemWithHttpInfoAsync(CartItems? cartItems = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
+        {
+            const string queryPath = "/checkout/cart/line-item";
+
+            return ExecuteRequest<Cart?>(queryPath, default, HttpMethod.Post, cartItems, requestOptions, cancellationToken);
+        }
+
+        private async Task<ApiResponse<T>> ExecuteRequest<T>(string queryPath, string? query, HttpMethod? httpMethod,
+            object? content,
+            RequestOptions? requestOptions, CancellationToken? cancellationToken)
         {
             try
             {
-                using (HttpRequestMessage request = new HttpRequestMessage())
+                using var request = new HttpRequestMessage();
+                UriBuilder uriBuilder = new UriBuilder();
+                uriBuilder.Host = requestOptions?.Host?.Host ?? HttpClient.BaseAddress!.Host;
+                uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
+                uriBuilder.Path = ClientUtils.CONTEXT_PATH + queryPath;
+                uriBuilder.Query = query;
+
+                request.Content = content is System.IO.Stream stream
+                    ? request.Content = new StreamContent(stream)
+                    : request.Content =
+                        new StringContent(JsonSerializer.Serialize(content, _jsonSerializerOptions));
+
+                ApiKeyToken apiKey =
+                    (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
+                apiKey.UseInHeader(request, "sw-access-key");
+
+                request.PrepareRequestOptions(requestOptions);
+
+                request.RequestUri = uriBuilder.Uri;
+                string[] contentTypes = new string[]
                 {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/checkout/cart/line-item";
+                    "application/json"
+                };
 
-                    request.Content = (cartItems as object) is System.IO.Stream stream
-                        ? request.Content = new StreamContent(stream)
-                        : request.Content = new StringContent(JsonSerializer.Serialize(cartItems, _jsonSerializerOptions));
+                string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
 
-                    
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-                    request.RequestUri = uriBuilder.Uri;
+                if (contentType != null)
+                    request.Content.Headers.Add("ContentType", contentType);
 
-                    string[] contentTypes = new string[] {
-                        "application/json" 
-                    };
+                string[] accepts = new string[]
+                {
+                    "application/json"
+                };
 
-                    string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
+                string? accept = ClientUtils.SelectHeaderAccept(accepts);
 
-                    if (contentType != null)
-                        request.Content.Headers.Add("ContentType", contentType);
+                if (accept != null)
+                    request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
 
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
+                request.Method = httpMethod;
 
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
+                using var responseMessage = await HttpClient
+                    .SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
 
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Post;
+                DateTime requestedAt = DateTime.UtcNow;
 
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
+                string responseContent = await responseMessage.Content
+                    .ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
+
+                if (ApiResponded != null)
+                {
+                    try
                     {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/checkout/cart/line-item"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<Cart?> apiResponse = new ApiResponse<Cart?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<Cart>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
+                        ApiResponded.Invoke(this,
+                            new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode,
+                                queryPath));
+                    }
+                    catch (Exception e)
+                    {
+                        Logger.LogError(e, "An error occured while invoking ApiResponded.");
                     }
                 }
+
+                ApiResponse<T> apiResponse = new ApiResponse<T>(responseMessage, responseContent);
+
+                if (apiResponse.IsSuccessStatusCode)
+                    apiResponse.Content =
+                        JsonSerializer.Deserialize<T>(apiResponse.RawContent, _jsonSerializerOptions);
+
+                return apiResponse;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger.LogError(e, "An error occured while sending the request to the server.");
                 throw;
@@ -375,9 +422,11 @@ namespace ShopwareSharp.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="SuccessResponse"/>&gt;</returns>
-        public async Task<SuccessResponse?> DeleteCartAsync(System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<SuccessResponse?> DeleteCartAsync(RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<SuccessResponse?> result = await DeleteCartWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
+            ApiResponse<SuccessResponse?> result =
+                await DeleteCartWithHttpInfoAsync(requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -391,12 +440,13 @@ namespace ShopwareSharp.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="SuccessResponse"/>&gt;</returns>
-        public async Task<SuccessResponse?> DeleteCartOrDefaultAsync(System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<SuccessResponse?> DeleteCartOrDefaultAsync(RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<SuccessResponse?>? result = null;
-            try 
+            try
             {
-                result = await DeleteCartWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
+                result = await DeleteCartWithHttpInfoAsync(requestOptions, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -413,65 +463,13 @@ namespace ShopwareSharp.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="SuccessResponse"/></returns>
-        public async Task<ApiResponse<SuccessResponse?>> DeleteCartWithHttpInfoAsync(System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<SuccessResponse?>> DeleteCartWithHttpInfoAsync(
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/checkout/cart";
+            const string queryPath = "/checkout/cart";
 
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Delete;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/checkout/cart"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<SuccessResponse?> apiResponse = new ApiResponse<SuccessResponse?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<SuccessResponse>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<SuccessResponse?>(queryPath, default, HttpMethod.Delete, default, requestOptions,
+                cancellationToken);
         }
 
         /// <summary>
@@ -481,9 +479,11 @@ namespace ShopwareSharp.Api
         /// <param name="name">The name of the new cart. This parameter will only be used when creating a new cart. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Cart"/>&gt;</returns>
-        public async Task<Cart?> ReadCartAsync(string? name = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<Cart?> ReadCartAsync(string? name = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<Cart?> result = await ReadCartWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
+            ApiResponse<Cart?> result = await ReadCartWithHttpInfoAsync(name, requestOptions, cancellationToken)
+                .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -498,12 +498,13 @@ namespace ShopwareSharp.Api
         /// <param name="name">The name of the new cart. This parameter will only be used when creating a new cart. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Cart"/>&gt;</returns>
-        public async Task<Cart?> ReadCartOrDefaultAsync(string? name = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<Cart?> ReadCartOrDefaultAsync(string? name = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<Cart?>? result = null;
-            try 
+            try
             {
-                result = await ReadCartWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
+                result = await ReadCartWithHttpInfoAsync(name, requestOptions, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -521,71 +522,19 @@ namespace ShopwareSharp.Api
         /// <param name="name">The name of the new cart. This parameter will only be used when creating a new cart. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="Cart"/></returns>
-        public async Task<ApiResponse<Cart?>> ReadCartWithHttpInfoAsync(string? name = null, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<Cart?>> ReadCartWithHttpInfoAsync(string? name = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/checkout/cart";
+            const string queryPath = "/checkout/cart";
 
-                    System.Collections.Specialized.NameValueCollection parseQueryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
-                    if (name != null)
-                        parseQueryString["name"] = Uri.EscapeDataString(name.ToString()!);
+            System.Collections.Specialized.NameValueCollection parseQueryString =
+                System.Web.HttpUtility.ParseQueryString(string.Empty);
+            if (name != null)
+                parseQueryString["name"] = Uri.EscapeDataString(name.ToString()!);
+            var query = parseQueryString.ToString();
 
-                    uriBuilder.Query = parseQueryString.ToString();
-
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Get;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/checkout/cart"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<Cart?> apiResponse = new ApiResponse<Cart?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<Cart>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<Cart?>(queryPath, query, HttpMethod.Get, null, requestOptions,
+                cancellationToken);
         }
 
         /// <summary>
@@ -595,9 +544,11 @@ namespace ShopwareSharp.Api
         /// <param name="ids">A list of product identifiers.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Cart"/>&gt;</returns>
-        public async Task<Cart?> RemoveLineItemAsync(List<string> ids, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<Cart?> RemoveLineItemAsync(IEnumerable<string> ids, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<Cart?> result = await RemoveLineItemWithHttpInfoAsync(ids, cancellationToken).ConfigureAwait(false);
+            ApiResponse<Cart?> result = await RemoveLineItemWithHttpInfoAsync(ids, requestOptions, cancellationToken)
+                .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -612,12 +563,14 @@ namespace ShopwareSharp.Api
         /// <param name="ids">A list of product identifiers.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Cart"/>&gt;</returns>
-        public async Task<Cart?> RemoveLineItemOrDefaultAsync(List<string> ids, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<Cart?> RemoveLineItemOrDefaultAsync(IEnumerable<string> ids,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<Cart?>? result = null;
-            try 
+            try
             {
-                result = await RemoveLineItemWithHttpInfoAsync(ids, cancellationToken).ConfigureAwait(false);
+                result = await RemoveLineItemWithHttpInfoAsync(ids, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -635,78 +588,25 @@ namespace ShopwareSharp.Api
         /// <param name="ids">A list of product identifiers.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="Cart"/></returns>
-        public async Task<ApiResponse<Cart?>> RemoveLineItemWithHttpInfoAsync(List<string> ids, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<Cart?>> RemoveLineItemWithHttpInfoAsync(IEnumerable<string> ids,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                if (ids == null)
-                    throw new ArgumentNullException(nameof(ids));
+            if (ids == null)
+                throw new ArgumentNullException(nameof(ids));
 
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/checkout/cart/line-item";
+            const string queryPath = "/checkout/cart/line-item";
 
-                    System.Collections.Specialized.NameValueCollection parseQueryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
+            System.Collections.Specialized.NameValueCollection parseQueryString =
+                System.Web.HttpUtility.ParseQueryString(string.Empty);
+            parseQueryString["ids"] = Uri.EscapeDataString(ids.ToString()!);
+            var query = parseQueryString.ToString();
 
-                    parseQueryString["ids"] = Uri.EscapeDataString(ids.ToString()!);
-                    
-                    uriBuilder.Query = parseQueryString.ToString();
-
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Delete;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/checkout/cart/line-item"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<Cart?> apiResponse = new ApiResponse<Cart?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<Cart>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<Cart?>(queryPath, query, HttpMethod.Delete, default, requestOptions,
+                cancellationToken);
         }
 
         /// <summary>
@@ -716,9 +616,12 @@ namespace ShopwareSharp.Api
         /// <param name="cartItems"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Cart"/>&gt;</returns>
-        public async Task<Cart?> UpdateLineItemAsync(CartItems? cartItems = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<Cart?> UpdateLineItemAsync(CartItems? cartItems = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<Cart?> result = await UpdateLineItemWithHttpInfoAsync(cartItems, cancellationToken).ConfigureAwait(false);
+            ApiResponse<Cart?> result =
+                await UpdateLineItemWithHttpInfoAsync(cartItems, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -733,12 +636,14 @@ namespace ShopwareSharp.Api
         /// <param name="cartItems"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Cart"/>&gt;</returns>
-        public async Task<Cart?> UpdateLineItemOrDefaultAsync(CartItems? cartItems = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<Cart?> UpdateLineItemOrDefaultAsync(CartItems? cartItems = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<Cart?>? result = null;
-            try 
+            try
             {
-                result = await UpdateLineItemWithHttpInfoAsync(cartItems, cancellationToken).ConfigureAwait(false);
+                result = await UpdateLineItemWithHttpInfoAsync(cartItems, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -753,82 +658,19 @@ namespace ShopwareSharp.Api
         /// Update items in the cart This route updates items in the cart. A typical example is updating the quantity of an item.  Example: [Working with the cart - Guide](https://developer.shopware.com/docs/guides/integrations-api/store-api-guide/work-with-the-cart#updating-items-in-the-cart)
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
+
+
         /// <param name="cartItems"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="Cart"/></returns>
-        public async Task<ApiResponse<Cart?>> UpdateLineItemWithHttpInfoAsync(CartItems? cartItems = null, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<Cart?>> UpdateLineItemWithHttpInfoAsync(CartItems? cartItems = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/checkout/cart/line-item";
-
-                    request.Content = (cartItems as object) is System.IO.Stream stream
-                        ? request.Content = new StreamContent(stream)
-                        : request.Content = new StringContent(JsonSerializer.Serialize(cartItems, _jsonSerializerOptions));
+            const string queryPath = "/checkout/cart/line-item";
 
 
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] contentTypes = new string[] {
-                        "application/json" 
-                    };
-
-                    string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentType != null)
-                        request.Content.Headers.Add("ContentType", contentType);
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Patch;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/checkout/cart/line-item"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<Cart?> apiResponse = new ApiResponse<Cart?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<Cart>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
-        }    }
+            return ExecuteRequest<Cart?>(queryPath, default, HttpMethod.Patch, default, requestOptions,
+                cancellationToken);
+        }
+    }
 }

@@ -36,6 +36,21 @@ namespace ShopwareSharp.Client
         /// The raw content of this response
         /// </summary>
         string RawContent { get; }
+
+        /// <summary>
+        /// The IsSuccessStatusCode from the api response
+        /// </summary>
+        bool IsSuccessStatusCode { get; }
+
+        /// <summary>
+        /// The reason phrase contained in the api response
+        /// </summary>
+        string? ReasonPhrase { get; }
+
+        /// <summary>
+        /// The headers contained in the api response
+        /// </summary>
+        System.Net.Http.Headers.HttpResponseHeaders Headers { get; }
     }
 
     /// <summary>

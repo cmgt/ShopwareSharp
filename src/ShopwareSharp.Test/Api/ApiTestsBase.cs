@@ -51,8 +51,8 @@ namespace ShopwareSharp.Test.Api
         public static IHostBuilder CreateHostBuilder(string[] args) => Host.CreateDefaultBuilder(args)
             .ConfigureApi((context, options) =>
             {
-                ApiKeyToken apiKeyToken = new ApiKeyToken("SWSCUJDICHA0SDMYA1BPRNLKAG");
-                options.AddTokens(apiKeyToken);
+                options.AddTokens(new ApiKeyToken("SWSCUJDICHA0SDMYA1BPRNLKAG"));
+                options.AddTokens(ContextKeyToken.Empty);
 
                 options.AddApiHttpClients(c => c.BaseAddress = new Uri("https://stage.shopware.cledeploy.com/store-api"));
                 

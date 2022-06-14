@@ -28,6 +28,7 @@ namespace ShopwareSharp
         protected TTokenBase[] _tokens;
 
         public abstract System.Threading.Tasks.ValueTask<TTokenBase> GetAsync(System.Threading.CancellationToken? cancellation = null);
+        public abstract System.Threading.Tasks.ValueTask SetAsync(TTokenBase value, System.Threading.CancellationToken? cancellation = null);
 
         /// <summary>
         /// Instantiates a TokenProvider.

@@ -11,8 +11,6 @@ namespace ShopwareSharp.Client
     /// </summary>
     public class ApiKeyToken : TokenBase
     {
-        private string _raw;
-
         /// <summary>
         /// Constructs an ApiKeyToken object.
         /// </summary>
@@ -20,39 +18,7 @@ namespace ShopwareSharp.Client
         /// <param name="prefix"></param>
         public ApiKeyToken(string value, string? prefix = default)
         {
-            _raw = $"{ prefix }{ value }";
-        }
-
-        /// <summary>
-        /// Places the token in the cookie.
-        /// </summary>
-        /// <param name="request"></param>
-        /// <param name="cookieName"></param>
-        public virtual void UseInCookie(System.Net.Http.HttpRequestMessage request, string cookieName)
-        {
-            request.Headers.Add("Cookie", $"{cookieName}={_raw}");
-        }
-
-        /// <summary>
-        /// Places the token in the header.
-        /// </summary>
-        /// <param name="request"></param>
-        /// <param name="headerName"></param>
-        public virtual void UseInHeader(System.Net.Http.HttpRequestMessage request, string headerName)
-        {
-            request.Headers.Add(headerName, _raw);
-        }
-        
-        /// <summary>
-        /// Places the token in the query.
-        /// </summary>
-        /// <param name="request"></param>
-        /// <param name="uriBuilder"></param>
-        /// <param name="parseQueryString"></param>
-        /// <param name="parameterName"></param>
-        public virtual void UseInQuery(System.Net.Http.HttpRequestMessage request, UriBuilder uriBuilder, System.Collections.Specialized.NameValueCollection parseQueryString, string parameterName)
-        {
-            parseQueryString[parameterName] = Uri.EscapeDataString(_raw).ToString()!;
+            raw = $"{ prefix }{ value }";
         }
     }
 }

@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Microsoft.Extensions.DependencyInjection;
 using ShopwareSharp.Api;
+using ShopwareSharp.Client;
 using ShopwareSharp.Model;
 
 
@@ -72,9 +73,10 @@ namespace ShopwareSharp.Test.Api
             var cart = await _instance.ReadCartAsync(name);
 
             CartItems? cartItems = new CartItems(cartItemsAllOf: new CartItemsAllOf(new List<LineItem>()
-                {new LineItem() {ReferencedId = "0f683a27c45a4e408814a97fd7150ffa", Quantity = 1}}));
+                {new LineItem() {ReferencedId = "0f683a27c45a4e408814a97fd7150ffa", Quantity = 1, Type = "product"}}));
 
-            var response = await _instance.AddLineItemAsync(cartItems);
+            var response = await _instance.AddLineItemAsync(cartItems,
+                new RequestOptions() {ContextKey = new ContextKeyToken(cart.CartAllOf.Token)});
             Assert.IsType<Cart>(response);
         }
 

@@ -48,7 +48,8 @@ namespace ShopwareSharp.Client
         /// <param name="options"></param>
         /// <param name="result"></param>
         /// <returns></returns>
-        public static bool TryDeserialize<T>(string json, JsonSerializerOptions options, [System.Diagnostics.CodeAnalysis.NotNullWhen(true)] out T? result)
+        public static bool TryDeserialize<T>(string json, JsonSerializerOptions options,
+            [System.Diagnostics.CodeAnalysis.NotNullWhen(true)] out T? result)
         {
             try
             {
@@ -70,7 +71,8 @@ namespace ShopwareSharp.Client
         /// <param name="options"></param>
         /// <param name="result"></param>
         /// <returns></returns>
-        public static bool TryDeserialize<T>(ref Utf8JsonReader reader, JsonSerializerOptions options, [System.Diagnostics.CodeAnalysis.NotNullWhen(true)] out T? result)
+        public static bool TryDeserialize<T>(ref Utf8JsonReader reader, JsonSerializerOptions options,
+            [System.Diagnostics.CodeAnalysis.NotNullWhen(true)] out T? result)
         {
             try
             {
@@ -226,7 +228,8 @@ namespace ShopwareSharp.Client
         /// <summary>
         /// Provides a case-insensitive check that a provided content type is a known JSON-like content type.
         /// </summary>
-        public static readonly Regex JsonRegex = new Regex("(?i)^(application/json|[^;/ \t]+/[^;/ \t]+[+]json)[ \t]*(;.*)?$");
+        public static readonly Regex JsonRegex =
+            new Regex("(?i)^(application/json|[^;/ \t]+/[^;/ \t]+[+]json)[ \t]*(;.*)?$");
 
         /// <summary>
         /// Check if the given MIME is a JSON MIME.
@@ -265,9 +268,10 @@ namespace ShopwareSharp.Client
         /// </summary>
         /// <param name="builder"></param>
         /// <param name="options"></param>
-        public static IHostBuilder ConfigureApi(this IHostBuilder builder, Action<HostBuilderContext, HostConfiguration> options)
+        public static IHostBuilder ConfigureApi(this IHostBuilder builder,
+            Action<HostBuilderContext, HostConfiguration> options)
         {
-            builder.ConfigureServices((context, services) => 
+            builder.ConfigureServices((context, services) =>
             {
                 HostConfiguration config = new HostConfiguration(services);
 
@@ -299,18 +303,20 @@ namespace ShopwareSharp.Client
             // ensure that a token provider was provided for this token type
             // if not, default to SimpleTokenProvider
             var containerServices = services.Where(s => s.ServiceType.IsGenericType &&
-                s.ServiceType.GetGenericTypeDefinition().IsAssignableFrom(typeof(TokenContainer<>))).ToArray();
+                                                        s.ServiceType.GetGenericTypeDefinition()
+                                                            .IsAssignableFrom(typeof(TokenContainer<>))).ToArray();
 
-            foreach(var containerService in containerServices)
+            foreach (var containerService in containerServices)
             {
                 var tokenType = containerService.ServiceType.GenericTypeArguments[0];
 
-                var provider = services.FirstOrDefault(s => s.ServiceType.IsAssignableFrom(typeof(TokenProvider<>).MakeGenericType(tokenType)));
+                var provider = services.FirstOrDefault(s =>
+                    s.ServiceType.IsAssignableFrom(typeof(TokenProvider<>).MakeGenericType(tokenType)));
 
                 if (provider == null)
                 {
                     services.AddSingleton(typeof(SimpleTokenProvider<>).MakeGenericType(tokenType));
-                    services.AddSingleton(typeof(TokenProvider<>).MakeGenericType(tokenType), 
+                    services.AddSingleton(typeof(TokenProvider<>).MakeGenericType(tokenType),
                         s => s.GetRequiredService(typeof(SimpleTokenProvider<>).MakeGenericType(tokenType)));
                 }
             }
@@ -349,9 +355,11 @@ namespace ShopwareSharp.Client
         /// <param name="handledEventsAllowedBeforeBreaking"></param>
         /// <param name="durationOfBreak"></param>
         /// <returns></returns>
-        public static IHttpClientBuilder AddCircuitBreakerPolicy(this IHttpClientBuilder client, int handledEventsAllowedBeforeBreaking, TimeSpan durationOfBreak)
+        public static IHttpClientBuilder AddCircuitBreakerPolicy(this IHttpClientBuilder client,
+            int handledEventsAllowedBeforeBreaking, TimeSpan durationOfBreak)
         {
-            client.AddTransientHttpErrorPolicy(builder => CircuitBreakerPolicy(builder, handledEventsAllowedBeforeBreaking, durationOfBreak));
+            client.AddTransientHttpErrorPolicy(builder =>
+                CircuitBreakerPolicy(builder, handledEventsAllowedBeforeBreaking, durationOfBreak));
 
             return client;
         }
@@ -366,7 +374,24 @@ namespace ShopwareSharp.Client
             => Policy.TimeoutAsync<HttpResponseMessage>(timeout);
 
         private static Polly.CircuitBreaker.AsyncCircuitBreakerPolicy<HttpResponseMessage> CircuitBreakerPolicy(
-            PolicyBuilder<HttpResponseMessage> builder, int handledEventsAllowedBeforeBreaking, TimeSpan durationOfBreak)
-                => builder.CircuitBreakerAsync(handledEventsAllowedBeforeBreaking, durationOfBreak);
+            PolicyBuilder<HttpResponseMessage> builder, int handledEventsAllowedBeforeBreaking,
+            TimeSpan durationOfBreak)
+            => builder.CircuitBreakerAsync(handledEventsAllowedBeforeBreaking, durationOfBreak);
+
+
+        internal static void PrepareRequestOptions(this HttpRequestMessage request, RequestOptions? options)
+        {
+            if (options == default) return;
+
+            options.ContextKey?.UseInHeader(request, "sw-context-token");
+
+            if (options.Headers != default)
+            {
+                foreach (var header in options.Headers)
+                {
+                    request.Headers.Add(header.Key, header.Value);
+                }
+            }
+        }
     }
 }
