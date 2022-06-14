@@ -57,6 +57,30 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
+        /// Test the property 'ProductId'
+        /// </summary>
+        [Fact]
+        public void ProductIdTest()
+        {
+            // TODO unit test for the property 'ProductId'
+        }
+        /// <summary>
+        /// Test the property 'MediaId'
+        /// </summary>
+        [Fact]
+        public void MediaIdTest()
+        {
+            // TODO unit test for the property 'MediaId'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
         /// Test the property 'Id'
         /// </summary>
         [Fact]
@@ -73,28 +97,12 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'VersionId'
         }
         /// <summary>
-        /// Test the property 'ProductId'
-        /// </summary>
-        [Fact]
-        public void ProductIdTest()
-        {
-            // TODO unit test for the property 'ProductId'
-        }
-        /// <summary>
         /// Test the property 'ProductVersionId'
         /// </summary>
         [Fact]
         public void ProductVersionIdTest()
         {
             // TODO unit test for the property 'ProductVersionId'
-        }
-        /// <summary>
-        /// Test the property 'MediaId'
-        /// </summary>
-        [Fact]
-        public void MediaIdTest()
-        {
-            // TODO unit test for the property 'MediaId'
         }
         /// <summary>
         /// Test the property 'Position'
@@ -111,14 +119,6 @@ namespace ShopwareSharp.Test.Model
         public void CustomFieldsTest()
         {
             // TODO unit test for the property 'CustomFields'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

@@ -57,6 +57,14 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
+        /// Test the property 'Errors'
+        /// </summary>
+        [Fact]
+        public void ErrorsTest()
+        {
+            // TODO unit test for the property 'Errors'
+        }
+        /// <summary>
         /// Test the property 'Meta'
         /// </summary>
         [Fact]
@@ -71,14 +79,6 @@ namespace ShopwareSharp.Test.Model
         public void LinksTest()
         {
             // TODO unit test for the property 'Links'
-        }
-        /// <summary>
-        /// Test the property 'Errors'
-        /// </summary>
-        [Fact]
-        public void ErrorsTest()
-        {
-            // TODO unit test for the property 'Errors'
         }
 
     }

@@ -73,22 +73,6 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'TotalPrice'
         }
         /// <summary>
-        /// Test the property 'CalculatedTaxes'
-        /// </summary>
-        [Fact]
-        public void CalculatedTaxesTest()
-        {
-            // TODO unit test for the property 'CalculatedTaxes'
-        }
-        /// <summary>
-        /// Test the property 'TaxRules'
-        /// </summary>
-        [Fact]
-        public void TaxRulesTest()
-        {
-            // TODO unit test for the property 'TaxRules'
-        }
-        /// <summary>
         /// Test the property 'PositionPrice'
         /// </summary>
         [Fact]
@@ -111,6 +95,22 @@ namespace ShopwareSharp.Test.Model
         public void TaxStatusTest()
         {
             // TODO unit test for the property 'TaxStatus'
+        }
+        /// <summary>
+        /// Test the property 'CalculatedTaxes'
+        /// </summary>
+        [Fact]
+        public void CalculatedTaxesTest()
+        {
+            // TODO unit test for the property 'CalculatedTaxes'
+        }
+        /// <summary>
+        /// Test the property 'TaxRules'
+        /// </summary>
+        [Fact]
+        public void TaxRulesTest()
+        {
+            // TODO unit test for the property 'TaxRules'
         }
 
     }

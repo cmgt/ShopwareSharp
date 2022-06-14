@@ -57,6 +57,30 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
+        /// Test the property 'OrderDeliveryId'
+        /// </summary>
+        [Fact]
+        public void OrderDeliveryIdTest()
+        {
+            // TODO unit test for the property 'OrderDeliveryId'
+        }
+        /// <summary>
+        /// Test the property 'OrderLineItemId'
+        /// </summary>
+        [Fact]
+        public void OrderLineItemIdTest()
+        {
+            // TODO unit test for the property 'OrderLineItemId'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
         /// Test the property 'Id'
         /// </summary>
         [Fact]
@@ -73,28 +97,12 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'VersionId'
         }
         /// <summary>
-        /// Test the property 'OrderDeliveryId'
-        /// </summary>
-        [Fact]
-        public void OrderDeliveryIdTest()
-        {
-            // TODO unit test for the property 'OrderDeliveryId'
-        }
-        /// <summary>
         /// Test the property 'OrderDeliveryVersionId'
         /// </summary>
         [Fact]
         public void OrderDeliveryVersionIdTest()
         {
             // TODO unit test for the property 'OrderDeliveryVersionId'
-        }
-        /// <summary>
-        /// Test the property 'OrderLineItemId'
-        /// </summary>
-        [Fact]
-        public void OrderLineItemIdTest()
-        {
-            // TODO unit test for the property 'OrderLineItemId'
         }
         /// <summary>
         /// Test the property 'OrderLineItemVersionId'
@@ -143,14 +151,6 @@ namespace ShopwareSharp.Test.Model
         public void CustomFieldsTest()
         {
             // TODO unit test for the property 'CustomFields'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

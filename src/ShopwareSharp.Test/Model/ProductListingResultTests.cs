@@ -104,38 +104,6 @@ namespace ShopwareSharp.Test.Model
         {
             // TODO unit test for the property 'Limit'
         }
-        /// <summary>
-        /// Test the property 'CurrentFilters'
-        /// </summary>
-        [Fact]
-        public void CurrentFiltersTest()
-        {
-            // TODO unit test for the property 'CurrentFilters'
-        }
-        /// <summary>
-        /// Test the property 'AvailableSortings'
-        /// </summary>
-        [Fact]
-        public void AvailableSortingsTest()
-        {
-            // TODO unit test for the property 'AvailableSortings'
-        }
-        /// <summary>
-        /// Test the property 'Sorting'
-        /// </summary>
-        [Fact]
-        public void SortingTest()
-        {
-            // TODO unit test for the property 'Sorting'
-        }
-        /// <summary>
-        /// Test the property 'Elements'
-        /// </summary>
-        [Fact]
-        public void ElementsTest()
-        {
-            // TODO unit test for the property 'Elements'
-        }
 
     }
 

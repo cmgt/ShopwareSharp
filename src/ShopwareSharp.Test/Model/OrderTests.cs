@@ -57,44 +57,12 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
-        }
-        /// <summary>
-        /// Test the property 'VersionId'
-        /// </summary>
-        [Fact]
-        public void VersionIdTest()
-        {
-            // TODO unit test for the property 'VersionId'
-        }
-        /// <summary>
-        /// Test the property 'OrderNumber'
-        /// </summary>
-        [Fact]
-        public void OrderNumberTest()
-        {
-            // TODO unit test for the property 'OrderNumber'
-        }
-        /// <summary>
         /// Test the property 'BillingAddressId'
         /// </summary>
         [Fact]
         public void BillingAddressIdTest()
         {
             // TODO unit test for the property 'BillingAddressId'
-        }
-        /// <summary>
-        /// Test the property 'BillingAddressVersionId'
-        /// </summary>
-        [Fact]
-        public void BillingAddressVersionIdTest()
-        {
-            // TODO unit test for the property 'BillingAddressVersionId'
         }
         /// <summary>
         /// Test the property 'CurrencyId'
@@ -127,6 +95,54 @@ namespace ShopwareSharp.Test.Model
         public void OrderDateTimeTest()
         {
             // TODO unit test for the property 'OrderDateTime'
+        }
+        /// <summary>
+        /// Test the property 'CurrencyFactor'
+        /// </summary>
+        [Fact]
+        public void CurrencyFactorTest()
+        {
+            // TODO unit test for the property 'CurrencyFactor'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'VersionId'
+        /// </summary>
+        [Fact]
+        public void VersionIdTest()
+        {
+            // TODO unit test for the property 'VersionId'
+        }
+        /// <summary>
+        /// Test the property 'OrderNumber'
+        /// </summary>
+        [Fact]
+        public void OrderNumberTest()
+        {
+            // TODO unit test for the property 'OrderNumber'
+        }
+        /// <summary>
+        /// Test the property 'BillingAddressVersionId'
+        /// </summary>
+        [Fact]
+        public void BillingAddressVersionIdTest()
+        {
+            // TODO unit test for the property 'BillingAddressVersionId'
         }
         /// <summary>
         /// Test the property 'OrderDate'
@@ -193,14 +209,6 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'ShippingTotal'
         }
         /// <summary>
-        /// Test the property 'CurrencyFactor'
-        /// </summary>
-        [Fact]
-        public void CurrencyFactorTest()
-        {
-            // TODO unit test for the property 'CurrencyFactor'
-        }
-        /// <summary>
         /// Test the property 'DeepLinkCode'
         /// </summary>
         [Fact]
@@ -255,14 +263,6 @@ namespace ShopwareSharp.Test.Model
         public void UpdatedByIdTest()
         {
             // TODO unit test for the property 'UpdatedById'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

@@ -57,14 +57,6 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
-        }
-        /// <summary>
         /// Test the property 'DocumentTypeId'
         /// </summary>
         [Fact]
@@ -81,20 +73,52 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'FileType'
         }
         /// <summary>
-        /// Test the property 'ReferencedDocumentId'
-        /// </summary>
-        [Fact]
-        public void ReferencedDocumentIdTest()
-        {
-            // TODO unit test for the property 'ReferencedDocumentId'
-        }
-        /// <summary>
         /// Test the property 'OrderId'
         /// </summary>
         [Fact]
         public void OrderIdTest()
         {
             // TODO unit test for the property 'OrderId'
+        }
+        /// <summary>
+        /// Test the property 'Config'
+        /// </summary>
+        [Fact]
+        public void ConfigTest()
+        {
+            // TODO unit test for the property 'Config'
+        }
+        /// <summary>
+        /// Test the property 'DeepLinkCode'
+        /// </summary>
+        [Fact]
+        public void DeepLinkCodeTest()
+        {
+            // TODO unit test for the property 'DeepLinkCode'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'ReferencedDocumentId'
+        /// </summary>
+        [Fact]
+        public void ReferencedDocumentIdTest()
+        {
+            // TODO unit test for the property 'ReferencedDocumentId'
         }
         /// <summary>
         /// Test the property 'DocumentMediaFileId'
@@ -113,14 +137,6 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'OrderVersionId'
         }
         /// <summary>
-        /// Test the property 'Config'
-        /// </summary>
-        [Fact]
-        public void ConfigTest()
-        {
-            // TODO unit test for the property 'Config'
-        }
-        /// <summary>
         /// Test the property 'Sent'
         /// </summary>
         [Fact]
@@ -137,28 +153,12 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'Static'
         }
         /// <summary>
-        /// Test the property 'DeepLinkCode'
-        /// </summary>
-        [Fact]
-        public void DeepLinkCodeTest()
-        {
-            // TODO unit test for the property 'DeepLinkCode'
-        }
-        /// <summary>
         /// Test the property 'CustomFields'
         /// </summary>
         [Fact]
         public void CustomFieldsTest()
         {
             // TODO unit test for the property 'CustomFields'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

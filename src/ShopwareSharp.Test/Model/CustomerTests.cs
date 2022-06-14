@@ -57,14 +57,6 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
-        }
-        /// <summary>
         /// Test the property 'GroupId'
         /// </summary>
         [Fact]
@@ -95,14 +87,6 @@ namespace ShopwareSharp.Test.Model
         public void LanguageIdTest()
         {
             // TODO unit test for the property 'LanguageId'
-        }
-        /// <summary>
-        /// Test the property 'LastPaymentMethodId'
-        /// </summary>
-        [Fact]
-        public void LastPaymentMethodIdTest()
-        {
-            // TODO unit test for the property 'LastPaymentMethodId'
         }
         /// <summary>
         /// Test the property 'DefaultBillingAddressId'
@@ -153,20 +137,44 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'LastName'
         }
         /// <summary>
-        /// Test the property 'Company'
-        /// </summary>
-        [Fact]
-        public void CompanyTest()
-        {
-            // TODO unit test for the property 'Company'
-        }
-        /// <summary>
         /// Test the property 'Email'
         /// </summary>
         [Fact]
         public void EmailTest()
         {
             // TODO unit test for the property 'Email'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'LastPaymentMethodId'
+        /// </summary>
+        [Fact]
+        public void LastPaymentMethodIdTest()
+        {
+            // TODO unit test for the property 'LastPaymentMethodId'
+        }
+        /// <summary>
+        /// Test the property 'Company'
+        /// </summary>
+        [Fact]
+        public void CompanyTest()
+        {
+            // TODO unit test for the property 'Company'
         }
         /// <summary>
         /// Test the property 'Title'
@@ -311,14 +319,6 @@ namespace ShopwareSharp.Test.Model
         public void TagIdsTest()
         {
             // TODO unit test for the property 'TagIds'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

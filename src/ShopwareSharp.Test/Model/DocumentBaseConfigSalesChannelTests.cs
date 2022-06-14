@@ -57,20 +57,28 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
-        }
-        /// <summary>
         /// Test the property 'DocumentBaseConfigId'
         /// </summary>
         [Fact]
         public void DocumentBaseConfigIdTest()
         {
             // TODO unit test for the property 'DocumentBaseConfigId'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
         /// Test the property 'SalesChannelId'
@@ -87,14 +95,6 @@ namespace ShopwareSharp.Test.Model
         public void DocumentTypeIdTest()
         {
             // TODO unit test for the property 'DocumentTypeId'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

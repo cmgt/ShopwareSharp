@@ -104,14 +104,6 @@ namespace ShopwareSharp.Test.Model
         {
             // TODO unit test for the property 'Limit'
         }
-        /// <summary>
-        /// Test the property 'Elements'
-        /// </summary>
-        [Fact]
-        public void ElementsTest()
-        {
-            // TODO unit test for the property 'Elements'
-        }
 
     }
 

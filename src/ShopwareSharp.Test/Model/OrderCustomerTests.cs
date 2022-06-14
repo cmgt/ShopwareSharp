@@ -57,22 +57,6 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
-        }
-        /// <summary>
-        /// Test the property 'VersionId'
-        /// </summary>
-        [Fact]
-        public void VersionIdTest()
-        {
-            // TODO unit test for the property 'VersionId'
-        }
-        /// <summary>
         /// Test the property 'Email'
         /// </summary>
         [Fact]
@@ -103,6 +87,30 @@ namespace ShopwareSharp.Test.Model
         public void LastNameTest()
         {
             // TODO unit test for the property 'LastName'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'VersionId'
+        /// </summary>
+        [Fact]
+        public void VersionIdTest()
+        {
+            // TODO unit test for the property 'VersionId'
         }
         /// <summary>
         /// Test the property 'Company'
@@ -143,14 +151,6 @@ namespace ShopwareSharp.Test.Model
         public void CustomFieldsTest()
         {
             // TODO unit test for the property 'CustomFields'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

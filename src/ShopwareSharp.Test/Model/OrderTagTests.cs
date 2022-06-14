@@ -57,14 +57,6 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
-        }
-        /// <summary>
         /// Test the property 'OrderId'
         /// </summary>
         [Fact]
@@ -73,20 +65,28 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'OrderId'
         }
         /// <summary>
-        /// Test the property 'OrderVersionId'
-        /// </summary>
-        [Fact]
-        public void OrderVersionIdTest()
-        {
-            // TODO unit test for the property 'OrderVersionId'
-        }
-        /// <summary>
         /// Test the property 'TagId'
         /// </summary>
         [Fact]
         public void TagIdTest()
         {
             // TODO unit test for the property 'TagId'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'OrderVersionId'
+        /// </summary>
+        [Fact]
+        public void OrderVersionIdTest()
+        {
+            // TODO unit test for the property 'OrderVersionId'
         }
         /// <summary>
         /// Test the property 'Order'

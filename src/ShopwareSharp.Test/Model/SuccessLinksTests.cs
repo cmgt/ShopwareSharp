@@ -56,38 +56,6 @@ namespace ShopwareSharp.Test.Model
         }
 
 
-        /// <summary>
-        /// Test the property 'First'
-        /// </summary>
-        [Fact]
-        public void FirstTest()
-        {
-            // TODO unit test for the property 'First'
-        }
-        /// <summary>
-        /// Test the property 'Last'
-        /// </summary>
-        [Fact]
-        public void LastTest()
-        {
-            // TODO unit test for the property 'Last'
-        }
-        /// <summary>
-        /// Test the property 'Prev'
-        /// </summary>
-        [Fact]
-        public void PrevTest()
-        {
-            // TODO unit test for the property 'Prev'
-        }
-        /// <summary>
-        /// Test the property 'Next'
-        /// </summary>
-        [Fact]
-        public void NextTest()
-        {
-            // TODO unit test for the property 'Next'
-        }
 
     }
 

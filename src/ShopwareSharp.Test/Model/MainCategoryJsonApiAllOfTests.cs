@@ -57,14 +57,6 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
-        }
-        /// <summary>
         /// Test the property 'ProductId'
         /// </summary>
         [Fact]
@@ -73,28 +65,12 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'ProductId'
         }
         /// <summary>
-        /// Test the property 'ProductVersionId'
-        /// </summary>
-        [Fact]
-        public void ProductVersionIdTest()
-        {
-            // TODO unit test for the property 'ProductVersionId'
-        }
-        /// <summary>
         /// Test the property 'CategoryId'
         /// </summary>
         [Fact]
         public void CategoryIdTest()
         {
             // TODO unit test for the property 'CategoryId'
-        }
-        /// <summary>
-        /// Test the property 'CategoryVersionId'
-        /// </summary>
-        [Fact]
-        public void CategoryVersionIdTest()
-        {
-            // TODO unit test for the property 'CategoryVersionId'
         }
         /// <summary>
         /// Test the property 'SalesChannelId'
@@ -111,6 +87,30 @@ namespace ShopwareSharp.Test.Model
         public void CreatedAtTest()
         {
             // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'ProductVersionId'
+        /// </summary>
+        [Fact]
+        public void ProductVersionIdTest()
+        {
+            // TODO unit test for the property 'ProductVersionId'
+        }
+        /// <summary>
+        /// Test the property 'CategoryVersionId'
+        /// </summary>
+        [Fact]
+        public void CategoryVersionIdTest()
+        {
+            // TODO unit test for the property 'CategoryVersionId'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

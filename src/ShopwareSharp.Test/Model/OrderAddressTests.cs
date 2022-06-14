@@ -57,36 +57,12 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
-        }
-        /// <summary>
-        /// Test the property 'VersionId'
-        /// </summary>
-        [Fact]
-        public void VersionIdTest()
-        {
-            // TODO unit test for the property 'VersionId'
-        }
-        /// <summary>
         /// Test the property 'CountryId'
         /// </summary>
         [Fact]
         public void CountryIdTest()
         {
             // TODO unit test for the property 'CountryId'
-        }
-        /// <summary>
-        /// Test the property 'CountryStateId'
-        /// </summary>
-        [Fact]
-        public void CountryStateIdTest()
-        {
-            // TODO unit test for the property 'CountryStateId'
         }
         /// <summary>
         /// Test the property 'FirstName'
@@ -127,6 +103,38 @@ namespace ShopwareSharp.Test.Model
         public void CityTest()
         {
             // TODO unit test for the property 'City'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'VersionId'
+        /// </summary>
+        [Fact]
+        public void VersionIdTest()
+        {
+            // TODO unit test for the property 'VersionId'
+        }
+        /// <summary>
+        /// Test the property 'CountryStateId'
+        /// </summary>
+        [Fact]
+        public void CountryStateIdTest()
+        {
+            // TODO unit test for the property 'CountryStateId'
         }
         /// <summary>
         /// Test the property 'Company'
@@ -191,14 +199,6 @@ namespace ShopwareSharp.Test.Model
         public void CustomFieldsTest()
         {
             // TODO unit test for the property 'CustomFields'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

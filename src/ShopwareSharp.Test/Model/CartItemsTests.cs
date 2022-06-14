@@ -56,22 +56,6 @@ namespace ShopwareSharp.Test.Model
         }
 
 
-        /// <summary>
-        /// Test the property 'ApiAlias'
-        /// </summary>
-        [Fact]
-        public void ApiAliasTest()
-        {
-            // TODO unit test for the property 'ApiAlias'
-        }
-        /// <summary>
-        /// Test the property 'Items'
-        /// </summary>
-        [Fact]
-        public void ItemsTest()
-        {
-            // TODO unit test for the property 'Items'
-        }
 
     }
 

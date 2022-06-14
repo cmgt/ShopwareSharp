@@ -57,6 +57,62 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
+        /// Test the property 'OrderId'
+        /// </summary>
+        [Fact]
+        public void OrderIdTest()
+        {
+            // TODO unit test for the property 'OrderId'
+        }
+        /// <summary>
+        /// Test the property 'Identifier'
+        /// </summary>
+        [Fact]
+        public void IdentifierTest()
+        {
+            // TODO unit test for the property 'Identifier'
+        }
+        /// <summary>
+        /// Test the property 'Quantity'
+        /// </summary>
+        [Fact]
+        public void QuantityTest()
+        {
+            // TODO unit test for the property 'Quantity'
+        }
+        /// <summary>
+        /// Test the property 'Label'
+        /// </summary>
+        [Fact]
+        public void LabelTest()
+        {
+            // TODO unit test for the property 'Label'
+        }
+        /// <summary>
+        /// Test the property 'Position'
+        /// </summary>
+        [Fact]
+        public void PositionTest()
+        {
+            // TODO unit test for the property 'Position'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
+        /// Test the property 'Children'
+        /// </summary>
+        [Fact]
+        public void ChildrenTest()
+        {
+            // TODO unit test for the property 'Children'
+        }
+        /// <summary>
         /// Test the property 'Id'
         /// </summary>
         [Fact]
@@ -71,14 +127,6 @@ namespace ShopwareSharp.Test.Model
         public void VersionIdTest()
         {
             // TODO unit test for the property 'VersionId'
-        }
-        /// <summary>
-        /// Test the property 'OrderId'
-        /// </summary>
-        [Fact]
-        public void OrderIdTest()
-        {
-            // TODO unit test for the property 'OrderId'
         }
         /// <summary>
         /// Test the property 'OrderVersionId'
@@ -129,36 +177,12 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'CoverId'
         }
         /// <summary>
-        /// Test the property 'Identifier'
-        /// </summary>
-        [Fact]
-        public void IdentifierTest()
-        {
-            // TODO unit test for the property 'Identifier'
-        }
-        /// <summary>
         /// Test the property 'ReferencedId'
         /// </summary>
         [Fact]
         public void ReferencedIdTest()
         {
             // TODO unit test for the property 'ReferencedId'
-        }
-        /// <summary>
-        /// Test the property 'Quantity'
-        /// </summary>
-        [Fact]
-        public void QuantityTest()
-        {
-            // TODO unit test for the property 'Quantity'
-        }
-        /// <summary>
-        /// Test the property 'Label'
-        /// </summary>
-        [Fact]
-        public void LabelTest()
-        {
-            // TODO unit test for the property 'Label'
         }
         /// <summary>
         /// Test the property 'Payload'
@@ -191,14 +215,6 @@ namespace ShopwareSharp.Test.Model
         public void StackableTest()
         {
             // TODO unit test for the property 'Stackable'
-        }
-        /// <summary>
-        /// Test the property 'Position'
-        /// </summary>
-        [Fact]
-        public void PositionTest()
-        {
-            // TODO unit test for the property 'Position'
         }
         /// <summary>
         /// Test the property 'PriceDefinition'
@@ -249,14 +265,6 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'CustomFields'
         }
         /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
-        }
-        /// <summary>
         /// Test the property 'UpdatedAt'
         /// </summary>
         [Fact]
@@ -287,14 +295,6 @@ namespace ShopwareSharp.Test.Model
         public void ParentTest()
         {
             // TODO unit test for the property 'Parent'
-        }
-        /// <summary>
-        /// Test the property 'Children'
-        /// </summary>
-        [Fact]
-        public void ChildrenTest()
-        {
-            // TODO unit test for the property 'Children'
         }
 
     }

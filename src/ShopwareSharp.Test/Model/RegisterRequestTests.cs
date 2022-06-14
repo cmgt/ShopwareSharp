@@ -129,22 +129,6 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'ShippingAddress'
         }
         /// <summary>
-        /// Test the property 'AccountType'
-        /// </summary>
-        [Fact]
-        public void AccountTypeTest()
-        {
-            // TODO unit test for the property 'AccountType'
-        }
-        /// <summary>
-        /// Test the property 'Guest'
-        /// </summary>
-        [Fact]
-        public void GuestTest()
-        {
-            // TODO unit test for the property 'Guest'
-        }
-        /// <summary>
         /// Test the property 'BirthdayDay'
         /// </summary>
         [Fact]
@@ -191,6 +175,22 @@ namespace ShopwareSharp.Test.Model
         public void CampaignCodeTest()
         {
             // TODO unit test for the property 'CampaignCode'
+        }
+        /// <summary>
+        /// Test the property 'AccountType'
+        /// </summary>
+        [Fact]
+        public void AccountTypeTest()
+        {
+            // TODO unit test for the property 'AccountType'
+        }
+        /// <summary>
+        /// Test the property 'Guest'
+        /// </summary>
+        [Fact]
+        public void GuestTest()
+        {
+            // TODO unit test for the property 'Guest'
         }
 
     }

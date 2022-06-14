@@ -57,36 +57,12 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
-        }
-        /// <summary>
-        /// Test the property 'VersionId'
-        /// </summary>
-        [Fact]
-        public void VersionIdTest()
-        {
-            // TODO unit test for the property 'VersionId'
-        }
-        /// <summary>
         /// Test the property 'OrderId'
         /// </summary>
         [Fact]
         public void OrderIdTest()
         {
             // TODO unit test for the property 'OrderId'
-        }
-        /// <summary>
-        /// Test the property 'OrderVersionId'
-        /// </summary>
-        [Fact]
-        public void OrderVersionIdTest()
-        {
-            // TODO unit test for the property 'OrderVersionId'
         }
         /// <summary>
         /// Test the property 'PaymentMethodId'
@@ -113,20 +89,44 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'StateId'
         }
         /// <summary>
-        /// Test the property 'CustomFields'
-        /// </summary>
-        [Fact]
-        public void CustomFieldsTest()
-        {
-            // TODO unit test for the property 'CustomFields'
-        }
-        /// <summary>
         /// Test the property 'CreatedAt'
         /// </summary>
         [Fact]
         public void CreatedAtTest()
         {
             // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'VersionId'
+        /// </summary>
+        [Fact]
+        public void VersionIdTest()
+        {
+            // TODO unit test for the property 'VersionId'
+        }
+        /// <summary>
+        /// Test the property 'OrderVersionId'
+        /// </summary>
+        [Fact]
+        public void OrderVersionIdTest()
+        {
+            // TODO unit test for the property 'OrderVersionId'
+        }
+        /// <summary>
+        /// Test the property 'CustomFields'
+        /// </summary>
+        [Fact]
+        public void CustomFieldsTest()
+        {
+            // TODO unit test for the property 'CustomFields'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

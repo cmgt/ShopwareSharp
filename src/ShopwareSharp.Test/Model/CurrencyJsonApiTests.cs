@@ -57,118 +57,6 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'Type'
-        /// </summary>
-        [Fact]
-        public void TypeTest()
-        {
-            // TODO unit test for the property 'Type'
-        }
-        /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
-        }
-        /// <summary>
-        /// Test the property 'Attributes'
-        /// </summary>
-        [Fact]
-        public void AttributesTest()
-        {
-            // TODO unit test for the property 'Attributes'
-        }
-        /// <summary>
-        /// Test the property 'Relationships'
-        /// </summary>
-        [Fact]
-        public void RelationshipsTest()
-        {
-            // TODO unit test for the property 'Relationships'
-        }
-        /// <summary>
-        /// Test the property 'Links'
-        /// </summary>
-        [Fact]
-        public void LinksTest()
-        {
-            // TODO unit test for the property 'Links'
-        }
-        /// <summary>
-        /// Test the property 'Meta'
-        /// </summary>
-        [Fact]
-        public void MetaTest()
-        {
-            // TODO unit test for the property 'Meta'
-        }
-        /// <summary>
-        /// Test the property 'Factor'
-        /// </summary>
-        [Fact]
-        public void FactorTest()
-        {
-            // TODO unit test for the property 'Factor'
-        }
-        /// <summary>
-        /// Test the property 'Symbol'
-        /// </summary>
-        [Fact]
-        public void SymbolTest()
-        {
-            // TODO unit test for the property 'Symbol'
-        }
-        /// <summary>
-        /// Test the property 'IsoCode'
-        /// </summary>
-        [Fact]
-        public void IsoCodeTest()
-        {
-            // TODO unit test for the property 'IsoCode'
-        }
-        /// <summary>
-        /// Test the property 'ShortName'
-        /// </summary>
-        [Fact]
-        public void ShortNameTest()
-        {
-            // TODO unit test for the property 'ShortName'
-        }
-        /// <summary>
-        /// Test the property 'Name'
-        /// </summary>
-        [Fact]
-        public void NameTest()
-        {
-            // TODO unit test for the property 'Name'
-        }
-        /// <summary>
-        /// Test the property 'Position'
-        /// </summary>
-        [Fact]
-        public void PositionTest()
-        {
-            // TODO unit test for the property 'Position'
-        }
-        /// <summary>
-        /// Test the property 'IsSystemDefault'
-        /// </summary>
-        [Fact]
-        public void IsSystemDefaultTest()
-        {
-            // TODO unit test for the property 'IsSystemDefault'
-        }
-        /// <summary>
-        /// Test the property 'CustomFields'
-        /// </summary>
-        [Fact]
-        public void CustomFieldsTest()
-        {
-            // TODO unit test for the property 'CustomFields'
-        }
-        /// <summary>
         /// Test the property 'CreatedAt'
         /// </summary>
         [Fact]
@@ -183,14 +71,6 @@ namespace ShopwareSharp.Test.Model
         public void UpdatedAtTest()
         {
             // TODO unit test for the property 'UpdatedAt'
-        }
-        /// <summary>
-        /// Test the property 'Translated'
-        /// </summary>
-        [Fact]
-        public void TranslatedTest()
-        {
-            // TODO unit test for the property 'Translated'
         }
 
     }

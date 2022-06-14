@@ -57,22 +57,6 @@ namespace ShopwareSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
-        }
-        /// <summary>
-        /// Test the property 'VersionId'
-        /// </summary>
-        [Fact]
-        public void VersionIdTest()
-        {
-            // TODO unit test for the property 'VersionId'
-        }
-        /// <summary>
         /// Test the property 'Type'
         /// </summary>
         [Fact]
@@ -87,6 +71,38 @@ namespace ShopwareSharp.Test.Model
         public void SlotTest()
         {
             // TODO unit test for the property 'Slot'
+        }
+        /// <summary>
+        /// Test the property 'BlockId'
+        /// </summary>
+        [Fact]
+        public void BlockIdTest()
+        {
+            // TODO unit test for the property 'BlockId'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Fact]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
+        /// Test the property 'Id'
+        /// </summary>
+        [Fact]
+        public void IdTest()
+        {
+            // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'VersionId'
+        /// </summary>
+        [Fact]
+        public void VersionIdTest()
+        {
+            // TODO unit test for the property 'VersionId'
         }
         /// <summary>
         /// Test the property 'Locked'
@@ -121,28 +137,12 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'Data'
         }
         /// <summary>
-        /// Test the property 'BlockId'
-        /// </summary>
-        [Fact]
-        public void BlockIdTest()
-        {
-            // TODO unit test for the property 'BlockId'
-        }
-        /// <summary>
         /// Test the property 'CmsBlockVersionId'
         /// </summary>
         [Fact]
         public void CmsBlockVersionIdTest()
         {
             // TODO unit test for the property 'CmsBlockVersionId'
-        }
-        /// <summary>
-        /// Test the property 'CreatedAt'
-        /// </summary>
-        [Fact]
-        public void CreatedAtTest()
-        {
-            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
         /// Test the property 'UpdatedAt'

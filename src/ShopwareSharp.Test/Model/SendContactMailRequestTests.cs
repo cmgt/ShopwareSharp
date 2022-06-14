@@ -65,36 +65,12 @@ namespace ShopwareSharp.Test.Model
             // TODO unit test for the property 'SalutationId'
         }
         /// <summary>
-        /// Test the property 'FirstName'
-        /// </summary>
-        [Fact]
-        public void FirstNameTest()
-        {
-            // TODO unit test for the property 'FirstName'
-        }
-        /// <summary>
-        /// Test the property 'LastName'
-        /// </summary>
-        [Fact]
-        public void LastNameTest()
-        {
-            // TODO unit test for the property 'LastName'
-        }
-        /// <summary>
         /// Test the property 'Email'
         /// </summary>
         [Fact]
         public void EmailTest()
         {
             // TODO unit test for the property 'Email'
-        }
-        /// <summary>
-        /// Test the property 'Phone'
-        /// </summary>
-        [Fact]
-        public void PhoneTest()
-        {
-            // TODO unit test for the property 'Phone'
         }
         /// <summary>
         /// Test the property 'Subject'
@@ -111,6 +87,30 @@ namespace ShopwareSharp.Test.Model
         public void CommentTest()
         {
             // TODO unit test for the property 'Comment'
+        }
+        /// <summary>
+        /// Test the property 'FirstName'
+        /// </summary>
+        [Fact]
+        public void FirstNameTest()
+        {
+            // TODO unit test for the property 'FirstName'
+        }
+        /// <summary>
+        /// Test the property 'LastName'
+        /// </summary>
+        [Fact]
+        public void LastNameTest()
+        {
+            // TODO unit test for the property 'LastName'
+        }
+        /// <summary>
+        /// Test the property 'Phone'
+        /// </summary>
+        [Fact]
+        public void PhoneTest()
+        {
+            // TODO unit test for the property 'Phone'
         }
         /// <summary>
         /// Test the property 'NavigationId'
