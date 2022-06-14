@@ -36,11 +36,11 @@ namespace ShopwareSharp.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelOrderRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;StateMachineState?&gt;&gt;</returns>
-        Task<ApiResponse<StateMachineState?>> CancelOrderWithHttpInfoAsync(CancelOrderRequest cancelOrderRequest, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<StateMachineState?>> CancelOrderWithHttpInfoAsync(CancelOrderRequest cancelOrderRequest,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Cancel an order
@@ -50,11 +50,11 @@ namespace ShopwareSharp.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelOrderRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;StateMachineState&gt;</returns>
-        Task<StateMachineState?> CancelOrderAsync(CancelOrderRequest cancelOrderRequest, System.Threading.CancellationToken? cancellationToken = null);
+        Task<StateMachineState?> CancelOrderAsync(CancelOrderRequest cancelOrderRequest,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Cancel an order
@@ -63,13 +63,13 @@ namespace ShopwareSharp.Api
         /// Cancels an order. The order state will be set to &#39;cancelled&#39;.
         /// </remarks>
         /// <param name="cancelOrderRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;StateMachineState?&gt;</returns>
-        Task<StateMachineState?> CancelOrderOrDefaultAsync(CancelOrderRequest cancelOrderRequest, System.Threading.CancellationToken? cancellationToken = null);
+        Task<StateMachineState?> CancelOrderOrDefaultAsync(CancelOrderRequest cancelOrderRequest,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Create an order from a cart
         /// </summary>
@@ -77,12 +77,12 @@ namespace ShopwareSharp.Api
         /// Creates a new order from the current cart and deletes the cart.
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
         /// <param name="createOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;Order?&gt;&gt;</returns>
-        Task<ApiResponse<Order?>> CreateOrderWithHttpInfoAsync(CreateOrderRequest? createOrderRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<Order?>> CreateOrderWithHttpInfoAsync(CreateOrderRequest? createOrderRequest = null,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Create an order from a cart
@@ -91,12 +91,12 @@ namespace ShopwareSharp.Api
         /// Creates a new order from the current cart and deletes the cart.
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
         /// <param name="createOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;Order&gt;</returns>
-        Task<Order?> CreateOrderAsync(CreateOrderRequest? createOrderRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<Order?> CreateOrderAsync(CreateOrderRequest? createOrderRequest = null,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Create an order from a cart
@@ -104,14 +104,14 @@ namespace ShopwareSharp.Api
         /// <remarks>
         /// Creates a new order from the current cart and deletes the cart.
         /// </remarks>
-        
-        
         /// <param name="createOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;Order?&gt;</returns>
-        Task<Order?> CreateOrderOrDefaultAsync(CreateOrderRequest? createOrderRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<Order?> CreateOrderOrDefaultAsync(CreateOrderRequest? createOrderRequest = null,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Update the payment method of an order
         /// </summary>
@@ -120,11 +120,11 @@ namespace ShopwareSharp.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderSetPaymentRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;SuccessResponse?&gt;&gt;</returns>
-        Task<ApiResponse<SuccessResponse?>> OrderSetPaymentWithHttpInfoAsync(OrderSetPaymentRequest orderSetPaymentRequest, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<SuccessResponse?>> OrderSetPaymentWithHttpInfoAsync(
+            OrderSetPaymentRequest orderSetPaymentRequest, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Update the payment method of an order
@@ -134,11 +134,11 @@ namespace ShopwareSharp.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderSetPaymentRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;SuccessResponse&gt;</returns>
-        Task<SuccessResponse?> OrderSetPaymentAsync(OrderSetPaymentRequest orderSetPaymentRequest, System.Threading.CancellationToken? cancellationToken = null);
+        Task<SuccessResponse?> OrderSetPaymentAsync(OrderSetPaymentRequest orderSetPaymentRequest,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Update the payment method of an order
@@ -147,13 +147,13 @@ namespace ShopwareSharp.Api
         /// Changes the payment method of a specific order. You can use the /order route to find out if the payment method of an order can be changed - take a look at the &#x60;paymentChangeable&#x60;- array in the response.
         /// </remarks>
         /// <param name="orderSetPaymentRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;SuccessResponse?&gt;</returns>
-        Task<SuccessResponse?> OrderSetPaymentOrDefaultAsync(OrderSetPaymentRequest orderSetPaymentRequest, System.Threading.CancellationToken? cancellationToken = null);
+        Task<SuccessResponse?> OrderSetPaymentOrDefaultAsync(OrderSetPaymentRequest orderSetPaymentRequest,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Fetch a list of orders
         /// </summary>
@@ -162,11 +162,11 @@ namespace ShopwareSharp.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="readOrderRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;OrderRouteResponse?&gt;&gt;</returns>
-        Task<ApiResponse<OrderRouteResponse?>> ReadOrderWithHttpInfoAsync(ReadOrderRequest readOrderRequest, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<OrderRouteResponse?>> ReadOrderWithHttpInfoAsync(ReadOrderRequest readOrderRequest,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch a list of orders
@@ -176,11 +176,11 @@ namespace ShopwareSharp.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="readOrderRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;OrderRouteResponse&gt;</returns>
-        Task<OrderRouteResponse?> ReadOrderAsync(ReadOrderRequest readOrderRequest, System.Threading.CancellationToken? cancellationToken = null);
+        Task<OrderRouteResponse?> ReadOrderAsync(ReadOrderRequest readOrderRequest,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch a list of orders
@@ -189,53 +189,27 @@ namespace ShopwareSharp.Api
         /// List orders of a customer.
         /// </remarks>
         /// <param name="readOrderRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;OrderRouteResponse?&gt;</returns>
-        Task<OrderRouteResponse?> ReadOrderOrDefaultAsync(ReadOrderRequest readOrderRequest, System.Threading.CancellationToken? cancellationToken = null);
-
-            }
+        Task<OrderRouteResponse?> ReadOrderOrDefaultAsync(ReadOrderRequest readOrderRequest,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
+    }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class OrderApi : IOrderApi
+    public partial class OrderApi : ApiBase, IOrderApi
     {
-        private JsonSerializerOptions _jsonSerializerOptions;
-
-        /// <summary>
-        /// An event to track the health of the server. 
-        /// If you store these event args, be sure to purge old event args to prevent a memory leak.
-        /// </summary>
-        public event ClientUtils.EventHandler<ApiResponseEventArgs>? ApiResponded;
-
-        /// <summary>
-        /// The logger
-        /// </summary>
-        public ILogger<OrderApi> Logger { get; }
-
-        /// <summary>
-        /// The HttpClient
-        /// </summary>
-        public HttpClient HttpClient { get; }
-
-        /// <summary>
-        /// A token provider of type <see cref="ApiKeyProvider"/>
-        /// </summary>
-        public TokenProvider<ApiKeyToken> ApiKeyProvider { get; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public OrderApi(ILogger<OrderApi> logger, HttpClient httpClient, JsonSerializerOptionsProvider jsonSerializerOptionsProvider, 
-            TokenProvider<ApiKeyToken> apiKeyProvider)
+        public OrderApi(ILogger<OrderApi> logger, HttpClient httpClient,
+            JsonSerializerOptionsProvider jsonSerializerOptionsProvider,
+            TokenProvider<ApiKeyToken> apiKeyProvider, TokenProvider<ContextKeyToken> contextKeyTokenProvider) : base(
+            logger, httpClient, jsonSerializerOptionsProvider, apiKeyProvider, contextKeyTokenProvider)
         {
-            _jsonSerializerOptions = jsonSerializerOptionsProvider.Options;
-            Logger = logger;
-            HttpClient = httpClient;
-            ApiKeyProvider = apiKeyProvider;
         }
 
         /// <summary>
@@ -243,13 +217,14 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelOrderRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="StateMachineState"/>&gt;</returns>
-        public async Task<StateMachineState?> CancelOrderAsync(CancelOrderRequest cancelOrderRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<StateMachineState?> CancelOrderAsync(CancelOrderRequest cancelOrderRequest,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<StateMachineState?> result = await CancelOrderWithHttpInfoAsync(cancelOrderRequest, cancellationToken).ConfigureAwait(false);
+            ApiResponse<StateMachineState?> result =
+                await CancelOrderWithHttpInfoAsync(cancelOrderRequest, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -262,16 +237,16 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelOrderRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="StateMachineState"/>&gt;</returns>
-        public async Task<StateMachineState?> CancelOrderOrDefaultAsync(CancelOrderRequest cancelOrderRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<StateMachineState?> CancelOrderOrDefaultAsync(CancelOrderRequest cancelOrderRequest,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<StateMachineState?>? result = null;
-            try 
+            try
             {
-                result = await CancelOrderWithHttpInfoAsync(cancelOrderRequest, cancellationToken).ConfigureAwait(false);
+                result = await CancelOrderWithHttpInfoAsync(cancelOrderRequest, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -289,101 +264,28 @@ namespace ShopwareSharp.Api
         /// <param name="cancelOrderRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="StateMachineState"/></returns>
-        public async Task<ApiResponse<StateMachineState?>> CancelOrderWithHttpInfoAsync(CancelOrderRequest cancelOrderRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<StateMachineState?>> CancelOrderWithHttpInfoAsync(CancelOrderRequest cancelOrderRequest,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+            const string queryPath = "/order/state/cancel";
 
-                if (cancelOrderRequest == null)
-                    throw new ArgumentNullException(nameof(cancelOrderRequest));
-
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
-
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/order/state/cancel";
-
-                    request.Content = (cancelOrderRequest as object) is System.IO.Stream stream
-                        ? request.Content = new StreamContent(stream)
-                        : request.Content = new StringContent(JsonSerializer.Serialize(cancelOrderRequest, _jsonSerializerOptions));
-
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    //contextToken.UseInHeader(request, "sw-context-token");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] contentTypes = new string[] {
-                        "application/json" 
-                    };
-
-                    string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentType != null)
-                        request.Content.Headers.Add("ContentType", contentType);
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Post;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/order/state/cancel"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<StateMachineState?> apiResponse = new ApiResponse<StateMachineState?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<StateMachineState>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<StateMachineState?>(queryPath, default, HttpMethod.Post, cancelOrderRequest,
+                requestOptions, cancellationToken);
         }
 
         /// <summary>
         /// Create an order from a cart Creates a new order from the current cart and deletes the cart.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
         /// <param name="createOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Order"/>&gt;</returns>
-        public async Task<Order?> CreateOrderAsync(CreateOrderRequest? createOrderRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<Order?> CreateOrderAsync(CreateOrderRequest? createOrderRequest = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<Order?> result = await CreateOrderWithHttpInfoAsync(createOrderRequest, cancellationToken).ConfigureAwait(false);
+            ApiResponse<Order?> result =
+                await CreateOrderWithHttpInfoAsync(createOrderRequest, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -395,17 +297,17 @@ namespace ShopwareSharp.Api
         /// Create an order from a cart Creates a new order from the current cart and deletes the cart.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
         /// <param name="createOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Order"/>&gt;</returns>
-        public async Task<Order?> CreateOrderOrDefaultAsync(CreateOrderRequest? createOrderRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<Order?> CreateOrderOrDefaultAsync(CreateOrderRequest? createOrderRequest = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<Order?>? result = null;
-            try 
+            try
             {
-                result = await CreateOrderWithHttpInfoAsync(createOrderRequest, cancellationToken).ConfigureAwait(false);
+                result = await CreateOrderWithHttpInfoAsync(createOrderRequest, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -420,85 +322,16 @@ namespace ShopwareSharp.Api
         /// Create an order from a cart Creates a new order from the current cart and deletes the cart.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
         /// <param name="createOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="Order"/></returns>
-        public async Task<ApiResponse<Order?>> CreateOrderWithHttpInfoAsync(CreateOrderRequest? createOrderRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<Order?>> CreateOrderWithHttpInfoAsync(CreateOrderRequest? createOrderRequest = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/checkout/order";
+            const string queryPath = "/order/state/cancel";
 
-                    request.Content = (createOrderRequest as object) is System.IO.Stream stream
-                        ? request.Content = new StreamContent(stream)
-                        : request.Content = new StringContent(JsonSerializer.Serialize(createOrderRequest, _jsonSerializerOptions));
-
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    //contextToken.UseInHeader(request, "sw-context-token");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] contentTypes = new string[] {
-                        "application/json" 
-                    };
-
-                    string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentType != null)
-                        request.Content.Headers.Add("ContentType", contentType);
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Post;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/checkout/order"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<Order?> apiResponse = new ApiResponse<Order?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<Order>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<Order?>(queryPath, default, HttpMethod.Post, createOrderRequest,
+                requestOptions, cancellationToken);
         }
 
         /// <summary>
@@ -506,13 +339,14 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderSetPaymentRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="SuccessResponse"/>&gt;</returns>
-        public async Task<SuccessResponse?> OrderSetPaymentAsync(OrderSetPaymentRequest orderSetPaymentRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<SuccessResponse?> OrderSetPaymentAsync(OrderSetPaymentRequest orderSetPaymentRequest,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<SuccessResponse?> result = await OrderSetPaymentWithHttpInfoAsync(orderSetPaymentRequest, cancellationToken).ConfigureAwait(false);
+            ApiResponse<SuccessResponse?> result =
+                await OrderSetPaymentWithHttpInfoAsync(orderSetPaymentRequest, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -525,16 +359,16 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderSetPaymentRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="SuccessResponse"/>&gt;</returns>
-        public async Task<SuccessResponse?> OrderSetPaymentOrDefaultAsync(OrderSetPaymentRequest orderSetPaymentRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<SuccessResponse?> OrderSetPaymentOrDefaultAsync(OrderSetPaymentRequest orderSetPaymentRequest,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<SuccessResponse?>? result = null;
-            try 
+            try
             {
-                result = await OrderSetPaymentWithHttpInfoAsync(orderSetPaymentRequest, cancellationToken).ConfigureAwait(false);
+                result = await OrderSetPaymentWithHttpInfoAsync(orderSetPaymentRequest, requestOptions,
+                    cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -550,91 +384,24 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="orderSetPaymentRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="SuccessResponse"/></returns>
-        public async Task<ApiResponse<SuccessResponse?>> OrderSetPaymentWithHttpInfoAsync(OrderSetPaymentRequest orderSetPaymentRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<SuccessResponse?>> OrderSetPaymentWithHttpInfoAsync(
+            OrderSetPaymentRequest orderSetPaymentRequest, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                if (orderSetPaymentRequest == null)
-                    throw new ArgumentNullException(nameof(orderSetPaymentRequest));
+            if (orderSetPaymentRequest == null)
+                throw new ArgumentNullException(nameof(orderSetPaymentRequest));
 
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/order/payment";
 
-                    request.Content = (orderSetPaymentRequest as object) is System.IO.Stream stream
-                        ? request.Content = new StreamContent(stream)
-                        : request.Content = new StringContent(JsonSerializer.Serialize(orderSetPaymentRequest, _jsonSerializerOptions));
+            const string queryPath = "/order/payment";
 
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    //contextToken.UseInHeader(request, "sw-context-token");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] contentTypes = new string[] {
-                        "application/json" 
-                    };
-
-                    string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentType != null)
-                        request.Content.Headers.Add("ContentType", contentType);
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Post;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/order/payment"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<SuccessResponse?> apiResponse = new ApiResponse<SuccessResponse?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<SuccessResponse>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<SuccessResponse?>(queryPath, default, HttpMethod.Post, orderSetPaymentRequest,
+                requestOptions, cancellationToken);
         }
 
         /// <summary>
@@ -642,13 +409,15 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="readOrderRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="OrderRouteResponse"/>&gt;</returns>
-        public async Task<OrderRouteResponse?> ReadOrderAsync(ReadOrderRequest readOrderRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<OrderRouteResponse?> ReadOrderAsync(ReadOrderRequest readOrderRequest,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<OrderRouteResponse?> result = await ReadOrderWithHttpInfoAsync(readOrderRequest, cancellationToken).ConfigureAwait(false);
+            ApiResponse<OrderRouteResponse?> result =
+                await ReadOrderWithHttpInfoAsync(readOrderRequest, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -661,16 +430,17 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="readOrderRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="OrderRouteResponse"/>&gt;</returns>
-        public async Task<OrderRouteResponse?> ReadOrderOrDefaultAsync(ReadOrderRequest readOrderRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<OrderRouteResponse?> ReadOrderOrDefaultAsync(ReadOrderRequest readOrderRequest,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<OrderRouteResponse?>? result = null;
-            try 
+            try
             {
-                result = await ReadOrderWithHttpInfoAsync(readOrderRequest, cancellationToken).ConfigureAwait(false);
+                result = await ReadOrderWithHttpInfoAsync(readOrderRequest, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -686,88 +456,23 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="readOrderRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="OrderRouteResponse"/></returns>
-        public async Task<ApiResponse<OrderRouteResponse?>> ReadOrderWithHttpInfoAsync(ReadOrderRequest readOrderRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<OrderRouteResponse?>> ReadOrderWithHttpInfoAsync(ReadOrderRequest readOrderRequest,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                if (readOrderRequest == null)
-                    throw new ArgumentNullException(nameof(readOrderRequest));
+            if (readOrderRequest == null)
+                throw new ArgumentNullException(nameof(readOrderRequest));
 
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/order";
+            const string queryPath = "/order";
 
-                    request.Content = (readOrderRequest as object) is System.IO.Stream stream
-                        ? request.Content = new StreamContent(stream)
-                        : request.Content = new StringContent(JsonSerializer.Serialize(readOrderRequest, _jsonSerializerOptions));
-
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] contentTypes = new string[] {
-                        "application/json" 
-                    };
-
-                    string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentType != null)
-                        request.Content.Headers.Add("ContentType", contentType);
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Post;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/order"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<OrderRouteResponse?> apiResponse = new ApiResponse<OrderRouteResponse?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<OrderRouteResponse>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
-        }    }
+            return ExecuteRequest<OrderRouteResponse?>(queryPath, default, HttpMethod.Post, readOrderRequest,
+                requestOptions, cancellationToken);
+        }
+    }
 }

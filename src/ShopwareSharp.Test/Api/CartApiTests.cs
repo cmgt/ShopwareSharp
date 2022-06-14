@@ -69,14 +69,10 @@ namespace ShopwareSharp.Test.Api
         [Fact]
         public async Task AddLineItemAsyncTest()
         {
-            var name = Guid.NewGuid().ToString();
-            var cart = await _instance.ReadCartAsync(name);
-
             CartItems? cartItems = new CartItems(cartItemsAllOf: new CartItemsAllOf(new List<LineItem>()
                 {new LineItem() {ReferencedId = "0f683a27c45a4e408814a97fd7150ffa", Quantity = 1, Type = "product"}}));
 
-            var response = await _instance.AddLineItemAsync(cartItems,
-                new RequestOptions() {ContextKey = new ContextKeyToken(cart.CartAllOf.Token)});
+            var response = await _instance.AddLineItemAsync(cartItems);
             Assert.IsType<Cart>(response);
         }
 

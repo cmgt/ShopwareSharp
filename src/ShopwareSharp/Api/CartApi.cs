@@ -228,49 +228,17 @@ namespace ShopwareSharp.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class CartApi : ICartApi
+    public class CartApi : ApiBase, ICartApi
     {
-        private JsonSerializerOptions _jsonSerializerOptions;
-
-        /// <summary>
-        /// An event to track the health of the server. 
-        /// If you store these event args, be sure to purge old event args to prevent a memory leak.
-        /// </summary>
-        public event ClientUtils.EventHandler<ApiResponseEventArgs>? ApiResponded;
-
-        /// <summary>
-        /// The logger
-        /// </summary>
-        public ILogger<CartApi> Logger { get; }
-
-        /// <summary>
-        /// The HttpClient
-        /// </summary>
-        public HttpClient HttpClient { get; }
-
-        /// <summary>
-        /// A token provider of type <see cref="ApiKeyToken"/>
-        /// </summary>
-        public TokenProvider<ApiKeyToken> ApiKeyProvider { get; }
-
-        /// <summary>
-        /// A token provider of type <see cref="ContextKeyToken"/>
-        /// </summary>
-        public TokenProvider<ContextKeyToken> ContextKeyProvider { get; set; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="CartApi"/> class.
         /// </summary>
         /// <returns></returns>
         public CartApi(ILogger<CartApi> logger, HttpClient httpClient,
             JsonSerializerOptionsProvider jsonSerializerOptionsProvider,
-            TokenProvider<ApiKeyToken> apiKeyProvider, TokenProvider<ContextKeyToken> contextKeyProvider)
+            TokenProvider<ApiKeyToken> apiKeyProvider, TokenProvider<ContextKeyToken> contextKeyProvider) : base(logger,
+            httpClient, jsonSerializerOptionsProvider, apiKeyProvider, contextKeyProvider)
         {
-            _jsonSerializerOptions = jsonSerializerOptionsProvider.Options;
-            Logger = logger;
-            HttpClient = httpClient;
-            ApiKeyProvider = apiKeyProvider;
-            ContextKeyProvider = contextKeyProvider;
         }
 
         /// <summary>
@@ -330,90 +298,6 @@ namespace ShopwareSharp.Api
             const string queryPath = "/checkout/cart/line-item";
 
             return ExecuteRequest<Cart?>(queryPath, default, HttpMethod.Post, cartItems, requestOptions, cancellationToken);
-        }
-
-        private async Task<ApiResponse<T>> ExecuteRequest<T>(string queryPath, string? query, HttpMethod? httpMethod,
-            object? content,
-            RequestOptions? requestOptions, CancellationToken? cancellationToken)
-        {
-            try
-            {
-                using var request = new HttpRequestMessage();
-                UriBuilder uriBuilder = new UriBuilder();
-                uriBuilder.Host = requestOptions?.Host?.Host ?? HttpClient.BaseAddress!.Host;
-                uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                uriBuilder.Path = ClientUtils.CONTEXT_PATH + queryPath;
-                uriBuilder.Query = query;
-
-                request.Content = content is System.IO.Stream stream
-                    ? request.Content = new StreamContent(stream)
-                    : request.Content =
-                        new StringContent(JsonSerializer.Serialize(content, _jsonSerializerOptions));
-
-                ApiKeyToken apiKey =
-                    (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                apiKey.UseInHeader(request, "sw-access-key");
-
-                request.PrepareRequestOptions(requestOptions);
-
-                request.RequestUri = uriBuilder.Uri;
-                string[] contentTypes = new string[]
-                {
-                    "application/json"
-                };
-
-                string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                if (contentType != null)
-                    request.Content.Headers.Add("ContentType", contentType);
-
-                string[] accepts = new string[]
-                {
-                    "application/json"
-                };
-
-                string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                if (accept != null)
-                    request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-
-                request.Method = httpMethod;
-
-                using var responseMessage = await HttpClient
-                    .SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                DateTime requestedAt = DateTime.UtcNow;
-
-                string responseContent = await responseMessage.Content
-                    .ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                if (ApiResponded != null)
-                {
-                    try
-                    {
-                        ApiResponded.Invoke(this,
-                            new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode,
-                                queryPath));
-                    }
-                    catch (Exception e)
-                    {
-                        Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                    }
-                }
-
-                ApiResponse<T> apiResponse = new ApiResponse<T>(responseMessage, responseContent);
-
-                if (apiResponse.IsSuccessStatusCode)
-                    apiResponse.Content =
-                        JsonSerializer.Deserialize<T>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                return apiResponse;
-            }
-            catch (Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
         }
 
         /// <summary>

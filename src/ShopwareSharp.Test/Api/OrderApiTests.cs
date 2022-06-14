@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Microsoft.Extensions.DependencyInjection;
 using ShopwareSharp.Api;
+using ShopwareSharp.Client;
 using ShopwareSharp.Model;
 
 
@@ -67,13 +68,12 @@ namespace ShopwareSharp.Test.Api
         /// <summary>
         /// Test CreateOrder
         /// </summary>
-        [Fact (Skip = "not implemented")]
+        [Fact]
         public async Task CreateOrderAsyncTest()
         {
-            
-            
             CreateOrderRequest? createOrderRequest = default;
-            var response = await _instance.CreateOrderAsync(createOrderRequest);
+            var response = await _instance.CreateOrderAsync(createOrderRequest,
+                new RequestOptions() {ContextKey = new ContextKeyToken("qnEIHRHOt1Nz8xWkHL0PFbvnrDjRWazS")});
             Assert.IsType<Order>(response);
         }
 
