@@ -77,6 +77,7 @@ namespace ShopwareSharp.Client
             this.services.AddSingleton<IPaymentShippingApi, PaymentShippingApi>();
             this.services.AddSingleton<IProductApi, ProductApi>();
             this.services.AddSingleton<ILoginRegistrationApi, LoginRegistrationApi>();
+            this.services.AddSingleton<ISystemContextApi, SystemContextApi>();
         }
 
         /// <summary>
@@ -86,7 +87,7 @@ namespace ShopwareSharp.Client
         /// <param name="builder"></param>
         /// <returns></returns>
         public HostConfiguration AddApiHttpClients<TCartApi, TOrderApi, TPaymentMethodApi, TPaymentShippingApi,
-            TProductApi, TLoginRegistrationApi>
+            TProductApi, TLoginRegistrationApi, TSystemContextApi>
         (
             Action<HttpClient>? client = null, Action<IHttpClientBuilder>? builder = null)
             where TCartApi : class, ICartApi
@@ -95,6 +96,7 @@ namespace ShopwareSharp.Client
             where TPaymentShippingApi : class, IPaymentShippingApi
             where TProductApi : class, IProductApi
             where TLoginRegistrationApi : class, ILoginRegistrationApi
+            where TSystemContextApi : class, ISystemContextApi
         {
             if (client == null)
                 client = c => c.BaseAddress = new Uri(ClientUtils.BASE_ADDRESS);
@@ -106,7 +108,8 @@ namespace ShopwareSharp.Client
                 services.AddHttpClient<IPaymentMethodApi, TPaymentMethodApi>(client),
                 services.AddHttpClient<IPaymentShippingApi, TPaymentShippingApi>(client),
                 services.AddHttpClient<IProductApi, TProductApi>(client),
-                services.AddHttpClient<ILoginRegistrationApi, TLoginRegistrationApi>(client)
+                services.AddHttpClient<ILoginRegistrationApi, TLoginRegistrationApi>(client),
+                services.AddHttpClient<ISystemContextApi, TSystemContextApi>(client)
             };
 
             if (builder != null)
@@ -128,7 +131,7 @@ namespace ShopwareSharp.Client
             Action<IHttpClientBuilder>? builder = null)
         {
             AddApiHttpClients<CartApi, OrderApi, PaymentMethodApi, PaymentShippingApi, ProductApi,
-                LoginRegistrationApi>(client, builder);
+                LoginRegistrationApi, SystemContextApi>(client, builder);
 
             return this;
         }
