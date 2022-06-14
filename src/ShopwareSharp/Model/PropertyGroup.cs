@@ -46,19 +46,21 @@ namespace ShopwareSharp.Model
         /// <param name="updatedAt">updatedAt</param>
         /// <param name="translated">translated</param>
         /// <param name="options">options</param>
-        public PropertyGroup(string name, string displayType, string sortingType, DateTime createdAt, string? id = default, string? description = default, bool? filterable = default, bool? visibleOnProductDetailPage = default, long? position = default, Object? customFields = default, DateTime? updatedAt = default, Object? translated = default, PropertyGroupOption? options = default)
+        public PropertyGroup(string name, string displayType, string sortingType, DateTime createdAt,
+            string? id = default, string? description = default, bool? filterable = default,
+            bool? visibleOnProductDetailPage = default, long? position = default, Object? customFields = default,
+            DateTime? updatedAt = default, Object? translated = default, PropertyGroupOption[]? options = default)
         {
             if (name == null)
                 throw new ArgumentNullException("name is a required property for PropertyGroup and cannot be null.");
 
             if (displayType == null)
-                throw new ArgumentNullException("displayType is a required property for PropertyGroup and cannot be null.");
+                throw new ArgumentNullException(
+                    "displayType is a required property for PropertyGroup and cannot be null.");
 
             if (sortingType == null)
-                throw new ArgumentNullException("sortingType is a required property for PropertyGroup and cannot be null.");
-
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for PropertyGroup and cannot be null.");
+                throw new ArgumentNullException(
+                    "sortingType is a required property for PropertyGroup and cannot be null.");
 
             Name = name;
             DisplayType = displayType;
@@ -151,7 +153,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Options
         /// </summary>
         [JsonPropertyName("options")]
-        public PropertyGroupOption? Options { get; set; }
+        public PropertyGroupOption[]? Options { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

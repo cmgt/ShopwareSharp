@@ -114,7 +114,35 @@ namespace ShopwareSharp.Model
         /// <param name="streams">streams</param>
         /// <param name="categoriesRo">categoriesRo</param>
         /// <param name="seoCategory">seoCategory</param>
-        public Product(string taxId, string productNumber, long stock, string name, DateTime createdAt, string? id = default, string? versionId = default, string? parentId = default, string? parentVersionId = default, string? manufacturerId = default, string? productManufacturerVersionId = default, string? unitId = default, string? coverId = default, string? productMediaVersionId = default, string? deliveryTimeId = default, string? canonicalProductId = default, string? cmsPageId = default, string? cmsPageVersionId = default, long? restockTime = default, bool? active = default, long? availableStock = default, bool? available = default, bool? isCloseout = default, string? displayGroup = default, string? mainVariantId = default, string? manufacturerNumber = default, string? ean = default, long? purchaseSteps = default, long? maxPurchase = default, long? minPurchase = default, float? purchaseUnit = default, float? referenceUnit = default, bool? shippingFree = default, bool? markAsTopseller = default, float? weight = default, float? width = default, float? height = default, float? length = default, DateTime? releaseDate = default, float? ratingAverage = default, List<string>? categoryTree = default, List<string>? propertyIds = default, List<string>? optionIds = default, List<string>? categoryIds = default, long? childCount = default, long? sales = default, string? metaDescription = default, string? keywords = default, string? description = default, string? metaTitle = default, string? packUnit = default, string? packUnitPlural = default, Object? customFields = default, Object? calculatedPrice = default, List<Object>? calculatedPrices = default, long? calculatedMaxPurchase = default, Object? calculatedCheapestPrice = default, bool? isNew = default, DateTime? updatedAt = default, Object? translated = default, Product? parent = default, Product? children = default, DeliveryTime? deliveryTime = default, Tax? tax = default, ProductManufacturer? manufacturer = default, Unit? unit = default, ProductMedia? cover = default, CmsPage? cmsPage = default, Product? canonicalProduct = default, ProductMedia? media = default, ProductCrossSelling? crossSellings = default, ProductConfiguratorSetting? configuratorSettings = default, ProductReview? productReviews = default, MainCategory? mainCategories = default, SeoUrl? seoUrls = default, PropertyGroupOption? options = default, PropertyGroupOption? properties = default, Category? categories = default, ProductStream? streams = default, Category? categoriesRo = default, Category? seoCategory = default)
+        public Product(string taxId, string productNumber, long stock, string name, DateTime createdAt,
+            string? id = default, string? versionId = default, string? parentId = default,
+            string? parentVersionId = default, string? manufacturerId = default,
+            string? productManufacturerVersionId = default, string? unitId = default, string? coverId = default,
+            string? productMediaVersionId = default, string? deliveryTimeId = default,
+            string? canonicalProductId = default, string? cmsPageId = default, string? cmsPageVersionId = default,
+            long? restockTime = default, bool? active = default, long? availableStock = default,
+            bool? available = default, bool? isCloseout = default, string? displayGroup = default,
+            string? mainVariantId = default, string? manufacturerNumber = default, string? ean = default,
+            long? purchaseSteps = default, long? maxPurchase = default, long? minPurchase = default,
+            float? purchaseUnit = default, float? referenceUnit = default, bool? shippingFree = default,
+            bool? markAsTopseller = default, float? weight = default, float? width = default, float? height = default,
+            float? length = default, DateTime? releaseDate = default, float? ratingAverage = default,
+            List<string>? categoryTree = default, List<string>? propertyIds = default,
+            List<string>? optionIds = default, List<string>? categoryIds = default, long? childCount = default,
+            long? sales = default, string? metaDescription = default, string? keywords = default,
+            string? description = default, string? metaTitle = default, string? packUnit = default,
+            string? packUnitPlural = default, Object? customFields = default, Object? calculatedPrice = default,
+            List<Object>? calculatedPrices = default, long? calculatedMaxPurchase = default,
+            Object? calculatedCheapestPrice = default, bool? isNew = default, DateTime? updatedAt = default,
+            Object? translated = default, Product? parent = default, Product? children = default,
+            DeliveryTime? deliveryTime = default, Tax? tax = default, ProductManufacturer? manufacturer = default,
+            Unit? unit = default, ProductMedia? cover = default, CmsPage? cmsPage = default,
+            Product? canonicalProduct = default, ProductMedia? media = default,
+            ProductCrossSelling? crossSellings = default, ProductConfiguratorSetting? configuratorSettings = default,
+            ProductReview? productReviews = default, MainCategory? mainCategories = default, SeoUrl? seoUrls = default,
+            PropertyGroupOption? options = default, PropertyGroupOption? properties = default,
+            Category? categories = default, ProductStream? streams = default, Category? categoriesRo = default,
+            Category? seoCategory = default)
         {
             if (taxId == null)
                 throw new ArgumentNullException("taxId is a required property for Product and cannot be null.");
@@ -122,14 +150,8 @@ namespace ShopwareSharp.Model
             if (productNumber == null)
                 throw new ArgumentNullException("productNumber is a required property for Product and cannot be null.");
 
-            if (stock == null)
-                throw new ArgumentNullException("stock is a required property for Product and cannot be null.");
-
             if (name == null)
                 throw new ArgumentNullException("name is a required property for Product and cannot be null.");
-
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for Product and cannot be null.");
 
             TaxId = taxId;
             ProductNumber = productNumber;
@@ -213,6 +235,10 @@ namespace ShopwareSharp.Model
             CategoriesRo = categoriesRo;
             SeoCategory = seoCategory;
         }
+
+        [JsonConstructor]
+        public Product()
+        {}
 
         /// <summary>
         /// Gets or Sets TaxId

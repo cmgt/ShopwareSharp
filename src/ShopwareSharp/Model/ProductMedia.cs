@@ -51,9 +51,6 @@ namespace ShopwareSharp.Model
             if (mediaId == null)
                 throw new ArgumentNullException("mediaId is a required property for ProductMedia and cannot be null.");
 
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for ProductMedia and cannot be null.");
-
             ProductId = productId;
             MediaId = mediaId;
             CreatedAt = createdAt;

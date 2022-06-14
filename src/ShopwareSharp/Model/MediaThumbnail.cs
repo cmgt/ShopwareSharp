@@ -46,15 +46,6 @@ namespace ShopwareSharp.Model
             if (mediaId == null)
                 throw new ArgumentNullException("mediaId is a required property for MediaThumbnail and cannot be null.");
 
-            if (width == null)
-                throw new ArgumentNullException("width is a required property for MediaThumbnail and cannot be null.");
-
-            if (height == null)
-                throw new ArgumentNullException("height is a required property for MediaThumbnail and cannot be null.");
-
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for MediaThumbnail and cannot be null.");
-
             MediaId = mediaId;
             Width = width;
             Height = height;

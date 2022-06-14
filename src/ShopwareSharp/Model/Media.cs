@@ -50,11 +50,12 @@ namespace ShopwareSharp.Model
         /// <param name="updatedAt">updatedAt</param>
         /// <param name="translated">translated</param>
         /// <param name="thumbnails">thumbnails</param>
-        public Media(DateTime createdAt, string? id = default, string? mimeType = default, string? fileExtension = default, DateTime? uploadedAt = default, string? fileName = default, long? fileSize = default, Object? metaData = default, string? alt = default, string? title = default, string? url = default, bool? hasFile = default, bool? _private = default, Object? customFields = default, DateTime? updatedAt = default, Object? translated = default, MediaThumbnail? thumbnails = default)
+        public Media(DateTime createdAt, string? id = default, string? mimeType = default,
+            string? fileExtension = default, DateTime? uploadedAt = default, string? fileName = default,
+            long? fileSize = default, Object? metaData = default, string? alt = default, string? title = default,
+            string? url = default, bool? hasFile = default, bool? _private = default, Object? customFields = default,
+            DateTime? updatedAt = default, Object? translated = default, MediaThumbnail[]? thumbnails = default)
         {
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for Media and cannot be null.");
-
             CreatedAt = createdAt;
             Id = id;
             MimeType = mimeType;
@@ -73,6 +74,10 @@ namespace ShopwareSharp.Model
             Translated = translated;
             Thumbnails = thumbnails;
         }
+
+        [JsonConstructor]
+        public Media()
+        {}
 
         /// <summary>
         /// Gets or Sets CreatedAt
@@ -174,7 +179,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Thumbnails
         /// </summary>
         [JsonPropertyName("thumbnails")]
-        public MediaThumbnail? Thumbnails { get; set; }
+        public MediaThumbnail[]? Thumbnails { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
