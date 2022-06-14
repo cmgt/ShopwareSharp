@@ -324,7 +324,7 @@ namespace ShopwareSharp.Api
         /// <param name="searchPageRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ProductListingResult&gt;</returns>
-        Task<ProductListingResult?> SearchPageAsync(SearchPageRequest? searchPageRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ProductListingResult?> SearchPageAsync(SearchPageRequest searchPageRequest = null, System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Search for products
@@ -1329,7 +1329,7 @@ namespace ShopwareSharp.Api
         /// <param name="searchPageRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ProductListingResult"/>&gt;</returns>
-        public async Task<ProductListingResult?> SearchPageAsync(SearchPageRequest? searchPageRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ProductListingResult?> SearchPageAsync(SearchPageRequest searchPageRequest, System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<ProductListingResult?> result = await SearchPageWithHttpInfoAsync(searchPageRequest, cancellationToken).ConfigureAwait(false);
 
@@ -1377,10 +1377,6 @@ namespace ShopwareSharp.Api
         {
             try
             {
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
-
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
-
                 using (HttpRequestMessage request = new HttpRequestMessage())
                 {
                     UriBuilder uriBuilder = new UriBuilder();

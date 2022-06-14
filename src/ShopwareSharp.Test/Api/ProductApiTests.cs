@@ -116,10 +116,10 @@ namespace ShopwareSharp.Test.Api
         /// <summary>
         /// Test ReadProductReviews
         /// </summary>
-        [Fact (Skip = "not implemented")]
+        [Fact]
         public async Task ReadProductReviewsAsyncTest()
         {
-            string productId = default;
+            string productId = "0f683a27c45a4e408814a97fd7150ffa";
             
             
             ReadCustomerRequest? readCustomerRequest = default;
@@ -143,12 +143,12 @@ namespace ShopwareSharp.Test.Api
         /// <summary>
         /// Test SearchPage
         /// </summary>
-        [Fact (Skip = "not implemented")]
+        [Fact]
         public async Task SearchPageAsyncTest()
         {
             
             
-            SearchPageRequest? searchPageRequest = default;
+            SearchPageRequest? searchPageRequest = new SearchPageRequest(new SearchPageRequestAllOf("test"));
             var response = await _instance.SearchPageAsync(searchPageRequest);
             Assert.IsType<ProductListingResult>(response);
         }

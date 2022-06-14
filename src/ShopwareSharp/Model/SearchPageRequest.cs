@@ -59,7 +59,17 @@ namespace ShopwareSharp.Model
         /// <param name="ratingFilter">Enables/disabled filtering by rating. If set to false, the &#x60;rating&#x60; filter will be ignored. Also the &#x60;aggregations[rating]&#x60; key will be removed from the response. (default to true)</param>
         /// <param name="shippingFreeFilter">Enables/disabled filtering by shipping-free products. If set to false, the &#x60;shipping-free&#x60; filter will be ignored. Also the &#x60;aggregations[shipping-free]&#x60; key will be removed from the response. (default to true)</param>
         /// <param name="propertyFilter">Enables/disabled filtering by properties products. If set to false, the &#x60;properties&#x60; filter will be ignored. Also the &#x60;aggregations[properties]&#x60; key will be removed from the response. (default to true)</param>
-        public SearchPageRequest(ProductListingCriteria productListingCriteria, ProductListingFlags productListingFlags, SearchPageRequestAllOf searchPageRequestAllOf, int? page = default, int? limit = default, List<CriteriaFilterInner>? filter = default, List<CriteriaSortInner>? sort = default, List<CriteriaFilterInner>? postFilter = default, Object? associations = default, List<CriteriaAggregationsInner>? aggregations = default, List<string>? grouping = default, string? order = default, string? manufacturer = default, int? rating = default, string? properties = default, string? propertyWhitelist = default, string? reduceAggregations = default, int? p = 1, int? minPrice = 0, int? maxPrice = 0, bool? shippingFree = false, bool? manufacturerFilter = true, bool? priceFilter = true, bool? ratingFilter = true, bool? shippingFreeFilter = true, bool? propertyFilter = true)
+        public SearchPageRequest(SearchPageRequestAllOf searchPageRequestAllOf,
+            ProductListingCriteria? productListingCriteria = default,
+            ProductListingFlags? productListingFlags = default, int? page = default, int? limit = default,
+            List<CriteriaFilterInner>? filter = default, List<CriteriaSortInner>? sort = default,
+            List<CriteriaFilterInner>? postFilter = default, Object? associations = default,
+            List<CriteriaAggregationsInner>? aggregations = default, List<string>? grouping = default,
+            string? order = default, string? manufacturer = default, int? rating = default,
+            string? properties = default, string? propertyWhitelist = default, string? reduceAggregations = default,
+            int? p = 1, int? minPrice = 0, int? maxPrice = 0, bool? shippingFree = false,
+            bool? manufacturerFilter = true, bool? priceFilter = true, bool? ratingFilter = true,
+            bool? shippingFreeFilter = true, bool? propertyFilter = true)
         {
             ProductListingCriteria = productListingCriteria;
             ProductListingFlags = productListingFlags;
@@ -92,12 +102,12 @@ namespace ShopwareSharp.Model
         /// <summary>
         /// Gets or Sets ProductListingCriteria
         /// </summary>
-        public ProductListingCriteria ProductListingCriteria { get; set; }
+        public ProductListingCriteria? ProductListingCriteria { get; set; }
 
         /// <summary>
         /// Gets or Sets ProductListingFlags
         /// </summary>
-        public ProductListingFlags ProductListingFlags { get; set; }
+        public ProductListingFlags? ProductListingFlags { get; set; }
 
         /// <summary>
         /// Gets or Sets SearchPageRequestAllOf
@@ -675,7 +685,7 @@ namespace ShopwareSharp.Model
                 }
             }
 
-            return new SearchPageRequest(productListingCriteria, productListingFlags, searchPageRequestAllOf, page, limit, filter, sort, postFilter, associations, aggregations, grouping, order, manufacturer, rating, properties, propertyWhitelist, reduceAggregations, p, minPrice, maxPrice, shippingFree, manufacturerFilter, priceFilter, ratingFilter, shippingFreeFilter, propertyFilter);
+            return new SearchPageRequest(searchPageRequestAllOf!, productListingCriteria, productListingFlags, page, limit, filter, sort, postFilter, associations, aggregations, grouping, order, manufacturer, rating, properties, propertyWhitelist, reduceAggregations, p, minPrice, maxPrice, shippingFree, manufacturerFilter, priceFilter, ratingFilter, shippingFreeFilter, propertyFilter);
         }
 
         /// <summary>
@@ -685,6 +695,13 @@ namespace ShopwareSharp.Model
         /// <param name="searchPageRequest"></param>
         /// <param name="options"></param>
         /// <exception cref="NotImplementedException"></exception>
-        public override void Write(Utf8JsonWriter writer, SearchPageRequest searchPageRequest, JsonSerializerOptions options) => throw new NotImplementedException();
+        public override void Write(Utf8JsonWriter writer, SearchPageRequest searchPageRequest,
+            JsonSerializerOptions options)
+        {
+            if (searchPageRequest.SearchPageRequestAllOf != default)
+            {
+                JsonSerializer.Serialize(writer, searchPageRequest.SearchPageRequestAllOf, options);
+            }
+        }
     }
 }
