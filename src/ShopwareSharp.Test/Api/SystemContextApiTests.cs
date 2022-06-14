@@ -54,7 +54,7 @@ namespace ShopwareSharp.Test.Api
         /// <summary>
         /// Test ReadContext
         /// </summary>
-        [Fact (Skip = "not implemented")]
+        [Fact]
         public async Task ReadContextAsyncTest()
         {
             var response = await _instance.ReadContextAsync();
@@ -67,7 +67,7 @@ namespace ShopwareSharp.Test.Api
         [Fact]
         public async Task ReadCountryAsyncTest()
         {
-            ReadCustomerRequest? readCustomerRequest = default;
+            ReadCustomerRequest? readCustomerRequest = new ReadCustomerRequest(new Criteria(limit:50, page: 1));
             var response = await _instance.ReadCountryAsync(readCustomerRequest);
             Assert.IsType<ReadCountry200Response>(response);
         }

@@ -60,7 +60,6 @@ namespace ShopwareSharp.Test.Api
         {
             CancelOrderRequest cancelOrderRequest = default;
             
-            
             var response = await _instance.CancelOrderAsync(cancelOrderRequest);
             Assert.IsType<StateMachineState>(response);
         }

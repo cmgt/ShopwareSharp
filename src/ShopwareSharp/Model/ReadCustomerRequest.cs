@@ -161,6 +161,10 @@ namespace ShopwareSharp.Model
         /// <param name="readCustomerRequest"></param>
         /// <param name="options"></param>
         /// <exception cref="NotImplementedException"></exception>
-        public override void Write(Utf8JsonWriter writer, ReadCustomerRequest readCustomerRequest, JsonSerializerOptions options) => throw new NotImplementedException();
+        public override void Write(Utf8JsonWriter writer, ReadCustomerRequest readCustomerRequest,
+            JsonSerializerOptions options)
+        {
+            JsonSerializer.Serialize(writer, readCustomerRequest.Criteria, options);
+        }
     }
 }
