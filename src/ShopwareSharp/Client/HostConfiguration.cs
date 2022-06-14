@@ -76,6 +76,7 @@ namespace ShopwareSharp.Client
             this.services.AddSingleton<IPaymentMethodApi, PaymentMethodApi>();
             this.services.AddSingleton<IPaymentShippingApi, PaymentShippingApi>();
             this.services.AddSingleton<IProductApi, ProductApi>();
+            this.services.AddSingleton<ILoginRegistrationApi, LoginRegistrationApi>();
         }
 
         /// <summary>
@@ -84,7 +85,8 @@ namespace ShopwareSharp.Client
         /// <param name="client"></param>
         /// <param name="builder"></param>
         /// <returns></returns>
-        public HostConfiguration AddApiHttpClients<TCartApi, TOrderApi, TPaymentMethodApi, TPaymentShippingApi, TProductApi>
+        public HostConfiguration AddApiHttpClients<TCartApi, TOrderApi, TPaymentMethodApi, TPaymentShippingApi,
+            TProductApi, TLoginRegistrationApi>
         (
             Action<HttpClient>? client = null, Action<IHttpClientBuilder>? builder = null)
             where TCartApi : class, ICartApi
@@ -92,6 +94,7 @@ namespace ShopwareSharp.Client
             where TPaymentMethodApi : class, IPaymentMethodApi
             where TPaymentShippingApi : class, IPaymentShippingApi
             where TProductApi : class, IProductApi
+            where TLoginRegistrationApi : class, ILoginRegistrationApi
         {
             if (client == null)
                 client = c => c.BaseAddress = new Uri(ClientUtils.BASE_ADDRESS);
@@ -102,7 +105,8 @@ namespace ShopwareSharp.Client
                 services.AddHttpClient<IOrderApi, TOrderApi>(client),
                 services.AddHttpClient<IPaymentMethodApi, TPaymentMethodApi>(client),
                 services.AddHttpClient<IPaymentShippingApi, TPaymentShippingApi>(client),
-                services.AddHttpClient<IProductApi, TProductApi>(client)
+                services.AddHttpClient<IProductApi, TProductApi>(client),
+                services.AddHttpClient<ILoginRegistrationApi, TLoginRegistrationApi>(client)
             };
 
             if (builder != null)
@@ -120,9 +124,11 @@ namespace ShopwareSharp.Client
         /// <param name="client"></param>
         /// <param name="builder"></param>
         /// <returns></returns>
-        public HostConfiguration AddApiHttpClients(Action<HttpClient>? client = null, Action<IHttpClientBuilder>? builder = null)
+        public HostConfiguration AddApiHttpClients(Action<HttpClient>? client = null,
+            Action<IHttpClientBuilder>? builder = null)
         {
-            AddApiHttpClients<CartApi, OrderApi, PaymentMethodApi, PaymentShippingApi, ProductApi>(client, builder);
+            AddApiHttpClients<CartApi, OrderApi, PaymentMethodApi, PaymentShippingApi, ProductApi,
+                LoginRegistrationApi>(client, builder);
 
             return this;
         }

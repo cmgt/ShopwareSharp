@@ -55,22 +55,13 @@ namespace ShopwareSharp.Model
         /// <param name="country">country</param>
         /// <param name="countryState">countryState</param>
         /// <param name="salutation">salutation</param>
-        public CustomerAddress(string customerId, string countryId, string salutationId, string firstName, string lastName, string zipcode, string city, string street, DateTime createdAt, string? id = default, string? countryStateId = default, string? company = default, string? department = default, string? title = default, string? phoneNumber = default, string? additionalAddressLine1 = default, string? additionalAddressLine2 = default, Object? customFields = default, DateTime? updatedAt = default, Country? country = default, CountryState? countryState = default, Salutation? salutation = default)
+        public CustomerAddress(string countryId, string salutationId, string zipcode, string city, string street, string? firstName = default, string? lastName = default, string? customerId = default, DateTime createdAt = default, string? id = default, string? countryStateId = default, string? company = default, string? department = default, string? title = default, string? phoneNumber = default, string? additionalAddressLine1 = default, string? additionalAddressLine2 = default, Object? customFields = default, DateTime? updatedAt = default, Country? country = default, CountryState? countryState = default, Salutation? salutation = default)
         {
-            if (customerId == null)
-                throw new ArgumentNullException("customerId is a required property for CustomerAddress and cannot be null.");
-
             if (countryId == null)
                 throw new ArgumentNullException("countryId is a required property for CustomerAddress and cannot be null.");
 
             if (salutationId == null)
                 throw new ArgumentNullException("salutationId is a required property for CustomerAddress and cannot be null.");
-
-            if (firstName == null)
-                throw new ArgumentNullException("firstName is a required property for CustomerAddress and cannot be null.");
-
-            if (lastName == null)
-                throw new ArgumentNullException("lastName is a required property for CustomerAddress and cannot be null.");
 
             if (zipcode == null)
                 throw new ArgumentNullException("zipcode is a required property for CustomerAddress and cannot be null.");
@@ -80,9 +71,6 @@ namespace ShopwareSharp.Model
 
             if (street == null)
                 throw new ArgumentNullException("street is a required property for CustomerAddress and cannot be null.");
-
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for CustomerAddress and cannot be null.");
 
             CustomerId = customerId;
             CountryId = countryId;
@@ -112,7 +100,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets CustomerId
         /// </summary>
         [JsonPropertyName("customerId")]
-        public string CustomerId { get; set; }
+        public string CustomerId { get; set; } = default!;
 
         /// <summary>
         /// Gets or Sets CountryId
@@ -130,13 +118,13 @@ namespace ShopwareSharp.Model
         /// Gets or Sets FirstName
         /// </summary>
         [JsonPropertyName("firstName")]
-        public string FirstName { get; set; }
+        public string FirstName { get; set; } = default!;
 
         /// <summary>
         /// Gets or Sets LastName
         /// </summary>
         [JsonPropertyName("lastName")]
-        public string LastName { get; set; }
+        public string LastName { get; set; } = default!;
 
         /// <summary>
         /// Gets or Sets Zipcode
