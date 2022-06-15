@@ -50,31 +50,38 @@ namespace ShopwareSharp.Model
         /// <param name="campaignCode">Field can be used to store a campaign tracking code</param>
         /// <param name="accountType">Account type of the customer which can be either &#x60;private&#x60; or &#x60;business&#x60;. (default to &quot;private&quot;)</param>
         /// <param name="guest">If set, will create a guest customer. Guest customers can re-use an email address and don&#39;t need a password. (default to false)</param>
-        public RegisterRequest(string email, string password, string salutationId, string firstName, string lastName, bool acceptedDataProtection, string storefrontUrl, CustomerAddress billingAddress, CustomerAddress? shippingAddress = default, int? birthdayDay = default, int? birthdayMonth = default, int? birthdayYear = default, string? title = default, string? affiliateCode = default, string? campaignCode = default, string? accountType = "private", bool? guest = false)
+        public RegisterRequest(string email, string password, string salutationId, string firstName, string lastName,
+            string storefrontUrl, CustomerAddress billingAddress, bool? acceptedDataProtection = default,
+            CustomerAddress? shippingAddress = default, int? birthdayDay = default, int? birthdayMonth = default,
+            int? birthdayYear = default, string? title = default, string? affiliateCode = default,
+            string? campaignCode = default, string? accountType = default, bool? guest = false)
         {
             if (email == null)
                 throw new ArgumentNullException("email is a required property for RegisterRequest and cannot be null.");
 
             if (password == null)
-                throw new ArgumentNullException("password is a required property for RegisterRequest and cannot be null.");
+                throw new ArgumentNullException(
+                    "password is a required property for RegisterRequest and cannot be null.");
 
             if (salutationId == null)
-                throw new ArgumentNullException("salutationId is a required property for RegisterRequest and cannot be null.");
+                throw new ArgumentNullException(
+                    "salutationId is a required property for RegisterRequest and cannot be null.");
 
             if (firstName == null)
-                throw new ArgumentNullException("firstName is a required property for RegisterRequest and cannot be null.");
+                throw new ArgumentNullException(
+                    "firstName is a required property for RegisterRequest and cannot be null.");
 
             if (lastName == null)
-                throw new ArgumentNullException("lastName is a required property for RegisterRequest and cannot be null.");
-
-            if (acceptedDataProtection == null)
-                throw new ArgumentNullException("acceptedDataProtection is a required property for RegisterRequest and cannot be null.");
+                throw new ArgumentNullException(
+                    "lastName is a required property for RegisterRequest and cannot be null.");
 
             if (storefrontUrl == null)
-                throw new ArgumentNullException("storefrontUrl is a required property for RegisterRequest and cannot be null.");
+                throw new ArgumentNullException(
+                    "storefrontUrl is a required property for RegisterRequest and cannot be null.");
 
             if (billingAddress == null)
-                throw new ArgumentNullException("billingAddress is a required property for RegisterRequest and cannot be null.");
+                throw new ArgumentNullException(
+                    "billingAddress is a required property for RegisterRequest and cannot be null.");
 
             Email = email;
             Password = password;
@@ -135,7 +142,7 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>Flag indicating accepted data protection</value>
         [JsonPropertyName("acceptedDataProtection")]
-        public bool AcceptedDataProtection { get; set; }
+        public bool? AcceptedDataProtection { get; set; }
 
         /// <summary>
         /// URL of the storefront for that registration. Used in confirmation emails. Has to be one of the configured domains of the sales channel.

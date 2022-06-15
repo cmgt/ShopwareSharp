@@ -91,9 +91,10 @@ namespace ShopwareSharp.Test.Api
         {
             var countryId = "82eea3268e2d4bda8d225a997706cb5d";
             var salutationId = "9f7efcf3d889448baebd8aa9a43ee578";
+            var billing = new CustomerAddress(countryId, "94066", "San Bruno", "136 Geogria Ave");
+
             RegisterRequest registerRequest = new RegisterRequest("john@doe.com", String.Empty, salutationId, "John",
-                "Doe", false, String.Empty, 
-                new CustomerAddress(countryId, salutationId, "94066", "Chicago", "136 Ave", createdAt: DateTime.UtcNow), guest: true);
+                "Doe",  "https://stage.shopware.cledeploy.com/", billing, guest: true);
 
             var response = await _instance.RegisterAsync(registerRequest);
             Assert.IsType<Customer>(response);

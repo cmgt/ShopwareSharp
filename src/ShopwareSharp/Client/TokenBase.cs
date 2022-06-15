@@ -30,6 +30,7 @@ namespace ShopwareSharp.Client
         /// <param name="headerName"></param>
         public virtual void UseInHeader(System.Net.Http.HttpRequestMessage request, string headerName)
         {
+            if (String.IsNullOrWhiteSpace(raw)) return;
             request.Headers.Add(headerName, raw);
         }
         
