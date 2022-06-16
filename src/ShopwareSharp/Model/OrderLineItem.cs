@@ -63,7 +63,7 @@ namespace ShopwareSharp.Model
         /// <param name="cover">cover</param>
         /// <param name="orderDeliveryPositions">orderDeliveryPositions</param>
         /// <param name="parent">parent</param>
-        public OrderLineItem(string orderId, string identifier, long quantity, string label, long position, DateTime createdAt, OrderLineItem children, string? id = default, string? versionId = default, string? orderVersionId = default, string? productId = default, string? productVersionId = default, string? parentId = default, string? parentVersionId = default, string? coverId = default, string? referencedId = default, Object? payload = default, bool? good = default, bool? removable = default, bool? stackable = default, Object? priceDefinition = default, float? unitPrice = default, float? totalPrice = default, string? description = default, string? type = default, Object? customFields = default, DateTime? updatedAt = default, Media? cover = default, OrderDeliveryPosition? orderDeliveryPositions = default, OrderLineItem? parent = default)
+        public OrderLineItem(string orderId, string identifier, long quantity, string label, long position, DateTime createdAt, OrderLineItem[] children, string? id = default, string? versionId = default, string? orderVersionId = default, string? productId = default, string? productVersionId = default, string? parentId = default, string? parentVersionId = default, string? coverId = default, string? referencedId = default, Object? payload = default, bool? good = default, bool? removable = default, bool? stackable = default, Object? priceDefinition = default, float? unitPrice = default, float? totalPrice = default, string? description = default, string? type = default, Object? customFields = default, DateTime? updatedAt = default, Media? cover = default, OrderDeliveryPosition? orderDeliveryPositions = default, OrderLineItem? parent = default)
         {
             if (orderId == null)
                 throw new ArgumentNullException("orderId is a required property for OrderLineItem and cannot be null.");
@@ -71,17 +71,8 @@ namespace ShopwareSharp.Model
             if (identifier == null)
                 throw new ArgumentNullException("identifier is a required property for OrderLineItem and cannot be null.");
 
-            if (quantity == null)
-                throw new ArgumentNullException("quantity is a required property for OrderLineItem and cannot be null.");
-
             if (label == null)
                 throw new ArgumentNullException("label is a required property for OrderLineItem and cannot be null.");
-
-            if (position == null)
-                throw new ArgumentNullException("position is a required property for OrderLineItem and cannot be null.");
-
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for OrderLineItem and cannot be null.");
 
             if (children == null)
                 throw new ArgumentNullException("children is a required property for OrderLineItem and cannot be null.");
@@ -158,7 +149,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Children
         /// </summary>
         [JsonPropertyName("children")]
-        public OrderLineItem Children { get; set; }
+        public OrderLineItem[] Children { get; set; }
 
         /// <summary>
         /// Gets or Sets Id

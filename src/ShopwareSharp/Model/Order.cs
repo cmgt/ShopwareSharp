@@ -71,10 +71,23 @@ namespace ShopwareSharp.Model
         /// <param name="transactions">transactions</param>
         /// <param name="documents">documents</param>
         /// <param name="tags">tags</param>
-        public Order(string billingAddressId, string currencyId, string languageId, string salesChannelId, DateTime orderDateTime, float currencyFactor, DateTime createdAt, string? id = default, string? versionId = default, string? orderNumber = default, string? billingAddressVersionId = default, string? orderDate = default, OrderPrice? price = default, float? amountTotal = default, float? amountNet = default, float? positionPrice = default, string? taxStatus = default, OrderShippingCosts? shippingCosts = default, float? shippingTotal = default, string? deepLinkCode = default, string? affiliateCode = default, string? campaignCode = default, string? customerComment = default, Object? customFields = default, string? createdById = default, string? updatedById = default, DateTime? updatedAt = default, StateMachineState? stateMachineState = default, OrderCustomer? orderCustomer = default, Currency? currency = default, Language? language = default, OrderAddress? addresses = default, OrderAddress? billingAddress = default, OrderDelivery? deliveries = default, OrderLineItem? lineItems = default, OrderTransaction? transactions = default, Document? documents = default, Tag? tags = default)
+        public Order(string billingAddressId, string currencyId, string languageId, string salesChannelId,
+            DateTime orderDateTime, float currencyFactor, DateTime createdAt, string? id = default,
+            string? versionId = default, string? orderNumber = default, string? billingAddressVersionId = default,
+            string? orderDate = default, OrderPrice? price = default, float? amountTotal = default,
+            float? amountNet = default, float? positionPrice = default, string? taxStatus = default,
+            OrderShippingCosts? shippingCosts = default, float? shippingTotal = default, string? deepLinkCode = default,
+            string? affiliateCode = default, string? campaignCode = default, string? customerComment = default,
+            Object? customFields = default, string? createdById = default, string? updatedById = default,
+            DateTime? updatedAt = default, StateMachineState? stateMachineState = default,
+            OrderCustomer? orderCustomer = default, Currency? currency = default, Language? language = default,
+            OrderAddress[]? addresses = default, OrderAddress? billingAddress = default,
+            OrderDelivery[]? deliveries = default, OrderLineItem[]? lineItems = default,
+            OrderTransaction[]? transactions = default, Document? documents = default, Tag? tags = default)
         {
             if (billingAddressId == null)
-                throw new ArgumentNullException("billingAddressId is a required property for Order and cannot be null.");
+                throw new ArgumentNullException(
+                    "billingAddressId is a required property for Order and cannot be null.");
 
             if (currencyId == null)
                 throw new ArgumentNullException("currencyId is a required property for Order and cannot be null.");
@@ -84,15 +97,6 @@ namespace ShopwareSharp.Model
 
             if (salesChannelId == null)
                 throw new ArgumentNullException("salesChannelId is a required property for Order and cannot be null.");
-
-            if (orderDateTime == null)
-                throw new ArgumentNullException("orderDateTime is a required property for Order and cannot be null.");
-
-            if (currencyFactor == null)
-                throw new ArgumentNullException("currencyFactor is a required property for Order and cannot be null.");
-
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for Order and cannot be null.");
 
             BillingAddressId = billingAddressId;
             CurrencyId = currencyId;
@@ -324,7 +328,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Addresses
         /// </summary>
         [JsonPropertyName("addresses")]
-        public OrderAddress? Addresses { get; set; }
+        public OrderAddress[]? Addresses { get; set; }
 
         /// <summary>
         /// Gets or Sets BillingAddress
@@ -336,19 +340,19 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Deliveries
         /// </summary>
         [JsonPropertyName("deliveries")]
-        public OrderDelivery? Deliveries { get; set; }
+        public OrderDelivery[]? Deliveries { get; set; }
 
         /// <summary>
         /// Gets or Sets LineItems
         /// </summary>
         [JsonPropertyName("lineItems")]
-        public OrderLineItem? LineItems { get; set; }
+        public OrderLineItem[]? LineItems { get; set; }
 
         /// <summary>
         /// Gets or Sets Transactions
         /// </summary>
         [JsonPropertyName("transactions")]
-        public OrderTransaction? Transactions { get; set; }
+        public OrderTransaction[]? Transactions { get; set; }
 
         /// <summary>
         /// Gets or Sets Documents

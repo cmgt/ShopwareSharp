@@ -69,15 +69,6 @@ namespace ShopwareSharp.Model
             if (trackingCodes == null)
                 throw new ArgumentNullException("trackingCodes is a required property for OrderDelivery and cannot be null.");
 
-            if (shippingDateEarliest == null)
-                throw new ArgumentNullException("shippingDateEarliest is a required property for OrderDelivery and cannot be null.");
-
-            if (shippingDateLatest == null)
-                throw new ArgumentNullException("shippingDateLatest is a required property for OrderDelivery and cannot be null.");
-
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for OrderDelivery and cannot be null.");
-
             OrderId = orderId;
             ShippingOrderAddressId = shippingOrderAddressId;
             ShippingMethodId = shippingMethodId;

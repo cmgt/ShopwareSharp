@@ -328,7 +328,7 @@ namespace ShopwareSharp.Api
         public Task<ApiResponse<Order?>> CreateOrderWithHttpInfoAsync(CreateOrderRequest? createOrderRequest = null,
             RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            const string queryPath = "/order/state/cancel";
+            const string queryPath = "/checkout/order";
 
             return ExecuteRequest<Order?>(queryPath, default, HttpMethod.Post, createOrderRequest,
                 requestOptions, cancellationToken);

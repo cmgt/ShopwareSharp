@@ -51,19 +51,22 @@ namespace ShopwareSharp.Model
         /// <param name="media">media</param>
         /// <param name="tags">tags</param>
         /// <param name="tax">tax</param>
-        public ShippingMethod(string name, string deliveryTimeId, string taxType, DateTime createdAt, string? id = default, bool? active = default, Object? customFields = default, string? mediaId = default, string? description = default, string? trackingUrl = default, DateTime? updatedAt = default, Object? translated = default, DeliveryTime? deliveryTime = default, Rule? availabilityRule = default, ShippingMethodPrice? prices = default, Media? media = default, Tag? tags = default, Tax? tax = default)
+        public ShippingMethod(string name, string deliveryTimeId, string taxType, DateTime createdAt,
+            string? id = default, bool? active = default, Object? customFields = default, string? mediaId = default,
+            string? description = default, string? trackingUrl = default, DateTime? updatedAt = default,
+            Object? translated = default, DeliveryTime? deliveryTime = default, Rule? availabilityRule = default,
+            ShippingMethodPrice[]? prices = default, Media? media = default, Tag? tags = default, Tax? tax = default)
         {
             if (name == null)
                 throw new ArgumentNullException("name is a required property for ShippingMethod and cannot be null.");
 
             if (deliveryTimeId == null)
-                throw new ArgumentNullException("deliveryTimeId is a required property for ShippingMethod and cannot be null.");
+                throw new ArgumentNullException(
+                    "deliveryTimeId is a required property for ShippingMethod and cannot be null.");
 
             if (taxType == null)
-                throw new ArgumentNullException("taxType is a required property for ShippingMethod and cannot be null.");
-
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for ShippingMethod and cannot be null.");
+                throw new ArgumentNullException(
+                    "taxType is a required property for ShippingMethod and cannot be null.");
 
             Name = name;
             DeliveryTimeId = deliveryTimeId;
@@ -173,7 +176,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Prices
         /// </summary>
         [JsonPropertyName("prices")]
-        public ShippingMethodPrice? Prices { get; set; }
+        public ShippingMethodPrice[]? Prices { get; set; }
 
         /// <summary>
         /// Gets or Sets Media
