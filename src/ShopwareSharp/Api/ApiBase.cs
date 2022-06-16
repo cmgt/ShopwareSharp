@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Net.Http.Json;
+using System.Net.Mime;
 using System.Text;
 using System.Text.Json;
 using System.Threading;
@@ -54,22 +56,25 @@ namespace ShopwareSharp.Api
         }
 
         protected async Task<ApiResponse<T>> ExecuteRequest<T>(string queryPath, string? query, HttpMethod? httpMethod,
-            object? content,
-            RequestOptions? requestOptions, CancellationToken? cancellationToken)
+            object? content, RequestOptions? requestOptions, CancellationToken? cancellationToken)
         {
             try
             {
                 using var request = new HttpRequestMessage();
-                UriBuilder uriBuilder = new UriBuilder();
-                uriBuilder.Host = requestOptions?.Host?.Host ?? HttpClient.BaseAddress!.Host;
-                uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                uriBuilder.Path = ClientUtils.CONTEXT_PATH + queryPath;
-                uriBuilder.Query = query;
+                UriBuilder uriBuilder = new UriBuilder
+                {
+                    Host = requestOptions?.Host?.Host ?? HttpClient.BaseAddress!.Host,
+                    Scheme = HttpClient.BaseAddress!.Scheme,
+                    Path = ClientUtils.CONTEXT_PATH + queryPath,
+                    Query = query
+                };
 
-                request.Content = content is System.IO.Stream stream
-                    ? request.Content = new StreamContent(stream)
-                    : request.Content =
-                        new StringContent(JsonSerializer.Serialize(content, jsonSerializerOptions));
+                if (content != default)
+                {
+                    request.Content = content is System.IO.Stream stream
+                        ? request.Content = new StreamContent(stream)
+                        : request.Content = JsonContent.Create(content, options: jsonSerializerOptions);
+                }
 
                 var apiKey = await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
                 apiKey.UseInHeader(request, "sw-access-key");
@@ -80,16 +85,6 @@ namespace ShopwareSharp.Api
                 request.PrepareRequestOptions(requestOptions);
 
                 request.RequestUri = uriBuilder.Uri;
-                string[] contentTypes = new string[]
-                {
-                    "application/json"
-                };
-
-                string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                if (contentType != null)
-                    request.Content.Headers.Add("ContentType", contentType);
-
                 string[] accepts = new string[]
                 {
                     "application/json"
@@ -100,7 +95,7 @@ namespace ShopwareSharp.Api
                 if (accept != null)
                     request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
 
-                request.Method = httpMethod;
+                request.Method = httpMethod ?? HttpMethod.Post;
 
                 using var responseMessage = await HttpClient
                     .SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false);

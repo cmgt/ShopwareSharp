@@ -75,7 +75,7 @@ namespace ShopwareSharp.Model
         /// <param name="defaultShippingAddress">defaultShippingAddress</param>
         /// <param name="salutation">salutation</param>
         /// <param name="addresses">addresses</param>
-        public Customer(string groupId, string defaultPaymentMethodId, string salesChannelId, string languageId, string defaultBillingAddressId, string defaultShippingAddressId, string customerNumber, string salutationId, string firstName, string lastName, string email, DateTime createdAt, string? id = default, string? lastPaymentMethodId = default, string? company = default, string? title = default, List<string>? vatIds = default, string? affiliateCode = default, string? campaignCode = default, bool? active = default, bool? doubleOptInRegistration = default, DateTime? doubleOptInEmailSentDate = default, DateTime? doubleOptInConfirmDate = default, string? hash = default, bool? guest = default, DateTime? firstLogin = default, DateTime? lastLogin = default, bool? newsletter = default, string? birthday = default, DateTime? lastOrderDate = default, long? orderCount = default, Object? customFields = default, List<string>? tagIds = default, DateTime? updatedAt = default, CustomerGroup? group = default, PaymentMethod? defaultPaymentMethod = default, Language? language = default, PaymentMethod? lastPaymentMethod = default, CustomerAddress? defaultBillingAddress = default, CustomerAddress? defaultShippingAddress = default, Salutation? salutation = default, CustomerAddress? addresses = default)
+        public Customer(string groupId, string defaultPaymentMethodId, string salesChannelId, string languageId, string defaultBillingAddressId, string defaultShippingAddressId, string customerNumber, string salutationId, string firstName, string lastName, string email, DateTime createdAt, string? id = default, string? lastPaymentMethodId = default, string? company = default, string? title = default, List<string>? vatIds = default, string? affiliateCode = default, string? campaignCode = default, bool? active = default, bool? doubleOptInRegistration = default, DateTime? doubleOptInEmailSentDate = default, DateTime? doubleOptInConfirmDate = default, string? hash = default, bool? guest = default, DateTime? firstLogin = default, DateTime? lastLogin = default, bool? newsletter = default, string? birthday = default, DateTime? lastOrderDate = default, long? orderCount = default, Object? customFields = default, List<string>? tagIds = default, DateTime? updatedAt = default, CustomerGroup? group = default, PaymentMethod? defaultPaymentMethod = default, Language? language = default, PaymentMethod? lastPaymentMethod = default, CustomerAddress? defaultBillingAddress = default, CustomerAddress? defaultShippingAddress = default, Salutation? salutation = default, CustomerAddress[]? addresses = default)
         {
             if (groupId == null)
                 throw new ArgumentNullException("groupId is a required property for Customer and cannot be null.");
@@ -407,7 +407,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Addresses
         /// </summary>
         [JsonPropertyName("addresses")]
-        public CustomerAddress? Addresses { get; set; }
+        public CustomerAddress[]? Addresses { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
