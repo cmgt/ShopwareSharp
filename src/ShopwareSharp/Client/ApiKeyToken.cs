@@ -20,5 +20,7 @@ namespace ShopwareSharp.Client
         {
             raw = $"{ prefix }{ value }";
         }
+
+        public static readonly ApiKeyToken Unit = new ApiKeyToken(String.Empty);
     }
 }

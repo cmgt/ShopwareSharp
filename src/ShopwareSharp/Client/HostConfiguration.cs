@@ -98,10 +98,9 @@ namespace ShopwareSharp.Client
             where TLoginRegistrationApi : class, ILoginRegistrationApi
             where TSystemContextApi : class, ISystemContextApi
         {
-            if (client == null)
-                client = c => c.BaseAddress = new Uri(ClientUtils.BASE_ADDRESS);
+            client ??= c => c.BaseAddress = new Uri(ClientUtils.BASE_ADDRESS);
 
-            List<IHttpClientBuilder> builders = new List<IHttpClientBuilder>
+            var builders = new[]
             {
                 services.AddHttpClient<ICartApi, TCartApi>(client),
                 services.AddHttpClient<IOrderApi, TOrderApi>(client),
@@ -113,7 +112,7 @@ namespace ShopwareSharp.Client
             };
 
             if (builder != null)
-                foreach (IHttpClientBuilder instance in builders)
+                foreach (var instance in builders)
                     builder(instance);
 
             HttpClientsAdded = true;

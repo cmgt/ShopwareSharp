@@ -268,7 +268,7 @@ namespace ShopwareSharp.Client
         /// </summary>
         /// <param name="builder"></param>
         /// <param name="options"></param>
-        public static IHostBuilder ConfigureApi(this IHostBuilder builder,
+        public static IHostBuilder ShopwareConfigureApi(this IHostBuilder builder,
             Action<HostBuilderContext, HostConfiguration> options)
         {
             builder.ConfigureServices((context, services) =>
@@ -277,7 +277,7 @@ namespace ShopwareSharp.Client
 
                 options(context, config);
 
-                AddApi(services, config);
+                AddShopwareApi(services, config);
             });
 
             return builder;
@@ -288,14 +288,14 @@ namespace ShopwareSharp.Client
         /// </summary>
         /// <param name="services"></param>
         /// <param name="options"></param>
-        public static void AddApi(this IServiceCollection services, Action<HostConfiguration> options)
+        public static void AddShopwareApi(this IServiceCollection services, Action<HostConfiguration> options)
         {
             HostConfiguration config = new HostConfiguration(services);
             options(config);
-            AddApi(services, config);
+            AddShopwareApi(services, config);
         }
 
-        private static void AddApi(IServiceCollection services, HostConfiguration host)
+        private static void AddShopwareApi(IServiceCollection services, HostConfiguration host)
         {
             if (!host.HttpClientsAdded)
                 host.AddApiHttpClients();

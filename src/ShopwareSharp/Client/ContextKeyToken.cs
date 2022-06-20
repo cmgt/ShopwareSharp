@@ -16,5 +16,5 @@ public class ContextKeyToken : TokenBase
         raw = value;
     }
 
-    public static readonly ContextKeyToken Empty = new ContextKeyToken(String.Empty);
+    public static readonly ContextKeyToken Unit = new ContextKeyToken(String.Empty);
 }

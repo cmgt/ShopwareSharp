@@ -49,7 +49,7 @@ namespace ShopwareSharp.Test.Api
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) => Host.CreateDefaultBuilder(args)
-            .ConfigureApi((context, options) =>
+            .ShopwareConfigureApi((_, options) =>
             {
                 options.AddTokens(new ApiKeyToken("SWSCUJDICHA0SDMYA1BPRNLKAG"));
                 //options.AddTokens(new ApiKeyToken("SWSCCVJZZ2LKUJA3DHI5C3F2ZA"));

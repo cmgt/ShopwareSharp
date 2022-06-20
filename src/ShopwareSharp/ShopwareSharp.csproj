@@ -1,23 +1,31 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <GenerateAssemblyInfo>true</GenerateAssemblyInfo> <!-- setting GenerateAssemblyInfo to false causes this bug https://github.com/dotnet/project-system/issues/3934 -->
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>ShopwareSharp</AssemblyName>
     <PackageId>ShopwareSharp</PackageId>
     <OutputType>Library</OutputType>
-    <Authors>OpenAPI</Authors>
-    <Company>OpenAPI</Company>
-    <AssemblyTitle>OpenAPI Library</AssemblyTitle>
-    <Description>A library generated from a OpenAPI doc</Description>
-    <Copyright>No Copyright</Copyright>
-    <RootNamespace>ShopwareSharp</RootNamespace>
-    <Version>0.1.0</Version>
-    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\ShopwareSharp.xml</DocumentationFile>
+	  <AssemblyTitle>ShopwareSharp Library</AssemblyTitle>
+	  <RootNamespace>ShopwareSharp</RootNamespace>
+	  <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\ShopwareSharp.xml</DocumentationFile>
     <RepositoryUrl>https://github.com/cmgt/ShopwareSharp.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Minor update</PackageReleaseNotes>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <Nullable>enable</Nullable>
+	  <VersionPrefix>0.2.0</VersionPrefix>
+	  <EmbedAllSources>true</EmbedAllSources>
+	  <IncludeSymbols>true</IncludeSymbols>
+	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	  <Authors>Cyberline Engineering, Denis Porotikov</Authors>
+	  <Company>Cyberline Engineering</Company>
+	  <Copyright>Cyberline Engineering</Copyright>
+	  <Description>.net client for Shopware 6 e-commerce platform API</Description>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <PackageProjectUrl>https://github.com/cmgt/ShopwareSharp</PackageProjectUrl>
+	  <PackageTags>Shopware; Cyberline Engineering</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,5 +35,12 @@
     <PackageReference Include="Polly" Version="7.2.3" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>

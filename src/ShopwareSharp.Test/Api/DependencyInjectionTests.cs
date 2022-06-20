@@ -24,7 +24,7 @@ namespace ShopwareSharp.Test.Api
     public class DependencyInjectionTest
     {
         private readonly IHost _hostUsingConfigureWithoutAClient = 
-            Host.CreateDefaultBuilder(Array.Empty<string>()).ConfigureApi((context, options) =>
+            Host.CreateDefaultBuilder(Array.Empty<string>()).ShopwareConfigureApi((context, options) =>
             {
                 ApiKeyToken apiKeyToken = new ApiKeyToken($"<token>");
                 options.AddTokens(apiKeyToken);
@@ -33,7 +33,7 @@ namespace ShopwareSharp.Test.Api
             .Build();
 
         private readonly IHost _hostUsingConfigureWithAClient =
-            Host.CreateDefaultBuilder(Array.Empty<string>()).ConfigureApi((context, options) =>
+            Host.CreateDefaultBuilder(Array.Empty<string>()).ShopwareConfigureApi((context, options) =>
             {
                 ApiKeyToken apiKeyToken = new ApiKeyToken($"<token>");
                 options.AddTokens(apiKeyToken);
@@ -45,7 +45,7 @@ namespace ShopwareSharp.Test.Api
         private readonly IHost _hostUsingAddWithoutAClient =
             Host.CreateDefaultBuilder(Array.Empty<string>()).ConfigureServices((host, services) =>
             {
-                services.AddApi(options =>
+                services.AddShopwareApi(options =>
                 {
                     ApiKeyToken apiKeyToken = new ApiKeyToken($"<token>");
                     options.AddTokens(apiKeyToken);
@@ -57,7 +57,7 @@ namespace ShopwareSharp.Test.Api
         private readonly IHost _hostUsingAddWithAClient =
             Host.CreateDefaultBuilder(Array.Empty<string>()).ConfigureServices((host, services) =>
             {
-                services.AddApi(options =>
+                services.AddShopwareApi(options =>
                 {
                     ApiKeyToken apiKeyToken = new ApiKeyToken($"<token>");
                     options.AddTokens(apiKeyToken);
