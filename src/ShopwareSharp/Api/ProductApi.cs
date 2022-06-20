@@ -38,7 +38,9 @@ namespace ShopwareSharp.Api
         /// <param name="readCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;ReadProduct200Response?&gt;&gt;</returns>
-        Task<ApiResponse<ReadProduct200Response?>> ReadProductWithHttpInfoAsync(ReadCustomerRequest? readCustomerRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<ReadProduct200Response?>> ReadProductWithHttpInfoAsync(
+            ReadCustomerRequest? readCustomerRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch a list of products
@@ -50,7 +52,8 @@ namespace ShopwareSharp.Api
         /// <param name="readCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ReadProduct200Response&gt;</returns>
-        Task<ReadProduct200Response?> ReadProductAsync(ReadCustomerRequest? readCustomerRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ReadProduct200Response?> ReadProductAsync(ReadCustomerRequest? readCustomerRequest = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch a list of products
@@ -61,9 +64,10 @@ namespace ShopwareSharp.Api
         /// <param name="readCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ReadProduct200Response?&gt;</returns>
-        Task<ReadProduct200Response?> ReadProductOrDefaultAsync(ReadCustomerRequest? readCustomerRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ReadProduct200Response?> ReadProductOrDefaultAsync(ReadCustomerRequest? readCustomerRequest = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Fetch cross-selling groups of a product
         /// </summary>
@@ -74,7 +78,9 @@ namespace ShopwareSharp.Api
         /// <param name="productId">Product ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;List&lt;CrossSellingElementCollectionInner&gt;?&gt;&gt;</returns>
-        Task<ApiResponse<List<CrossSellingElementCollectionInner>?>> ReadProductCrossSellingsWithHttpInfoAsync(string productId, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<IEnumerable<CrossSellingElementCollectionInner>?>> ReadProductCrossSellingsWithHttpInfoAsync(
+            string productId, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch cross-selling groups of a product
@@ -86,7 +92,8 @@ namespace ShopwareSharp.Api
         /// <param name="productId">Product ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;List&lt;CrossSellingElementCollectionInner&gt;&gt;</returns>
-        Task<List<CrossSellingElementCollectionInner>?> ReadProductCrossSellingsAsync(string productId, System.Threading.CancellationToken? cancellationToken = null);
+        Task<IEnumerable<CrossSellingElementCollectionInner>?> ReadProductCrossSellingsAsync(string productId,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch cross-selling groups of a product
@@ -97,9 +104,10 @@ namespace ShopwareSharp.Api
         /// <param name="productId">Product ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;List&lt;CrossSellingElementCollectionInner&gt;?&gt;</returns>
-        Task<List<CrossSellingElementCollectionInner>?> ReadProductCrossSellingsOrDefaultAsync(string productId, System.Threading.CancellationToken? cancellationToken = null);
+        Task<IEnumerable<CrossSellingElementCollectionInner>?> ReadProductCrossSellingsOrDefaultAsync(string productId,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Fetch a single product
         /// </summary>
@@ -110,7 +118,8 @@ namespace ShopwareSharp.Api
         /// <param name="productId">Product ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;ProductDetailResponse?&gt;&gt;</returns>
-        Task<ApiResponse<ProductDetailResponse?>> ReadProductDetailWithHttpInfoAsync(string productId, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<ProductDetailResponse?>> ReadProductDetailWithHttpInfoAsync(string productId,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch a single product
@@ -122,7 +131,8 @@ namespace ShopwareSharp.Api
         /// <param name="productId">Product ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ProductDetailResponse&gt;</returns>
-        Task<ProductDetailResponse?> ReadProductDetailAsync(string productId, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ProductDetailResponse?> ReadProductDetailAsync(string productId, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch a single product
@@ -133,9 +143,10 @@ namespace ShopwareSharp.Api
         /// <param name="productId">Product ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ProductDetailResponse?&gt;</returns>
-        Task<ProductDetailResponse?> ReadProductDetailOrDefaultAsync(string productId, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ProductDetailResponse?> ReadProductDetailOrDefaultAsync(string productId,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Export product export
         /// </summary>
@@ -147,7 +158,8 @@ namespace ShopwareSharp.Api
         /// <param name="fileName">File Name</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;object?&gt;&gt;</returns>
-        Task<ApiResponse<object?>> ReadProductExportWithHttpInfoAsync(string accessKey, string fileName, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<object?>> ReadProductExportWithHttpInfoAsync(string accessKey, string fileName,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Export product export
@@ -160,7 +172,8 @@ namespace ShopwareSharp.Api
         /// <param name="fileName">File Name</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;object&gt;</returns>
-        Task<object?> ReadProductExportAsync(string accessKey, string fileName, System.Threading.CancellationToken? cancellationToken = null);
+        Task<object?> ReadProductExportAsync(string accessKey, string fileName,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Export product export
@@ -172,9 +185,10 @@ namespace ShopwareSharp.Api
         /// <param name="fileName">File Name</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;object?&gt;</returns>
-        Task<object?> ReadProductExportOrDefaultAsync(string accessKey, string fileName, System.Threading.CancellationToken? cancellationToken = null);
+        Task<object?> ReadProductExportOrDefaultAsync(string accessKey, string fileName,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Fetch a product listing by category
         /// </summary>
@@ -186,7 +200,9 @@ namespace ShopwareSharp.Api
         /// <param name="readProductListingRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;ProductListingResult?&gt;&gt;</returns>
-        Task<ApiResponse<ProductListingResult?>> ReadProductListingWithHttpInfoAsync(string categoryId, ReadProductListingRequest? readProductListingRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<ProductListingResult?>> ReadProductListingWithHttpInfoAsync(string categoryId,
+            ReadProductListingRequest? readProductListingRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch a product listing by category
@@ -199,7 +215,9 @@ namespace ShopwareSharp.Api
         /// <param name="readProductListingRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ProductListingResult&gt;</returns>
-        Task<ProductListingResult?> ReadProductListingAsync(string categoryId, ReadProductListingRequest? readProductListingRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ProductListingResult?> ReadProductListingAsync(string categoryId,
+            ReadProductListingRequest? readProductListingRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch a product listing by category
@@ -211,9 +229,11 @@ namespace ShopwareSharp.Api
         /// <param name="readProductListingRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ProductListingResult?&gt;</returns>
-        Task<ProductListingResult?> ReadProductListingOrDefaultAsync(string categoryId, ReadProductListingRequest? readProductListingRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ProductListingResult?> ReadProductListingOrDefaultAsync(string categoryId,
+            ReadProductListingRequest? readProductListingRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Fetch product reviews
         /// </summary>
@@ -225,7 +245,9 @@ namespace ShopwareSharp.Api
         /// <param name="readCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;ReadProductReviews200Response?&gt;&gt;</returns>
-        Task<ApiResponse<ReadProductReviews200Response?>> ReadProductReviewsWithHttpInfoAsync(string productId, ReadCustomerRequest? readCustomerRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<ReadProductReviews200Response?>> ReadProductReviewsWithHttpInfoAsync(string productId,
+            ReadCustomerRequest? readCustomerRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch product reviews
@@ -238,7 +260,9 @@ namespace ShopwareSharp.Api
         /// <param name="readCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ReadProductReviews200Response&gt;</returns>
-        Task<ReadProductReviews200Response?> ReadProductReviewsAsync(string productId, ReadCustomerRequest? readCustomerRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ReadProductReviews200Response?> ReadProductReviewsAsync(string productId,
+            ReadCustomerRequest? readCustomerRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Fetch product reviews
@@ -250,9 +274,11 @@ namespace ShopwareSharp.Api
         /// <param name="readCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ReadProductReviews200Response?&gt;</returns>
-        Task<ReadProductReviews200Response?> ReadProductReviewsOrDefaultAsync(string productId, ReadCustomerRequest? readCustomerRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ReadProductReviews200Response?> ReadProductReviewsOrDefaultAsync(string productId,
+            ReadCustomerRequest? readCustomerRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Save a product review
         /// </summary>
@@ -261,12 +287,12 @@ namespace ShopwareSharp.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Identifier of the product which is reviewed.</param>
-        
-        
         /// <param name="saveProductReviewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;object?&gt;&gt;</returns>
-        Task<ApiResponse<object?>> SaveProductReviewWithHttpInfoAsync(string productId, SaveProductReviewRequest? saveProductReviewRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<object?>> SaveProductReviewWithHttpInfoAsync(string productId,
+            SaveProductReviewRequest? saveProductReviewRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Save a product review
@@ -276,12 +302,12 @@ namespace ShopwareSharp.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Identifier of the product which is reviewed.</param>
-        
-        
         /// <param name="saveProductReviewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;object&gt;</returns>
-        Task<object?> SaveProductReviewAsync(string productId, SaveProductReviewRequest? saveProductReviewRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<object?> SaveProductReviewAsync(string productId,
+            SaveProductReviewRequest? saveProductReviewRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Save a product review
@@ -290,14 +316,14 @@ namespace ShopwareSharp.Api
         /// Saves a review for a product. Reviews have to be activated in the settings.
         /// </remarks>
         /// <param name="productId">Identifier of the product which is reviewed.</param>
-        
-        
         /// <param name="saveProductReviewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;object?&gt;</returns>
-        Task<object?> SaveProductReviewOrDefaultAsync(string productId, SaveProductReviewRequest? saveProductReviewRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<object?> SaveProductReviewOrDefaultAsync(string productId,
+            SaveProductReviewRequest? saveProductReviewRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Search for products
         /// </summary>
@@ -305,12 +331,12 @@ namespace ShopwareSharp.Api
         /// Performs a search for products which can be used to display a product listing.
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
         /// <param name="searchPageRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;ProductListingResult?&gt;&gt;</returns>
-        Task<ApiResponse<ProductListingResult?>> SearchPageWithHttpInfoAsync(SearchPageRequest? searchPageRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<ProductListingResult?>> SearchPageWithHttpInfoAsync(
+            SearchPageRequest? searchPageRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Search for products
@@ -319,12 +345,11 @@ namespace ShopwareSharp.Api
         /// Performs a search for products which can be used to display a product listing.
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
         /// <param name="searchPageRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ProductListingResult&gt;</returns>
-        Task<ProductListingResult?> SearchPageAsync(SearchPageRequest searchPageRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ProductListingResult?> SearchPageAsync(SearchPageRequest? searchPageRequest = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Search for products
@@ -332,14 +357,13 @@ namespace ShopwareSharp.Api
         /// <remarks>
         /// Performs a search for products which can be used to display a product listing.
         /// </remarks>
-        
-        
         /// <param name="searchPageRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ProductListingResult?&gt;</returns>
-        Task<ProductListingResult?> SearchPageOrDefaultAsync(SearchPageRequest? searchPageRequest = null, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ProductListingResult?> SearchPageOrDefaultAsync(SearchPageRequest? searchPageRequest = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
-        
+
         /// <summary>
         /// Search for products (suggest)
         /// </summary>
@@ -348,11 +372,11 @@ namespace ShopwareSharp.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchSuggestRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;ProductListingResult?&gt;&gt;</returns>
-        Task<ApiResponse<ProductListingResult?>> SearchSuggestWithHttpInfoAsync(SearchSuggestRequest searchSuggestRequest, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ApiResponse<ProductListingResult?>> SearchSuggestWithHttpInfoAsync(
+            SearchSuggestRequest searchSuggestRequest, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Search for products (suggest)
@@ -362,11 +386,10 @@ namespace ShopwareSharp.Api
         /// </remarks>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchSuggestRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ProductListingResult&gt;</returns>
-        Task<ProductListingResult?> SearchSuggestAsync(SearchSuggestRequest searchSuggestRequest, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ProductListingResult?> SearchSuggestAsync(SearchSuggestRequest searchSuggestRequest,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
         /// Search for products (suggest)
@@ -375,67 +398,42 @@ namespace ShopwareSharp.Api
         /// Can be used to implement search previews or suggestion listings, that don’t require any interaction.
         /// </remarks>
         /// <param name="searchSuggestRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ProductListingResult?&gt;</returns>
-        Task<ProductListingResult?> SearchSuggestOrDefaultAsync(SearchSuggestRequest searchSuggestRequest, System.Threading.CancellationToken? cancellationToken = null);
+        Task<ProductListingResult?> SearchSuggestOrDefaultAsync(SearchSuggestRequest searchSuggestRequest,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null);
 
-            }
+    }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class ProductApi : IProductApi
+    public partial class ProductApi : ApiBase, IProductApi
     {
-        private JsonSerializerOptions _jsonSerializerOptions;
-
-        /// <summary>
-        /// An event to track the health of the server. 
-        /// If you store these event args, be sure to purge old event args to prevent a memory leak.
-        /// </summary>
-        public event ClientUtils.EventHandler<ApiResponseEventArgs>? ApiResponded;
-
-        /// <summary>
-        /// The logger
-        /// </summary>
-        public ILogger<ProductApi> Logger { get; }
-
-        /// <summary>
-        /// The HttpClient
-        /// </summary>
-        public HttpClient HttpClient { get; }
-
-        /// <summary>
-        /// A token provider of type <see cref="ApiKeyProvider"/>
-        /// </summary>
-        public TokenProvider<ApiKeyToken> ApiKeyProvider { get; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public ProductApi(ILogger<ProductApi> logger, HttpClient httpClient, JsonSerializerOptionsProvider jsonSerializerOptionsProvider, 
-            TokenProvider<ApiKeyToken> apiKeyProvider)
+        public ProductApi(ILogger<ProductApi> logger, HttpClient httpClient,
+            JsonSerializerOptionsProvider jsonSerializerOptionsProvider,
+            TokenProvider<ApiKeyToken> apiKeyProvider, TokenProvider<ContextKeyToken> contextKeyProvider) : base(logger,
+            httpClient, jsonSerializerOptionsProvider, apiKeyProvider, contextKeyProvider)
         {
-            _jsonSerializerOptions = jsonSerializerOptionsProvider.Options;
-            Logger = logger;
-            HttpClient = httpClient;
-            ApiKeyProvider = apiKeyProvider;
         }
 
         /// <summary>
         /// Fetch a list of products List products that match the given criteria. For performance ressons a limit should always be set.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
         /// <param name="readCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ReadProduct200Response"/>&gt;</returns>
-        public async Task<ReadProduct200Response?> ReadProductAsync(ReadCustomerRequest? readCustomerRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ReadProduct200Response?> ReadProductAsync(ReadCustomerRequest? readCustomerRequest = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<ReadProduct200Response?> result = await ReadProductWithHttpInfoAsync(readCustomerRequest, cancellationToken).ConfigureAwait(false);
+            ApiResponse<ReadProduct200Response?> result =
+                await ReadProductWithHttpInfoAsync(readCustomerRequest, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -447,17 +445,18 @@ namespace ShopwareSharp.Api
         /// Fetch a list of products List products that match the given criteria. For performance ressons a limit should always be set.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
         /// <param name="readCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ReadProduct200Response"/>&gt;</returns>
-        public async Task<ReadProduct200Response?> ReadProductOrDefaultAsync(ReadCustomerRequest? readCustomerRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ReadProduct200Response?> ReadProductOrDefaultAsync(
+            ReadCustomerRequest? readCustomerRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<ReadProduct200Response?>? result = null;
-            try 
+            try
             {
-                result = await ReadProductWithHttpInfoAsync(readCustomerRequest, cancellationToken).ConfigureAwait(false);
+                result = await ReadProductWithHttpInfoAsync(readCustomerRequest, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -472,83 +471,17 @@ namespace ShopwareSharp.Api
         /// Fetch a list of products List products that match the given criteria. For performance ressons a limit should always be set.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
         /// <param name="readCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="ReadProduct200Response"/></returns>
-        public async Task<ApiResponse<ReadProduct200Response?>> ReadProductWithHttpInfoAsync(ReadCustomerRequest? readCustomerRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<ReadProduct200Response?>> ReadProductWithHttpInfoAsync(
+            ReadCustomerRequest? readCustomerRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/product";
+            const string queryPath = "/product";
 
-                    request.Content = (readCustomerRequest as object) is System.IO.Stream stream
-                        ? request.Content = new StreamContent(stream)
-                        : request.Content = new StringContent(JsonSerializer.Serialize(readCustomerRequest, _jsonSerializerOptions));
-
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] contentTypes = new string[] {
-                        "application/json" 
-                    };
-
-                    string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentType != null)
-                        request.Content.Headers.Add("ContentType", contentType);
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Post;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/product"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<ReadProduct200Response?> apiResponse = new ApiResponse<ReadProduct200Response?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<ReadProduct200Response>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<ReadProduct200Response?>(queryPath, default, HttpMethod.Post, readCustomerRequest,
+                requestOptions, cancellationToken);
         }
 
         /// <summary>
@@ -556,13 +489,15 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Product ID</param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="List&lt;CrossSellingElementCollectionInner&gt;"/>&gt;</returns>
-        public async Task<List<CrossSellingElementCollectionInner>?> ReadProductCrossSellingsAsync(string productId, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<IEnumerable<CrossSellingElementCollectionInner>?> ReadProductCrossSellingsAsync(
+            string productId, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<List<CrossSellingElementCollectionInner>?> result = await ReadProductCrossSellingsWithHttpInfoAsync(productId, cancellationToken).ConfigureAwait(false);
+            ApiResponse<IEnumerable<CrossSellingElementCollectionInner>?> result =
+                await ReadProductCrossSellingsWithHttpInfoAsync(productId, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -575,16 +510,17 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Product ID</param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="List&lt;CrossSellingElementCollectionInner&gt;"/>&gt;</returns>
-        public async Task<List<CrossSellingElementCollectionInner>?> ReadProductCrossSellingsOrDefaultAsync(string productId, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<IEnumerable<CrossSellingElementCollectionInner>?> ReadProductCrossSellingsOrDefaultAsync(
+            string productId, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<List<CrossSellingElementCollectionInner>?>? result = null;
-            try 
+            ApiResponse<IEnumerable<CrossSellingElementCollectionInner>?>? result = null;
+            try
             {
-                result = await ReadProductCrossSellingsWithHttpInfoAsync(productId, cancellationToken).ConfigureAwait(false);
+                result = await ReadProductCrossSellingsWithHttpInfoAsync(productId, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -600,78 +536,24 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Product ID</param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="List&lt;CrossSellingElementCollectionInner&gt;"/></returns>
-        public async Task<ApiResponse<List<CrossSellingElementCollectionInner>?>> ReadProductCrossSellingsWithHttpInfoAsync(string productId, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<IEnumerable<CrossSellingElementCollectionInner>?>>
+            ReadProductCrossSellingsWithHttpInfoAsync(string productId, RequestOptions? requestOptions = default,
+                System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                if (productId == null)
-                    throw new ArgumentNullException(nameof(productId));
+            if (productId == null)
+                throw new ArgumentNullException(nameof(productId));
 
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/product/{productId}/cross-selling";
-                    uriBuilder.Path = uriBuilder.Path.Replace("%7BproductId%7D", Uri.EscapeDataString(productId.ToString()));
+            var queryPath = $"/product/{productId}/cross-selling";
 
-
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Post;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/product/{productId}/cross-selling"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<List<CrossSellingElementCollectionInner>?> apiResponse = new ApiResponse<List<CrossSellingElementCollectionInner>?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<List<CrossSellingElementCollectionInner>>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<IEnumerable<CrossSellingElementCollectionInner>?>(queryPath, default, HttpMethod.Post,
+                default,
+                requestOptions, cancellationToken);
         }
 
         /// <summary>
@@ -679,13 +561,15 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Product ID</param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ProductDetailResponse"/>&gt;</returns>
-        public async Task<ProductDetailResponse?> ReadProductDetailAsync(string productId, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ProductDetailResponse?> ReadProductDetailAsync(string productId,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<ProductDetailResponse?> result = await ReadProductDetailWithHttpInfoAsync(productId, cancellationToken).ConfigureAwait(false);
+            ApiResponse<ProductDetailResponse?> result =
+                await ReadProductDetailWithHttpInfoAsync(productId, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -698,16 +582,17 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Product ID</param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ProductDetailResponse"/>&gt;</returns>
-        public async Task<ProductDetailResponse?> ReadProductDetailOrDefaultAsync(string productId, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ProductDetailResponse?> ReadProductDetailOrDefaultAsync(string productId,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<ProductDetailResponse?>? result = null;
-            try 
+            try
             {
-                result = await ReadProductDetailWithHttpInfoAsync(productId, cancellationToken).ConfigureAwait(false);
+                result = await ReadProductDetailWithHttpInfoAsync(productId, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -723,77 +608,23 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Product ID</param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="ProductDetailResponse"/></returns>
-        public async Task<ApiResponse<ProductDetailResponse?>> ReadProductDetailWithHttpInfoAsync(string productId, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<ProductDetailResponse?>> ReadProductDetailWithHttpInfoAsync(string productId,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                if (productId == null)
-                    throw new ArgumentNullException(nameof(productId));
+            if (productId == null)
+                throw new ArgumentNullException(nameof(productId));
 
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/product/{productId}";
-                    uriBuilder.Path = uriBuilder.Path.Replace("%7BproductId%7D", Uri.EscapeDataString(productId.ToString()));
+            var queryPath = $"/product/{productId}";
 
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Post;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/product/{productId}"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<ProductDetailResponse?> apiResponse = new ApiResponse<ProductDetailResponse?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<ProductDetailResponse>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<ProductDetailResponse?>(queryPath, default, HttpMethod.Post, default, requestOptions,
+                cancellationToken);
         }
 
         /// <summary>
@@ -802,13 +633,15 @@ namespace ShopwareSharp.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="accessKey">Access Key</param>
         /// <param name="fileName">File Name</param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="object"/>&gt;</returns>
-        public async Task<object?> ReadProductExportAsync(string accessKey, string fileName, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<object?> ReadProductExportAsync(string accessKey, string fileName,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<object?> result = await ReadProductExportWithHttpInfoAsync(accessKey, fileName, cancellationToken).ConfigureAwait(false);
+            ApiResponse<object?> result =
+                await ReadProductExportWithHttpInfoAsync(accessKey, fileName, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -822,16 +655,17 @@ namespace ShopwareSharp.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="accessKey">Access Key</param>
         /// <param name="fileName">File Name</param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="object"/>&gt;</returns>
-        public async Task<object?> ReadProductExportOrDefaultAsync(string accessKey, string fileName, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<object?> ReadProductExportOrDefaultAsync(string accessKey, string fileName,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<object?>? result = null;
-            try 
+            try
             {
-                result = await ReadProductExportWithHttpInfoAsync(accessKey, fileName, cancellationToken).ConfigureAwait(false);
+                result = await ReadProductExportWithHttpInfoAsync(accessKey, fileName, requestOptions,
+                    cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -848,72 +682,26 @@ namespace ShopwareSharp.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="accessKey">Access Key</param>
         /// <param name="fileName">File Name</param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="object"/></returns>
-        public async Task<ApiResponse<object?>> ReadProductExportWithHttpInfoAsync(string accessKey, string fileName, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<object?>> ReadProductExportWithHttpInfoAsync(string accessKey, string fileName,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                if (accessKey == null)
-                    throw new ArgumentNullException(nameof(accessKey));
+            if (accessKey == null)
+                throw new ArgumentNullException(nameof(accessKey));
 
-                if (fileName == null)
-                    throw new ArgumentNullException(nameof(fileName));
+            if (fileName == null)
+                throw new ArgumentNullException(nameof(fileName));
 
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/product-export/{accessKey}/{fileName}";
-                    uriBuilder.Path = uriBuilder.Path.Replace("%7BaccessKey%7D", Uri.EscapeDataString(accessKey.ToString()));
-                    uriBuilder.Path = uriBuilder.Path.Replace("%7BfileName%7D", Uri.EscapeDataString(fileName.ToString()));
+            var queryPath = $"/product-export/{accessKey}/{fileName}";
 
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    request.RequestUri = uriBuilder.Uri;
-                        
-                    request.Method = HttpMethod.Get;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/product-export/{accessKey}/{fileName}"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<object?> apiResponse = new ApiResponse<object?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<object>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<object?>(queryPath, default, HttpMethod.Post, default, requestOptions,
+                cancellationToken);
         }
 
         /// <summary>
@@ -921,14 +709,16 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Identifier of a category.</param>
-        
-        
         /// <param name="readProductListingRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ProductListingResult"/>&gt;</returns>
-        public async Task<ProductListingResult?> ReadProductListingAsync(string categoryId, ReadProductListingRequest? readProductListingRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ProductListingResult?> ReadProductListingAsync(string categoryId,
+            ReadProductListingRequest? readProductListingRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<ProductListingResult?> result = await ReadProductListingWithHttpInfoAsync(categoryId, readProductListingRequest, cancellationToken).ConfigureAwait(false);
+            ApiResponse<ProductListingResult?> result =
+                await ReadProductListingWithHttpInfoAsync(categoryId, readProductListingRequest, requestOptions,
+                    cancellationToken).ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -941,17 +731,18 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Identifier of a category.</param>
-        
-        
         /// <param name="readProductListingRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ProductListingResult"/>&gt;</returns>
-        public async Task<ProductListingResult?> ReadProductListingOrDefaultAsync(string categoryId, ReadProductListingRequest? readProductListingRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ProductListingResult?> ReadProductListingOrDefaultAsync(string categoryId,
+            ReadProductListingRequest? readProductListingRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<ProductListingResult?>? result = null;
-            try 
+            try
             {
-                result = await ReadProductListingWithHttpInfoAsync(categoryId, readProductListingRequest, cancellationToken).ConfigureAwait(false);
+                result = await ReadProductListingWithHttpInfoAsync(categoryId, readProductListingRequest,
+                    requestOptions, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -967,92 +758,25 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Identifier of a category.</param>
-        
-        
         /// <param name="readProductListingRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="ProductListingResult"/></returns>
-        public async Task<ApiResponse<ProductListingResult?>> ReadProductListingWithHttpInfoAsync(string categoryId, ReadProductListingRequest? readProductListingRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<ProductListingResult?>> ReadProductListingWithHttpInfoAsync(string categoryId,
+            ReadProductListingRequest? readProductListingRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                if (categoryId == null)
-                    throw new ArgumentNullException(nameof(categoryId));
+            if (categoryId == null)
+                throw new ArgumentNullException(nameof(categoryId));
 
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/product-listing/{categoryId}";
-                    uriBuilder.Path = uriBuilder.Path.Replace("%7BcategoryId%7D", Uri.EscapeDataString(categoryId.ToString()));
+            var queryPath = $"/product-listing/{categoryId}";
 
-                    request.Content = (readProductListingRequest as object) is System.IO.Stream stream
-                        ? request.Content = new StreamContent(stream)
-                        : request.Content = new StringContent(JsonSerializer.Serialize(readProductListingRequest, _jsonSerializerOptions));
-
-
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] contentTypes = new string[] {
-                        "application/json" 
-                    };
-
-                    string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentType != null)
-                        request.Content.Headers.Add("ContentType", contentType);
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Post;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/product-listing/{categoryId}"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<ProductListingResult?> apiResponse = new ApiResponse<ProductListingResult?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<ProductListingResult>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<ProductListingResult?>(queryPath, default, HttpMethod.Post, readProductListingRequest,
+                requestOptions,
+                cancellationToken);
         }
 
         /// <summary>
@@ -1063,9 +787,13 @@ namespace ShopwareSharp.Api
         /// <param name="readCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ReadProductReviews200Response"/>&gt;</returns>
-        public async Task<ReadProductReviews200Response?> ReadProductReviewsAsync(string productId, ReadCustomerRequest? readCustomerRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ReadProductReviews200Response?> ReadProductReviewsAsync(string productId,
+            ReadCustomerRequest? readCustomerRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<ReadProductReviews200Response?> result = await ReadProductReviewsWithHttpInfoAsync(productId, readCustomerRequest, cancellationToken).ConfigureAwait(false);
+            ApiResponse<ReadProductReviews200Response?> result =
+                await ReadProductReviewsWithHttpInfoAsync(productId, readCustomerRequest, requestOptions,
+                    cancellationToken).ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -1081,12 +809,15 @@ namespace ShopwareSharp.Api
         /// <param name="readCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ReadProductReviews200Response"/>&gt;</returns>
-        public async Task<ReadProductReviews200Response?> ReadProductReviewsOrDefaultAsync(string productId, ReadCustomerRequest? readCustomerRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ReadProductReviews200Response?> ReadProductReviewsOrDefaultAsync(string productId,
+            ReadCustomerRequest? readCustomerRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<ReadProductReviews200Response?>? result = null;
-            try 
+            try
             {
-                result = await ReadProductReviewsWithHttpInfoAsync(productId, readCustomerRequest, cancellationToken).ConfigureAwait(false);
+                result = await ReadProductReviewsWithHttpInfoAsync(productId, readCustomerRequest, requestOptions,
+                    cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1102,91 +833,25 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Identifier of the product.</param>
-        
-        
         /// <param name="readCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="ReadProductReviews200Response"/></returns>
-        public async Task<ApiResponse<ReadProductReviews200Response?>> ReadProductReviewsWithHttpInfoAsync(string productId, ReadCustomerRequest? readCustomerRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<ReadProductReviews200Response?>> ReadProductReviewsWithHttpInfoAsync(string productId,
+            ReadCustomerRequest? readCustomerRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                if (productId == null)
-                    throw new ArgumentNullException(nameof(productId));
+            if (productId == null)
+                throw new ArgumentNullException(nameof(productId));
 
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/product/{productId}/reviews";
-                    uriBuilder.Path = uriBuilder.Path.Replace("%7BproductId%7D", Uri.EscapeDataString(productId.ToString()));
+            var queryPath = $"/product/{productId}/reviews";
 
-                    request.Content = (readCustomerRequest as object) is System.IO.Stream stream
-                        ? request.Content = new StreamContent(stream)
-                        : request.Content = new StringContent(JsonSerializer.Serialize(readCustomerRequest, _jsonSerializerOptions));
-
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] contentTypes = new string[] {
-                        "application/json" 
-                    };
-
-                    string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentType != null)
-                        request.Content.Headers.Add("ContentType", contentType);
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Post;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/product/{productId}/reviews"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<ReadProductReviews200Response?> apiResponse = new ApiResponse<ReadProductReviews200Response?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<ReadProductReviews200Response>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<ReadProductReviews200Response?>(queryPath, default, HttpMethod.Post,
+                readCustomerRequest,
+                requestOptions, cancellationToken);
         }
 
         /// <summary>
@@ -1194,14 +859,16 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Identifier of the product which is reviewed.</param>
-        
-        
         /// <param name="saveProductReviewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="object"/>&gt;</returns>
-        public async Task<object?> SaveProductReviewAsync(string productId, SaveProductReviewRequest? saveProductReviewRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<object?> SaveProductReviewAsync(string productId,
+            SaveProductReviewRequest? saveProductReviewRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<object?> result = await SaveProductReviewWithHttpInfoAsync(productId, saveProductReviewRequest, cancellationToken).ConfigureAwait(false);
+            ApiResponse<object?> result =
+                await SaveProductReviewWithHttpInfoAsync(productId, saveProductReviewRequest, requestOptions,
+                    cancellationToken).ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -1214,17 +881,18 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Identifier of the product which is reviewed.</param>
-        
-        
         /// <param name="saveProductReviewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="object"/>&gt;</returns>
-        public async Task<object?> SaveProductReviewOrDefaultAsync(string productId, SaveProductReviewRequest? saveProductReviewRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<object?> SaveProductReviewOrDefaultAsync(string productId,
+            SaveProductReviewRequest? saveProductReviewRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<object?>? result = null;
-            try 
+            try
             {
-                result = await SaveProductReviewWithHttpInfoAsync(productId, saveProductReviewRequest, cancellationToken).ConfigureAwait(false);
+                result = await SaveProductReviewWithHttpInfoAsync(productId, saveProductReviewRequest, requestOptions,
+                    cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1240,98 +908,39 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="productId">Identifier of the product which is reviewed.</param>
-        
-        
         /// <param name="saveProductReviewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="object"/></returns>
-        public async Task<ApiResponse<object?>> SaveProductReviewWithHttpInfoAsync(string productId, SaveProductReviewRequest? saveProductReviewRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<object?>> SaveProductReviewWithHttpInfoAsync(string productId,
+            SaveProductReviewRequest? saveProductReviewRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                if (productId == null)
-                    throw new ArgumentNullException(nameof(productId));
+            if (productId == null)
+                throw new ArgumentNullException(nameof(productId));
 
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/product/{productId}/review";
-                    uriBuilder.Path = uriBuilder.Path.Replace("%7BproductId%7D", Uri.EscapeDataString(productId.ToString()));
+            var queryPath = $"/product/{productId}/review";
 
-                    request.Content = (saveProductReviewRequest as object) is System.IO.Stream stream
-                        ? request.Content = new StreamContent(stream)
-                        : request.Content = new StringContent(JsonSerializer.Serialize(saveProductReviewRequest, _jsonSerializerOptions));
-
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    //contextToken.UseInHeader(request, "sw-context-token");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] contentTypes = new string[] {
-                        "application/json" 
-                    };
-
-                    string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentType != null)
-                        request.Content.Headers.Add("ContentType", contentType);
-                        
-                    request.Method = HttpMethod.Post;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/product/{productId}/review"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<object?> apiResponse = new ApiResponse<object?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<object>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<object?>(queryPath, default, HttpMethod.Post, saveProductReviewRequest,
+                requestOptions, cancellationToken);
         }
 
         /// <summary>
         /// Search for products Performs a search for products which can be used to display a product listing.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
         /// <param name="searchPageRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ProductListingResult"/>&gt;</returns>
-        public async Task<ProductListingResult?> SearchPageAsync(SearchPageRequest searchPageRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ProductListingResult?> SearchPageAsync(SearchPageRequest searchPageRequest,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<ProductListingResult?> result = await SearchPageWithHttpInfoAsync(searchPageRequest, cancellationToken).ConfigureAwait(false);
+            ApiResponse<ProductListingResult?> result =
+                await SearchPageWithHttpInfoAsync(searchPageRequest, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -1343,17 +952,17 @@ namespace ShopwareSharp.Api
         /// Search for products Performs a search for products which can be used to display a product listing.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
         /// <param name="searchPageRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ProductListingResult"/>&gt;</returns>
-        public async Task<ProductListingResult?> SearchPageOrDefaultAsync(SearchPageRequest? searchPageRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ProductListingResult?> SearchPageOrDefaultAsync(SearchPageRequest? searchPageRequest = null,
+            RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<ProductListingResult?>? result = null;
-            try 
+            try
             {
-                result = await SearchPageWithHttpInfoAsync(searchPageRequest, cancellationToken).ConfigureAwait(false);
+                result = await SearchPageWithHttpInfoAsync(searchPageRequest, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1368,83 +977,17 @@ namespace ShopwareSharp.Api
         /// Search for products Performs a search for products which can be used to display a product listing.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
-        
-        
         /// <param name="searchPageRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="ProductListingResult"/></returns>
-        public async Task<ApiResponse<ProductListingResult?>> SearchPageWithHttpInfoAsync(SearchPageRequest? searchPageRequest = null, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<ProductListingResult?>> SearchPageWithHttpInfoAsync(
+            SearchPageRequest? searchPageRequest = null, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/search";
+            const string queryPath = "/search";
 
-                    request.Content = (searchPageRequest as object) is System.IO.Stream stream
-                        ? request.Content = new StreamContent(stream)
-                        : request.Content = new StringContent(JsonSerializer.Serialize(searchPageRequest, _jsonSerializerOptions));
-
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] contentTypes = new string[] {
-                        "application/json" 
-                    };
-
-                    string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentType != null)
-                        request.Content.Headers.Add("ContentType", contentType);
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Post;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/search"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<ProductListingResult?> apiResponse = new ApiResponse<ProductListingResult?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<ProductListingResult>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
+            return ExecuteRequest<ProductListingResult?>(queryPath, default, HttpMethod.Post, searchPageRequest,
+                requestOptions, cancellationToken);
         }
 
         /// <summary>
@@ -1452,13 +995,15 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchSuggestRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ProductListingResult"/>&gt;</returns>
-        public async Task<ProductListingResult?> SearchSuggestAsync(SearchSuggestRequest searchSuggestRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ProductListingResult?> SearchSuggestAsync(SearchSuggestRequest searchSuggestRequest,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<ProductListingResult?> result = await SearchSuggestWithHttpInfoAsync(searchSuggestRequest, cancellationToken).ConfigureAwait(false);
+            ApiResponse<ProductListingResult?> result =
+                await SearchSuggestWithHttpInfoAsync(searchSuggestRequest, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -1471,16 +1016,17 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchSuggestRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ProductListingResult"/>&gt;</returns>
-        public async Task<ProductListingResult?> SearchSuggestOrDefaultAsync(SearchSuggestRequest searchSuggestRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ProductListingResult?> SearchSuggestOrDefaultAsync(SearchSuggestRequest searchSuggestRequest,
+            RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<ProductListingResult?>? result = null;
-            try 
+            try
             {
-                result = await SearchSuggestWithHttpInfoAsync(searchSuggestRequest, cancellationToken).ConfigureAwait(false);
+                result = await SearchSuggestWithHttpInfoAsync(searchSuggestRequest, requestOptions, cancellationToken)
+                    .ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -1496,88 +1042,23 @@ namespace ShopwareSharp.Api
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchSuggestRequest"></param>
-        
-        
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="ProductListingResult"/></returns>
-        public async Task<ApiResponse<ProductListingResult?>> SearchSuggestWithHttpInfoAsync(SearchSuggestRequest searchSuggestRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public Task<ApiResponse<ProductListingResult?>> SearchSuggestWithHttpInfoAsync(
+            SearchSuggestRequest searchSuggestRequest, RequestOptions? requestOptions = default,
+            System.Threading.CancellationToken? cancellationToken = null)
         {
-            try
-            {
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                if (searchSuggestRequest == null)
-                    throw new ArgumentNullException(nameof(searchSuggestRequest));
+            if (searchSuggestRequest == null)
+                throw new ArgumentNullException(nameof(searchSuggestRequest));
 
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
+#pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
 
-                using (HttpRequestMessage request = new HttpRequestMessage())
-                {
-                    UriBuilder uriBuilder = new UriBuilder();
-                    uriBuilder.Host = HttpClient.BaseAddress!.Host;
-                    uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
-                    uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/search-suggest";
+            const string queryPath = "/search-suggest";
 
-                    request.Content = (searchSuggestRequest as object) is System.IO.Stream stream
-                        ? request.Content = new StreamContent(stream)
-                        : request.Content = new StringContent(JsonSerializer.Serialize(searchSuggestRequest, _jsonSerializerOptions));
-
-                    ApiKeyToken apiKey = (ApiKeyToken) await ApiKeyProvider.GetAsync(cancellationToken).ConfigureAwait(false);
-                    apiKey.UseInHeader(request, "sw-access-key");
-
-                    request.RequestUri = uriBuilder.Uri;
-
-                    string[] contentTypes = new string[] {
-                        "application/json" 
-                    };
-
-                    string? contentType = ClientUtils.SelectHeaderContentType(contentTypes);
-
-                    if (contentType != null)
-                        request.Content.Headers.Add("ContentType", contentType);
-
-                    string[] accepts = new string[] { 
-                        "application/json" 
-                    };
-
-                    string? accept = ClientUtils.SelectHeaderAccept(accepts);
-
-                    if (accept != null)
-                        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(accept));
-                    
-                    request.Method = HttpMethod.Post;
-
-                    using (HttpResponseMessage responseMessage = await HttpClient.SendAsync(request, cancellationToken.GetValueOrDefault()).ConfigureAwait(false))
-                    {
-                        DateTime requestedAt = DateTime.UtcNow;
-
-                        string responseContent = await responseMessage.Content.ReadAsStringAsync(cancellationToken.GetValueOrDefault()).ConfigureAwait(false);
-
-                        if (ApiResponded != null)
-                        {
-                            try
-                            {
-                                ApiResponded.Invoke(this, new ApiResponseEventArgs(requestedAt, DateTime.UtcNow, responseMessage.StatusCode, "/search-suggest"));
-                            }
-                            catch(Exception e)
-                            {
-                                Logger.LogError(e, "An error occured while invoking ApiResponded.");
-                            }
-                        }
-
-                        ApiResponse<ProductListingResult?> apiResponse = new ApiResponse<ProductListingResult?>(responseMessage, responseContent);
-
-                        if (apiResponse.IsSuccessStatusCode)
-                            apiResponse.Content = JsonSerializer.Deserialize<ProductListingResult>(apiResponse.RawContent, _jsonSerializerOptions);
-
-                        return apiResponse;
-                    }
-                }
-            }
-            catch(Exception e)
-            {
-                Logger.LogError(e, "An error occured while sending the request to the server.");
-                throw;
-            }
-        }    }
+            return ExecuteRequest<ProductListingResult?>(queryPath, default, HttpMethod.Post, searchSuggestRequest,
+                requestOptions, cancellationToken);
+        }
+    }
 }

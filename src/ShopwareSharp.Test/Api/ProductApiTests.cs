@@ -146,8 +146,6 @@ namespace ShopwareSharp.Test.Api
         [Fact]
         public async Task SearchPageAsyncTest()
         {
-            
-            
             SearchPageRequest? searchPageRequest = new SearchPageRequest(new SearchPageRequestAllOf("test"));
             var response = await _instance.SearchPageAsync(searchPageRequest);
             Assert.IsType<ProductListingResult>(response);
