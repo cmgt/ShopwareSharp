@@ -383,6 +383,7 @@ namespace ShopwareSharp.Client
         {
             if (options == default) return;
 
+            options.ApiKey?.UseInHeader(request, "sw-access-key");
             options.ContextKey?.UseInHeader(request, "sw-context-token");
 
             if (options.Headers != default)

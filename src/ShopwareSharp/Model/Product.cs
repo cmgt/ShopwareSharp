@@ -131,10 +131,10 @@ namespace ShopwareSharp.Model
             List<string>? optionIds = default, List<string>? categoryIds = default, long? childCount = default,
             long? sales = default, string? metaDescription = default, string? keywords = default,
             string? description = default, string? metaTitle = default, string? packUnit = default,
-            string? packUnitPlural = default, Object? customFields = default, Object? calculatedPrice = default,
+            string? packUnitPlural = default, Object? customFields = default, CalculatedPrice? calculatedPrice = default,
             List<Object>? calculatedPrices = default, long? calculatedMaxPurchase = default,
             Object? calculatedCheapestPrice = default, bool? isNew = default, DateTime? updatedAt = default,
-            Object? translated = default, Product? parent = default, Product? children = default,
+            ProductTranslated? translated = default, Product? parent = default, Product? children = default,
             DeliveryTime? deliveryTime = default, Tax? tax = default, ProductManufacturer? manufacturer = default,
             Unit? unit = default, ProductMedia? cover = default, CmsPage? cmsPage = default,
             Product? canonicalProduct = default, ProductMedia? media = default,
@@ -562,7 +562,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets CalculatedPrice
         /// </summary>
         [JsonPropertyName("calculatedPrice")]
-        public Object? CalculatedPrice { get; set; }
+        public CalculatedPrice? CalculatedPrice { get; set; }
 
         /// <summary>
         /// Gets or Sets CalculatedPrices
@@ -598,7 +598,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Translated
         /// </summary>
         [JsonPropertyName("translated")]
-        public Object? Translated { get; set; }
+        public ProductTranslated? Translated { get; set; }
 
         /// <summary>
         /// Gets or Sets Parent
@@ -1618,4 +1618,5 @@ namespace ShopwareSharp.Model
         }
     }
 
+    
 }

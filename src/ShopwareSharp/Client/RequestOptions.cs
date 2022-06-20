@@ -23,5 +23,9 @@ namespace ShopwareSharp.Client
         /// Context key token
         /// </summary>
         public ContextKeyToken? ContextKey { get; set; }
+        /// <summary>
+        /// Api key token
+        /// </summary>
+        public ApiKeyToken? ApiKey { get; set; }
     }
 }
