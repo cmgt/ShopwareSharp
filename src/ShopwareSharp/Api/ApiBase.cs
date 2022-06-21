@@ -61,10 +61,12 @@ namespace ShopwareSharp.Api
             try
             {
                 using var request = new HttpRequestMessage();
+                var url = requestOptions?.Host ?? HttpClient.BaseAddress!;
+
                 UriBuilder uriBuilder = new UriBuilder
                 {
-                    Host = requestOptions?.Host?.Host ?? HttpClient.BaseAddress!.Host,
-                    Scheme = HttpClient.BaseAddress!.Scheme,
+                    Host = url.Host,
+                    Scheme = url.Scheme,
                     Path = ClientUtils.CONTEXT_PATH + queryPath,
                     Query = query
                 };

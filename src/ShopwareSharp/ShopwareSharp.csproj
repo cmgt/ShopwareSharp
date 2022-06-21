@@ -13,7 +13,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes></PackageReleaseNotes>
     <Nullable>enable</Nullable>
-	  <VersionPrefix>0.3.3</VersionPrefix>
+	  <VersionPrefix>0.3.4</VersionPrefix>
 	  <EmbedAllSources>true</EmbedAllSources>
 	  <IncludeSymbols>true</IncludeSymbols>
 	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
