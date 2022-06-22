@@ -12,9 +12,10 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 using Microsoft.Extensions.DependencyInjection;
-using ShopwareSharp.Api;
+using ShopwareSharp.StoreApi;
 using ShopwareSharp.Client;
 using ShopwareSharp.Model;
+using ShopwareSharp.Test.StoreApi;
 
 
 /* *********************************************************************************
@@ -42,7 +43,7 @@ namespace ShopwareSharp.Test.Api
     /// <summary>
     ///  Class for testing CartApi
     /// </summary>
-    public sealed class CartApiTests : ApiTestsBase
+    public sealed class CartApiTests : StoreApiTestsBase
     {
         private readonly ICartApi _instance;
 

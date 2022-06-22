@@ -12,8 +12,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 using Microsoft.Extensions.DependencyInjection;
-using ShopwareSharp.Api;
+using ShopwareSharp.StoreApi;
 using ShopwareSharp.Model;
+using ShopwareSharp.Test.StoreApi;
 
 
 /* *********************************************************************************
@@ -39,29 +40,42 @@ using ShopwareSharp.Model;
 namespace ShopwareSharp.Test.Api
 {
     /// <summary>
-    ///  Class for testing PaymentMethodApi
+    ///  Class for testing PaymentShippingApi
     /// </summary>
-    public sealed class PaymentMethodApiTests : ApiTestsBase
+    public sealed class PaymentShippingApiTests : StoreApiTestsBase
     {
-        private readonly IPaymentMethodApi _instance;
+        private readonly IPaymentShippingApi _instance;
 
-        public PaymentMethodApiTests(): base(Array.Empty<string>())
+        public PaymentShippingApiTests(): base(Array.Empty<string>())
         {
-            _instance = _host.Services.GetRequiredService<IPaymentMethodApi>();
+            _instance = _host.Services.GetRequiredService<IPaymentShippingApi>();
         }
 
 
         /// <summary>
-        /// Test ReadPaymentMethod
+        /// Test HandlePaymentMethod
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task ReadPaymentMethodAsyncTest()
+        public async Task HandlePaymentMethodAsyncTest()
         {
-            ReadPaymentMethodRequest readPaymentMethodRequest = default;
+            HandlePaymentMethodRequest handlePaymentMethodRequest = default;
             
             
-            var response = await _instance.ReadPaymentMethodAsync(readPaymentMethodRequest);
-            Assert.IsType<ReadPaymentMethod200Response>(response);
+            await _instance.HandlePaymentMethodAsync(handlePaymentMethodRequest);
+        }
+
+        /// <summary>
+        /// Test ReadShippingMethod
+        /// </summary>
+        [Fact (Skip = "not implemented")]
+        public async Task ReadShippingMethodAsyncTest()
+        {
+            
+            
+            bool? onlyAvailable = default;
+            ReadCustomerRequest? readCustomerRequest = default;
+            var response = await _instance.ReadShippingMethodAsync(onlyAvailable, readCustomerRequest);
+            Assert.IsType<ReadShippingMethod200Response>(response);
         }
     }
 }

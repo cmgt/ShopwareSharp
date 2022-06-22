@@ -14,7 +14,7 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using ShopwareSharp.Api;
+using ShopwareSharp.StoreApi;
 using ShopwareSharp.Model;
 using ShopwareSharp.Client;
 using System.Reflection;

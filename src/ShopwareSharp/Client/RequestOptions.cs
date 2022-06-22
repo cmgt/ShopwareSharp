@@ -27,5 +27,9 @@ namespace ShopwareSharp.Client
         /// Api key token
         /// </summary>
         public ApiKeyToken? ApiKey { get; set; }
+        /// <summary>
+        /// OAuth token
+        /// </summary>
+        public OAuthToken? OAuthToken { get; set; }
     }
 }

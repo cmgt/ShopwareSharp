@@ -11,7 +11,7 @@ namespace ShopwareSharp.Client
     /// </summary>
     public abstract class TokenBase
     {
-        protected string raw;
+        protected string raw = default!;
 
         /// <summary>
         /// Places the token in the cookie.

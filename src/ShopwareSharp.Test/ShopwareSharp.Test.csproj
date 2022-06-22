@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <AssemblyName>ShopwareSharp.Test</AssemblyName>
@@ -16,6 +16,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ShopwareSharp\ShopwareSharp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AdminApi\" />
   </ItemGroup>
 
 </Project>

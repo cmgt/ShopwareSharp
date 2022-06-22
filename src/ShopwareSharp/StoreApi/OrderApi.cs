@@ -20,8 +20,9 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using ShopwareSharp.Client;
 using ShopwareSharp.Model;
+using ShopwareSharp.StoreApi;
 
-namespace ShopwareSharp.Api
+namespace ShopwareSharp.StoreApi
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -199,7 +200,7 @@ namespace ShopwareSharp.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class OrderApi : ApiBase, IOrderApi
+    public partial class OrderApi : BaseApi, IOrderApi
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderApi"/> class.

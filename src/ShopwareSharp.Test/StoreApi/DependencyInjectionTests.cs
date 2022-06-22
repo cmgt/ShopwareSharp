@@ -13,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using ShopwareSharp.Client;
-using ShopwareSharp.Api;
+using ShopwareSharp.StoreApi;
 using Xunit;
 
 namespace ShopwareSharp.Test.Api

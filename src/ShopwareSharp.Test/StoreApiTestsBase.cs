@@ -8,8 +8,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using Microsoft.Extensions.Hosting;
 using ShopwareSharp.Client;
 
@@ -34,16 +32,16 @@ using ShopwareSharp.Client;
 */
 
 
-namespace ShopwareSharp.Test.Api
+namespace ShopwareSharp.Test
 {
     /// <summary>
     ///  Base class for API tests
     /// </summary>
-    public class ApiTestsBase
+    public class StoreApiTestsBase
     {
         protected readonly IHost _host;
 
-        public ApiTestsBase(string[] args)
+        public StoreApiTestsBase(string[] args)
         {
             _host = CreateHostBuilder(args).Build();
         }
@@ -59,8 +57,9 @@ namespace ShopwareSharp.Test.Api
                 //options.AddTokens(new ContextKeyToken("3zEEcbq9Zzl0Z0633Hy0dPhPrGa9DzIF"));
                 //options.AddTokens(new ContextKeyToken(String.Empty));
 
-                options.AddApiHttpClients(c => c.BaseAddress = new Uri("https://stage.shopware.cledeploy.com/store-api"));
-                
+                options.AddApiHttpClients(
+                    c => c.BaseAddress = new Uri("https://stage.shopware.cledeploy.com/store-api"));
+
             });
     }
 }

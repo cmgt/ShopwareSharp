@@ -21,7 +21,7 @@ using System.Text.Json;
 using ShopwareSharp.Client;
 using ShopwareSharp.Model;
 
-namespace ShopwareSharp.Api
+namespace ShopwareSharp.StoreApi
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -274,7 +274,7 @@ namespace ShopwareSharp.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class SystemContextApi : ApiBase, ISystemContextApi
+    public partial class SystemContextApi : BaseApi, ISystemContextApi
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemContextApi"/> class.

@@ -21,7 +21,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Polly.Timeout;
 using Polly.Extensions.Http;
 using Polly;
-using ShopwareSharp.Api;
+using ShopwareSharp.StoreApi;
 
 namespace ShopwareSharp.Client
 {
@@ -385,6 +385,7 @@ namespace ShopwareSharp.Client
 
             options.ApiKey?.UseInHeader(request, "sw-access-key");
             options.ContextKey?.UseInHeader(request, "sw-context-token");
+            options.OAuthToken?.UseInHeader(request);
 
             if (options.Headers != default)
             {

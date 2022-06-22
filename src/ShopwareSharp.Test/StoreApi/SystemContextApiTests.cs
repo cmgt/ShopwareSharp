@@ -12,8 +12,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 using Microsoft.Extensions.DependencyInjection;
-using ShopwareSharp.Api;
+using ShopwareSharp.StoreApi;
 using ShopwareSharp.Model;
+using ShopwareSharp.Test.StoreApi;
 
 
 /* *********************************************************************************
@@ -41,7 +42,7 @@ namespace ShopwareSharp.Test.Api
     /// <summary>
     ///  Class for testing SystemContextApi
     /// </summary>
-    public sealed class SystemContextApiTests : ApiTestsBase
+    public sealed class SystemContextApiTests : StoreApiTestsBase
     {
         private readonly ISystemContextApi _instance;
 

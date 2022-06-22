@@ -21,7 +21,7 @@ using System.Text.Json;
 using ShopwareSharp.Client;
 using ShopwareSharp.Model;
 
-namespace ShopwareSharp.Api
+namespace ShopwareSharp.StoreApi
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints

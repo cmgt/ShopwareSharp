@@ -20,8 +20,9 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using ShopwareSharp.Client;
 using ShopwareSharp.Model;
+using ShopwareSharp.StoreApi;
 
-namespace ShopwareSharp.Api
+namespace ShopwareSharp.StoreApi
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -408,7 +409,7 @@ namespace ShopwareSharp.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class ProductApi : ApiBase, IProductApi
+    public partial class ProductApi : BaseApi, IProductApi
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductApi"/> class.
@@ -416,8 +417,8 @@ namespace ShopwareSharp.Api
         /// <returns></returns>
         public ProductApi(ILogger<ProductApi> logger, HttpClient httpClient,
             JsonSerializerOptionsProvider jsonSerializerOptionsProvider,
-            TokenProvider<ApiKeyToken> apiKeyProvider, TokenProvider<ContextKeyToken> contextKeyProvider) : base(logger,
-            httpClient, jsonSerializerOptionsProvider, apiKeyProvider, contextKeyProvider)
+            TokenProvider<ApiKeyToken> apiKeyProvider) : base(logger,
+            httpClient, jsonSerializerOptionsProvider, apiKeyProvider)
         {
         }
 
