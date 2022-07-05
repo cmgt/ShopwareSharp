@@ -35,7 +35,7 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <param name="criteria"></param>
         /// <param name="productListingCriteriaAllOf"></param>
-        public ProductListingCriteria(Criteria criteria, ProductListingCriteriaAllOf productListingCriteriaAllOf)
+        public ProductListingCriteria(Criteria? criteria = default, ProductListingCriteriaAllOf? productListingCriteriaAllOf = default)
         {
             Criteria = criteria;
             ProductListingCriteriaAllOf = productListingCriteriaAllOf;
@@ -44,12 +44,12 @@ namespace ShopwareSharp.Model
         /// <summary>
         /// Gets or Sets Criteria
         /// </summary>
-        public Criteria Criteria { get; set; }
+        public Criteria? Criteria { get; set; }
 
         /// <summary>
         /// Gets or Sets ProductListingCriteriaAllOf
         /// </summary>
-        public ProductListingCriteriaAllOf ProductListingCriteriaAllOf { get; set; }
+        public ProductListingCriteriaAllOf? ProductListingCriteriaAllOf { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

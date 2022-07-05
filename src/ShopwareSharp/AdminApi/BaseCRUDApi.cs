@@ -33,10 +33,10 @@ namespace ShopwareSharp.AdminApi
         /// <param name="createRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Response{T}"/>&gt;</returns>
-        public async Task<Response<T>?> CreateProductAsync(string? response = null, Request<T>? createRequest = null, RequestOptions? requestOptions = default,
+        public async Task<Response<T>?> CreateAsync(string? response = null, Request<T>? createRequest = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<Response<T>?> result = await CreateProductWithHttpInfoAsync(response, createRequest, requestOptions, cancellationToken).ConfigureAwait(false);
+            ApiResponse<Response<T>?> result = await CreateWithHttpInfoAsync(response, createRequest, requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -52,13 +52,13 @@ namespace ShopwareSharp.AdminApi
         /// <param name="createRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Response{T}"/>&gt;</returns>
-        public async Task<Response<T>?> CreateProductOrDefaultAsync(string? response = null, Request<T>? createRequest = null, RequestOptions? requestOptions = default,
+        public async Task<Response<T>?> CreateOrDefaultAsync(string? response = null, Request<T>? createRequest = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<Response<T>?>? result = null;
             try 
             {
-                result = await CreateProductWithHttpInfoAsync(response, createRequest, requestOptions, cancellationToken).ConfigureAwait(false);
+                result = await CreateWithHttpInfoAsync(response, createRequest, requestOptions, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -77,7 +77,7 @@ namespace ShopwareSharp.AdminApi
         /// <param name="createProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="Response{T}"/></returns>
-        public Task<ApiResponse<Response<T>?>> CreateProductWithHttpInfoAsync(string? response = null,
+        public Task<ApiResponse<Response<T>?>> CreateWithHttpInfoAsync(string? response = null,
             Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null)
         {
@@ -100,10 +100,10 @@ namespace ShopwareSharp.AdminApi
         /// <param name="response">Data format for response. Empty if none is provided. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="object"/>&gt;</returns>
-        public async Task<object?> DeleteProductAsync(string id, string? response = null, RequestOptions? requestOptions = default,
+        public async Task<object?> DeleteAsync(string id, string? response = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<object?> result = await DeleteProductWithHttpInfoAsync(id, response, requestOptions, cancellationToken).ConfigureAwait(false);
+            ApiResponse<object?> result = await DeleteWithHttpInfoAsync(id, response, requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -119,13 +119,13 @@ namespace ShopwareSharp.AdminApi
         /// <param name="response">Data format for response. Empty if none is provided. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="object"/>&gt;</returns>
-        public async Task<object?> DeleteProductOrDefaultAsync(string id, string? response = null, RequestOptions? requestOptions = default,
+        public async Task<object?> DeleteOrDefaultAsync(string id, string? response = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<object?>? result = null;
             try 
             {
-                result = await DeleteProductWithHttpInfoAsync(id, response, requestOptions, cancellationToken).ConfigureAwait(false);
+                result = await DeleteWithHttpInfoAsync(id, response, requestOptions, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -144,7 +144,7 @@ namespace ShopwareSharp.AdminApi
         /// <param name="response">Data format for response. Empty if none is provided. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="object"/></returns>
-        public Task<ApiResponse<object?>> DeleteProductWithHttpInfoAsync(string id, string? response = null,
+        public Task<ApiResponse<object?>> DeleteWithHttpInfoAsync(string id, string? response = null,
             RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
 #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
@@ -172,9 +172,9 @@ namespace ShopwareSharp.AdminApi
         /// <param name="id">Identifier for the product</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Response{T}"/>&gt;</returns>
-        public async Task<Response<T>?> GetProductAsync(string id, RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<Response<T>?> GetAsync(string id, RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<Response<T>?> result = await GetProductWithHttpInfoAsync(id, requestOptions, cancellationToken).ConfigureAwait(false);
+            ApiResponse<Response<T>?> result = await GetWithHttpInfoAsync(id, requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -189,12 +189,12 @@ namespace ShopwareSharp.AdminApi
         /// <param name="id">Identifier for the product</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Response{T}"/>&gt;</returns>
-        public async Task<Response<T>?> GetProductOrDefaultAsync(string id, RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<Response<T>?> GetOrDefaultAsync(string id, RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<Response<T>?>? result = null;
             try 
             {
-                result = await GetProductWithHttpInfoAsync(id, requestOptions, cancellationToken).ConfigureAwait(false);
+                result = await GetWithHttpInfoAsync(id, requestOptions, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -212,7 +212,7 @@ namespace ShopwareSharp.AdminApi
         /// <param name="id">Identifier for the product</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="Response{T}"/></returns>
-        public Task<ApiResponse<Response<T>?>> GetProductWithHttpInfoAsync(string id,
+        public Task<ApiResponse<Response<T>?>> GetWithHttpInfoAsync(string id,
             RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
 #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
@@ -237,9 +237,9 @@ namespace ShopwareSharp.AdminApi
         /// <param name="query">Encoded SwagQL in JSON (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ResponseList{T}"/>&gt;</returns>
-        public async Task<ResponseList<T>?> GetProductListAsync(int? limit = null, int? page = null, string? query = null, RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ResponseList<T>?> GetListAsync(int? limit = null, int? page = null, string? query = null, RequestOptions? requestOptions = default, System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<ResponseList<T>?> result = await GetProductListWithHttpInfoAsync(limit, page, query, requestOptions, cancellationToken).ConfigureAwait(false);
+            ApiResponse<ResponseList<T>?> result = await GetListWithHttpInfoAsync(limit, page, query, requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -256,14 +256,14 @@ namespace ShopwareSharp.AdminApi
         /// <param name="query">Encoded SwagQL in JSON (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ResponseList{T}"/>&gt;</returns>
-        public async Task<ResponseList<T>?> GetProductListOrDefaultAsync(int? limit = null, int? page = null,
+        public async Task<ResponseList<T>?> GetListOrDefaultAsync(int? limit = null, int? page = null,
             string? query = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<ResponseList<T>?>? result = null;
             try
             {
-                result = await GetProductListWithHttpInfoAsync(limit, page, query, requestOptions, cancellationToken)
+                result = await GetListWithHttpInfoAsync(limit, page, query, requestOptions, cancellationToken)
                     .ConfigureAwait(false);
             }
             catch (Exception)
@@ -284,7 +284,7 @@ namespace ShopwareSharp.AdminApi
         /// <param name="query">Encoded SwagQL in JSON (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="ResponseList{T}"/></returns>
-        public Task<ApiResponse<ResponseList<T>?>> GetProductListWithHttpInfoAsync(int? limit = null, int? page = null, string? query = null, RequestOptions? requestOptions = default,
+        public Task<ApiResponse<ResponseList<T>?>> GetListWithHttpInfoAsync(int? limit = null, int? page = null, string? query = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null)
         {
             var queryPath = endPoint;
@@ -314,10 +314,10 @@ namespace ShopwareSharp.AdminApi
         /// <param name="updateRequest">Partially update information about a Product resource. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Response{T}"/>&gt;</returns>
-        public async Task<Response<T>?> UpdateProductAsync(string id, string? response = null, Request<Product>? updateRequest = null, RequestOptions? requestOptions = default,
+        public async Task<Response<T>?> UpdateAsync(string id, string? response = null, Request<T>? updateRequest = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<Response<T>?> result = await UpdateProductWithHttpInfoAsync(id, response, updateRequest, requestOptions, cancellationToken).ConfigureAwait(false);
+            ApiResponse<Response<T>?> result = await UpdateWithHttpInfoAsync(id, response, updateRequest, requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -334,13 +334,13 @@ namespace ShopwareSharp.AdminApi
         /// <param name="createProductRequest">Partially update information about a Product resource. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="Response{T}"/>&gt;</returns>
-        public async Task<Response<T>?> UpdateProductOrDefaultAsync(string id, string? response = null, Request<Product>? createProductRequest = null, RequestOptions? requestOptions = default,
+        public async Task<Response<T>?> UpdateOrDefaultAsync(string id, string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<Response<T>?>? result = null;
             try 
             {
-                result = await UpdateProductWithHttpInfoAsync(id, response, createProductRequest, requestOptions, cancellationToken).ConfigureAwait(false);
+                result = await UpdateWithHttpInfoAsync(id, response, createProductRequest, requestOptions, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -360,7 +360,7 @@ namespace ShopwareSharp.AdminApi
         /// <param name="createProductRequest">Partially update information about a Product resource. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="Response{T}"/></returns>
-        public Task<ApiResponse<Response<T>?>> UpdateProductWithHttpInfoAsync(string id, string? response = null, Request<Product>? createProductRequest = null, RequestOptions? requestOptions = default,
+        public Task<ApiResponse<Response<T>?>> UpdateWithHttpInfoAsync(string id, string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null)
         {
 #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'

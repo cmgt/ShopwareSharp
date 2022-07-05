@@ -65,10 +65,10 @@ namespace ShopwareSharp.Test.StoreApi
         /// <summary>
         /// Test ReadProductCrossSellings
         /// </summary>
-        [Fact (Skip = "not implemented")]
+        [Fact]
         public async Task ReadProductCrossSellingsAsyncTest()
         {
-            string productId = default;
+            string productId = "0f683a27c45a4e408814a97fd7150ffa";
             
             
             var response = await _instance.ReadProductCrossSellingsAsync(productId);
@@ -82,6 +82,7 @@ namespace ShopwareSharp.Test.StoreApi
         public async Task ReadProductDetailAsyncTest()
         {
             string productId = "0f683a27c45a4e408814a97fd7150ffa";
+            var request = 
             
             var response = await _instance.ReadProductDetailAsync(productId);
             Assert.IsType<ProductDetailResponse>(response);
@@ -147,7 +148,10 @@ namespace ShopwareSharp.Test.StoreApi
         [Fact]
         public async Task SearchPageAsyncTest()
         {
-            SearchPageRequest? searchPageRequest = new SearchPageRequest(new SearchPageRequestAllOf("test"));
+            //var searchPageRequest = new SearchPageRequest(new SearchPageRequestAllOf("test"));
+            var criteria = new Criteria();
+            var searchPageRequest = new SearchPageRequest(productListingCriteria: new ProductListingCriteria(criteria));
+            
             var response = await _instance.SearchPageAsync(searchPageRequest);
             Assert.IsType<ProductListingResult>(response);
         }

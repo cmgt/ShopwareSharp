@@ -8,11 +8,12 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using Xunit;
 using Microsoft.Extensions.DependencyInjection;
 using ShopwareSharp.AdminApi;
 using ShopwareSharp.Model;
-using Xunit;
 
 
 /* *********************************************************************************
@@ -38,34 +39,35 @@ using Xunit;
 namespace ShopwareSharp.Test.AdminApi
 {
     /// <summary>
-    ///  Class for testing AdminProductApi
+    ///  Class for testing ProductConfiguratorSettingApi
     /// </summary>
-    public sealed class ProductApiTests : AdminApiTestsBase
+    public sealed class ProductConfiguratorSettingApiTests : AdminApiTestsBase
     {
-        private readonly IAdminProductApi _instance;
+        private readonly IAdminProductConfiguratorSettingApi _instance;
 
-        public ProductApiTests(): base(Array.Empty<string>())
+        public ProductConfiguratorSettingApiTests(): base(Array.Empty<string>())
         {
-            _instance = _host.Services.GetRequiredService<IAdminProductApi>();
+            _instance = _host.Services.GetRequiredService<IAdminProductConfiguratorSettingApi>();
         }
 
+
         /// <summary>
-        /// Test CreateProduct
+        /// Test CreateProductConfiguratorSetting
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task CreateProductAsyncTest()
+        public async Task CreateAsyncTest()
         {
             string? r = default;
-            Request<Product>? createProductRequest = default;
-            var response = await _instance.CreateAsync(r, createProductRequest);
-            Assert.IsType<Response<Product>>(response);
+            Request<ProductConfiguratorSetting> createProductConfiguratorSettingRequest = default;
+            var response = await _instance.CreateAsync(r, createProductConfiguratorSettingRequest);
+            Assert.IsType<Request<ProductConfiguratorSetting>>(response);
         }
 
         /// <summary>
-        /// Test DeleteProduct
+        /// Test DeleteProductConfiguratorSetting
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task DeleteProductAsyncTest()
+        public async Task DeleteAsyncTest()
         {
             string id = default;
             string? response = default;
@@ -73,40 +75,40 @@ namespace ShopwareSharp.Test.AdminApi
         }
 
         /// <summary>
-        /// Test GetProduct
+        /// Test GetProductConfiguratorSetting
         /// </summary>
         [Fact]
-        public async Task GetProductAsyncTest()
+        public async Task GetAsyncTest()
         {
             string id = "0f683a27c45a4e408814a97fd7150ffa";
             var response = await _instance.GetAsync(id);
-            Assert.IsType<Response<Product>>(response);
+            Assert.IsType<Response<ProductConfiguratorSetting>>(response);
         }
 
         /// <summary>
-        /// Test GetProductList
+        /// Test GetProductConfiguratorSettingList
         /// </summary>
-        [Fact (Skip = "not implemented")]
-        public async Task GetProductListAsyncTest()
+        [Fact]
+        public async Task GetProductConfiguratorSettingListAsyncTest()
         {
             int? limit = default;
             int? page = default;
             string? query = default;
             var response = await _instance.GetListAsync(limit, page, query);
-            Assert.IsType<ResponseList<Product>>(response);
+            Assert.IsType<ResponseList<ProductConfiguratorSetting>>(response);
         }
 
         /// <summary>
-        /// Test UpdateProduct
+        /// Test UpdateProductConfiguratorSetting
         /// </summary>
         [Fact (Skip = "not implemented")]
-        public async Task UpdateProductAsyncTest()
+        public async Task UpdateAsyncTest()
         {
             string id = default;
             string? r = default;
-            Request<Product>? createProductRequest = default;
-            var response = await _instance.UpdateAsync(id, r, createProductRequest);
-            Assert.IsType<Response<Product>>(response);
+            Request<ProductConfiguratorSetting>? createProductConfiguratorSettingRequest = default;
+            var response = await _instance.UpdateAsync(id, r, createProductConfiguratorSettingRequest);
+            Assert.IsType<Response<ProductConfiguratorSetting>>(response);
         }
     }
 }

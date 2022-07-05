@@ -16,6 +16,9 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text.Json;
+using System.Threading;
 using ShopwareSharp.Client;
 using ShopwareSharp.Model;
 
@@ -24,23 +27,26 @@ namespace ShopwareSharp.AdminApi
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IAdminProductApi : IAdminCRUDApi<Product>
+    public interface IAdminProductConfiguratorSettingApi : IAdminCRUDApi<ProductConfiguratorSetting>
     {
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class AdminProductApi : BaseCRUDApi<Product>, IAdminProductApi
+    public class AdminProductConfiguratorSettingApi : BaseCRUDApi<ProductConfiguratorSetting>, IAdminProductConfiguratorSettingApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AdminProductApi"/> class.
+        /// Initializes a new instance of the <see cref="AdminProductConfiguratorSettingApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public AdminProductApi(ILogger<AdminProductApi> logger, HttpClient httpClient,
+        public AdminProductConfiguratorSettingApi(ILogger<AdminProductConfiguratorSettingApi> logger,
+            HttpClient httpClient,
             JsonSerializerOptionsProvider jsonSerializerOptionsProvider,
             TokenProvider<OAuthToken> oauthTokenProvider) : base(logger, httpClient, jsonSerializerOptionsProvider,
             oauthTokenProvider: oauthTokenProvider)
-        { }
+        {
+            endPoint = "/product-configurator-setting";
+        }
     }
 }

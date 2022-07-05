@@ -21,7 +21,7 @@ namespace ShopwareSharp.Client
         /// <param name="createProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;Response<T>?&gt;&gt;</returns>
-        Task<ApiResponse<Response<T>?>> CreateProductWithHttpInfoAsync(string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
+        Task<ApiResponse<Response<T>?>> CreateWithHttpInfoAsync(string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace ShopwareSharp.Client
         /// <param name="createProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;CreateProduct200Response&gt;</returns>
-        Task<Response<T>?> CreateProductAsync(string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
+        Task<Response<T>?> CreateAsync(string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace ShopwareSharp.Client
         /// <param name="createProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;Response<T>?&gt;</returns>
-        Task<Response<T>?> CreateProductOrDefaultAsync(string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
+        Task<Response<T>?> CreateOrDefaultAsync(string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         
@@ -63,7 +63,7 @@ namespace ShopwareSharp.Client
         /// <param name="response">Data format for response. Empty if none is provided. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;object?&gt;&gt;</returns>
-        Task<ApiResponse<object?>> DeleteProductWithHttpInfoAsync(string id, string? response = null, RequestOptions? requestOptions = default,
+        Task<ApiResponse<object?>> DeleteWithHttpInfoAsync(string id, string? response = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace ShopwareSharp.Client
         /// <param name="response">Data format for response. Empty if none is provided. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;object&gt;</returns>
-        Task<object?> DeleteProductAsync(string id, string? response = null, RequestOptions? requestOptions = default,
+        Task<object?> DeleteAsync(string id, string? response = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace ShopwareSharp.Client
         /// <param name="response">Data format for response. Empty if none is provided. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;object?&gt;</returns>
-        Task<object?> DeleteProductOrDefaultAsync(string id, string? response = null, RequestOptions? requestOptions = default,
+        Task<object?> DeleteOrDefaultAsync(string id, string? response = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         
@@ -104,7 +104,7 @@ namespace ShopwareSharp.Client
         /// <param name="id">Identifier for the product</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;Response<T>?&gt;&gt;</returns>
-        Task<ApiResponse<Response<T>?>> GetProductWithHttpInfoAsync(string id, RequestOptions? requestOptions = default,
+        Task<ApiResponse<Response<T>?>> GetWithHttpInfoAsync(string id, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace ShopwareSharp.Client
         /// <param name="id">Identifier for the product</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;CreateProduct200Response&gt;</returns>
-        Task<Response<T>?> GetProductAsync(string id, RequestOptions? requestOptions = default,
+        Task<Response<T>?> GetAsync(string id, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace ShopwareSharp.Client
         /// <param name="id">Identifier for the product</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;Response<T>?&gt;</returns>
-        Task<Response<T>?> GetProductOrDefaultAsync(string id, RequestOptions? requestOptions = default,
+        Task<Response<T>?> GetOrDefaultAsync(string id, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         
@@ -145,7 +145,7 @@ namespace ShopwareSharp.Client
         /// <param name="query">Encoded SwagQL in JSON (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;GetProductList200Response?&gt;&gt;</returns>
-        Task<ApiResponse<ResponseList<T>?>> GetProductListWithHttpInfoAsync(int? limit = null, int? page = null, string? query = null, RequestOptions? requestOptions = default,
+        Task<ApiResponse<ResponseList<T>?>> GetListWithHttpInfoAsync(int? limit = null, int? page = null, string? query = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace ShopwareSharp.Client
         /// <param name="query">Encoded SwagQL in JSON (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;GetProductList200Response&gt;</returns>
-        Task<ResponseList<T>?> GetProductListAsync(int? limit = null, int? page = null, string? query = null, RequestOptions? requestOptions = default,
+        Task<ResponseList<T>?> GetListAsync(int? limit = null, int? page = null, string? query = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace ShopwareSharp.Client
         /// <param name="query">Encoded SwagQL in JSON (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;GetProductList200Response?&gt;</returns>
-        Task<ResponseList<T>?> GetProductListOrDefaultAsync(int? limit = null, int? page = null, string? query = null, RequestOptions? requestOptions = default,
+        Task<ResponseList<T>?> GetListOrDefaultAsync(int? limit = null, int? page = null, string? query = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         
@@ -190,7 +190,7 @@ namespace ShopwareSharp.Client
         /// <param name="createProductRequest">Partially update information about a Product resource. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;Response<T>?&gt;&gt;</returns>
-        Task<ApiResponse<Response<T>?>> UpdateProductWithHttpInfoAsync(string id, string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
+        Task<ApiResponse<Response<T>?>> UpdateWithHttpInfoAsync(string id, string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace ShopwareSharp.Client
         /// <param name="createProductRequest">Partially update information about a Product resource. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;CreateProduct200Response&gt;</returns>
-        Task<Response<T>?> UpdateProductAsync(string id, string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
+        Task<Response<T>?> UpdateAsync(string id, string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace ShopwareSharp.Client
         /// <param name="createProductRequest">Partially update information about a Product resource. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;Response<T>?&gt;</returns>
-        Task<Response<T>?> UpdateProductOrDefaultAsync(string id, string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
+        Task<Response<T>?> UpdateOrDefaultAsync(string id, string? response = null, Request<T>? createProductRequest = null, RequestOptions? requestOptions = default,
             System.Threading.CancellationToken? cancellationToken = null);
     }
 }

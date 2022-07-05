@@ -59,7 +59,7 @@ namespace ShopwareSharp.Model
         /// <param name="ratingFilter">Enables/disabled filtering by rating. If set to false, the &#x60;rating&#x60; filter will be ignored. Also the &#x60;aggregations[rating]&#x60; key will be removed from the response. (default to true)</param>
         /// <param name="shippingFreeFilter">Enables/disabled filtering by shipping-free products. If set to false, the &#x60;shipping-free&#x60; filter will be ignored. Also the &#x60;aggregations[shipping-free]&#x60; key will be removed from the response. (default to true)</param>
         /// <param name="propertyFilter">Enables/disabled filtering by properties products. If set to false, the &#x60;properties&#x60; filter will be ignored. Also the &#x60;aggregations[properties]&#x60; key will be removed from the response. (default to true)</param>
-        public SearchPageRequest(SearchPageRequestAllOf searchPageRequestAllOf,
+        public SearchPageRequest(SearchPageRequestAllOf? searchPageRequestAllOf = default,
             ProductListingCriteria? productListingCriteria = default,
             ProductListingFlags? productListingFlags = default, int? page = default, int? limit = default,
             List<CriteriaFilterInner>? filter = default, List<CriteriaSortInner>? sort = default,

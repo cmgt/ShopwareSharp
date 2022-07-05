@@ -81,6 +81,7 @@ namespace ShopwareSharp.Client
             this.services.AddSingleton<ISystemContextApi, SystemContextApi>();
             
             this.services.AddSingleton<IAdminProductApi, AdminProductApi>();
+            this.services.AddSingleton<IAdminProductConfiguratorSettingApi, AdminProductConfiguratorSettingApi>();
         }
 
         /// <summary>
@@ -90,7 +91,7 @@ namespace ShopwareSharp.Client
         /// <param name="builder"></param>
         /// <returns></returns>
         public HostConfiguration AddApiHttpClients<TCartApi, TOrderApi, TPaymentMethodApi, TPaymentShippingApi,
-            TProductApi, TLoginRegistrationApi, TSystemContextApi, TAdminProductApi>
+            TProductApi, TLoginRegistrationApi, TSystemContextApi, TAdminProductApi, TAdminProductConfiguratorSettingApi>
         (
             Action<HttpClient>? client = null, Action<IHttpClientBuilder>? builder = null)
             where TCartApi : class, ICartApi
@@ -101,6 +102,7 @@ namespace ShopwareSharp.Client
             where TLoginRegistrationApi : class, ILoginRegistrationApi
             where TSystemContextApi : class, ISystemContextApi
             where TAdminProductApi : class, IAdminProductApi
+            where TAdminProductConfiguratorSettingApi : class, IAdminProductConfiguratorSettingApi
         {
             client ??= c => c.BaseAddress = new Uri(ClientUtils.BASE_ADDRESS);
 
@@ -114,6 +116,7 @@ namespace ShopwareSharp.Client
                 services.AddHttpClient<ILoginRegistrationApi, TLoginRegistrationApi>(client),
                 services.AddHttpClient<ISystemContextApi, TSystemContextApi>(client),
                 services.AddHttpClient<IAdminProductApi, TAdminProductApi>(client),
+                services.AddHttpClient<IAdminProductConfiguratorSettingApi, TAdminProductConfiguratorSettingApi>(client),
             };
 
             if (builder != null)
@@ -135,7 +138,7 @@ namespace ShopwareSharp.Client
             Action<IHttpClientBuilder>? builder = null)
         {
             AddApiHttpClients<CartApi, OrderApi, PaymentMethodApi, PaymentShippingApi, ProductApi,
-                LoginRegistrationApi, SystemContextApi, AdminProductApi>(client, builder);
+                LoginRegistrationApi, SystemContextApi, AdminProductApi, AdminProductConfiguratorSettingApi>(client, builder);
 
             return this;
         }
