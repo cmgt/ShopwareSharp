@@ -22,6 +22,7 @@ using System.Text.RegularExpressions;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.ComponentModel.DataAnnotations;
+using System.Xml;
 
 namespace ShopwareSharp.Model
 {
@@ -30,6 +31,8 @@ namespace ShopwareSharp.Model
     /// </summary>
     public partial class Criteria : IEquatable<Criteria>, IValidatableObject
     {
+        public static readonly object AssociationDefault = new object();
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Criteria" /> class.
         /// </summary>
@@ -41,7 +44,10 @@ namespace ShopwareSharp.Model
         /// <param name="associations">Used to fetch associations which are not fetched by default.</param>
         /// <param name="aggregations">Used to perform aggregations on the search result. For more information, see [Search Queries &gt; Aggregations](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#aggregations)</param>
         /// <param name="grouping">Perform groupings over certain fields</param>
-        public Criteria(int? page = default, int? limit = default, List<CriteriaFilterInner>? filter = default, List<CriteriaSortInner>? sort = default, List<CriteriaFilterInner>? postFilter = default, Object? associations = default, List<CriteriaAggregationsInner>? aggregations = default, List<string>? grouping = default)
+        public Criteria(int? page = default, int? limit = default, List<CriteriaFilterInner>? filter = default,
+            List<CriteriaSortInner>? sort = default, List<CriteriaFilterInner>? postFilter = default,
+            Object? associations = default, List<CriteriaAggregationsInner>? aggregations = default,
+            List<string>? grouping = default, Dictionary<string, string[]>? includes = default)
         {
             Page = page;
             Limit = limit;
@@ -51,7 +57,15 @@ namespace ShopwareSharp.Model
             Associations = associations;
             Aggregations = aggregations;
             Grouping = grouping;
+            Includes = includes;
         }
+
+        /// <summary>
+        /// Search result page
+        /// </summary>
+        /// <value>Search result page</value>
+        [JsonPropertyName("includes")]
+        public Dictionary<string, string[]>? Includes { get; set; }
 
         /// <summary>
         /// Search result page

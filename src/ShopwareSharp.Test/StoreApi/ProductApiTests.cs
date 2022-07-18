@@ -57,7 +57,28 @@ namespace ShopwareSharp.Test.StoreApi
         [Fact]
         public async Task ReadProductAsyncTest()
         {
-            ReadCustomerRequest? readCustomerRequest = default;
+            var criteria = new Criteria(associations: new
+                {
+                    categories = Criteria.AssociationDefault,
+                    children = Criteria.AssociationDefault,
+                    properties = Criteria.AssociationDefault,
+                    options = Criteria.AssociationDefault,
+                    media = Criteria.AssociationDefault,
+                    manufacturer = Criteria.AssociationDefault,
+                    configuratorSettings=Criteria.AssociationDefault,
+                },
+                //filter: new List<CriteriaFilterInner>() {new CriteriaFilterInner("equals", "childCount", "6")},
+                includes: new Dictionary<string, string[]>
+                {
+                    ["property_group_option"] = new[] {"configuratorSetting", "name", "id", "group"},
+                    ["product_configurator_setting"] = new []{"selected", "option", "position"},
+                    ["product_media"] = new[] {"media"},
+                    ["media"] = new[] {"url"},
+                    ["product_manufacturer"] = new[] {"name"},
+                    ["array_struct"] = Array.Empty<string>()
+                }
+            );
+            ReadCustomerRequest readCustomerRequest = new ReadCustomerRequest(criteria);
             var response = await _instance.ReadProductAsync(readCustomerRequest);
             Assert.IsType<ReadProduct200Response>(response);
         }
@@ -82,8 +103,7 @@ namespace ShopwareSharp.Test.StoreApi
         public async Task ReadProductDetailAsyncTest()
         {
             string productId = "0f683a27c45a4e408814a97fd7150ffa";
-            var request = 
-            
+
             var response = await _instance.ReadProductDetailAsync(productId);
             Assert.IsType<ProductDetailResponse>(response);
         }
@@ -149,8 +169,7 @@ namespace ShopwareSharp.Test.StoreApi
         public async Task SearchPageAsyncTest()
         {
             //var searchPageRequest = new SearchPageRequest(new SearchPageRequestAllOf("test"));
-            var criteria = new Criteria();
-            var searchPageRequest = new SearchPageRequest(productListingCriteria: new ProductListingCriteria(criteria));
+            var searchPageRequest = new SearchPageRequest();
             
             var response = await _instance.SearchPageAsync(searchPageRequest);
             Assert.IsType<ProductListingResult>(response);

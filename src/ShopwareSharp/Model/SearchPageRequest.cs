@@ -685,7 +685,10 @@ namespace ShopwareSharp.Model
                 }
             }
 
-            return new SearchPageRequest(searchPageRequestAllOf!, productListingCriteria, productListingFlags, page, limit, filter, sort, postFilter, associations, aggregations, grouping, order, manufacturer, rating, properties, propertyWhitelist, reduceAggregations, p, minPrice, maxPrice, shippingFree, manufacturerFilter, priceFilter, ratingFilter, shippingFreeFilter, propertyFilter);
+            return new SearchPageRequest(searchPageRequestAllOf!, productListingCriteria, productListingFlags, page,
+                limit, filter, sort, postFilter, associations, aggregations, grouping, order, manufacturer, rating,
+                properties, propertyWhitelist, reduceAggregations, p, minPrice, maxPrice, shippingFree,
+                manufacturerFilter, priceFilter, ratingFilter, shippingFreeFilter, propertyFilter);
         }
 
         /// <summary>
@@ -701,6 +704,16 @@ namespace ShopwareSharp.Model
             if (searchPageRequest.SearchPageRequestAllOf != default)
             {
                 JsonSerializer.Serialize(writer, searchPageRequest.SearchPageRequestAllOf, options);
+            } else if (searchPageRequest.ProductListingCriteria != default)
+            {
+                JsonSerializer.Serialize(writer, searchPageRequest.ProductListingCriteria, options);
+            }
+            else
+            {
+                var opts = new JsonSerializerOptions(options);
+                opts.Converters.Clear();
+
+                JsonSerializer.Serialize(writer, searchPageRequest, opts);
             }
         }
     }
