@@ -134,14 +134,14 @@ namespace ShopwareSharp.Model
             string? packUnitPlural = default, Object? customFields = default, CalculatedPrice? calculatedPrice = default,
             List<Object>? calculatedPrices = default, long? calculatedMaxPurchase = default,
             Object? calculatedCheapestPrice = default, bool? isNew = default, DateTime? updatedAt = default,
-            ProductTranslated? translated = default, Product? parent = default, Product? children = default,
+            ProductTranslated? translated = default, Product? parent = default, Product[]? children = default,
             DeliveryTime? deliveryTime = default, Tax? tax = default, ProductManufacturer? manufacturer = default,
             Unit? unit = default, ProductMedia? cover = default, CmsPage? cmsPage = default,
-            Product? canonicalProduct = default, ProductMedia? media = default,
+            Product? canonicalProduct = default, ProductMedia[]? media = default,
             ProductCrossSelling? crossSellings = default, ProductConfiguratorSetting? configuratorSettings = default,
             ProductReview? productReviews = default, MainCategory? mainCategories = default, SeoUrl? seoUrls = default,
-            PropertyGroupOption? options = default, PropertyGroupOption? properties = default,
-            Category? categories = default, ProductStream? streams = default, Category? categoriesRo = default,
+            PropertyGroupOption[]? options = default, PropertyGroupOption[]? properties = default,
+            Category[]? categories = default, ProductStream[]? streams = default, Category[]? categoriesRo = default,
             Category? seoCategory = default)
         {
             if (taxId == null)
@@ -268,7 +268,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets CreatedAt
         /// </summary>
         [JsonPropertyName("createdAt")]
-        public DateTime CreatedAt { get; private set; }
+        public DateTime CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
@@ -364,13 +364,13 @@ namespace ShopwareSharp.Model
         /// Gets or Sets AvailableStock
         /// </summary>
         [JsonPropertyName("availableStock")]
-        public long? AvailableStock { get; private set; }
+        public long? AvailableStock { get; set; }
 
         /// <summary>
         /// Gets or Sets Available
         /// </summary>
         [JsonPropertyName("available")]
-        public bool? Available { get; private set; }
+        public bool? Available { get; set; }
 
         /// <summary>
         /// Gets or Sets IsCloseout
@@ -382,7 +382,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets DisplayGroup
         /// </summary>
         [JsonPropertyName("displayGroup")]
-        public string? DisplayGroup { get; private set; }
+        public string? DisplayGroup { get; set; }
 
         /// <summary>
         /// Gets or Sets MainVariantId
@@ -478,43 +478,43 @@ namespace ShopwareSharp.Model
         /// Gets or Sets RatingAverage
         /// </summary>
         [JsonPropertyName("ratingAverage")]
-        public float? RatingAverage { get; private set; }
+        public float? RatingAverage { get; set; }
 
         /// <summary>
         /// Gets or Sets CategoryTree
         /// </summary>
         [JsonPropertyName("categoryTree")]
-        public List<string>? CategoryTree { get; private set; }
+        public List<string>? CategoryTree { get; set; }
 
         /// <summary>
         /// Gets or Sets PropertyIds
         /// </summary>
         [JsonPropertyName("propertyIds")]
-        public List<string>? PropertyIds { get; private set; }
+        public List<string>? PropertyIds { get; set; }
 
         /// <summary>
         /// Gets or Sets OptionIds
         /// </summary>
         [JsonPropertyName("optionIds")]
-        public List<string>? OptionIds { get; private set; }
+        public List<string>? OptionIds { get; set; }
 
         /// <summary>
         /// Gets or Sets CategoryIds
         /// </summary>
         [JsonPropertyName("categoryIds")]
-        public List<string>? CategoryIds { get; private set; }
+        public List<string>? CategoryIds { get; set; }
 
         /// <summary>
         /// Gets or Sets ChildCount
         /// </summary>
         [JsonPropertyName("childCount")]
-        public long? ChildCount { get; private set; }
+        public long? ChildCount { get; set; }
 
         /// <summary>
         /// Gets or Sets Sales
         /// </summary>
         [JsonPropertyName("sales")]
-        public long? Sales { get; private set; }
+        public long? Sales { get; set; }
 
         /// <summary>
         /// Gets or Sets MetaDescription
@@ -592,7 +592,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets UpdatedAt
         /// </summary>
         [JsonPropertyName("updatedAt")]
-        public DateTime? UpdatedAt { get; private set; }
+        public DateTime? UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Translated
@@ -610,7 +610,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Children
         /// </summary>
         [JsonPropertyName("children")]
-        public Product? Children { get; set; }
+        public Product[]? Children { get; set; }
 
         /// <summary>
         /// Gets or Sets DeliveryTime
@@ -658,7 +658,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Media
         /// </summary>
         [JsonPropertyName("media")]
-        public ProductMedia? Media { get; set; }
+        public ProductMedia[]? Media { get; set; }
 
         /// <summary>
         /// Gets or Sets CrossSellings
@@ -694,31 +694,31 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Options
         /// </summary>
         [JsonPropertyName("options")]
-        public PropertyGroupOption? Options { get; set; }
+        public PropertyGroupOption[]? Options { get; set; }
 
         /// <summary>
         /// Gets or Sets Properties
         /// </summary>
         [JsonPropertyName("properties")]
-        public PropertyGroupOption? Properties { get; set; }
+        public PropertyGroupOption[]? Properties { get; set; }
 
         /// <summary>
         /// Gets or Sets Categories
         /// </summary>
         [JsonPropertyName("categories")]
-        public Category? Categories { get; set; }
+        public Category[]? Categories { get; set; }
 
         /// <summary>
         /// Gets or Sets Streams
         /// </summary>
         [JsonPropertyName("streams")]
-        public ProductStream? Streams { get; set; }
+        public ProductStream[]? Streams { get; set; }
 
         /// <summary>
         /// Gets or Sets CategoriesRo
         /// </summary>
         [JsonPropertyName("categoriesRo")]
-        public Category? CategoriesRo { get; set; }
+        public Category[]? CategoriesRo { get; set; }
 
         /// <summary>
         /// Gets or Sets SeoCategory

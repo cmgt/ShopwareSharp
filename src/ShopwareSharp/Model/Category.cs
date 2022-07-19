@@ -71,9 +71,6 @@ namespace ShopwareSharp.Model
         /// <param name="seoUrls">seoUrls</param>
         public Category(bool displayNestedProducts, string type, string productAssignmentType, string name, DateTime createdAt, string? id = default, string? versionId = default, string? parentId = default, string? parentVersionId = default, string? afterCategoryId = default, string? afterCategoryVersionId = default, string? mediaId = default, List<string>? breadcrumb = default, long? level = default, string? path = default, long? childCount = default, bool? visible = default, bool? active = default, Object? customFields = default, string? linkType = default, string? internalLink = default, string? externalLink = default, bool? linkNewTab = default, string? description = default, string? metaTitle = default, string? metaDescription = default, string? keywords = default, string? cmsPageId = default, string? cmsPageVersionId = default, DateTime? updatedAt = default, Object? translated = default, Category? parent = default, Category? children = default, Media? media = default, CmsPage? cmsPage = default, SeoUrl? seoUrls = default)
         {
-            if (displayNestedProducts == null)
-                throw new ArgumentNullException("displayNestedProducts is a required property for Category and cannot be null.");
-
             if (type == null)
                 throw new ArgumentNullException("type is a required property for Category and cannot be null.");
 
@@ -82,9 +79,6 @@ namespace ShopwareSharp.Model
 
             if (name == null)
                 throw new ArgumentNullException("name is a required property for Category and cannot be null.");
-
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for Category and cannot be null.");
 
             DisplayNestedProducts = displayNestedProducts;
             Type = type;
@@ -124,6 +118,10 @@ namespace ShopwareSharp.Model
             SeoUrls = seoUrls;
         }
 
+        [JsonConstructor]
+        public Category()
+        {}
+
         /// <summary>
         /// Gets or Sets DisplayNestedProducts
         /// </summary>
@@ -152,7 +150,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets CreatedAt
         /// </summary>
         [JsonPropertyName("createdAt")]
-        public DateTime CreatedAt { get; private set; }
+        public DateTime CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
@@ -200,25 +198,25 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Breadcrumb
         /// </summary>
         [JsonPropertyName("breadcrumb")]
-        public List<string>? Breadcrumb { get; private set; }
+        public List<string>? Breadcrumb { get; set; }
 
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
         [JsonPropertyName("level")]
-        public long? Level { get; private set; }
+        public long? Level { get; set; }
 
         /// <summary>
         /// Gets or Sets Path
         /// </summary>
         [JsonPropertyName("path")]
-        public string? Path { get; private set; }
+        public string? Path { get; set; }
 
         /// <summary>
         /// Gets or Sets ChildCount
         /// </summary>
         [JsonPropertyName("childCount")]
-        public long? ChildCount { get; private set; }
+        public long? ChildCount { get; set; }
 
         /// <summary>
         /// Gets or Sets Visible
@@ -302,7 +300,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets UpdatedAt
         /// </summary>
         [JsonPropertyName("updatedAt")]
-        public DateTime? UpdatedAt { get; private set; }
+        public DateTime? UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Translated

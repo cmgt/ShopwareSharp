@@ -53,9 +53,6 @@ namespace ShopwareSharp.Model
             if (name == null)
                 throw new ArgumentNullException("name is a required property for PropertyGroupOption and cannot be null.");
 
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for PropertyGroupOption and cannot be null.");
-
             GroupId = groupId;
             Name = name;
             CreatedAt = createdAt;
@@ -69,6 +66,10 @@ namespace ShopwareSharp.Model
             Media = media;
             Group = group;
         }
+
+        [JsonConstructor]
+        public PropertyGroupOption()
+        {}
 
         /// <summary>
         /// Gets or Sets GroupId
@@ -86,7 +87,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets CreatedAt
         /// </summary>
         [JsonPropertyName("createdAt")]
-        public DateTime CreatedAt { get; private set; }
+        public DateTime CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
@@ -122,7 +123,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets UpdatedAt
         /// </summary>
         [JsonPropertyName("updatedAt")]
-        public DateTime? UpdatedAt { get; private set; }
+        public DateTime? UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Translated

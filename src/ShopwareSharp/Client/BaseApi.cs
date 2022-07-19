@@ -70,7 +70,7 @@ namespace ShopwareSharp.Client
                 {
                     Host = url.Host,
                     Scheme = url.Scheme,
-                    Path = url.AbsolutePath + queryPath,
+                    Path = url.AbsolutePath == "/" ? queryPath : url.AbsolutePath + queryPath,
                     Query = query
                 };
 

@@ -83,7 +83,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets CreatedAt
         /// </summary>
         [JsonPropertyName("createdAt")]
-        public DateTime CreatedAt { get; private set; }
+        public DateTime CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
@@ -95,37 +95,37 @@ namespace ShopwareSharp.Model
         /// Gets or Sets MimeType
         /// </summary>
         [JsonPropertyName("mimeType")]
-        public string? MimeType { get; private set; }
+        public string? MimeType { get; set; }
 
         /// <summary>
         /// Gets or Sets FileExtension
         /// </summary>
         [JsonPropertyName("fileExtension")]
-        public string? FileExtension { get; private set; }
+        public string? FileExtension { get; set; }
 
         /// <summary>
         /// Gets or Sets UploadedAt
         /// </summary>
         [JsonPropertyName("uploadedAt")]
-        public DateTime? UploadedAt { get; private set; }
+        public DateTime? UploadedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets FileName
         /// </summary>
         [JsonPropertyName("fileName")]
-        public string? FileName { get; private set; }
+        public string? FileName { get; set; }
 
         /// <summary>
         /// Gets or Sets FileSize
         /// </summary>
         [JsonPropertyName("fileSize")]
-        public long? FileSize { get; private set; }
+        public long? FileSize { get; set; }
 
         /// <summary>
         /// Gets or Sets MetaData
         /// </summary>
         [JsonPropertyName("metaData")]
-        public Object? MetaData { get; private set; }
+        public Object? MetaData { get; set; }
 
         /// <summary>
         /// Gets or Sets Alt
@@ -167,7 +167,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets UpdatedAt
         /// </summary>
         [JsonPropertyName("updatedAt")]
-        public DateTime? UpdatedAt { get; private set; }
+        public DateTime? UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Translated

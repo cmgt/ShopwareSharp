@@ -63,6 +63,10 @@ namespace ShopwareSharp.Model
             Media = media;
         }
 
+        [JsonConstructor]
+        public ProductMedia()
+        {}
+
         /// <summary>
         /// Gets or Sets ProductId
         /// </summary>
@@ -79,7 +83,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets CreatedAt
         /// </summary>
         [JsonPropertyName("createdAt")]
-        public DateTime CreatedAt { get; private set; }
+        public DateTime CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
@@ -115,7 +119,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets UpdatedAt
         /// </summary>
         [JsonPropertyName("updatedAt")]
-        public DateTime? UpdatedAt { get; private set; }
+        public DateTime? UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Media
