@@ -47,7 +47,7 @@ namespace ShopwareSharp.Model
         public Criteria(int? page = default, int? limit = default, List<CriteriaFilterInner>? filter = default,
             List<CriteriaSortInner>? sort = default, List<CriteriaFilterInner>? postFilter = default,
             Object? associations = default, List<CriteriaAggregationsInner>? aggregations = default,
-            List<string>? grouping = default, Dictionary<string, string[]>? includes = default)
+            List<string>? grouping = default, Dictionary<string, string[]>? includes = default, string[]? ids = default)
         {
             Page = page;
             Limit = limit;
@@ -58,12 +58,18 @@ namespace ShopwareSharp.Model
             Aggregations = aggregations;
             Grouping = grouping;
             Includes = includes;
+            Ids = ids;
         }
 
         /// <summary>
-        /// Search result page
+        /// Limits the search to a list of Ids
         /// </summary>
-        /// <value>Search result page</value>
+        [JsonPropertyName("ids")]
+        public string[]? Ids { get; set; }
+
+        /// <summary>
+        /// Restricts the output to the defined fields
+        /// </summary>
         [JsonPropertyName("includes")]
         public Dictionary<string, string[]>? Includes { get; set; }
 

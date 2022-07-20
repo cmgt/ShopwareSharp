@@ -53,9 +53,6 @@ namespace ShopwareSharp.Model
             if (optionId == null)
                 throw new ArgumentNullException("optionId is a required property for ProductConfiguratorSetting and cannot be null.");
 
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for ProductConfiguratorSetting and cannot be null.");
-
             ProductId = productId;
             OptionId = optionId;
             CreatedAt = createdAt;
@@ -69,6 +66,10 @@ namespace ShopwareSharp.Model
             Media = media;
             Option = option;
         }
+
+        [JsonConstructor]
+        public ProductConfiguratorSetting()
+        {}
 
         /// <summary>
         /// Gets or Sets ProductId
@@ -86,7 +87,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets CreatedAt
         /// </summary>
         [JsonPropertyName("createdAt")]
-        public DateTime CreatedAt { get; private set; }
+        public DateTime CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
@@ -128,7 +129,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets UpdatedAt
         /// </summary>
         [JsonPropertyName("updatedAt")]
-        public DateTime? UpdatedAt { get; private set; }
+        public DateTime? UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Media

@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
+using ShopwareSharp.Client;
 using ShopwareSharp.Model;
 using ShopwareSharp.StoreApi;
 using ShopwareSharp.Test.Api;
@@ -60,23 +61,24 @@ namespace ShopwareSharp.Test.StoreApi
             var criteria = new Criteria(associations: new
                 {
                     categories = Criteria.AssociationDefault,
-                    children = Criteria.AssociationDefault,
+                    children = new {includes = new[] {"id"}},
                     properties = Criteria.AssociationDefault,
-                    options = Criteria.AssociationDefault,
+                    options = new {associations = new {productOptions = Criteria.AssociationDefault, group = Criteria.AssociationDefault}},
                     media = Criteria.AssociationDefault,
                     manufacturer = Criteria.AssociationDefault,
-                    configuratorSettings=Criteria.AssociationDefault,
+                    configuratorSettings = new {associations = new {option = Criteria.AssociationDefault}},
                 },
                 //filter: new List<CriteriaFilterInner>() {new CriteriaFilterInner("equals", "childCount", "6")},
                 includes: new Dictionary<string, string[]>
                 {
-                    ["property_group_option"] = new[] {"configuratorSetting", "name", "id", "group"},
-                    ["product_configurator_setting"] = new []{"selected", "option", "position"},
+                    //["property_group_option"] = new[] {"configuratorSetting", "name", "id", "group"},
+                    //["product_configurator_setting"] = new []{"selected", "option", "position"},
                     ["product_media"] = new[] {"media"},
                     ["media"] = new[] {"url"},
                     ["product_manufacturer"] = new[] {"name"},
                     ["array_struct"] = Array.Empty<string>()
-                }
+                },
+                ids: new []{"43a23e0c03bf4ceabc6055a2185faa87"}
             );
             ReadCustomerRequest readCustomerRequest = new ReadCustomerRequest(criteria);
             var response = await _instance.ReadProductAsync(readCustomerRequest);
@@ -99,12 +101,43 @@ namespace ShopwareSharp.Test.StoreApi
         /// <summary>
         /// Test ReadProductDetail
         /// </summary>
-        [Fact]
-        public async Task ReadProductDetailAsyncTest()
+        [Theory]
+        //Parent product
+        [InlineData("43a23e0c03bf4ceabc6055a2185faa87")]
+        //Variant
+        [InlineData("0f683a27c45a4e408814a97fd7150ffa")]
+        public async Task ReadProductDetailAsyncTest(string productId)
         {
-            string productId = "0f683a27c45a4e408814a97fd7150ffa";
+            var criteria = new Criteria(associations: new
+                {
+                    categories = Criteria.AssociationDefault,
+                    children = Criteria.AssociationDefault,
+                    //properties = Criteria.AssociationDefault,
+                    //options = new
+                    //{
+                    //    associations = new
+                    //        {productOptions = Criteria.AssociationDefault, group = Criteria.AssociationDefault}
+                    //},
+                    //media = Criteria.AssociationDefault,
+                    //manufacturer = Criteria.AssociationDefault,
+                    //configuratorSettings = Criteria.AssociationDefault,
+                }
+                //,
+                //filter: new List<CriteriaFilterInner>() {new CriteriaFilterInner("equals", "childCount", "6")},
+                //includes: new Dictionary<string, string[]>
+                //{
+                //    //["property_group_option"] = new[] {"configuratorSetting", "name", "id", "group"},
+                //    ["product_configurator_setting"] = new[] {"selected", "option", "position"},
+                //    ["product_media"] = new[] {"media"},
+                //    ["media"] = new[] {"url"},
+                //    ["product_manufacturer"] = new[] {"name"},
+                //    //["product"] = new[] {"children"}
+                //}
+            );
 
-            var response = await _instance.ReadProductDetailAsync(productId);
+            var response = await _instance.ReadProductDetailAsync(productId,
+                new ReadCustomerRequest(criteria),
+                new RequestOptions() {Headers = new[] {new KeyValuePair<string, string>("sw-inheritance", "1")}});
             Assert.IsType<ProductDetailResponse>(response);
         }
 

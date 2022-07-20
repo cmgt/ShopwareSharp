@@ -138,7 +138,7 @@ namespace ShopwareSharp.Model
             DeliveryTime? deliveryTime = default, Tax? tax = default, ProductManufacturer? manufacturer = default,
             Unit? unit = default, ProductMedia? cover = default, CmsPage? cmsPage = default,
             Product? canonicalProduct = default, ProductMedia[]? media = default,
-            ProductCrossSelling? crossSellings = default, ProductConfiguratorSetting? configuratorSettings = default,
+            ProductCrossSelling? crossSellings = default, ProductConfiguratorSetting[]? configuratorSettings = default,
             ProductReview? productReviews = default, MainCategory? mainCategories = default, SeoUrl? seoUrls = default,
             PropertyGroupOption[]? options = default, PropertyGroupOption[]? properties = default,
             Category[]? categories = default, ProductStream[]? streams = default, Category[]? categoriesRo = default,
@@ -670,7 +670,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets ConfiguratorSettings
         /// </summary>
         [JsonPropertyName("configuratorSettings")]
-        public ProductConfiguratorSetting? ConfiguratorSettings { get; set; }
+        public ProductConfiguratorSetting[]? ConfiguratorSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets ProductReviews
