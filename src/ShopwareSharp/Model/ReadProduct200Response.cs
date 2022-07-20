@@ -41,7 +41,7 @@ namespace ShopwareSharp.Model
         /// <param name="aggregations">Contains aggregated data. A simple example is the determination of the average price from a product search query.</param>
         /// <param name="page">The actual page. This can be used for pagination.</param>
         /// <param name="limit">The actual limit. This is used for pagination and goes together with the page.</param>
-        public ReadProduct200Response(EntitySearchResult entitySearchResult, ReadProduct200ResponseAllOf readProduct200ResponseAllOf, string? apiAlias = default, string? entity = default, int? total = default, List<Object>? aggregations = default, int? page = default, int? limit = default)
+        public ReadProduct200Response(EntitySearchResult? entitySearchResult, ReadProduct200ResponseAllOf? readProduct200ResponseAllOf, string? apiAlias = default, string? entity = default, int? total = default, List<Object>? aggregations = default, int? page = default, int? limit = default)
         {
             EntitySearchResult = entitySearchResult;
             ReadProduct200ResponseAllOf = readProduct200ResponseAllOf;
@@ -56,12 +56,12 @@ namespace ShopwareSharp.Model
         /// <summary>
         /// Gets or Sets EntitySearchResult
         /// </summary>
-        public EntitySearchResult EntitySearchResult { get; set; }
+        public EntitySearchResult? EntitySearchResult { get; set; }
 
         /// <summary>
         /// Gets or Sets ReadProduct200ResponseAllOf
         /// </summary>
-        public ReadProduct200ResponseAllOf ReadProduct200ResponseAllOf { get; set; }
+        public ReadProduct200ResponseAllOf? ReadProduct200ResponseAllOf { get; set; }
 
         /// <summary>
         /// Alias which can be used to restrict response fields. For more information see [includes](https://shopware.stoplight.io/docs/store-api/docs/concepts/search-queries.md#includes-apialias).
@@ -263,26 +263,29 @@ namespace ShopwareSharp.Model
                     string? propertyName = reader.GetString();
                     reader.Read();
 
-                    switch (propertyName)
+                    if (reader.TokenType != JsonTokenType.Null)
                     {
-                        case "apiAlias":
-                            apiAlias = reader.GetString();
-                            break;
-                        case "entity":
-                            entity = reader.GetString();
-                            break;
-                        case "total":
-                            total = reader.GetInt32();
-                            break;
-                        case "aggregations":
-                            aggregations = JsonSerializer.Deserialize<List<Object>>(ref reader, options);
-                            break;
-                        case "page":
-                            page = reader.GetInt32();
-                            break;
-                        case "limit":
-                            limit = reader.GetInt32();
-                            break;
+                        switch (propertyName)
+                        {
+                            case "apiAlias":
+                                apiAlias = reader.GetString();
+                                break;
+                            case "entity":
+                                entity = reader.GetString();
+                                break;
+                            case "total":
+                                total = reader.GetInt32();
+                                break;
+                            case "aggregations":
+                                aggregations = JsonSerializer.Deserialize<List<Object>>(ref reader, options);
+                                break;
+                            case "page":
+                                page = reader.GetInt32();
+                                break;
+                            case "limit":
+                                limit = reader.GetInt32();
+                                break;
+                        }
                     }
                 }
             }
