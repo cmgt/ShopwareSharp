@@ -28,7 +28,7 @@ namespace ShopwareSharp.Model
     /// <summary>
     /// LineItem
     /// </summary>
-    public partial class LineItem : IEquatable<LineItem>, IValidatableObject
+    public class LineItem : IEquatable<LineItem>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LineItem" /> class.
@@ -43,7 +43,9 @@ namespace ShopwareSharp.Model
         /// <param name="removable">removable</param>
         /// <param name="stackable">stackable</param>
         /// <param name="modified">modified</param>
-        public LineItem(string? id = default, string? referencedId = default, string? label = default, int? quantity = default, string? type = default, bool? good = default, string? description = default, bool? removable = default, bool? stackable = default, bool? modified = default)
+        public LineItem(string? id = default, string? referencedId = default, string? label = default,
+            int? quantity = default, string? type = default, bool? good = default, string? description = default,
+            bool? removable = default, bool? stackable = default, bool? modified = default)
         {
             Id = id;
             ReferencedId = referencedId;
@@ -56,6 +58,10 @@ namespace ShopwareSharp.Model
             Stackable = stackable;
             Modified = modified;
         }
+
+        [JsonConstructor]
+        public LineItem()
+        {}
 
         /// <summary>
         /// Gets or Sets Id

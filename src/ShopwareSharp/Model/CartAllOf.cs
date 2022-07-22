@@ -43,7 +43,11 @@ namespace ShopwareSharp.Model
         /// <param name="customerComment">A comment that can be added to the cart.</param>
         /// <param name="affiliateCode">An affiliate tracking code</param>
         /// <param name="campaignCode">A campaign tracking code</param>
-        public CartAllOf(string? name = default, string? token = default, CartAllOfPrice? price = default, List<LineItem>? lineItems = default, List<CartAllOfErrors>? errors = default, List<CartAllOfTransactions>? transactions = default, bool? modified = default, string? customerComment = default, string? affiliateCode = default, string? campaignCode = default)
+        public CartAllOf(string? name = default, string? token = default, CartAllOfPrice? price = default,
+            List<LineItem>? lineItems = default, Object? errors = default,
+            List<CartDelivery>? deliveries = default,
+            List<CartAllOfTransactions>? transactions = default, bool? modified = default,
+            string? customerComment = default, string? affiliateCode = default, string? campaignCode = default)
         {
             Name = name;
             Token = token;
@@ -55,7 +59,14 @@ namespace ShopwareSharp.Model
             CustomerComment = customerComment;
             AffiliateCode = affiliateCode;
             CampaignCode = campaignCode;
+            Deliveries = deliveries;
         }
+
+        public List<CartDelivery>? Deliveries { get; set; }
+
+        [JsonConstructor]
+        public CartAllOf()
+        {}
 
         /// <summary>
         /// Name of the cart - for example &#x60;guest-cart&#x60;
@@ -89,7 +100,7 @@ namespace ShopwareSharp.Model
         /// </summary>
         /// <value>A list of all cart errors, such as insufficient stocks, invalid addresses or vouchers.</value>
         [JsonPropertyName("errors")]
-        public List<CartAllOfErrors>? Errors { get; set; }
+        public Object? Errors { get; set; }
 
         /// <summary>
         /// A list of all payment transactions associated with the current cart.
@@ -189,13 +200,7 @@ namespace ShopwareSharp.Model
                     this.LineItems != null &&
                     input.LineItems != null &&
                     this.LineItems.SequenceEqual(input.LineItems)
-                ) && 
-                (
-                    this.Errors == input.Errors ||
-                    this.Errors != null &&
-                    input.Errors != null &&
-                    this.Errors.SequenceEqual(input.Errors)
-                ) && 
+                ) &&
                 (
                     this.Transactions == input.Transactions ||
                     this.Transactions != null &&
@@ -283,5 +288,4 @@ namespace ShopwareSharp.Model
             yield break;
         }
     }
-
 }

@@ -53,7 +53,7 @@ namespace ShopwareSharp.Test
                 //options.AddTokens(new ApiKeyToken("SWSCCVJZZ2LKUJA3DHI5C3F2ZA"));
 
                 //options.AddTokens(new ContextKeyToken("qnEIHRHOt1Nz8xWkHL0PFbvnrDjRWazS"));
-                options.AddTokens(new ContextKeyToken("PMH6LseYehJr175aXKB4kI5Mw2qaVh31"));
+                options.AddTokens(new ContextKeyToken("hOiykCGo2aDFbOllZYxTwZP7PgVkyx2A"));
                 //options.AddTokens(new ContextKeyToken("3zEEcbq9Zzl0Z0633Hy0dPhPrGa9DzIF"));
                 //options.AddTokens(new ContextKeyToken(String.Empty));
 

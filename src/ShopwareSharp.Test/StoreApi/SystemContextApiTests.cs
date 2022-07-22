@@ -68,7 +68,10 @@ namespace ShopwareSharp.Test.Api
         [Fact]
         public async Task ReadCountryAsyncTest()
         {
-            ReadCustomerRequest? readCustomerRequest = new ReadCustomerRequest(new Criteria(limit:50, page: 1));
+            ReadCustomerRequest? readCustomerRequest = new ReadCustomerRequest(
+                new Criteria(filter: new List<CriteriaFilterInner>()
+                        {new CriteriaFilterInner("contains", "iso", "us")},
+                    includes: new Dictionary<string, string[]> {["country"] = new[] {"id"}}));
             var response = await _instance.ReadCountryAsync(readCustomerRequest);
             Assert.IsType<ReadCountry200Response>(response);
         }

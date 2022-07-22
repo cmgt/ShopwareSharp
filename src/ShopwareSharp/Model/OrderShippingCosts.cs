@@ -42,15 +42,6 @@ namespace ShopwareSharp.Model
         /// <param name="listPrice">listPrice</param>
         public OrderShippingCosts(float unitPrice, float totalPrice, long quantity, Object? calculatedTaxes = default, Object? taxRules = default, Object? referencePrice = default, OrderShippingCostsListPrice? listPrice = default)
         {
-            if (unitPrice == null)
-                throw new ArgumentNullException("unitPrice is a required property for OrderShippingCosts and cannot be null.");
-
-            if (totalPrice == null)
-                throw new ArgumentNullException("totalPrice is a required property for OrderShippingCosts and cannot be null.");
-
-            if (quantity == null)
-                throw new ArgumentNullException("quantity is a required property for OrderShippingCosts and cannot be null.");
-
             UnitPrice = unitPrice;
             TotalPrice = totalPrice;
             Quantity = quantity;

@@ -36,7 +36,7 @@ namespace ShopwareSharp.Model
         /// <param name="key">key</param>
         /// <param name="level">level</param>
         /// <param name="message">message</param>
-        public CartAllOfErrors(string? key = default, string? level = default, string? message = default)
+        public CartAllOfErrors(string? key = default, int? level = default, string? message = default)
         {
             Key = key;
             Level = level;
@@ -53,7 +53,7 @@ namespace ShopwareSharp.Model
         /// Gets or Sets Level
         /// </summary>
         [JsonPropertyName("level")]
-        public string? Level { get; set; }
+        public int? Level { get; set; }
 
         /// <summary>
         /// Gets or Sets Message

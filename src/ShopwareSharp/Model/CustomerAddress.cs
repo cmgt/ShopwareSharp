@@ -93,6 +93,10 @@ namespace ShopwareSharp.Model
             Salutation = salutation;
         }
 
+        [JsonConstructor]
+        public CustomerAddress()
+        {}
+
         /// <summary>
         /// Gets or Sets CustomerId
         /// </summary>
