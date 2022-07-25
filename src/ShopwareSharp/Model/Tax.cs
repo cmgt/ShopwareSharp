@@ -42,18 +42,6 @@ namespace ShopwareSharp.Model
         /// <param name="updatedAt">updatedAt</param>
         public Tax(float taxRate, string name, long position, DateTime createdAt, string? id = default, Object? customFields = default, DateTime? updatedAt = default)
         {
-            if (taxRate == null)
-                throw new ArgumentNullException("taxRate is a required property for Tax and cannot be null.");
-
-            if (name == null)
-                throw new ArgumentNullException("name is a required property for Tax and cannot be null.");
-
-            if (position == null)
-                throw new ArgumentNullException("position is a required property for Tax and cannot be null.");
-
-            if (createdAt == null)
-                throw new ArgumentNullException("createdAt is a required property for Tax and cannot be null.");
-
             TaxRate = taxRate;
             Name = name;
             Position = position;

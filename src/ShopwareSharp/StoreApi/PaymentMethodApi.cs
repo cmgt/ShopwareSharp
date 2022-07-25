@@ -39,7 +39,7 @@ namespace ShopwareSharp.StoreApi
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task&lt;ApiResponse&lt;ReadPaymentMethod200Response?&gt;&gt;</returns>
         Task<ApiResponse<ReadPaymentMethod200Response?>> ReadPaymentMethodWithHttpInfoAsync(
-            ReadPaymentMethodRequest readPaymentMethodRequest,
+            bool? onlyAvailable = null, ReadPaymentMethodRequest? readPaymentMethodRequest = null,
             System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace ShopwareSharp.StoreApi
         /// <param name="readPaymentMethodRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ReadPaymentMethod200Response&gt;</returns>
-        Task<ReadPaymentMethod200Response?> ReadPaymentMethodAsync(ReadPaymentMethodRequest readPaymentMethodRequest,
+        Task<ReadPaymentMethod200Response?> ReadPaymentMethodAsync(bool? onlyAvailable = null, ReadPaymentMethodRequest? readPaymentMethodRequest = null,
             System.Threading.CancellationToken? cancellationToken = null);
 
         /// <summary>
@@ -64,8 +64,8 @@ namespace ShopwareSharp.StoreApi
         /// <param name="readPaymentMethodRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse&lt;ReadPaymentMethod200Response?&gt;</returns>
-        Task<ReadPaymentMethod200Response?> ReadPaymentMethodOrDefaultAsync(
-            ReadPaymentMethodRequest readPaymentMethodRequest,
+        Task<ReadPaymentMethod200Response?> ReadPaymentMethodOrDefaultAsync(bool? onlyAvailable = null, 
+            ReadPaymentMethodRequest? readPaymentMethodRequest = null,
             System.Threading.CancellationToken? cancellationToken = null);
 
     }
@@ -120,9 +120,9 @@ namespace ShopwareSharp.StoreApi
         
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ReadPaymentMethod200Response"/>&gt;</returns>
-        public async Task<ReadPaymentMethod200Response?> ReadPaymentMethodAsync(ReadPaymentMethodRequest readPaymentMethodRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ReadPaymentMethod200Response?> ReadPaymentMethodAsync(bool? onlyAvailable = null, ReadPaymentMethodRequest? readPaymentMethodRequest = null, System.Threading.CancellationToken? cancellationToken = null)
         {
-            ApiResponse<ReadPaymentMethod200Response?> result = await ReadPaymentMethodWithHttpInfoAsync(readPaymentMethodRequest, cancellationToken).ConfigureAwait(false);
+            ApiResponse<ReadPaymentMethod200Response?> result = await ReadPaymentMethodWithHttpInfoAsync(onlyAvailable, readPaymentMethodRequest, cancellationToken).ConfigureAwait(false);
 
             if (result.Content == null)
                 throw new ApiException(result.ReasonPhrase, result.StatusCode, result.RawContent);
@@ -130,7 +130,7 @@ namespace ShopwareSharp.StoreApi
             return result.Content;
         }
 
-        /// <summary>
+        /// <summary>onlyAvailable
         /// Loads all available payment methods 
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
@@ -139,12 +139,12 @@ namespace ShopwareSharp.StoreApi
         
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ReadPaymentMethod200Response"/>&gt;</returns>
-        public async Task<ReadPaymentMethod200Response?> ReadPaymentMethodOrDefaultAsync(ReadPaymentMethodRequest readPaymentMethodRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ReadPaymentMethod200Response?> ReadPaymentMethodOrDefaultAsync(bool? onlyAvailable = null, ReadPaymentMethodRequest? readPaymentMethodRequest = null, System.Threading.CancellationToken? cancellationToken = null)
         {
             ApiResponse<ReadPaymentMethod200Response?>? result = null;
             try 
             {
-                result = await ReadPaymentMethodWithHttpInfoAsync(readPaymentMethodRequest, cancellationToken).ConfigureAwait(false);
+                result = await ReadPaymentMethodWithHttpInfoAsync(onlyAvailable, readPaymentMethodRequest, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -164,23 +164,22 @@ namespace ShopwareSharp.StoreApi
         
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="ApiResponse{T}"/>&gt; where T : <see cref="ReadPaymentMethod200Response"/></returns>
-        public async Task<ApiResponse<ReadPaymentMethod200Response?>> ReadPaymentMethodWithHttpInfoAsync(ReadPaymentMethodRequest readPaymentMethodRequest, System.Threading.CancellationToken? cancellationToken = null)
+        public async Task<ApiResponse<ReadPaymentMethod200Response?>> ReadPaymentMethodWithHttpInfoAsync(bool? onlyAvailable = null, ReadPaymentMethodRequest? readPaymentMethodRequest = null, System.Threading.CancellationToken? cancellationToken = null)
         {
             try
             {
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
-
-                if (readPaymentMethodRequest == null)
-                    throw new ArgumentNullException(nameof(readPaymentMethodRequest));
-
-                #pragma warning disable CS0472 // The result of the expression is always the same since a value of this type is never equal to 'null'
-
                 using (HttpRequestMessage request = new HttpRequestMessage())
                 {
                     UriBuilder uriBuilder = new UriBuilder();
                     uriBuilder.Host = HttpClient.BaseAddress!.Host;
                     uriBuilder.Scheme = HttpClient.BaseAddress!.Scheme;
                     uriBuilder.Path = ClientUtils.CONTEXT_PATH + "/payment-method";
+
+                    System.Collections.Specialized.NameValueCollection parseQueryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
+                    if (onlyAvailable != null)
+                        parseQueryString["onlyAvailable"] = Uri.EscapeDataString(onlyAvailable.ToString()!);
+
+                    uriBuilder.Query = parseQueryString.ToString();
 
                     request.Content = (readPaymentMethodRequest as object) is System.IO.Stream stream
                         ? request.Content = new StreamContent(stream)

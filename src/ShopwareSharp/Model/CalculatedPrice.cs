@@ -15,10 +15,10 @@ public class CalculatedPrice
     public double TotalPrice { get; set; }
 
     [JsonPropertyName("calculatedTaxes")]
-    public IEnumerable<CalculatedTaxis> CalculatedTaxes { get; set; }
+    public List<CalculatedTax> CalculatedTaxes { get; set; }
 
     [JsonPropertyName("taxRules")]
-    public IEnumerable<PriceTaxRule> TaxRules { get; set; }
+    public List<PriceTaxRule> TaxRules { get; set; }
 
     [JsonPropertyName("referencePrice")]
     public double? ReferencePrice { get; set; }
@@ -28,24 +28,6 @@ public class CalculatedPrice
 
     [JsonPropertyName("regulationPrice")]
     public double? RegulationPrice { get; set; }
-
-    [JsonPropertyName("apiAlias")]
-    public string ApiAlias { get; set; }
-}
-
-public class CalculatedTaxis
-{
-    [JsonPropertyName("tax")]
-    public double Tax { get; set; }
-
-    [JsonPropertyName("taxRate")]
-    public int TaxRate { get; set; }
-
-    [JsonPropertyName("price")]
-    public double Price { get; set; }
-
-    [JsonPropertyName("apiAlias")]
-    public string ApiAlias { get; set; }
 }
 
 public class PriceTaxRule
@@ -55,7 +37,4 @@ public class PriceTaxRule
 
     [JsonPropertyName("percentage")]
     public int Percentage { get; set; }
-
-    [JsonPropertyName("apiAlias")]
-    public string ApiAlias { get; set; }
 }

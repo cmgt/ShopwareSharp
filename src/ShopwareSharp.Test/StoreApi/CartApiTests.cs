@@ -10,12 +10,11 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Xunit;
 using Microsoft.Extensions.DependencyInjection;
-using ShopwareSharp.StoreApi;
 using ShopwareSharp.Client;
 using ShopwareSharp.Model;
-using ShopwareSharp.Test.StoreApi;
+using ShopwareSharp.StoreApi;
+using Xunit;
 
 
 /* *********************************************************************************
@@ -38,7 +37,7 @@ using ShopwareSharp.Test.StoreApi;
 */
 
 
-namespace ShopwareSharp.Test.Api
+namespace ShopwareSharp.Test.StoreApi
 {
     /// <summary>
     ///  Class for testing CartApi
@@ -100,8 +99,6 @@ namespace ShopwareSharp.Test.Api
         [Fact]
         public async Task ReadCartAsyncTest()
         {
-            
-            
             string? name = default;
             var response = await _instance.ReadCartAsync(name);
             Assert.IsType<Cart>(response);

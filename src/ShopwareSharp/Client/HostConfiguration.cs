@@ -17,6 +17,7 @@ using System.Text.Json.Serialization;
 using System.Net.Http;
 using Microsoft.Extensions.DependencyInjection;
 using ShopwareSharp.AdminApi;
+using StoreApi;
 using ShopwareSharp.StoreApi;
 using ShopwareSharp.Model;
 
@@ -91,7 +92,7 @@ namespace ShopwareSharp.Client
         /// <param name="builder"></param>
         /// <returns></returns>
         public HostConfiguration AddApiHttpClients<TCartApi, TOrderApi, TPaymentMethodApi, TPaymentShippingApi,
-            TProductApi, TLoginRegistrationApi, TSystemContextApi, TAdminProductApi, TAdminProductConfiguratorSettingApi>
+            TProductApi, TLoginRegistrationApi, TSystemContextApi, TAddressApi, TAdminProductApi, TAdminProductConfiguratorSettingApi>
         (
             Action<HttpClient>? client = null, Action<IHttpClientBuilder>? builder = null)
             where TCartApi : class, ICartApi
@@ -101,6 +102,7 @@ namespace ShopwareSharp.Client
             where TProductApi : class, IProductApi
             where TLoginRegistrationApi : class, ILoginRegistrationApi
             where TSystemContextApi : class, ISystemContextApi
+            where TAddressApi : class, IAddressApi
             where TAdminProductApi : class, IAdminProductApi
             where TAdminProductConfiguratorSettingApi : class, IAdminProductConfiguratorSettingApi
         {
@@ -115,6 +117,7 @@ namespace ShopwareSharp.Client
                 services.AddHttpClient<IProductApi, TProductApi>(client),
                 services.AddHttpClient<ILoginRegistrationApi, TLoginRegistrationApi>(client),
                 services.AddHttpClient<ISystemContextApi, TSystemContextApi>(client),
+                services.AddHttpClient<IAddressApi, TAddressApi>(client),
                 services.AddHttpClient<IAdminProductApi, TAdminProductApi>(client),
                 services.AddHttpClient<IAdminProductConfiguratorSettingApi, TAdminProductConfiguratorSettingApi>(client),
             };
@@ -138,7 +141,7 @@ namespace ShopwareSharp.Client
             Action<IHttpClientBuilder>? builder = null)
         {
             AddApiHttpClients<CartApi, OrderApi, PaymentMethodApi, PaymentShippingApi, ProductApi,
-                LoginRegistrationApi, SystemContextApi, AdminProductApi, AdminProductConfiguratorSettingApi>(client, builder);
+                LoginRegistrationApi, SystemContextApi, AddressApi, AdminProductApi, AdminProductConfiguratorSettingApi>(client, builder);
 
             return this;
         }

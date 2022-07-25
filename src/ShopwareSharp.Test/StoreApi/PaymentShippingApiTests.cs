@@ -8,13 +8,11 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using Xunit;
 using Microsoft.Extensions.DependencyInjection;
-using ShopwareSharp.StoreApi;
 using ShopwareSharp.Model;
-using ShopwareSharp.Test.StoreApi;
+using ShopwareSharp.StoreApi;
+using Xunit;
 
 
 /* *********************************************************************************
@@ -37,7 +35,7 @@ using ShopwareSharp.Test.StoreApi;
 */
 
 
-namespace ShopwareSharp.Test.Api
+namespace ShopwareSharp.Test.StoreApi
 {
     /// <summary>
     ///  Class for testing PaymentShippingApi
@@ -67,11 +65,9 @@ namespace ShopwareSharp.Test.Api
         /// <summary>
         /// Test ReadShippingMethod
         /// </summary>
-        [Fact (Skip = "not implemented")]
+        [Fact]
         public async Task ReadShippingMethodAsyncTest()
         {
-            
-            
             bool? onlyAvailable = default;
             ReadCustomerRequest? readCustomerRequest = default;
             var response = await _instance.ReadShippingMethodAsync(onlyAvailable, readCustomerRequest);

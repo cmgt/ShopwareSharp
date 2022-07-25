@@ -37,13 +37,22 @@ namespace ShopwareSharp.Model
         /// <param name="totalPrice">Total price of the cart, including shipping costs, discounts and taxes</param>
         /// <param name="positionPrice">Price for all line items in the cart</param>
         /// <param name="taxStatus">Tax calculation for the cart. One of &#x60;gross&#x60;, &#x60;net&#x60; or &#x60;tax-free&#x60;</param>
-        public CartAllOfPrice(float? netPrice = default, float? totalPrice = default, float? positionPrice = default, string? taxStatus = default)
+        public CartAllOfPrice(float? netPrice = default, float? totalPrice = default, float? positionPrice = default,
+            string? taxStatus = default, List<CalculatedTax>? calculatedTaxes = default)
         {
             NetPrice = netPrice;
             TotalPrice = totalPrice;
             PositionPrice = positionPrice;
             TaxStatus = taxStatus;
+            CalculatedTaxes = calculatedTaxes;
         }
+
+        [JsonConstructor]
+        public CartAllOfPrice()
+        {}
+
+        [JsonPropertyName("calculatedTaxes")]
+        public List<CalculatedTax>? CalculatedTaxes { get; set; }
 
         /// <summary>
         /// Net price of the cart

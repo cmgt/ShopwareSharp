@@ -8,13 +8,11 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using Xunit;
 using Microsoft.Extensions.DependencyInjection;
-using ShopwareSharp.StoreApi;
 using ShopwareSharp.Model;
-using ShopwareSharp.Test.StoreApi;
+using ShopwareSharp.StoreApi;
+using Xunit;
 
 
 /* *********************************************************************************
@@ -37,7 +35,7 @@ using ShopwareSharp.Test.StoreApi;
 */
 
 
-namespace ShopwareSharp.Test.Api
+namespace ShopwareSharp.Test.StoreApi
 {
     /// <summary>
     ///  Class for testing PaymentMethodApi
@@ -55,13 +53,13 @@ namespace ShopwareSharp.Test.Api
         /// <summary>
         /// Test ReadPaymentMethod
         /// </summary>
-        [Fact (Skip = "not implemented")]
+        [Fact]
         public async Task ReadPaymentMethodAsyncTest()
         {
-            ReadPaymentMethodRequest readPaymentMethodRequest = default;
+            ReadPaymentMethodRequest? readPaymentMethodRequest = default;
+            bool? onlyAvailable = true;
             
-            
-            var response = await _instance.ReadPaymentMethodAsync(readPaymentMethodRequest);
+            var response = await _instance.ReadPaymentMethodAsync(onlyAvailable, readPaymentMethodRequest);
             Assert.IsType<ReadPaymentMethod200Response>(response);
         }
     }

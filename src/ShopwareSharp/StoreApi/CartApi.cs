@@ -16,12 +16,8 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text.Json;
-using System.Threading;
 using ShopwareSharp.Client;
 using ShopwareSharp.Model;
-using ShopwareSharp.StoreApi;
 
 namespace ShopwareSharp.StoreApi
 {
